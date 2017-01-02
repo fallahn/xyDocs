@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xygine: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xygine/include/xygine/physics/CollisionRectangleShape.hpp Source File</title>
+<title>xygine: C:/Users/Matthew Marchant/Documents/Visual Studio 2015/Projects/xygine/xygine/include/xygine/physics/CollisionRectangleShape.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -53,7 +53,7 @@
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">Matt Marchant 2014 - 2016</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">Matt Marchant 2014 - 2017</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">http://trederia.blogspot.com</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">xygine - Zlib license.</span></div>
@@ -97,28 +97,31 @@
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        {</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <a class="code" href="classxy_1_1_physics_1_1_collision_rectangle_shape.html">CollisionRectangleShape</a>(<span class="keyword">const</span> sf::Vector2f&amp; size, <span class="keyword">const</span> sf::Vector2f&amp; position = sf::Vector2f());</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            ~<a class="code" href="classxy_1_1_physics_1_1_collision_rectangle_shape.html">CollisionRectangleShape</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <a class="code" href="classxy_1_1_physics_1_1_collision_rectangle_shape.html">CollisionRectangleShape</a>(<span class="keyword">const</span> <a class="code" href="classxy_1_1_physics_1_1_collision_rectangle_shape.html">CollisionRectangleShape</a>&amp;);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keyword">const</span> <a class="code" href="classxy_1_1_physics_1_1_collision_rectangle_shape.html">CollisionRectangleShape</a>&amp; operator = (<span class="keyword">const</span> <a class="code" href="classxy_1_1_physics_1_1_collision_rectangle_shape.html">CollisionRectangleShape</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            CollisionShape::Type type()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> CollisionShape::Type::Box; }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordtype">void</span> setRect(<span class="keyword">const</span> sf::Vector2f&amp; size, <span class="keyword">const</span> sf::Vector2f&amp; position = sf::Vector2f());</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordtype">void</span> setRect(<span class="keyword">const</span> sf::FloatRect&amp;);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keyword">const</span> sf::Vector2f&amp; getSize() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keyword">const</span> sf::Vector2f&amp; getPosition() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            b2PolygonShape m_rectangleShape;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            sf::Vector2f m_size;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            sf::Vector2f m_position;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        };</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#endif // XY_COLLISION_RECTANGLE_SHAPE_HPP_</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <a class="code" href="classxy_1_1_physics_1_1_collision_rectangle_shape.html">CollisionRectangleShape</a>(<span class="keyword">const</span> sf::FloatRect&amp; size);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            ~<a class="code" href="classxy_1_1_physics_1_1_collision_rectangle_shape.html">CollisionRectangleShape</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <a class="code" href="classxy_1_1_physics_1_1_collision_rectangle_shape.html">CollisionRectangleShape</a>(<span class="keyword">const</span> <a class="code" href="classxy_1_1_physics_1_1_collision_rectangle_shape.html">CollisionRectangleShape</a>&amp;);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keyword">const</span> <a class="code" href="classxy_1_1_physics_1_1_collision_rectangle_shape.html">CollisionRectangleShape</a>&amp; operator = (<span class="keyword">const</span> <a class="code" href="classxy_1_1_physics_1_1_collision_rectangle_shape.html">CollisionRectangleShape</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            CollisionShape::Type type()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> CollisionShape::Type::Box; }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordtype">void</span> setRect(<span class="keyword">const</span> sf::Vector2f&amp; size, <span class="keyword">const</span> sf::Vector2f&amp; position = sf::Vector2f());</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keywordtype">void</span> setRect(<span class="keyword">const</span> sf::FloatRect&amp;);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keyword">const</span> sf::Vector2f&amp; getSize() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keyword">const</span> sf::Vector2f&amp; getPosition() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            b2PolygonShape m_rectangleShape;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            sf::Vector2f m_size;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            sf::Vector2f m_position;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        };</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">#endif // XY_COLLISION_RECTANGLE_SHAPE_HPP_</span></div>
 <div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xygine namespace. </div><div class="ttdef"><b>Definition:</b> App.hpp:55</div></div>
 <div class="ttc" id="classxy_1_1_physics_1_1_collision_shape_html"><div class="ttname"><a href="classxy_1_1_physics_1_1_collision_shape.html">xy::Physics::CollisionShape</a></div><div class="ttdoc">Abstract base class for creating CollisionShapes. </div><div class="ttdef"><b>Definition:</b> CollisionShape.hpp:58</div></div>
 <div class="ttc" id="classxy_1_1_physics_1_1_collision_rectangle_shape_html"><div class="ttname"><a href="classxy_1_1_physics_1_1_collision_rectangle_shape.html">xy::Physics::CollisionRectangleShape</a></div><div class="ttdoc">Defines a rectangular CollisionShape which can be attached to a RigidBody. </div><div class="ttdef"><b>Definition:</b> CollisionRectangleShape.hpp:45</div></div>

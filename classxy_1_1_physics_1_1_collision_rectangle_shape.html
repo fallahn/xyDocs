@@ -78,6 +78,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9e76ff1c886ad6075565dc16ed26d374"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_physics_1_1_collision_rectangle_shape.html#a9e76ff1c886ad6075565dc16ed26d374">CollisionRectangleShape</a> (const sf::Vector2f &amp;size, const sf::Vector2f &amp;position=sf::Vector2f())</td></tr>
 <tr class="memdesc:a9e76ff1c886ad6075565dc16ed26d374"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a box from a size and optional position.  <a href="#a9e76ff1c886ad6075565dc16ed26d374">More...</a><br /></td></tr>
 <tr class="separator:a9e76ff1c886ad6075565dc16ed26d374"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab182f29dbb9b31bbd9e6308fb8149289"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_physics_1_1_collision_rectangle_shape.html#ab182f29dbb9b31bbd9e6308fb8149289">CollisionRectangleShape</a> (const sf::FloatRect &amp;size)</td></tr>
+<tr class="memdesc:ab182f29dbb9b31bbd9e6308fb8149289"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a box from a size.  <a href="#ab182f29dbb9b31bbd9e6308fb8149289">More...</a><br /></td></tr>
+<tr class="separator:ab182f29dbb9b31bbd9e6308fb8149289"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e99ef247e84cfd05a0821569b2c47cd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e99ef247e84cfd05a0821569b2c47cd"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>CollisionRectangleShape</b> (const <a class="el" href="classxy_1_1_physics_1_1_collision_rectangle_shape.html">CollisionRectangleShape</a> &amp;)</td></tr>
 <tr class="separator:a5e99ef247e84cfd05a0821569b2c47cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -210,6 +213,31 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setShape</b> (b2Shape
   <table class="params">
     <tr><td class="paramname">size</td><td>Size of the box in world units </td></tr>
     <tr><td class="paramname">position</td><td>Position of the box relative to the parent body </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab182f29dbb9b31bbd9e6308fb8149289"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">xy::Physics::CollisionRectangleShape::CollisionRectangleShape </td>
+          <td>(</td>
+          <td class="paramtype">const sf::FloatRect &amp;&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a box from a size. </p>
+<p>When attached to a rigidbody the position is relative to its parent, else it is in world coordinates</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sf::FloatRect</td><td>an sf::FloatRect representing the size and position of the </td></tr>
   </table>
   </dd>
 </dl>
