@@ -118,9 +118,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab01a101fdabfee30003fbaf8d2ebf34a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_audio_source.html#ab01a101fdabfee30003fbaf8d2ebf34a">destroy</a> () override</td></tr>
 <tr class="memdesc:ab01a101fdabfee30003fbaf8d2ebf34a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys this component.  <a href="#ab01a101fdabfee30003fbaf8d2ebf34a">More...</a><br /></td></tr>
 <tr class="separator:ab01a101fdabfee30003fbaf8d2ebf34a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a789135e89b5e86a4e554e5362a329e02"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_audio_source.html#a789135e89b5e86a4e554e5362a329e02">setSound</a> (const std::string &amp;path, <a class="el" href="classxy_1_1_audio_source.html#a7790e8dcfad315e0dcb6f8b19fdff533">Mode</a>=Mode::Cached)</td></tr>
-<tr class="memdesc:a789135e89b5e86a4e554e5362a329e02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the sound to be played by this sound source.  <a href="#a789135e89b5e86a4e554e5362a329e02">More...</a><br /></td></tr>
-<tr class="separator:a789135e89b5e86a4e554e5362a329e02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a307a4b4daa1adfee97a4c1b486f7364a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_audio_source.html#a307a4b4daa1adfee97a4c1b486f7364a">setSound</a> (const std::string &amp;path, <a class="el" href="classxy_1_1_audio_source.html#a7790e8dcfad315e0dcb6f8b19fdff533">Mode</a>=Mode::Cached)</td></tr>
+<tr class="memdesc:a307a4b4daa1adfee97a4c1b486f7364a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the sound to be played by this sound source.  <a href="#a307a4b4daa1adfee97a4c1b486f7364a">More...</a><br /></td></tr>
+<tr class="separator:a307a4b4daa1adfee97a4c1b486f7364a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6900df6708a0d4a2d4524e603297fd75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_audio_source.html#a6900df6708a0d4a2d4524e603297fd75">setSoundBuffer</a> (sf::SoundBuffer &amp;)</td></tr>
 <tr class="memdesc:a6900df6708a0d4a2d4524e603297fd75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the SoundBuffer for Cached mode sounds. Has no effect on streaming sounds. When creating a lot of components on the fly it may be more effecient to cache SoundBuffers elsewhere to save a string lookup for the SoundBuffer audio path each time.  <a href="#a6900df6708a0d4a2d4524e603297fd75">More...</a><br /></td></tr>
 <tr class="separator:a6900df6708a0d4a2d4524e603297fd75"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -583,12 +583,12 @@ template&lt;typename T &gt; </td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a789135e89b5e86a4e554e5362a329e02"></a>
+<a class="anchor" id="a307a4b4daa1adfee97a4c1b486f7364a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void AudioSource::setSound </td>
+          <td class="memname">bool AudioSource::setSound </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>path</em>, </td>
@@ -615,6 +615,7 @@ template&lt;typename T &gt; </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the file was loaded successfully (or a placeholder was found) </dd></dl>
 
 </div>
 </div>

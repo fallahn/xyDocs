@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xygine: C:/Users/Matthew Marchant/Documents/Visual Studio 2015/Projects/xygine/xygine/include/xygine/Scene.hpp Source File</title>
+<title>xygine: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xygine/include/xygine/Scene.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -175,48 +175,45 @@
 <div class="line"><a name="l00280"></a><span class="lineno"><a class="line" href="classxy_1_1_scene.html#a0943d7d56e5ab466af7d46fcd7c2bda9">  280</a></span>&#160;        <a class="code" href="structxy_1_1_scene_1_1_sky_light.html">SkyLight</a>&amp; <a class="code" href="classxy_1_1_scene.html#a0943d7d56e5ab466af7d46fcd7c2bda9">getSkyLight</a>() { <span class="keywordflow">return</span> m_skyLight; }</div>
 <div class="line"><a name="l00284"></a><span class="lineno"><a class="line" href="classxy_1_1_scene.html#a82635a5258216f14577758700b6de38c">  284</a></span>&#160;        <span class="keyword">const</span> <a class="code" href="structxy_1_1_scene_1_1_sky_light.html">SkyLight</a>&amp; <a class="code" href="classxy_1_1_scene.html#a82635a5258216f14577758700b6de38c">getSkyLight</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_skyLight; }</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
-<div class="line"><a name="l00290"></a><span class="lineno"><a class="line" href="classxy_1_1_scene.html#aedc55e7e5cccb7f85071def13e1a9392">  290</a></span>&#160;        <span class="keyword">const</span> sf::Texture&amp; <a class="code" href="classxy_1_1_scene.html#aedc55e7e5cccb7f85071def13e1a9392">getReflection</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_reflectionTexture.getTexture(); }</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        <a class="code" href="classxy_1_1_quad_tree.html">QuadTree</a> m_quadTree; <span class="comment">//must live longer than any entity</span></div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <a class="code" href="classxy_1_1_quad_tree.html">QuadTree</a> m_lightTree;</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        sf::Color m_ambientColour;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        SkyLight m_skyLight;</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        std::vector&lt;Entity::Ptr&gt; m_layers;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        std::vector&lt;std::pair&lt;Layer, Entity::Ptr&gt;&gt; m_pendingEntities;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        </div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="keyword">mutable</span> sf::RenderTexture m_reflectionTexture;</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        <a class="code" href="classxy_1_1_camera.html">Camera</a>* m_defaultCamera;</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <span class="keyword">const</span> <a class="code" href="classxy_1_1_camera.html">Camera</a>* m_activeCamera;</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        </div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>&amp; m_messageBus;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <a class="code" href="classxy_1_1_command_queue.html">CommandQueue</a> m_commandQueue;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <span class="keywordtype">bool</span> m_drawDebug;</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="keyword">struct </span><a class="code" href="classxy_1_1_render_pass.html">RenderPass</a></div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        {</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            PostProcess::Ptr postEffect;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            sf::RenderTexture* inBuffer = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            sf::RenderTexture* outBuffer = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        };</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        std::vector&lt;RenderPass&gt; m_renderPasses;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <a class="code" href="classxy_1_1_quad_tree.html">QuadTree</a> m_quadTree; <span class="comment">//must live longer than any entity</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <a class="code" href="classxy_1_1_quad_tree.html">QuadTree</a> m_lightTree;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        sf::Color m_ambientColour;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        SkyLight m_skyLight;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        std::vector&lt;Entity::Ptr&gt; m_layers;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        std::vector&lt;std::pair&lt;Layer, Entity::Ptr&gt;&gt; m_pendingEntities;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <a class="code" href="classxy_1_1_camera.html">Camera</a>* m_defaultCamera;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <span class="keyword">const</span> <a class="code" href="classxy_1_1_camera.html">Camera</a>* m_activeCamera;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        </div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        <a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>&amp; m_messageBus;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <a class="code" href="classxy_1_1_command_queue.html">CommandQueue</a> m_commandQueue;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keywordtype">bool</span> m_drawDebug;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <span class="keyword">struct </span><a class="code" href="classxy_1_1_render_pass.html">RenderPass</a></div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        {</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            PostProcess::Ptr postEffect;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            sf::RenderTexture* inBuffer = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            sf::RenderTexture* outBuffer = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        };</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        std::vector&lt;RenderPass&gt; m_renderPasses;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <span class="keyword">mutable</span> sf::RenderTexture m_sceneBufferA;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <span class="keyword">mutable</span> sf::RenderTexture m_sceneBufferB;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        std::function&lt;void(sf::RenderTarget&amp;, sf::RenderStates)&gt; m_currentRenderPath;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <span class="keywordtype">void</span> draw(sf::RenderTarget&amp;, sf::RenderStates) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        <span class="keyword">mutable</span> sf::RenderTexture m_sceneBufferA;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        <span class="keyword">mutable</span> sf::RenderTexture m_sceneBufferB;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        <span class="keywordtype">void</span> defaultRenderPath(sf::RenderTarget&amp;, sf::RenderStates) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        <span class="keywordtype">void</span> postEffectRenderPath(sf::RenderTarget&amp;, sf::RenderStates) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        std::function&lt;void(sf::RenderTarget&amp;, sf::RenderStates)&gt; m_currentRenderPath;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        <span class="keywordtype">void</span> draw(sf::RenderTarget&amp;, sf::RenderStates) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        <span class="keywordtype">void</span> defaultRenderPath(sf::RenderTarget&amp;, sf::RenderStates) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        <span class="keywordtype">void</span> postEffectRenderPath(sf::RenderTarget&amp;, sf::RenderStates) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        <span class="keywordtype">void</span> setupConCommands();</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    };</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;}</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;<span class="preprocessor">#endif //XY_SCENE_HPP_</span></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        <span class="keywordtype">void</span> setupConCommands();</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    };</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;}</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="preprocessor">#endif //XY_SCENE_HPP_</span></div>
 <div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xygine namespace. </div><div class="ttdef"><b>Definition:</b> App.hpp:55</div></div>
 <div class="ttc" id="classxy_1_1_scene_html_ad2693dc43b077e49c66dc3c6653e6b04"><div class="ttname"><a href="classxy_1_1_scene.html#ad2693dc43b077e49c66dc3c6653e6b04">xy::Scene::getAmbientColour</a></div><div class="ttdeci">const sf::Color &amp; getAmbientColour() const </div><div class="ttdoc">Retrieves the scene&#39;s current ambient colour for shaders which perform lighting. </div><div class="ttdef"><b>Definition:</b> Scene.hpp:269</div></div>
 <div class="ttc" id="classxy_1_1_scene_html_a0bf10e5ead2c4248f2f3e2c4536a5240"><div class="ttname"><a href="classxy_1_1_scene.html#a0bf10e5ead2c4248f2f3e2c4536a5240">xy::Scene::Layer</a></div><div class="ttdeci">Layer</div><div class="ttdoc">Layer names to which entities may be added. </div><div class="ttdef"><b>Definition:</b> Scene.hpp:121</div></div>
@@ -229,7 +226,6 @@
 <div class="ttc" id="classxy_1_1_command_queue_html"><div class="ttname"><a href="classxy_1_1_command_queue.html">xy::CommandQueue</a></div><div class="ttdoc">Queue of commands to be executed by Entities in a scene. </div><div class="ttdef"><b>Definition:</b> Command.hpp:66</div></div>
 <div class="ttc" id="structxy_1_1_scene_1_1_sky_light_html_a4a3a8f2a36c22e4cd86660394aa84538"><div class="ttname"><a href="structxy_1_1_scene_1_1_sky_light.html#a4a3a8f2a36c22e4cd86660394aa84538">xy::Scene::SkyLight::setDiffuseColour</a></div><div class="ttdeci">void setDiffuseColour(const sf::Color &amp;c)</div><div class="ttdoc">Sets the current diffuse colour of the sky light. </div><div class="ttdef"><b>Definition:</b> Scene.hpp:79</div></div>
 <div class="ttc" id="classxy_1_1_camera_html"><div class="ttname"><a href="classxy_1_1_camera.html">xy::Camera</a></div><div class="ttdoc">Camera Component. </div><div class="ttdef"><b>Definition:</b> Camera.hpp:50</div></div>
-<div class="ttc" id="classxy_1_1_scene_html_aedc55e7e5cccb7f85071def13e1a9392"><div class="ttname"><a href="classxy_1_1_scene.html#aedc55e7e5cccb7f85071def13e1a9392">xy::Scene::getReflection</a></div><div class="ttdeci">const sf::Texture &amp; getReflection() const </div><div class="ttdoc">Returns a low resolution render of the background layers which can be used as a reflection map...</div><div class="ttdef"><b>Definition:</b> Scene.hpp:290</div></div>
 <div class="ttc" id="structxy_1_1_scene_1_1_sky_light_html_a1f88359ae04b69765e896f27b085e560"><div class="ttname"><a href="structxy_1_1_scene_1_1_sky_light.html#a1f88359ae04b69765e896f27b085e560">xy::Scene::SkyLight::getDirection</a></div><div class="ttdeci">const sf::Vector3f &amp; getDirection() const </div><div class="ttdoc">Gets the direction from which the sky light is cast. </div><div class="ttdef"><b>Definition:</b> Scene.hpp:92</div></div>
 <div class="ttc" id="classxy_1_1_render_pass_html"><div class="ttname"><a href="classxy_1_1_render_pass.html">xy::RenderPass</a></div><div class="ttdoc">Represents an OpenGL state used during a specific render pass. </div><div class="ttdef"><b>Definition:</b> RenderPass.hpp:89</div></div>
 <div class="ttc" id="structxy_1_1_scene_1_1_sky_light_html_a16631d43172046657361ff2314e26c26"><div class="ttname"><a href="structxy_1_1_scene_1_1_sky_light.html#a16631d43172046657361ff2314e26c26">xy::Scene::SkyLight::setIntensity</a></div><div class="ttdeci">void setIntensity(float i)</div><div class="ttdoc">Sets the sky light intensity. A value of 0 effectively turns off the light, and any positive value is...</div><div class="ttdef"><b>Definition:</b> Scene.hpp:110</div></div>

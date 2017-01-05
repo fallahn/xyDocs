@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xygine: C:/Users/Matthew Marchant/Documents/Visual Studio 2015/Projects/xygine/xygine/include/xygine/mesh/shaders/DeferredLighting.hpp Source File</title>
+<title>xygine: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xygine/include/xygine/mesh/shaders/DeferredLighting.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -169,7 +169,7 @@
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                <span class="stringliteral">&quot;uniform sampler2D u_positionMap;\n&quot;</span></div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                <span class="stringliteral">&quot;//uniform sampler2D u_aoMap;\n&quot;</span></div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                <span class="stringliteral">&quot;uniform sampler2D u_illuminationMap;\n&quot;</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                <span class="stringliteral">&quot;uniform sampler2D u_reflectMap;\n&quot;</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                <span class="stringliteral">&quot;//uniform sampler2D u_reflectMap;\n&quot;</span></div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                <span class="stringliteral">&quot;uniform int u_lightCount = MAX_POINT_LIGHTS;\n&quot;</span></div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                <span class="stringliteral">&quot;uniform sampler2DArray u_depthMaps;\n&quot;</span></div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                <span class="stringliteral">&quot;uniform sampler2D u_depthBuffer;\n&quot;</span></div>
@@ -258,12 +258,12 @@
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="comment">                &quot;        return (base &lt; 0.5) ? (2.0 * base * blend) : (1.0 - 2.0 * (1.0 - base) * (1.0 - blend));\n&quot;</span></div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="comment">                &quot;    }\n&quot;*/</span></div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                <span class="stringliteral">&quot;vec3 getReflection(vec3 normal)\n&quot;</span></div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                <span class="stringliteral">&quot;{\n&quot;</span></div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                <span class="stringliteral">&quot;    vec3 reflection = reflect(normal, eyeDirection);\n&quot;</span></div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                <span class="stringliteral">&quot;    vec2 coord = vec2(reflection.x, reflection.y);\n&quot;</span></div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                <span class="stringliteral">&quot;    return texture(u_reflectMap, coord).rgb;\n&quot;</span></div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                <span class="stringliteral">&quot;}\n&quot;</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                <span class="comment">/*&quot;vec3 getReflection(vec3 normal)\n&quot;</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="comment">                &quot;{\n&quot;</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="comment">                &quot;    vec3 reflection = reflect(normal, eyeDirection);\n&quot;</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="comment">                &quot;    vec2 coord = vec2(reflection.x, reflection.y);\n&quot;</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="comment">                &quot;    return texture(u_reflectMap, coord).rgb;\n&quot;</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="comment">                &quot;}\n&quot;*/</span></div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                <span class="comment">//#include &quot;Water.inl&quot;</span></div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
@@ -304,7 +304,7 @@
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                <span class="stringliteral">&quot;    //blendedColour *= texture(u_aoMap, v_texCoord).rgb;\n&quot;</span></div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                <span class="stringliteral">&quot;    blendedColour = mix(blendedColour, diffuse.rgb, mask.b);\n&quot;</span></div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                <span class="stringliteral">&quot;    //blendedColour = mix(getReflection(normal), blendedColour, mask.a);\n&quot;</span></div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                <span class="stringliteral">&quot;    blendedColour += getReflection(normal) * (1.0 - mask.a);\n&quot;</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                <span class="stringliteral">&quot;    //blendedColour += getReflection(normal) * (1.0 - mask.a);\n&quot;</span></div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                <span class="comment">/*&quot;    vec3 illumination  = texture(u_illuminationMap, v_texCoord).rgb;\n&quot;</span></div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="comment">                &quot;    illumination.r = blendOverlay(blendedColour.r, illumination.r);\n&quot;</span></div>
