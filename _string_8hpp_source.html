@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xygine: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xygine/include/xygine/util/String.hpp Source File</title>
+<title>xygine: C:/Users/Matthew Marchant/Documents/Visual Studio 2015/Projects/xygine/xygine/include/xygine/util/String.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -94,7 +94,7 @@
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
 <div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_string.html">   44</a></span>&#160;        <span class="keyword">namespace </span>String</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> std::vector&lt;float&gt; toFloatArray(<span class="keyword">const</span> std::string&amp; str)</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_string.html#a043207bb782ceef5d5022c3bdd216683">   49</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> std::vector&lt;float&gt; <a class="code" href="namespacexy_1_1_util_1_1_string.html#a043207bb782ceef5d5022c3bdd216683">toFloatArray</a>(<span class="keyword">const</span> std::string&amp; str)</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            {</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                std::vector&lt;float&gt; values;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="keyword">auto</span> start = 0u;</div>
@@ -116,7 +116,7 @@
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="keywordflow">return</span> values;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            }</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> std::vector&lt;std::string&gt; tokenize(<span class="keyword">const</span> std::string&amp; str, <span class="keywordtype">char</span> delim, <span class="keywordtype">bool</span> keepEmpty = <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_string.html#a0b538eddd674b5693501d799e77c87bc">   74</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> std::vector&lt;std::string&gt; <a class="code" href="namespacexy_1_1_util_1_1_string.html#a0b538eddd674b5693501d799e77c87bc">tokenize</a>(<span class="keyword">const</span> std::string&amp; str, <span class="keywordtype">char</span> delim, <span class="keywordtype">bool</span> keepEmpty = <span class="keyword">false</span>)</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            {</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                XY_ASSERT(!str.empty(), <span class="stringliteral">&quot;string empty&quot;</span>);</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                std::stringstream ss(str);</div>
@@ -133,7 +133,7 @@
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                <span class="keywordflow">return</span> output;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            }</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> std::string toLower(<span class="keyword">const</span> std::string&amp; str)</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_string.html#a975e2b336f6d9263532ada9a02338a4d">   94</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> std::string <a class="code" href="namespacexy_1_1_util_1_1_string.html#a975e2b336f6d9263532ada9a02338a4d">toLower</a>(<span class="keyword">const</span> std::string&amp; str)</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            {</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                std::string result = str;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                std::transform(result.begin(), result.end(), result.begin(), ::tolower);</div>
@@ -145,6 +145,9 @@
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#endif //XY_UTIL_STRING_HPP_</span></div>
 <div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xygine namespace. </div><div class="ttdef"><b>Definition:</b> App.hpp:55</div></div>
+<div class="ttc" id="namespacexy_1_1_util_1_1_string_html_a975e2b336f6d9263532ada9a02338a4d"><div class="ttname"><a href="namespacexy_1_1_util_1_1_string.html#a975e2b336f6d9263532ada9a02338a4d">xy::Util::String::toLower</a></div><div class="ttdeci">static std::string toLower(const std::string &amp;str)</div><div class="ttdoc">Converts a string to all lower case. </div><div class="ttdef"><b>Definition:</b> String.hpp:94</div></div>
+<div class="ttc" id="namespacexy_1_1_util_1_1_string_html_a043207bb782ceef5d5022c3bdd216683"><div class="ttname"><a href="namespacexy_1_1_util_1_1_string.html#a043207bb782ceef5d5022c3bdd216683">xy::Util::String::toFloatArray</a></div><div class="ttdeci">static std::vector&lt; float &gt; toFloatArray(const std::string &amp;str)</div><div class="ttdoc">Converts a comma delimited string of floats into an array. </div><div class="ttdef"><b>Definition:</b> String.hpp:49</div></div>
+<div class="ttc" id="namespacexy_1_1_util_1_1_string_html_a0b538eddd674b5693501d799e77c87bc"><div class="ttname"><a href="namespacexy_1_1_util_1_1_string.html#a0b538eddd674b5693501d799e77c87bc">xy::Util::String::tokenize</a></div><div class="ttdeci">static std::vector&lt; std::string &gt; tokenize(const std::string &amp;str, char delim, bool keepEmpty=false)</div><div class="ttdoc">Splits a string with a given token and returns a vector of results. </div><div class="ttdef"><b>Definition:</b> String.hpp:74</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

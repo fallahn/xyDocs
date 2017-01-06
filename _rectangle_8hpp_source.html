@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xygine: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xygine/include/xygine/util/Rectangle.hpp Source File</title>
+<title>xygine: C:/Users/Matthew Marchant/Documents/Visual Studio 2015/Projects/xygine/xygine/include/xygine/util/Rectangle.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,7 +91,7 @@
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    {</div>
 <div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_rectangle.html">   41</a></span>&#160;        <span class="keyword">namespace </span>Rectangle</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">bool</span> contains(<span class="keyword">const</span> sf::FloatRect&amp; first, <span class="keyword">const</span> sf::FloatRect&amp; second)</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_rectangle.html#a5d7fa3d2499f0106cff948299086430c">   46</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="namespacexy_1_1_util_1_1_rectangle.html#a5d7fa3d2499f0106cff948299086430c">contains</a>(<span class="keyword">const</span> sf::FloatRect&amp; first, <span class="keyword">const</span> sf::FloatRect&amp; second)</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            {</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="keywordflow">if</span> (second.left &lt; first.left) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <span class="keywordflow">if</span> (second.top &lt; first.top) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
@@ -100,11 +100,11 @@
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> sf::Vector2f centre(<span class="keyword">const</span> sf::FloatRect&amp; rect)</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_rectangle.html#a317758f4191f075a38a1fee0b2c48ec7">   58</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> sf::Vector2f <a class="code" href="namespacexy_1_1_util_1_1_rectangle.html#a317758f4191f075a38a1fee0b2c48ec7">centre</a>(<span class="keyword">const</span> sf::FloatRect&amp; rect)</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            {</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="keywordflow">return</span> sf::Vector2f(rect.left + (rect.width / 2.f), rect.top + (rect.height / 2.f));</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> sf::FloatRect fromBounds(<span class="keyword">const</span> sf::Vector2f&amp; lower, <span class="keyword">const</span> sf::Vector2f&amp; upper)</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_rectangle.html#afcc7604d8332e0869ee16cc8944fd038">   65</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> sf::FloatRect <a class="code" href="namespacexy_1_1_util_1_1_rectangle.html#afcc7604d8332e0869ee16cc8944fd038">fromBounds</a>(<span class="keyword">const</span> sf::Vector2f&amp; lower, <span class="keyword">const</span> sf::Vector2f&amp; upper)</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            {</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <span class="keywordflow">return</span> sf::FloatRect(lower.x, lower.y, upper.x - lower.x, upper.y - lower.y);</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            }</div>
@@ -113,6 +113,9 @@
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif //XY_UTIL_RECTANGLE_HPP_</span></div>
 <div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xygine namespace. </div><div class="ttdef"><b>Definition:</b> App.hpp:55</div></div>
+<div class="ttc" id="namespacexy_1_1_util_1_1_rectangle_html_a317758f4191f075a38a1fee0b2c48ec7"><div class="ttname"><a href="namespacexy_1_1_util_1_1_rectangle.html#a317758f4191f075a38a1fee0b2c48ec7">xy::Util::Rectangle::centre</a></div><div class="ttdeci">static sf::Vector2f centre(const sf::FloatRect &amp;rect)</div><div class="ttdoc">Returns the centre point of a given FloatRect. </div><div class="ttdef"><b>Definition:</b> Rectangle.hpp:58</div></div>
+<div class="ttc" id="namespacexy_1_1_util_1_1_rectangle_html_afcc7604d8332e0869ee16cc8944fd038"><div class="ttname"><a href="namespacexy_1_1_util_1_1_rectangle.html#afcc7604d8332e0869ee16cc8944fd038">xy::Util::Rectangle::fromBounds</a></div><div class="ttdeci">static sf::FloatRect fromBounds(const sf::Vector2f &amp;lower, const sf::Vector2f &amp;upper)</div><div class="ttdoc">Returns a new FloatRect from the given upper and lower bounds. </div><div class="ttdef"><b>Definition:</b> Rectangle.hpp:65</div></div>
+<div class="ttc" id="namespacexy_1_1_util_1_1_rectangle_html_a5d7fa3d2499f0106cff948299086430c"><div class="ttname"><a href="namespacexy_1_1_util_1_1_rectangle.html#a5d7fa3d2499f0106cff948299086430c">xy::Util::Rectangle::contains</a></div><div class="ttdeci">static bool contains(const sf::FloatRect &amp;first, const sf::FloatRect &amp;second)</div><div class="ttdoc">Returns true if the second given FloatRect is fully contained within the first. </div><div class="ttdef"><b>Definition:</b> Rectangle.hpp:46</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xygine: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xygine/include/xygine/util/Math.hpp Source File</title>
+<title>xygine: C:/Users/Matthew Marchant/Documents/Visual Studio 2015/Projects/xygine/xygine/include/xygine/util/Math.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,15 +91,15 @@
 <div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_math.html">   40</a></span>&#160;        <span class="keyword">namespace </span>Math</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        {</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> T clamp(<span class="keyword">const</span> T&amp; n, <span class="keyword">const</span> T&amp; lower, <span class="keyword">const</span> T&amp; upper)</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_math.html#a824c827da2e16925577d522e850786bf">   46</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> T <a class="code" href="namespacexy_1_1_util_1_1_math.html#a824c827da2e16925577d522e850786bf">clamp</a>(<span class="keyword">const</span> T&amp; n, <span class="keyword">const</span> T&amp; lower, <span class="keyword">const</span> T&amp; upper)</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            {</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="keywordflow">return</span> std::max(lower, std::min(n, upper));</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">float</span> round(<span class="keywordtype">float</span> v)</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_math.html#af6f8aa28faab6485b2b71a755ac382e2">   53</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code" href="namespacexy_1_1_util_1_1_math.html#af6f8aa28faab6485b2b71a755ac382e2">round</a>(<span class="keywordtype">float</span> v)</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            {</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="keywordflow">return</span> std::floor(v + 0.5f);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">float</span> shortestRotation(<span class="keywordtype">float</span> start, <span class="keywordtype">float</span> end)</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_math.html#a68413c56a7da0efee2f2dbd9f5c856c1">   60</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code" href="namespacexy_1_1_util_1_1_math.html#a68413c56a7da0efee2f2dbd9f5c856c1">shortestRotation</a>(<span class="keywordtype">float</span> start, <span class="keywordtype">float</span> end)</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            {</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="keywordtype">float</span> diff = end - start;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="keywordflow">if</span> (diff &gt; 180.f) diff -= 360.f;</div>
@@ -112,6 +112,9 @@
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif //XY_UTIL_MATH_HPP_</span></div>
 <div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xygine namespace. </div><div class="ttdef"><b>Definition:</b> App.hpp:55</div></div>
+<div class="ttc" id="namespacexy_1_1_util_1_1_math_html_a824c827da2e16925577d522e850786bf"><div class="ttname"><a href="namespacexy_1_1_util_1_1_math.html#a824c827da2e16925577d522e850786bf">xy::Util::Math::clamp</a></div><div class="ttdeci">static T clamp(const T &amp;n, const T &amp;lower, const T &amp;upper)</div><div class="ttdoc">Clamps a given value to the given upper and lower bounds. </div><div class="ttdef"><b>Definition:</b> Math.hpp:46</div></div>
+<div class="ttc" id="namespacexy_1_1_util_1_1_math_html_a68413c56a7da0efee2f2dbd9f5c856c1"><div class="ttname"><a href="namespacexy_1_1_util_1_1_math.html#a68413c56a7da0efee2f2dbd9f5c856c1">xy::Util::Math::shortestRotation</a></div><div class="ttdeci">static float shortestRotation(float start, float end)</div><div class="ttdoc">finds the shortest rotation, in degrees, between the given start and end angles </div><div class="ttdef"><b>Definition:</b> Math.hpp:60</div></div>
+<div class="ttc" id="namespacexy_1_1_util_1_1_math_html_af6f8aa28faab6485b2b71a755ac382e2"><div class="ttname"><a href="namespacexy_1_1_util_1_1_math.html#af6f8aa28faab6485b2b71a755ac382e2">xy::Util::Math::round</a></div><div class="ttdeci">static float round(float v)</div><div class="ttdoc">Rounds a floating point value to the nearest whole number. </div><div class="ttdef"><b>Definition:</b> Math.hpp:53</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

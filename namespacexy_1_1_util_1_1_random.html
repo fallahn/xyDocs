@@ -61,6 +61,15 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a1aa6e5ce76f4ec72ebe1da6d1744c2ec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1aa6e5ce76f4ec72ebe1da6d1744c2ec"></a>
+static std::mt19937&#160;</td><td class="memItemRight" valign="bottom"><b>rndEngine</b> (static_cast&lt; unsigned long &gt;(std::time(nullptr)))</td></tr>
+<tr class="separator:a1aa6e5ce76f4ec72ebe1da6d1744c2ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeed2496510b00eadc079e756924282f6"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacexy_1_1_util_1_1_random.html#aeed2496510b00eadc079e756924282f6">value</a> (float begin, float end)</td></tr>
+<tr class="memdesc:aeed2496510b00eadc079e756924282f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pseudo random floating point value.  <a href="#aeed2496510b00eadc079e756924282f6">More...</a><br /></td></tr>
+<tr class="separator:aeed2496510b00eadc079e756924282f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a162806add68712d884f1afb5c75e30ca"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacexy_1_1_util_1_1_random.html#a162806add68712d884f1afb5c75e30ca">value</a> (int begin, int end)</td></tr>
+<tr class="memdesc:a162806add68712d884f1afb5c75e30ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pseudo random integer value.  <a href="#a162806add68712d884f1afb5c75e30ca">More...</a><br /></td></tr>
+<tr class="separator:a162806add68712d884f1afb5c75e30ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0643645501c06ba19777c4aaa2a3bd47"><td class="memItemLeft" align="right" valign="top">XY_EXPORT_API std::vector&lt; sf::Vector2f &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacexy_1_1_util_1_1_random.html#a0643645501c06ba19777c4aaa2a3bd47">poissonDiscDistribution</a> (const sf::FloatRect &amp;area, float minDist, std::size_t maxPoints)</td></tr>
 <tr class="memdesc:a0643645501c06ba19777c4aaa2a3bd47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a poission disc sampled distribution of points within a given area.  <a href="#a0643645501c06ba19777c4aaa2a3bd47">More...</a><br /></td></tr>
 <tr class="separator:a0643645501c06ba19777c4aaa2a3bd47"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -104,6 +113,92 @@ Functions</h2></td></tr>
     <tr><td class="paramname">area</td><td>sf::FloatRect within which the points are distributed </td></tr>
     <tr><td class="paramname">minDist</td><td>minimum distance between points </td></tr>
     <tr><td class="paramname">maxPoints</td><td>maximum number of points to try generating </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aeed2496510b00eadc079e756924282f6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float xy::Util::Random::value </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a pseudo random floating point value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">begin</td><td>Minimum value </td></tr>
+    <tr><td class="paramname">end</td><td>Maximum value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a162806add68712d884f1afb5c75e30ca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int xy::Util::Random::value </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a pseudo random integer value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">begin</td><td>Minimum value </td></tr>
+    <tr><td class="paramname">end</td><td>Maximum value </td></tr>
   </table>
   </dd>
 </dl>

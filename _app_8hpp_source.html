@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xygine: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xygine/include/xygine/App.hpp Source File</title>
+<title>xygine: C:/Users/Matthew Marchant/Documents/Visual Studio 2015/Projects/xygine/xygine/include/xygine/App.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -161,57 +161,59 @@
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> quit();</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        sf::RenderWindow&amp; getRenderWindow();</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> handleEvent(<span class="keyword">const</span> sf::Event&amp;) = 0;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> handleMessage(<span class="keyword">const</span> <a class="code" href="classxy_1_1_message.html">Message</a>&amp;) = 0;</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> registerStates() = 0;</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> updateApp(<span class="keywordtype">float</span> dt) = 0;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> draw() = 0;</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> initialise();</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> finalise();</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <span class="keyword">struct </span>SettingsFile final</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        {</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            <span class="keywordtype">int</span> ident;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            <span class="keywordtype">int</span> version;</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            sf::VideoMode videoMode;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            sf::Int32 windowStyle;</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            <a class="code" href="structxy_1_1_app_1_1_audio_settings.html">AudioSettings</a> audioSettings;</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            <a class="code" href="structxy_1_1_app_1_1_game_settings.html">GameSettings</a> gameSettings;</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        };</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> setClearColour(sf::Color);</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        sf::RenderWindow&amp; getRenderWindow();</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> handleEvent(<span class="keyword">const</span> sf::Event&amp;) = 0;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> handleMessage(<span class="keyword">const</span> <a class="code" href="classxy_1_1_message.html">Message</a>&amp;) = 0;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> registerStates() = 0;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> updateApp(<span class="keywordtype">float</span> dt) = 0;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> draw() = 0;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> initialise();</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> finalise();</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        <span class="keyword">struct </span>SettingsFile final</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        {</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            <span class="keywordtype">int</span> ident;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            <span class="keywordtype">int</span> version;</div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        GameSettings m_gameSettings;</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        AudioSettings m_audioSettings;</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        VideoSettings m_videoSettings;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        sf::RenderWindow m_renderWindow;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            sf::VideoMode videoMode;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            sf::Int32 windowStyle;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;            <a class="code" href="structxy_1_1_app_1_1_audio_settings.html">AudioSettings</a> audioSettings;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;            <a class="code" href="structxy_1_1_app_1_1_game_settings.html">GameSettings</a> gameSettings;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        };</div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        <a class="code" href="classxy_1_1_message_bus.html">MessageBus</a> m_messageBus;</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        <a class="code" href="classxy_1_1_scores.html">Scores</a> m_scores;</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <span class="comment">//Difficulty m_pendingDifficulty;</span></div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        std::function&lt;void(float)&gt; update;</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        std::function&lt;void(const sf::Event&amp;)&gt; eventHandler;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        GameSettings m_gameSettings;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        AudioSettings m_audioSettings;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        VideoSettings m_videoSettings;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        sf::RenderWindow m_renderWindow;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        <a class="code" href="classxy_1_1_message_bus.html">MessageBus</a> m_messageBus;</div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        <span class="keywordtype">void</span> loadSettings();</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        <span class="keywordtype">void</span> saveSettings();</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        <a class="code" href="classxy_1_1_scores.html">Scores</a> m_scores;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        <span class="comment">//Difficulty m_pendingDifficulty;</span></div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        <span class="keywordtype">void</span> saveScreenshot();</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        <span class="keywordtype">void</span> handleEvents();</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        <span class="keywordtype">void</span> handleMessages();</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        <span class="keywordtype">void</span> registerConCommands();</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    };</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;}</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;<span class="preprocessor">#endif //XY_APP_HPP_</span></div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        std::function&lt;void(float)&gt; update;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        std::function&lt;void(const sf::Event&amp;)&gt; eventHandler;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        <span class="keywordtype">void</span> loadSettings();</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        <span class="keywordtype">void</span> saveSettings();</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <span class="keywordtype">void</span> saveScreenshot();</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        <span class="keywordtype">void</span> handleEvents();</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        <span class="keywordtype">void</span> handleMessages();</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        <span class="keywordtype">void</span> registerConCommands();</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    };</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;}</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;<span class="preprocessor">#endif //XY_APP_HPP_</span></div>
 <div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xygine namespace. </div><div class="ttdef"><b>Definition:</b> App.hpp:55</div></div>
 <div class="ttc" id="structxy_1_1_app_1_1_game_settings_html"><div class="ttname"><a href="structxy_1_1_app_1_1_game_settings.html">xy::App::GameSettings</a></div><div class="ttdoc">Game settings struct. </div><div class="ttdef"><b>Definition:</b> App.hpp:112</div></div>
 <div class="ttc" id="classxy_1_1_message_bus_html"><div class="ttname"><a href="classxy_1_1_message_bus.html">xy::MessageBus</a></div><div class="ttdoc">System wide message bus for custom event messaging. </div><div class="ttdef"><b>Definition:</b> MessageBus.hpp:251</div></div>

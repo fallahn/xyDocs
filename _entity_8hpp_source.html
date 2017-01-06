@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xygine: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xygine/include/xygine/Entity.hpp Source File</title>
+<title>xygine: C:/Users/Matthew Marchant/Documents/Visual Studio 2015/Projects/xygine/xygine/include/xygine/Entity.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -138,163 +138,177 @@
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            {</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                <span class="comment">//store a reference to drawables so they can be drawn</span></div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                m_drawables.push_back(dynamic_cast&lt;sf::Drawable*&gt;(c.get()));</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            }</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            c-&gt;setParentUID(m_uid);</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            c-&gt;onStart(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            </div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            m_pendingComponents.push_back(std::move(c));</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        }</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, enable_if&lt;std::is_base_of&lt;Component, T&gt;&gt;...&gt;</div>
-<div class="line"><a name="l00174"></a><span class="lineno"><a class="line" href="classxy_1_1_entity.html#a7fa28ed683bff48972b752f6fa01e81b">  174</a></span>&#160;        T* <a class="code" href="classxy_1_1_entity.html#a7fa28ed683bff48972b752f6fa01e81b">getComponent</a>(<span class="keyword">const</span> std::string&amp; name)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            <span class="keywordflow">if</span> (name.empty()) <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <span class="keyword">auto</span> result = std::find_if(m_components.begin(), m_components.end(), FindByName(name));</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <span class="keywordflow">if</span> (result == m_components.end())</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            {</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                result = std::find_if(m_pendingComponents.begin(), m_pendingComponents.end(), FindByName(name));</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                <span class="keywordflow">if</span> (result == m_pendingComponents.end())</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                {</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                }</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            }</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">dynamic_cast&lt;</span>T*<span class="keyword">&gt;</span>(result-&gt;get());</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        }</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, enable_if&lt;std::is_base_of&lt;Component, T&gt;&gt;...&gt;</div>
-<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="classxy_1_1_entity.html#af33ac2d16631af2ee0a84d4d6fa3ac8d">  199</a></span>&#160;        T* <a class="code" href="classxy_1_1_entity.html#af33ac2d16631af2ee0a84d4d6fa3ac8d">getComponent</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            std::type_index idx(<span class="keyword">typeid</span>(T));</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            <span class="keyword">auto</span> result = std::find_if(m_components.begin(), m_components.end(), FindByTypeIndex(idx));</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            <span class="keywordflow">if</span> (result == m_components.end())</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            {</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                result = std::find_if(m_pendingComponents.begin(), m_pendingComponents.end(), FindByTypeIndex(idx));</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                <span class="keywordflow">if</span> (result == m_pendingComponents.end())</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                {</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                }</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            }</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">dynamic_cast&lt;</span>T*<span class="keyword">&gt;</span>(result-&gt;get());</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        }</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, enable_if&lt;std::is_base_of&lt;Component, T&gt;&gt;...&gt;</div>
-<div class="line"><a name="l00219"></a><span class="lineno"><a class="line" href="classxy_1_1_entity.html#afd5c4b04ec95970b2a454c1187142025">  219</a></span>&#160;        std::vector&lt;T*&gt; <a class="code" href="classxy_1_1_entity.html#afd5c4b04ec95970b2a454c1187142025">getComponents</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            std::vector&lt;T*&gt; retval;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            std::type_index idx(<span class="keyword">typeid</span>(T));</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; c : m_components)</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            {</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                <span class="keywordflow">if</span> (c-&gt;uniqueType() == idx)</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                {</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                    retval.push_back(dynamic_cast&lt;T*&gt;(c.get()));</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                }</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            }</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; c : m_pendingComponents)</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            {</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                <span class="keywordflow">if</span> (c-&gt;uniqueType() == idx)</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                {</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                    retval.push_back(dynamic_cast&lt;T*&gt;(c.get()));</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                }</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            }</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            <span class="keywordflow">return</span> std::move(retval);</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        }</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00249"></a><span class="lineno"><a class="line" href="classxy_1_1_entity.html#a902f57d6801f128659984fecf1ab318a">  249</a></span>&#160;        std::unique_ptr&lt;T&gt; <a class="code" href="classxy_1_1_entity.html#a902f57d6801f128659984fecf1ab318a">removeComponent</a>(<span class="keyword">const</span> T* component)</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        {</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            static_assert(std::is_base_of&lt;Component, T&gt;::value, <span class="stringliteral">&quot;Must be a component&quot;</span>);</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            <span class="keyword">auto</span> it = std::find_if(m_components.begin(), m_components.end(), </div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                [component](<span class="keyword">const</span> Component::Ptr&amp; ptr)</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            {</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                <span class="keywordflow">return</span> ptr.get() == component;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            });</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            <span class="keywordflow">if</span> (it != m_components.end())</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                m_boundedComponents.push_back(c.get());</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c-&gt;type() == Component::Type::Mesh)</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            {</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                m_boundedComponents.push_back(c.get());</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            c-&gt;setParentUID(m_uid);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            c-&gt;onStart(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            m_pendingComponents.push_back(std::move(c));</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, enable_if&lt;std::is_base_of&lt;Component, T&gt;&gt;...&gt;</div>
+<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="classxy_1_1_entity.html#a7fa28ed683bff48972b752f6fa01e81b">  179</a></span>&#160;        T* <a class="code" href="classxy_1_1_entity.html#a7fa28ed683bff48972b752f6fa01e81b">getComponent</a>(<span class="keyword">const</span> std::string&amp; name)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="keywordflow">if</span> (name.empty()) <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            <span class="keyword">auto</span> result = std::find_if(m_components.begin(), m_components.end(), FindByName(name));</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            <span class="keywordflow">if</span> (result == m_components.end())</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                result = std::find_if(m_pendingComponents.begin(), m_pendingComponents.end(), FindByName(name));</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                <span class="keywordflow">if</span> (result == m_pendingComponents.end())</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                }</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">dynamic_cast&lt;</span>T*<span class="keyword">&gt;</span>(result-&gt;get());</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, enable_if&lt;std::is_base_of&lt;Component, T&gt;&gt;...&gt;</div>
+<div class="line"><a name="l00204"></a><span class="lineno"><a class="line" href="classxy_1_1_entity.html#af33ac2d16631af2ee0a84d4d6fa3ac8d">  204</a></span>&#160;        T* <a class="code" href="classxy_1_1_entity.html#af33ac2d16631af2ee0a84d4d6fa3ac8d">getComponent</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            std::type_index idx(<span class="keyword">typeid</span>(T));</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            <span class="keyword">auto</span> result = std::find_if(m_components.begin(), m_components.end(), FindByTypeIndex(idx));</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            <span class="keywordflow">if</span> (result == m_components.end())</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            {</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                result = std::find_if(m_pendingComponents.begin(), m_pendingComponents.end(), FindByTypeIndex(idx));</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                <span class="keywordflow">if</span> (result == m_pendingComponents.end())</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                {</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                }</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">dynamic_cast&lt;</span>T*<span class="keyword">&gt;</span>(result-&gt;get());</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        }</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, enable_if&lt;std::is_base_of&lt;Component, T&gt;&gt;...&gt;</div>
+<div class="line"><a name="l00224"></a><span class="lineno"><a class="line" href="classxy_1_1_entity.html#afd5c4b04ec95970b2a454c1187142025">  224</a></span>&#160;        std::vector&lt;T*&gt; <a class="code" href="classxy_1_1_entity.html#afd5c4b04ec95970b2a454c1187142025">getComponents</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            std::vector&lt;T*&gt; retval;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            std::type_index idx(<span class="keyword">typeid</span>(T));</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; c : m_components)</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            {</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                <span class="keywordflow">if</span> (c-&gt;uniqueType() == idx)</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                {</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                    retval.push_back(dynamic_cast&lt;T*&gt;(c.get()));</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                }</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; c : m_pendingComponents)</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            {</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                <span class="keywordflow">if</span> (c-&gt;uniqueType() == idx)</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                {</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                    retval.push_back(dynamic_cast&lt;T*&gt;(c.get()));</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                }</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            }</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <span class="keywordflow">return</span> std::move(retval);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        }</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00254"></a><span class="lineno"><a class="line" href="classxy_1_1_entity.html#a902f57d6801f128659984fecf1ab318a">  254</a></span>&#160;        std::unique_ptr&lt;T&gt; <a class="code" href="classxy_1_1_entity.html#a902f57d6801f128659984fecf1ab318a">removeComponent</a>(<span class="keyword">const</span> T* component)</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        {</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            static_assert(std::is_base_of&lt;Component, T&gt;::value, <span class="stringliteral">&quot;Must be a component&quot;</span>);</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            <span class="keyword">auto</span> it = std::find_if(m_components.begin(), m_components.end(), </div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                [component](<span class="keyword">const</span> Component::Ptr&amp; ptr)</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            {</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                std::unique_ptr&lt;T&gt; retVal(dynamic_cast&lt;T*&gt;(it-&gt;release()));</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                m_components.erase(it);</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                <span class="keywordflow">if</span> (component-&gt;type() == Component::Type::Drawable)</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                {</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                    std::remove_if(m_drawables.begin(), m_drawables.end(), [component](<span class="keyword">const</span> sf::Drawable* ptr)</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                    {</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                        <span class="keywordflow">return</span> ptr == <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span>sf::Drawable*<span class="keyword">&gt;</span>(component);</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                    });</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                }</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                retVal-&gt;setParentUID(0u);</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                <span class="keywordflow">return</span> std::move(retVal);</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            }</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        }</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <span class="keywordtype">void</span> destroy();</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <span class="keywordtype">bool</span> destroyed() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        <span class="keywordtype">void</span> setUID(sf::Uint64);</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        sf::Uint64 getUID() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <span class="keywordtype">void</span> handleMessage(<span class="keyword">const</span> <a class="code" href="classxy_1_1_message.html">Message</a>&amp;);</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <span class="keywordtype">void</span> setScene(<a class="code" href="classxy_1_1_scene.html">Scene</a>*);</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        <a class="code" href="classxy_1_1_scene.html">Scene</a>* getScene();</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        <span class="keywordtype">bool</span> doCommand(<span class="keyword">const</span> <a class="code" href="structxy_1_1_command.html">Command</a>&amp;, <span class="keywordtype">float</span>);</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        <span class="keywordtype">void</span> addCommandCategories(sf::Int32);</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        <span class="keywordtype">bool</span> hasCommandCategories(sf::Int32);</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        sf::Uint32 size() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        <span class="keywordtype">void</span> getVertices(std::vector&lt;sf::Vertex&gt;&amp;);</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        sf::FloatRect globalBounds() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        <span class="keywordtype">bool</span> m_destroyed;</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        sf::Uint64 m_uid;</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        <a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>&amp; m_messageBus;</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        sf::Int32 m_commandCategories;</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        std::vector&lt;std::unique_ptr&lt;Component&gt;&gt; m_pendingComponents;</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        std::vector&lt;std::unique_ptr&lt;Component&gt;&gt; m_components;</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        std::vector&lt;sf::Drawable*&gt; m_drawables;</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        std::vector&lt;Ptr&gt; m_children;</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        std::vector&lt;Entity*&gt; m_deadChildren;</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        <a class="code" href="classxy_1_1_entity.html">Entity</a>* m_parent;</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        <a class="code" href="classxy_1_1_scene.html">Scene</a>* m_scene;</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        </div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <span class="keywordtype">void</span> draw(sf::RenderTarget&amp; rt, sf::RenderStates state) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        <span class="keywordtype">void</span> drawSelf(sf::RenderTarget&amp;, sf::RenderStates) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        <span class="keyword">struct </span>FindByName</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        {</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;            FindByName(<span class="keyword">const</span> std::string&amp; name) : m_name(name){}</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;            <span class="keywordtype">bool</span> operator()(<span class="keyword">const</span> Component::Ptr&amp; c){ <span class="keywordflow">return</span> (c &amp;&amp; c-&gt;getName() == m_name); }</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;            std::string m_name;</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        };</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                <span class="keywordflow">return</span> ptr.get() == component;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            });</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            <span class="keywordflow">if</span> (it != m_components.end())</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            {</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                std::unique_ptr&lt;T&gt; retVal(dynamic_cast&lt;T*&gt;(it-&gt;release()));</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                m_components.erase(it);</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                <span class="keywordflow">if</span> (component-&gt;type() == Component::Type::Drawable)</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                {</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                    m_drawables.erase(std::remove_if(m_drawables.begin(), m_drawables.end(), [component](<span class="keyword">const</span> sf::Drawable* ptr)</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                    {</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                        <span class="keywordflow">return</span> ptr == <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span>sf::Drawable*<span class="keyword">&gt;</span>(component);</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                    }), m_drawables.end());</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                }</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                m_boundedComponents.erase(std::remove_if(m_boundedComponents.begin(), m_boundedComponents.end(),</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                    [component](<span class="keyword">const</span> <a class="code" href="classxy_1_1_component.html">Component</a>* p)</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                {</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                    <span class="keywordflow">return</span> p == <span class="keyword">static_cast&lt;</span><a class="code" href="classxy_1_1_component.html">Component</a>*<span class="keyword">&gt;</span>(component);</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                }), m_boundedComponents.end());</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                retVal-&gt;setParentUID(0u);</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                <span class="keywordflow">return</span> std::move(retVal);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            }</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        }</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="keywordtype">void</span> destroy();</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <span class="keywordtype">bool</span> destroyed() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="keywordtype">void</span> setUID(sf::Uint64);</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        sf::Uint64 getUID() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <span class="keywordtype">void</span> handleMessage(<span class="keyword">const</span> <a class="code" href="classxy_1_1_message.html">Message</a>&amp;);</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        <span class="keywordtype">void</span> setScene(<a class="code" href="classxy_1_1_scene.html">Scene</a>*);</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        <a class="code" href="classxy_1_1_scene.html">Scene</a>* getScene();</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        <span class="keywordtype">bool</span> doCommand(<span class="keyword">const</span> <a class="code" href="structxy_1_1_command.html">Command</a>&amp;, <span class="keywordtype">float</span>);</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        <span class="keywordtype">void</span> addCommandCategories(sf::Int32);</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        <span class="keywordtype">bool</span> hasCommandCategories(sf::Int32);</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        sf::Uint32 size() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        <span class="keywordtype">void</span> getVertices(std::vector&lt;sf::Vertex&gt;&amp;);</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        sf::FloatRect globalBounds() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        <span class="keywordtype">bool</span> m_destroyed;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        sf::Uint64 m_uid;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>&amp; m_messageBus;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        sf::Int32 m_commandCategories;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        std::vector&lt;std::unique_ptr&lt;Component&gt;&gt; m_pendingComponents;</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        std::vector&lt;std::unique_ptr&lt;Component&gt;&gt; m_components;</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        std::vector&lt;sf::Drawable*&gt; m_drawables;</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        std::vector&lt;Component*&gt; m_boundedComponents;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        std::vector&lt;Ptr&gt; m_children;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        std::vector&lt;Entity*&gt; m_deadChildren;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        <a class="code" href="classxy_1_1_entity.html">Entity</a>* m_parent;</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        <a class="code" href="classxy_1_1_scene.html">Scene</a>* m_scene;</div>
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;        <span class="keyword">struct </span>FindByTypeIndex</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        {</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;            FindByTypeIndex(<span class="keyword">const</span> std::type_index&amp; ti) : m_ti(ti){}</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;            <span class="keywordtype">bool</span> operator() (<span class="keyword">const</span> Component::Ptr&amp; c) { <span class="keywordflow">return</span> c-&gt;uniqueType() == m_ti; }</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;            <span class="keyword">const</span> std::type_index&amp; m_ti;</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        };</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    };</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;}</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;<span class="preprocessor">#endif //XY_ENTITY_HPP_</span></div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;        </div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        <span class="keywordtype">void</span> draw(sf::RenderTarget&amp; rt, sf::RenderStates state) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        <span class="keywordtype">void</span> drawSelf(sf::RenderTarget&amp;, sf::RenderStates) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        <span class="keyword">struct </span>FindByName</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        {</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;            FindByName(<span class="keyword">const</span> std::string&amp; name) : m_name(name){}</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;            <span class="keywordtype">bool</span> operator()(<span class="keyword">const</span> Component::Ptr&amp; c){ <span class="keywordflow">return</span> (c &amp;&amp; c-&gt;getName() == m_name); }</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;            std::string m_name;</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        };</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        <span class="keyword">struct </span>FindByTypeIndex</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        {</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;            FindByTypeIndex(<span class="keyword">const</span> std::type_index&amp; ti) : m_ti(ti){}</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;            <span class="keywordtype">bool</span> operator() (<span class="keyword">const</span> Component::Ptr&amp; c) { <span class="keywordflow">return</span> c-&gt;uniqueType() == m_ti; }</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;            <span class="keyword">const</span> std::type_index&amp; m_ti;</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;        };</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    };</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;}</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;<span class="preprocessor">#endif //XY_ENTITY_HPP_</span></div>
 <div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xygine namespace. </div><div class="ttdef"><b>Definition:</b> App.hpp:55</div></div>
-<div class="ttc" id="classxy_1_1_entity_html_a902f57d6801f128659984fecf1ab318a"><div class="ttname"><a href="classxy_1_1_entity.html#a902f57d6801f128659984fecf1ab318a">xy::Entity::removeComponent</a></div><div class="ttdeci">std::unique_ptr&lt; T &gt; removeComponent(const T *component)</div><div class="ttdoc">Removes a component if it exists. </div><div class="ttdef"><b>Definition:</b> Entity.hpp:249</div></div>
+<div class="ttc" id="classxy_1_1_component_html"><div class="ttname"><a href="classxy_1_1_component.html">xy::Component</a></div><div class="ttdoc">Abstract base class for creating new components. </div><div class="ttdef"><b>Definition:</b> Component.hpp:59</div></div>
+<div class="ttc" id="classxy_1_1_entity_html_a902f57d6801f128659984fecf1ab318a"><div class="ttname"><a href="classxy_1_1_entity.html#a902f57d6801f128659984fecf1ab318a">xy::Entity::removeComponent</a></div><div class="ttdeci">std::unique_ptr&lt; T &gt; removeComponent(const T *component)</div><div class="ttdoc">Removes a component if it exists. </div><div class="ttdef"><b>Definition:</b> Entity.hpp:254</div></div>
 <div class="ttc" id="classxy_1_1_message_bus_html"><div class="ttname"><a href="classxy_1_1_message_bus.html">xy::MessageBus</a></div><div class="ttdoc">System wide message bus for custom event messaging. </div><div class="ttdef"><b>Definition:</b> MessageBus.hpp:251</div></div>
-<div class="ttc" id="classxy_1_1_entity_html_af33ac2d16631af2ee0a84d4d6fa3ac8d"><div class="ttname"><a href="classxy_1_1_entity.html#af33ac2d16631af2ee0a84d4d6fa3ac8d">xy::Entity::getComponent</a></div><div class="ttdeci">T * getComponent() const </div><div class="ttdoc">Find a component by type. </div><div class="ttdef"><b>Definition:</b> Entity.hpp:199</div></div>
-<div class="ttc" id="classxy_1_1_entity_html_a7fa28ed683bff48972b752f6fa01e81b"><div class="ttname"><a href="classxy_1_1_entity.html#a7fa28ed683bff48972b752f6fa01e81b">xy::Entity::getComponent</a></div><div class="ttdeci">T * getComponent(const std::string &amp;name) const </div><div class="ttdoc">finds a commponent with a given name </div><div class="ttdef"><b>Definition:</b> Entity.hpp:174</div></div>
+<div class="ttc" id="classxy_1_1_entity_html_af33ac2d16631af2ee0a84d4d6fa3ac8d"><div class="ttname"><a href="classxy_1_1_entity.html#af33ac2d16631af2ee0a84d4d6fa3ac8d">xy::Entity::getComponent</a></div><div class="ttdeci">T * getComponent() const </div><div class="ttdoc">Find a component by type. </div><div class="ttdef"><b>Definition:</b> Entity.hpp:204</div></div>
+<div class="ttc" id="classxy_1_1_entity_html_a7fa28ed683bff48972b752f6fa01e81b"><div class="ttname"><a href="classxy_1_1_entity.html#a7fa28ed683bff48972b752f6fa01e81b">xy::Entity::getComponent</a></div><div class="ttdeci">T * getComponent(const std::string &amp;name) const </div><div class="ttdoc">finds a commponent with a given name </div><div class="ttdef"><b>Definition:</b> Entity.hpp:179</div></div>
 <div class="ttc" id="classxy_1_1_message_html"><div class="ttname"><a href="classxy_1_1_message.html">xy::Message</a></div><div class="ttdoc">Message class. </div><div class="ttdef"><b>Definition:</b> MessageBus.hpp:79</div></div>
 <div class="ttc" id="structxy_1_1_command_html"><div class="ttname"><a href="structxy_1_1_command.html">xy::Command</a></div><div class="ttdoc">Command struct. </div><div class="ttdef"><b>Definition:</b> Command.hpp:46</div></div>
 <div class="ttc" id="classxy_1_1_entity_html_a9373441bc3fd860edfe76942e7832b3e"><div class="ttname"><a href="classxy_1_1_entity.html#a9373441bc3fd860edfe76942e7832b3e">xy::Entity::addComponent</a></div><div class="ttdeci">T * addComponent(std::unique_ptr&lt; T &gt; &amp;component)</div><div class="ttdoc">Adds a component to the entity. </div><div class="ttdef"><b>Definition:</b> Entity.hpp:153</div></div>
 <div class="ttc" id="classxy_1_1_entity_html"><div class="ttname"><a href="classxy_1_1_entity.html">xy::Entity</a></div><div class="ttdoc">Entity class. </div><div class="ttdef"><b>Definition:</b> Entity.hpp:63</div></div>
 <div class="ttc" id="classxy_1_1_scene_html"><div class="ttname"><a href="classxy_1_1_scene.html">xy::Scene</a></div><div class="ttdoc">Scene class. </div><div class="ttdef"><b>Definition:</b> Scene.hpp:56</div></div>
-<div class="ttc" id="classxy_1_1_entity_html_afd5c4b04ec95970b2a454c1187142025"><div class="ttname"><a href="classxy_1_1_entity.html#afd5c4b04ec95970b2a454c1187142025">xy::Entity::getComponents</a></div><div class="ttdeci">std::vector&lt; T * &gt; getComponents() const </div><div class="ttdoc">Returns a vector of pointers to all components of type T. </div><div class="ttdef"><b>Definition:</b> Entity.hpp:219</div></div>
+<div class="ttc" id="classxy_1_1_entity_html_afd5c4b04ec95970b2a454c1187142025"><div class="ttname"><a href="classxy_1_1_entity.html#afd5c4b04ec95970b2a454c1187142025">xy::Entity::getComponents</a></div><div class="ttdeci">std::vector&lt; T * &gt; getComponents() const </div><div class="ttdoc">Returns a vector of pointers to all components of type T. </div><div class="ttdef"><b>Definition:</b> Entity.hpp:224</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

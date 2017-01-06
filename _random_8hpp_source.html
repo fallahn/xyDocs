@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xygine: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xygine/include/xygine/util/Random.hpp Source File</title>
+<title>xygine: C:/Users/Matthew Marchant/Documents/Visual Studio 2015/Projects/xygine/xygine/include/xygine/util/Random.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -97,13 +97,13 @@
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        {</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keyword">static</span> std::mt19937 rndEngine(static_cast&lt;unsigned long&gt;(std::time(<span class="keyword">nullptr</span>)));</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">float</span> value(<span class="keywordtype">float</span> begin, <span class="keywordtype">float</span> end)</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_random.html#aeed2496510b00eadc079e756924282f6">   54</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code" href="namespacexy_1_1_util_1_1_random.html#aeed2496510b00eadc079e756924282f6">value</a>(<span class="keywordtype">float</span> begin, <span class="keywordtype">float</span> end)</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            {</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                XY_ASSERT(begin &lt; end, <span class="stringliteral">&quot;first value is not less than last value&quot;</span>);</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                std::uniform_real_distribution&lt;float&gt; dist(begin, end);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                <span class="keywordflow">return</span> dist(rndEngine);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span> value(<span class="keywordtype">int</span> begin, <span class="keywordtype">int</span> end)</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_random.html#a162806add68712d884f1afb5c75e30ca">   65</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="namespacexy_1_1_util_1_1_random.html#aeed2496510b00eadc079e756924282f6">value</a>(<span class="keywordtype">int</span> begin, <span class="keywordtype">int</span> end)</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            {</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                XY_ASSERT(begin &lt; end, <span class="stringliteral">&quot;first value is not less than last value&quot;</span>);</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                std::uniform_int_distribution&lt;int&gt; dist(begin, end);</div>
@@ -116,6 +116,7 @@
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#endif //XY_UTIL_RANDOM_HPP_</span></div>
 <div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xygine namespace. </div><div class="ttdef"><b>Definition:</b> App.hpp:55</div></div>
+<div class="ttc" id="namespacexy_1_1_util_1_1_random_html_aeed2496510b00eadc079e756924282f6"><div class="ttname"><a href="namespacexy_1_1_util_1_1_random.html#aeed2496510b00eadc079e756924282f6">xy::Util::Random::value</a></div><div class="ttdeci">static float value(float begin, float end)</div><div class="ttdoc">Returns a pseudo random floating point value. </div><div class="ttdef"><b>Definition:</b> Random.hpp:54</div></div>
 <div class="ttc" id="namespacexy_1_1_util_1_1_random_html_a0643645501c06ba19777c4aaa2a3bd47"><div class="ttname"><a href="namespacexy_1_1_util_1_1_random.html#a0643645501c06ba19777c4aaa2a3bd47">xy::Util::Random::poissonDiscDistribution</a></div><div class="ttdeci">XY_EXPORT_API std::vector&lt; sf::Vector2f &gt; poissonDiscDistribution(const sf::FloatRect &amp;area, float minDist, std::size_t maxPoints)</div><div class="ttdoc">Returns a poission disc sampled distribution of points within a given area. </div><div class="ttdef"><b>Definition:</b> Random.cpp:134</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
