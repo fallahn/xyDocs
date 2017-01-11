@@ -243,6 +243,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:ae15a88ff542f064420a7134e7c64697a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_physics_1_1_rigid_body.html#ae15a88ff542f064420a7134e7c64697a">applyAngularImpulse</a> (float, bool wake=true)</td></tr>
 <tr class="memdesc:ae15a88ff542f064420a7134e7c64697a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies an angular impulse to the body.  <a href="#ae15a88ff542f064420a7134e7c64697a">More...</a><br /></td></tr>
 <tr class="separator:ae15a88ff542f064420a7134e7c64697a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1146111f76572c4487610159dbbec0fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_physics_1_1_rigid_body.html#a1146111f76572c4487610159dbbec0fd">setTransform</a> (sf::Vector2f position, float angle)</td></tr>
+<tr class="memdesc:a1146111f76572c4487610159dbbec0fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manually sets the transofrm of the <a class="el" href="classxy_1_1_physics_1_1_rigid_body.html" title="Creates a rigidbody component allowing the entity to be updated by the physics world. ">RigidBody</a>. WARNING: this may not have the desired effect as this will be interfering with the physics simulation. Most useful on Kinematic type RigidBodies.  <a href="#a1146111f76572c4487610159dbbec0fd">More...</a><br /></td></tr>
+<tr class="separator:a1146111f76572c4487610159dbbec0fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01d100b0e34eae21d7ed9566acd0cb85"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a01d100b0e34eae21d7ed9566acd0cb85"></a>
 const std::vector&lt; CollisionShape::Ptr &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_physics_1_1_rigid_body.html#a01d100b0e34eae21d7ed9566acd0cb85">getCollisionShapes</a> () const </td></tr>
 <tr class="memdesc:a01d100b0e34eae21d7ed9566acd0cb85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector of CollisionShapes attached to his body. <br /></td></tr>
@@ -721,6 +724,41 @@ template&lt;typename T &gt; </div>
 
 <p>Sets the scale of the gravity applied to this body. </p>
 <p>Negative values can be used </p>
+
+</div>
+</div>
+<a class="anchor" id="a1146111f76572c4487610159dbbec0fd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RigidBody::setTransform </td>
+          <td>(</td>
+          <td class="paramtype">sf::Vector2f&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Manually sets the transofrm of the <a class="el" href="classxy_1_1_physics_1_1_rigid_body.html" title="Creates a rigidbody component allowing the entity to be updated by the physics world. ">RigidBody</a>. WARNING: this may not have the desired effect as this will be interfering with the physics simulation. Most useful on Kinematic type RigidBodies. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td><a class="el" href="classxy_1_1_physics_1_1_world.html" title="Physics World. ">World</a> position to transform body to </td></tr>
+    <tr><td class="paramname">angle</td><td>Angle in degrees to which to rotate the body </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
