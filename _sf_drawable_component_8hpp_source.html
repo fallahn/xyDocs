@@ -53,7 +53,7 @@
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">Matt Marchant 2014 - 2017</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">© Matt Marchant 2014 - 2017</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">http://trederia.blogspot.com</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">xygine - Zlib license.</span></div>
@@ -105,7 +105,7 @@
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classxy_1_1_sf_drawable_component.html">SfDrawableComponent</a>(<a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>&amp; mb)</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            : <a class="code" href="classxy_1_1_component.html">Component</a>(mb, <span class="keyword">this</span>), m_blendMode(sf::BlendAlpha)</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            static_assert(std::is_base_of&lt;sf::Drawable, T&gt;::value &amp;&amp; std::is_base_of&lt;sf::Transformable, T&gt;::value, <span class="stringliteral">&quot;must be sfml drawable and transformable&quot;</span>);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            static_assert(std::is_base_of&lt;sf::Drawable, T&gt;::value, <span class="stringliteral">&quot;must be sfml drawable&quot;</span>);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        ~<a class="code" href="classxy_1_1_sf_drawable_component.html">SfDrawableComponent</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
@@ -117,37 +117,43 @@
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        </div>
 <div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classxy_1_1_sf_drawable_component.html#a2a3807eaac0201287b3b3ff15042d48c">   80</a></span>&#160;        T&amp; <a class="code" href="classxy_1_1_sf_drawable_component.html#a2a3807eaac0201287b3b3ff15042d48c">getDrawable</a>() { <span class="keywordflow">return</span> m_drawable; }</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classxy_1_1_sf_drawable_component.html#a4ec5bef8e9794af2785c0df9415c2eba">   82</a></span>&#160;        sf::FloatRect <a class="code" href="classxy_1_1_sf_drawable_component.html#a4ec5bef8e9794af2785c0df9415c2eba">globalBounds</a>()<span class="keyword"> const override</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">return</span> m_drawable.getGlobalBounds();</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classxy_1_1_sf_drawable_component.html#a722913e5b1cf20f7e8c432e59a6e4d7a">   90</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classxy_1_1_sf_drawable_component.html#a722913e5b1cf20f7e8c432e59a6e4d7a">setBlendMode</a>(<span class="keyword">const</span> sf::BlendMode&amp; mode) { m_blendMode = mode; }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        T m_drawable;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        sf::BlendMode m_blendMode;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordtype">void</span> draw(sf::RenderTarget&amp; rt, sf::RenderStates states)<span class="keyword"> const override</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            states.transform *= getTransform();</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            states.shader = getActiveShader();</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            states.blendMode = m_blendMode;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            rt.draw(m_drawable, states);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        }</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    };</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#endif //XY_SF_DRAWABLE_COMPONENT_HPP_</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classxy_1_1_sf_drawable_component.html#a4ec5bef8e9794af2785c0df9415c2eba">   85</a></span>&#160;        sf::FloatRect <a class="code" href="classxy_1_1_sf_drawable_component.html#a4ec5bef8e9794af2785c0df9415c2eba">globalBounds</a>()<span class="keyword"> const override</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordflow">return</span> m_drawable.getGlobalBounds();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classxy_1_1_sf_drawable_component.html#a722913e5b1cf20f7e8c432e59a6e4d7a">   93</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classxy_1_1_sf_drawable_component.html#a722913e5b1cf20f7e8c432e59a6e4d7a">setBlendMode</a>(<span class="keyword">const</span> sf::BlendMode&amp; mode) { m_blendMode = mode; }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        T m_drawable;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        sf::BlendMode m_blendMode;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordtype">void</span> draw(sf::RenderTarget&amp; rt, sf::RenderStates states)<span class="keyword"> const override</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            states.transform *= getTransform();</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            states.shader = getActiveShader();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            states.blendMode = m_blendMode;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            rt.draw(m_drawable, states);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    };</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="classxy_1_1_sf_drawable_component.html#adfd0803e67d9a088cb78b7f57c8a4cf2">  112</a></span>&#160;    <span class="keyword">inline</span> sf::FloatRect <a class="code" href="classxy_1_1_sf_drawable_component.html#a4ec5bef8e9794af2785c0df9415c2eba">SfDrawableComponent&lt;sf::VertexArray&gt;::globalBounds</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">return</span> m_drawable.getBounds();</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">#endif //XY_SF_DRAWABLE_COMPONENT_HPP_</span></div>
 <div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xygine namespace. </div><div class="ttdef"><b>Definition:</b> App.hpp:55</div></div>
 <div class="ttc" id="classxy_1_1_component_html"><div class="ttname"><a href="classxy_1_1_component.html">xy::Component</a></div><div class="ttdoc">Abstract base class for creating new components. </div><div class="ttdef"><b>Definition:</b> Component.hpp:59</div></div>
 <div class="ttc" id="classxy_1_1_message_bus_html"><div class="ttname"><a href="classxy_1_1_message_bus.html">xy::MessageBus</a></div><div class="ttdoc">System wide message bus for custom event messaging. </div><div class="ttdef"><b>Definition:</b> MessageBus.hpp:251</div></div>
 <div class="ttc" id="classxy_1_1_sf_drawable_component_html"><div class="ttname"><a href="classxy_1_1_sf_drawable_component.html">xy::SfDrawableComponent</a></div><div class="ttdoc">Templated drawable component for attaching standard SFML drawables to entities. </div><div class="ttdef"><b>Definition:</b> SfDrawableComponent.hpp:56</div></div>
-<div class="ttc" id="classxy_1_1_sf_drawable_component_html_a4ec5bef8e9794af2785c0df9415c2eba"><div class="ttname"><a href="classxy_1_1_sf_drawable_component.html#a4ec5bef8e9794af2785c0df9415c2eba">xy::SfDrawableComponent::globalBounds</a></div><div class="ttdeci">sf::FloatRect globalBounds() const  override</div><div class="ttdoc">Returns the AABB of the component in world space. </div><div class="ttdef"><b>Definition:</b> SfDrawableComponent.hpp:82</div></div>
+<div class="ttc" id="classxy_1_1_sf_drawable_component_html_a4ec5bef8e9794af2785c0df9415c2eba"><div class="ttname"><a href="classxy_1_1_sf_drawable_component.html#a4ec5bef8e9794af2785c0df9415c2eba">xy::SfDrawableComponent::globalBounds</a></div><div class="ttdeci">sf::FloatRect globalBounds() const  override</div><div class="ttdoc">Returns an sf::Floatrect representing the global bounds of the underlying drawable. </div><div class="ttdef"><b>Definition:</b> SfDrawableComponent.hpp:85</div></div>
 <div class="ttc" id="classxy_1_1_sf_drawable_component_html_a4a21b013587240d9b7e480d673453bbf"><div class="ttname"><a href="classxy_1_1_sf_drawable_component.html#a4a21b013587240d9b7e480d673453bbf">xy::SfDrawableComponent::entityUpdate</a></div><div class="ttdeci">void entityUpdate(Entity &amp;entity, float) override</div><div class="ttdoc">Used to update the component&#39;s state. </div><div class="ttdef"><b>Definition:</b> SfDrawableComponent.hpp:69</div></div>
 <div class="ttc" id="classxy_1_1_entity_html"><div class="ttname"><a href="classxy_1_1_entity.html">xy::Entity</a></div><div class="ttdoc">Entity class. </div><div class="ttdef"><b>Definition:</b> Entity.hpp:63</div></div>
 <div class="ttc" id="classxy_1_1_sf_drawable_component_html_a7480d3b597eb896a6ff8223757d62719"><div class="ttname"><a href="classxy_1_1_sf_drawable_component.html#a7480d3b597eb896a6ff8223757d62719">xy::SfDrawableComponent::type</a></div><div class="ttdeci">Component::Type type() const  override</div><div class="ttdoc">Returns the general type of component. </div><div class="ttdef"><b>Definition:</b> SfDrawableComponent.hpp:68</div></div>
 <div class="ttc" id="classxy_1_1_component_html_a9b98d49ac2d36fc3539f27c67f44fc19"><div class="ttname"><a href="classxy_1_1_component.html#a9b98d49ac2d36fc3539f27c67f44fc19">xy::Component::Type</a></div><div class="ttdeci">Type</div><div class="ttdoc">Component type. </div><div class="ttdef"><b>Definition:</b> Component.hpp:94</div></div>
-<div class="ttc" id="classxy_1_1_sf_drawable_component_html_a722913e5b1cf20f7e8c432e59a6e4d7a"><div class="ttname"><a href="classxy_1_1_sf_drawable_component.html#a722913e5b1cf20f7e8c432e59a6e4d7a">xy::SfDrawableComponent::setBlendMode</a></div><div class="ttdeci">void setBlendMode(const sf::BlendMode &amp;mode)</div><div class="ttdoc">Sets the blend mode used by this drawable. </div><div class="ttdef"><b>Definition:</b> SfDrawableComponent.hpp:90</div></div>
+<div class="ttc" id="classxy_1_1_sf_drawable_component_html_a722913e5b1cf20f7e8c432e59a6e4d7a"><div class="ttname"><a href="classxy_1_1_sf_drawable_component.html#a722913e5b1cf20f7e8c432e59a6e4d7a">xy::SfDrawableComponent::setBlendMode</a></div><div class="ttdeci">void setBlendMode(const sf::BlendMode &amp;mode)</div><div class="ttdoc">Sets the blend mode used by this drawable. </div><div class="ttdef"><b>Definition:</b> SfDrawableComponent.hpp:93</div></div>
 <div class="ttc" id="classxy_1_1_sf_drawable_component_html_a2a3807eaac0201287b3b3ff15042d48c"><div class="ttname"><a href="classxy_1_1_sf_drawable_component.html#a2a3807eaac0201287b3b3ff15042d48c">xy::SfDrawableComponent::getDrawable</a></div><div class="ttdeci">T &amp; getDrawable()</div><div class="ttdoc">Returns a reference to the underlying drawable. </div><div class="ttdef"><b>Definition:</b> SfDrawableComponent.hpp:80</div></div>
 <div class="ttc" id="classxy_1_1_shader_property_html"><div class="ttname"><a href="classxy_1_1_shader_property.html">xy::ShaderProperty</a></div><div class="ttdoc">Allows quickly adding a shader property to a drawable component. </div><div class="ttdef"><b>Definition:</b> ShaderProperty.hpp:48</div></div>
 </div><!-- fragment --></div><!-- contents -->

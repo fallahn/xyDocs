@@ -109,13 +109,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2a3807eaac0201287b3b3ff15042d48c"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_sf_drawable_component.html#a2a3807eaac0201287b3b3ff15042d48c">getDrawable</a> ()</td></tr>
 <tr class="memdesc:a2a3807eaac0201287b3b3ff15042d48c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the underlying drawable.  <a href="#a2a3807eaac0201287b3b3ff15042d48c">More...</a><br /></td></tr>
 <tr class="separator:a2a3807eaac0201287b3b3ff15042d48c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ec5bef8e9794af2785c0df9415c2eba"><td class="memItemLeft" align="right" valign="top">sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_sf_drawable_component.html#a4ec5bef8e9794af2785c0df9415c2eba">globalBounds</a> () const  override</td></tr>
-<tr class="memdesc:a4ec5bef8e9794af2785c0df9415c2eba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the AABB of the component in world space.  <a href="#a4ec5bef8e9794af2785c0df9415c2eba">More...</a><br /></td></tr>
+<tr class="memitem:a4ec5bef8e9794af2785c0df9415c2eba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ec5bef8e9794af2785c0df9415c2eba"></a>
+sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_sf_drawable_component.html#a4ec5bef8e9794af2785c0df9415c2eba">globalBounds</a> () const  override</td></tr>
+<tr class="memdesc:a4ec5bef8e9794af2785c0df9415c2eba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an sf::Floatrect representing the global bounds of the underlying drawable. <br /></td></tr>
 <tr class="separator:a4ec5bef8e9794af2785c0df9415c2eba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a722913e5b1cf20f7e8c432e59a6e4d7a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a722913e5b1cf20f7e8c432e59a6e4d7a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_sf_drawable_component.html#a722913e5b1cf20f7e8c432e59a6e4d7a">setBlendMode</a> (const sf::BlendMode &amp;mode)</td></tr>
 <tr class="memdesc:a722913e5b1cf20f7e8c432e59a6e4d7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the blend mode used by this drawable. <br /></td></tr>
 <tr class="separator:a722913e5b1cf20f7e8c432e59a6e4d7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfd0803e67d9a088cb78b7f57c8a4cf2"><td class="memTemplParams" colspan="2"><a class="anchor" id="adfd0803e67d9a088cb78b7f57c8a4cf2"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:adfd0803e67d9a088cb78b7f57c8a4cf2"><td class="memTemplItemLeft" align="right" valign="top">sf::FloatRect&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxy_1_1_sf_drawable_component.html#adfd0803e67d9a088cb78b7f57c8a4cf2">globalBounds</a> () const</td></tr>
+<tr class="memdesc:adfd0803e67d9a088cb78b7f57c8a4cf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialisation for sf::VertexArray. <br /></td></tr>
+<tr class="separator:adfd0803e67d9a088cb78b7f57c8a4cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classxy_1_1_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classxy_1_1_component')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classxy_1_1_component.html">xy::Component</a></td></tr>
 <tr class="memitem:acf796948b8698892f7e966e1e695d2f3 inherit pub_methods_classxy_1_1_component"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:acf796948b8698892f7e966e1e695d2f3 inherit pub_methods_classxy_1_1_component"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxy_1_1_component.html#acf796948b8698892f7e966e1e695d2f3">Component</a> (<a class="el" href="classxy_1_1_message_bus.html">MessageBus</a> &amp;m, T *)</td></tr>
@@ -280,36 +286,6 @@ template&lt;class T &gt; </div>
 
 <p>Returns a reference to the underlying drawable. </p>
 <p>Allows access to the properties of the drawable type, such as setting the font on a text objects or texture on a sprite. </p>
-
-</div>
-</div>
-<a class="anchor" id="a4ec5bef8e9794af2785c0df9415c2eba"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">sf::FloatRect <a class="el" href="classxy_1_1_sf_drawable_component.html">xy::SfDrawableComponent</a>&lt; T &gt;::globalBounds </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the AABB of the component in world space. </p>
-<p>When using the <a class="el" href="classxy_1_1_quad_tree.html" title="Quad Tree spatial partitioning class. ">QuadTree</a> with a component the component must override this to provide accurate spatial information which then contributes to the overall bounding box of the parent entity. This is normally only needed when implementing a drawable component, but applies to any entity which may affect the parent entitiy spatially, such as custom collision components. Normally this returns the localBounds transformed by the component's transform if it has one, else it should return localBounds. NOTE Drawables <em>MUST</em> implement this as it is used in culling calculations when rendering. If a custom renderable component is not being drawn this is the first place to check. Global bounds can be visualised by enabling debug output of the <a class="el" href="classxy_1_1_scene.html" title="Scene class. ">Scene</a>. </p>
-
-<p>Reimplemented from <a class="el" href="classxy_1_1_component.html#a846f118a0de321932bffde9a407f044a">xy::Component</a>.</p>
 
 </div>
 </div>

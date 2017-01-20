@@ -108,13 +108,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:ae03970705897172bca5f028e2f33879e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c350a72adf2e3037c7a1a63302a5137"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_u_i_1_1_container.html#a0c350a72adf2e3037c7a1a63302a5137">setAlignment</a> (Alignment a) override</td></tr>
 <tr class="separator:a0c350a72adf2e3037c7a1a63302a5137"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2791e22f2b132af9abddfb4ef65d046a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_u_i_1_1_container.html#a2791e22f2b132af9abddfb4ef65d046a">setBackgroundColour</a> (const sf::Color &amp;)</td></tr>
-<tr class="memdesc:a2791e22f2b132af9abddfb4ef65d046a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the background colour of the container.  <a href="#a2791e22f2b132af9abddfb4ef65d046a">More...</a><br /></td></tr>
+<tr class="memitem:a2791e22f2b132af9abddfb4ef65d046a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2791e22f2b132af9abddfb4ef65d046a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_u_i_1_1_container.html#a2791e22f2b132af9abddfb4ef65d046a">setBackgroundColour</a> (const sf::Color &amp;)</td></tr>
+<tr class="memdesc:a2791e22f2b132af9abddfb4ef65d046a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the background colour of the container. <br /></td></tr>
 <tr class="separator:a2791e22f2b132af9abddfb4ef65d046a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae51952027601cf52f0aafab0267dc726"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae51952027601cf52f0aafab0267dc726"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_u_i_1_1_container.html#ae51952027601cf52f0aafab0267dc726">setBackgroundTexture</a> (const sf::Texture &amp;)</td></tr>
-<tr class="memdesc:ae51952027601cf52f0aafab0267dc726"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set he texture to be drawn in the background of the container. <br /></td></tr>
-<tr class="separator:ae51952027601cf52f0aafab0267dc726"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc1ccd0f679a065a5ccc181ec7aa3b67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_u_i_1_1_container.html#adc1ccd0f679a065a5ccc181ec7aa3b67">setBackgroundTexture</a> (const sf::Texture &amp;, bool centre=false)</td></tr>
+<tr class="memdesc:adc1ccd0f679a065a5ccc181ec7aa3b67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the texture to be drawn in the background of the container.  <a href="#adc1ccd0f679a065a5ccc181ec7aa3b67">More...</a><br /></td></tr>
+<tr class="separator:adc1ccd0f679a065a5ccc181ec7aa3b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classxy_1_1_u_i_1_1_control"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classxy_1_1_u_i_1_1_control')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classxy_1_1_u_i_1_1_control.html">xy::UI::Control</a></td></tr>
 <tr class="memitem:a7c4054ca7d7158d29508db2fe525cec5 inherit pub_methods_classxy_1_1_u_i_1_1_control"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c4054ca7d7158d29508db2fe525cec5"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Control</b> (const <a class="el" href="classxy_1_1_u_i_1_1_control.html">Control</a> &amp;)=delete</td></tr>
@@ -265,22 +265,38 @@ sf::Shader *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 </div>
 </div>
-<a class="anchor" id="a2791e22f2b132af9abddfb4ef65d046a"></a>
+<a class="anchor" id="adc1ccd0f679a065a5ccc181ec7aa3b67"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Container::setBackgroundColour </td>
+          <td class="memname">void Container::setBackgroundTexture </td>
           <td>(</td>
-          <td class="paramtype">const sf::Color &amp;&#160;</td>
-          <td class="paramname"><em>colour</em></td><td>)</td>
+          <td class="paramtype">const sf::Texture &amp;&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>centre</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set the background colour of the container. </p>
-<p>This is overriden if a background texture is set. </p>
+<p>Set the texture to be drawn in the background of the container. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sf::Texture</td><td>Texture to use </td></tr>
+    <tr><td class="paramname">centre</td><td>True to centre the background, false to leave origin at top left </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
