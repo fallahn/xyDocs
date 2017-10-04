@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xygine: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xygine/include/xygine/Log.hpp Source File</title>
+<title>xyginext: C:/Users/Matt/Documents/Visual Studio 2017/Projects/xygineXT/xyginext/include/xyginext/core/Log.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,10 +18,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">xygine
-   &#160;<span id="projectnumber">0.1.0</span>
+   <div id="projectname">xyginext
+   &#160;<span id="projectnumber">0.2.0</span>
    </div>
-   <div id="projectbrief">SFML Based 2D Game Creation Framework</div>
+   <div id="projectbrief">Second generation of xygine game creation framework</div>
   </td>
  </tr>
  </tbody>
@@ -44,7 +44,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_4d209b5b760f516cd5a2179341e2b1c7.html">xygine</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_efb0e9b2b77ba75392bcf64fcf40cd77.html">include</a></li><li class="navelem"><a class="el" href="dir_e1acbbb56b05dac1d2df5cc4492ca74b.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_09d685544d508c940ca45ef66000889f.html">core</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -53,10 +53,10 @@
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">© Matt Marchant 2014 - 2017</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">(c) Matt Marchant 2017</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">http://trederia.blogspot.com</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">xygine - Zlib license.</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">xygineXT - Zlib license.</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">This software is provided &#39;as-is&#39;, without any express or</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">implied warranty. In no event will the authors be held</span></div>
@@ -84,140 +84,143 @@
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#ifndef XY_LOGGER_HPP_</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define XY_LOGGER_HPP_</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;xygine/FileSystem.hpp&gt;</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;xygine/Console.hpp&gt;</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &lt;SFML/System/Lock.hpp&gt;</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;SFML/System/Mutex.hpp&gt;</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;iomanip&gt;</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;ctime&gt;</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#ifdef _MSC_VER</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#define NOMINMAX</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#include &lt;Windows.h&gt;</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif //_MSC_VER</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacexy.html">xy</a></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classxy_1_1_logger.html">   59</a></span>&#160;    <span class="keyword">class </span>XY_EXPORT_API <a class="code" href="classxy_1_1_logger.html">Logger</a> final</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keyword">enum class</span> Output</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <a class="code" href="classxy_1_1_console.html">Console</a>,</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            File,</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            All</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        };</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keyword">enum class</span> Type</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            Info,</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            Warning,</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            Error</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        };</div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classxy_1_1_logger.html#a832b50efdd1cf22c758eea4396363085">   81</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classxy_1_1_logger.html#a832b50efdd1cf22c758eea4396363085">log</a>(<span class="keyword">const</span> std::string&amp; message, Type type = Type::Info, Output output = Output::Console)</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            std::string outstring;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">switch</span> (type)</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">case</span> Type::Info:</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                outstring = <span class="stringliteral">&quot;INFO: &quot;</span> + message;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keywordflow">case</span> Type::Error:</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                outstring = <span class="stringliteral">&quot;ERROR: &quot;</span> + message;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">case</span> Type::Warning:</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                outstring = <span class="stringliteral">&quot;WARNING: &quot;</span> + message;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            }</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            sf::Lock lock(mutex());</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keywordflow">if</span> (output == Output::Console || output == Output::All)</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                (type == Type::Error) ?</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                    std::cerr &lt;&lt; outstring &lt;&lt; std::endl</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                    :</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                    std::cout &lt;&lt; outstring &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                <a class="code" href="classxy_1_1_console.html#a9bb304a0045f46f01cfc1136f3fffe13">Console::print</a>(outstring);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                <span class="keyword">const</span> std::size_t maxBuffer = 30;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                buffer().push_back(outstring);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                <span class="keywordflow">if</span> (buffer().size() &gt; maxBuffer)buffer().pop_front(); <span class="comment">//no majick here pl0x</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                updateOutString(maxBuffer);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#ifdef _MSC_VER</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                outstring += <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                OutputDebugString(outstring.c_str());</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">#endif //_MSC_VER</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            }</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="keywordflow">if</span> (output == Output::File || output == Output::All)</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            {</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                <span class="comment">//output to a log file</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                std::ofstream file(<span class="stringliteral">&quot;output.log&quot;</span>, std::ios::app);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                <span class="keywordflow">if</span> (file.good())</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                {</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                    std::time_t time = std::time(<span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                    <span class="keyword">auto</span> tm = *std::localtime(&amp;time);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                    file.imbue(std::locale());</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                    file &lt;&lt; std::put_time(&amp;tm, <span class="stringliteral">&quot;%d/%m/%y-%H:%M:%S: &quot;</span>);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                    file &lt;&lt; outstring &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                    file.close();</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                }</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                {</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                    log(message, type, Output::Console);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                    log(<span class="stringliteral">&quot;Above message was intended for log file. Opening file probably failed.&quot;</span>, Type::Warning, Output::Console);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                }</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            }</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        }</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> std::string&amp; bufferString(){ <span class="keywordflow">return</span> stringOutput(); }</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keyword">static</span> sf::Mutex&amp; mutex(){ <span class="keyword">static</span> sf::Mutex m; <span class="keywordflow">return</span> m; }</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="keyword">static</span> std::list&lt;std::string&gt;&amp; buffer(){ <span class="keyword">static</span> std::list&lt;std::string&gt; buffer; <span class="keywordflow">return</span> buffer; }</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keyword">static</span> std::string&amp; stringOutput() { <span class="keyword">static</span> std::string output; <span class="keywordflow">return</span> output; }</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> updateOutString(std::size_t maxBuffer)</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        {</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">size_t</span> count = 0;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            stringOutput().append(buffer().back());</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            stringOutput().append(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            count++;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <span class="keywordflow">if</span> (count &gt; maxBuffer)</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            {</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                stringOutput() = stringOutput().substr(stringOutput().find_first_of(<span class="charliteral">&#39;\n&#39;</span>) + 1, stringOutput().size());</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                count--;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            }</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        }</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    };</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;}</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="preprocessor">#ifndef _DEBUG_</span></div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="preprocessor">#define LOG(message, type)</span></div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="preprocessor">#define LOG(message, type) {\</span></div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="preprocessor">std::string fileName(__FILE__); \</span></div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="preprocessor">fileName = xy::FileSystem::getFileName(fileName); \</span></div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="preprocessor">std::stringstream ss; \</span></div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="preprocessor">ss &lt;&lt; message &lt;&lt; &quot; (&quot; &lt;&lt; fileName &lt;&lt; &quot;, &quot; &lt;&lt; __LINE__ &lt;&lt; &quot;)&quot;; \</span></div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="preprocessor">xy::Logger::log(ss.str(), type);}</span></div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="preprocessor">#endif //_DEBUG_</span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="preprocessor">#endif //XY_LOGGER_HPP_</span></div>
-<div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xygine namespace. </div><div class="ttdef"><b>Definition:</b> App.hpp:55</div></div>
-<div class="ttc" id="classxy_1_1_console_html_a9bb304a0045f46f01cfc1136f3fffe13"><div class="ttname"><a href="classxy_1_1_console.html#a9bb304a0045f46f01cfc1136f3fffe13">xy::Console::print</a></div><div class="ttdeci">static void print(const std::string &amp;)</div><div class="ttdoc">Prints the given string to the console. </div><div class="ttdef"><b>Definition:</b> Console.cpp:74</div></div>
-<div class="ttc" id="classxy_1_1_logger_html"><div class="ttname"><a href="classxy_1_1_logger.html">xy::Logger</a></div><div class="ttdoc">Class to allowing messages to be logged to a combination of one or more destinations such as the cons...</div><div class="ttdef"><b>Definition:</b> Log.hpp:59</div></div>
-<div class="ttc" id="classxy_1_1_console_html"><div class="ttname"><a href="classxy_1_1_console.html">xy::Console</a></div><div class="ttdoc">Console class The console is used to display messages and xygine specific information as well as allo...</div><div class="ttdef"><b>Definition:</b> Console.hpp:44</div></div>
-<div class="ttc" id="classxy_1_1_logger_html_a832b50efdd1cf22c758eea4396363085"><div class="ttname"><a href="classxy_1_1_logger.html#a832b50efdd1cf22c758eea4396363085">xy::Logger::log</a></div><div class="ttdeci">static void log(const std::string &amp;message, Type type=Type::Info, Output output=Output::Console)</div><div class="ttdoc">Logs a message to a given destination. </div><div class="ttdef"><b>Definition:</b> Log.hpp:81</div></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;xyginext/core/FileSystem.hpp&gt;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;xyginext/core/Console.hpp&gt;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;xyginext/core/SysTime.hpp&gt;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;SFML/System/Lock.hpp&gt;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &lt;SFML/System/Mutex.hpp&gt;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;iomanip&gt;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &lt;ctime&gt;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#ifdef _MSC_VER</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#define NOMINMAX</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#include &lt;Windows.h&gt;</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif //_MSC_VER</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacexy.html">xy</a></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classxy_1_1_logger.html">   60</a></span>&#160;    <span class="keyword">class </span>XY_EXPORT_API <a class="code" href="classxy_1_1_logger.html">Logger</a> final</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keyword">enum class</span> Output</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <a class="code" href="classxy_1_1_console.html">Console</a>,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            File,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            All</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        };</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">enum class</span> Type</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            Info,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            Warning,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            Error</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        };</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classxy_1_1_logger.html#a832b50efdd1cf22c758eea4396363085">   82</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classxy_1_1_logger.html#a832b50efdd1cf22c758eea4396363085">log</a>(<span class="keyword">const</span> std::string&amp; message, Type type = Type::Info, Output output = Output::Console)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            std::string outstring;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordflow">switch</span> (type)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordflow">case</span> Type::Info:</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                outstring = <span class="stringliteral">&quot;INFO: &quot;</span> + message;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keywordflow">case</span> Type::Error:</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                outstring = <span class="stringliteral">&quot;ERROR: &quot;</span> + message;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keywordflow">case</span> Type::Warning:</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                outstring = <span class="stringliteral">&quot;WARNING: &quot;</span> + message;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            sf::Lock lock(mutex());</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keywordflow">if</span> (output == Output::Console || output == Output::All)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                (type == Type::Error) ?</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                    std::cerr &lt;&lt; outstring &lt;&lt; std::endl</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                    :</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                    std::cout &lt;&lt; outstring &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                <a class="code" href="classxy_1_1_console.html#a4ea210bebca681a9ec2ab2eadcd8dc74">Console::print</a>(outstring);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                <span class="keyword">const</span> std::size_t maxBuffer = 30;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                buffer().push_back(outstring);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                <span class="keywordflow">if</span> (buffer().size() &gt; maxBuffer)buffer().pop_front(); <span class="comment">//no majick here pl0x</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                updateOutString(maxBuffer);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#ifdef _MSC_VER</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                outstring += <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                OutputDebugString(outstring.c_str());</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">#endif //_MSC_VER</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="keywordflow">if</span> (output == Output::File || output == Output::All)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                <span class="comment">//output to a log file</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                std::ofstream file(<span class="stringliteral">&quot;output.log&quot;</span>, std::ios::app);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                <span class="keywordflow">if</span> (file.good())</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                    <span class="comment">/*std::time_t time = std::time(nullptr);</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">                    auto tm = *std::localtime(&amp;time);</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">                    file.imbue(std::locale());</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment">                    file &lt;&lt; std::put_time(&amp;tm, &quot;%d/%m/%y-%H:%M:%S: &quot;);*/</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                    file &lt;&lt; <a class="code" href="classxy_1_1_sys_time.html#a164c78abbaac6ba67472a8fd09f48bc3">SysTime::dateString</a>() &lt;&lt; <span class="stringliteral">&quot;-&quot;</span> &lt;&lt; <a class="code" href="classxy_1_1_sys_time.html#ac85b177c55e33ff5e5cdb5b169c7d444">SysTime::timeString</a>() &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; outstring &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                    file.close();</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                    log(message, type, Output::Console);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                    log(<span class="stringliteral">&quot;Above message was intended for log file. Opening file probably failed.&quot;</span>, Type::Warning, Output::Console);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            }</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        }</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> std::string&amp; bufferString(){ <span class="keywordflow">return</span> stringOutput(); }</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="keyword">static</span> sf::Mutex&amp; mutex(){ <span class="keyword">static</span> sf::Mutex m; <span class="keywordflow">return</span> m; }</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keyword">static</span> std::list&lt;std::string&gt;&amp; buffer(){ <span class="keyword">static</span> std::list&lt;std::string&gt; buffer; <span class="keywordflow">return</span> buffer; }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keyword">static</span> std::string&amp; stringOutput() { <span class="keyword">static</span> std::string output; <span class="keywordflow">return</span> output; }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> updateOutString(std::size_t maxBuffer)</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        {</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">size_t</span> count = 0;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            stringOutput().append(buffer().back());</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            stringOutput().append(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            count++;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <span class="keywordflow">if</span> (count &gt; maxBuffer)</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            {</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                stringOutput() = stringOutput().substr(stringOutput().find_first_of(<span class="charliteral">&#39;\n&#39;</span>) + 1, stringOutput().size());</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                count--;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    };</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;}</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="preprocessor">#ifndef XY_DEBUG</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="preprocessor">#define LOG(message, type)</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="preprocessor">#define LOG(message, type) {\</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="preprocessor">std::string fileName(__FILE__); \</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="preprocessor">fileName = xy::FileSystem::getFileName(fileName); \</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="preprocessor">std::stringstream ss; \</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="preprocessor">ss &lt;&lt; message &lt;&lt; &quot; (&quot; &lt;&lt; fileName &lt;&lt; &quot;, &quot; &lt;&lt; __LINE__ &lt;&lt; &quot;)&quot;; \</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="preprocessor">xy::Logger::log(ss.str(), type);}</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="preprocessor">#endif //XY_DEBUG</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="preprocessor">#endif //XY_LOGGER_HPP_</span></div>
+<div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioSourceImpl.hpp:39</div></div>
+<div class="ttc" id="classxy_1_1_sys_time_html_ac85b177c55e33ff5e5cdb5b169c7d444"><div class="ttname"><a href="classxy_1_1_sys_time.html#ac85b177c55e33ff5e5cdb5b169c7d444">xy::SysTime::timeString</a></div><div class="ttdeci">static std::string timeString()</div><div class="ttdoc">Returns the current system time as a HH:MM:ss formatted string. </div></div>
+<div class="ttc" id="classxy_1_1_sys_time_html_a164c78abbaac6ba67472a8fd09f48bc3"><div class="ttname"><a href="classxy_1_1_sys_time.html#a164c78abbaac6ba67472a8fd09f48bc3">xy::SysTime::dateString</a></div><div class="ttdeci">static std::string dateString()</div><div class="ttdoc">Returns the current date as a dd/mm/yyyy formatted string. </div></div>
+<div class="ttc" id="classxy_1_1_logger_html"><div class="ttname"><a href="classxy_1_1_logger.html">xy::Logger</a></div><div class="ttdoc">Class to allowing messages to be logged to a combination of one or more destinations such as the cons...</div><div class="ttdef"><b>Definition:</b> Log.hpp:60</div></div>
+<div class="ttc" id="classxy_1_1_console_html_a4ea210bebca681a9ec2ab2eadcd8dc74"><div class="ttname"><a href="classxy_1_1_console.html#a4ea210bebca681a9ec2ab2eadcd8dc74">xy::Console::print</a></div><div class="ttdeci">static void print(const std::string &amp;)</div><div class="ttdoc">Prints the given string to the console window. </div></div>
+<div class="ttc" id="classxy_1_1_console_html"><div class="ttname"><a href="classxy_1_1_console.html">xy::Console</a></div><div class="ttdoc">Console class. The console class provides a feedback window and interface with xygine. Any class can register a command with the console as long as it inherits the ConsoleClient interface. </div><div class="ttdef"><b>Definition:</b> Console.hpp:48</div></div>
+<div class="ttc" id="classxy_1_1_logger_html_a832b50efdd1cf22c758eea4396363085"><div class="ttname"><a href="classxy_1_1_logger.html#a832b50efdd1cf22c758eea4396363085">xy::Logger::log</a></div><div class="ttdeci">static void log(const std::string &amp;message, Type type=Type::Info, Output output=Output::Console)</div><div class="ttdoc">Logs a message to a given destination. </div><div class="ttdef"><b>Definition:</b> Log.hpp:82</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

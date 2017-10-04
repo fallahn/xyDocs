@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xygine: Member List</title>
+<title>xyginext: Member List</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,10 +18,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">xygine
-   &#160;<span id="projectnumber">0.1.0</span>
+   <div id="projectname">xyginext
+   &#160;<span id="projectnumber">0.2.0</span>
    </div>
-   <div id="projectbrief">SFML Based 2D Game Creation Framework</div>
+   <div id="projectbrief">Second generation of xygine game creation framework</div>
   </td>
  </tr>
  </tbody>
@@ -58,13 +58,18 @@
 
 <p>This is the complete list of members for <a class="el" href="classxy_1_1_console.html">xy::Console</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classxy_1_1_console.html#aa531abac8b91fe26f46adb8aa5dc3998">addCommand</a>(const std::string &amp;name, const Command &amp;command, const void *owner=nullptr)</td><td class="entry"><a class="el" href="classxy_1_1_console.html">xy::Console</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classxy_1_1_console.html#ae5164b01bead86b785ceebae654cf51e">addConvar</a>(const std::string &amp;name, const std::string &amp;value, const std::string &amp;helpText=std::string())</td><td class="entry"><a class="el" href="classxy_1_1_console.html">xy::Console</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>App</b> (defined in <a class="el" href="classxy_1_1_console.html">xy::Console</a>)</td><td class="entry"><a class="el" href="classxy_1_1_console.html">xy::Console</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Command</b> typedef (defined in <a class="el" href="classxy_1_1_console.html">xy::Console</a>)</td><td class="entry"><a class="el" href="classxy_1_1_console.html">xy::Console</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classxy_1_1_console.html#a9f51f7ecce0f4758a65503979a4a840c">doCommand</a>(const std::string &amp;)</td><td class="entry"><a class="el" href="classxy_1_1_console.html">xy::Console</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classxy_1_1_console.html#a9bb304a0045f46f01cfc1136f3fffe13">print</a>(const std::string &amp;)</td><td class="entry"><a class="el" href="classxy_1_1_console.html">xy::Console</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classxy_1_1_console.html#a53b5fb3d1d7905b5b70e073ae3eae890">show</a>()</td><td class="entry"><a class="el" href="classxy_1_1_console.html">xy::Console</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classxy_1_1_console.html#a325f2027f9421878288aa3dd863db034">unregisterCommands</a>(const void *)</td><td class="entry"><a class="el" href="classxy_1_1_console.html">xy::Console</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classxy_1_1_console.html#a84f492258d94d097ed81aeb2a87d7ba5">Command</a> typedef</td><td class="entry"><a class="el" href="classxy_1_1_console.html">xy::Console</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>ConsoleClient</b> (defined in <a class="el" href="classxy_1_1_console.html">xy::Console</a>)</td><td class="entry"><a class="el" href="classxy_1_1_console.html">xy::Console</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classxy_1_1_console.html#ac44f4fc37fe6ddf25a580c57e8c6d4d6">doCommand</a>(const std::string &amp;)</td><td class="entry"><a class="el" href="classxy_1_1_console.html">xy::Console</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classxy_1_1_console.html#a40c2fdf90c17083c68054627523e4e1f">getConvarValue</a>(const std::string &amp;convar)</td><td class="entry"><a class="el" href="classxy_1_1_console.html">xy::Console</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getConvarValue</b>(const std::string &amp;name) (defined in <a class="el" href="classxy_1_1_console.html">xy::Console</a>)</td><td class="entry"><a class="el" href="classxy_1_1_console.html">xy::Console</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>getConvarValue</b>(const std::string &amp;name) (defined in <a class="el" href="classxy_1_1_console.html">xy::Console</a>)</td><td class="entry"><a class="el" href="classxy_1_1_console.html">xy::Console</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getConvarValue</b>(const std::string &amp;name) (defined in <a class="el" href="classxy_1_1_console.html">xy::Console</a>)</td><td class="entry"><a class="el" href="classxy_1_1_console.html">xy::Console</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>getConvarValue</b>(const std::string &amp;name) (defined in <a class="el" href="classxy_1_1_console.html">xy::Console</a>)</td><td class="entry"><a class="el" href="classxy_1_1_console.html">xy::Console</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classxy_1_1_console.html#a4ea210bebca681a9ec2ab2eadcd8dc74">print</a>(const std::string &amp;)</td><td class="entry"><a class="el" href="classxy_1_1_console.html">xy::Console</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classxy_1_1_console.html#a8bea8b276406881b7d35836d546846f2">show</a>()</td><td class="entry"><a class="el" href="classxy_1_1_console.html">xy::Console</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

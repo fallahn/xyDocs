@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xygine: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xygine/include/xygine/components/AudioListener.hpp Source File</title>
+<title>xyginext: C:/Users/Matt/Documents/Visual Studio 2017/Projects/xygineXT/xyginext/include/xyginext/ecs/components/AudioListener.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,10 +18,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">xygine
-   &#160;<span id="projectnumber">0.1.0</span>
+   <div id="projectname">xyginext
+   &#160;<span id="projectnumber">0.2.0</span>
    </div>
-   <div id="projectbrief">SFML Based 2D Game Creation Framework</div>
+   <div id="projectbrief">Second generation of xygine game creation framework</div>
   </td>
  </tr>
  </tbody>
@@ -44,7 +44,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_4d209b5b760f516cd5a2179341e2b1c7.html">xygine</a></li><li class="navelem"><a class="el" href="dir_72cf7aff5425aef4b747db5058388021.html">components</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_efb0e9b2b77ba75392bcf64fcf40cd77.html">include</a></li><li class="navelem"><a class="el" href="dir_e1acbbb56b05dac1d2df5cc4492ca74b.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_4aede1d1632dac51d267b8924e46a8b9.html">ecs</a></li><li class="navelem"><a class="el" href="dir_9d41577d93af472cf79e85c3d4cdf4e0.html">components</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -53,10 +53,10 @@
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">© Matt Marchant 2014 - 2017</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">(c) Matt Marchant 2017</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">http://trederia.blogspot.com</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">xygine - Zlib license.</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">xygineXT - Zlib license.</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">This software is provided &#39;as-is&#39;, without any express or</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">implied warranty. In no event will the authors be held</span></div>
@@ -79,62 +79,40 @@
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">source distribution.</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">*********************************************************************/</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">//sets the listener&#39;s position in the scene, so that all audio sources</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">//are automatically panned relative to this position. usually this</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">//component would be attached to the same entity as the active camera</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">//but may also be set to a neutral position in scenarios such as split</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">//screen multi player. there can only be a single instance of the</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">//listener and creating a new instance will remove any existing instances</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#ifndef XY_AUDIO_LISTENER_HPP_</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define XY_AUDIO_LISTENER_HPP_</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;xyginext/Config.hpp&gt;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#ifndef XY_AUDIO_LISTENER_HPP_</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#define XY_AUDIO_LISTENER_HPP_</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &lt;xygine/components/Component.hpp&gt;</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;SFML/Audio/Sound.hpp&gt;</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;SFML/Audio/SoundBuffer.hpp&gt;</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacexy.html">xy</a></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classxy_1_1_audio_listener.html">   61</a></span>&#160;    <span class="keyword">class </span>XY_EXPORT_API <a class="code" href="classxy_1_1_audio_listener.html">AudioListener</a> final : <span class="keyword">public</span> <a class="code" href="classxy_1_1_component.html">Component</a></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_audio_source.html">AudioSource</a>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keyword">using</span> Ptr = std::unique_ptr&lt;AudioListener&gt;;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classxy_1_1_audio_listener.html">AudioListener</a>(<a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>&amp;);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        ~<a class="code" href="classxy_1_1_audio_listener.html">AudioListener</a>();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classxy_1_1_audio_listener.html#ac30c7c5205c75d7c68c88f91551b3800">   70</a></span>&#160;        <a class="code" href="classxy_1_1_component.html#a9b98d49ac2d36fc3539f27c67f44fc19">Component::Type</a> <a class="code" href="classxy_1_1_audio_listener.html#ac30c7c5205c75d7c68c88f91551b3800">type</a>()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> Component::Type::Script; }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordtype">void</span> entityUpdate(<a class="code" href="classxy_1_1_entity.html">Entity</a>&amp;, <span class="keywordtype">float</span>) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacexy.html">xy</a></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classxy_1_1_audio_listener.html">   45</a></span>&#160;    <span class="keyword">class </span>XY_EXPORT_API <a class="code" href="classxy_1_1_audio_listener.html">AudioListener</a> final</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classxy_1_1_audio_listener.html#a820906a9ef455e0f0293f08055c8d14d">   55</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classxy_1_1_audio_listener.html#a820906a9ef455e0f0293f08055c8d14d">setVolume</a>(<span class="keywordtype">float</span> volume)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            m_volume = std::max(0.f, volume);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classxy_1_1_audio_listener.html#ab8e071ce87b2dd6ef3cb09faced17234">   63</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="classxy_1_1_audio_listener.html#ab8e071ce87b2dd6ef3cb09faced17234">getVolume</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">return</span> m_volume;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_audio_system.html">AudioSystem</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordtype">float</span> m_volume = 1.f;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    };</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">float</span> getListenerDepth();</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> setMasterVolume(<span class="keywordtype">float</span>);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classxy_1_1_audio_listener.html#a1aaec15f7ff7f497238245b11f6258e2">   89</a></span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="classxy_1_1_audio_listener.html#a1aaec15f7ff7f497238245b11f6258e2">MaxVolume</a>;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        std::list&lt;sf::Sound&gt; m_dyingSounds;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> addDyingSound(<span class="keyword">const</span> sf::Sound&amp;);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        sf::SoundBuffer dummyBuffer;<span class="comment">//kludge to keep the AL device valid</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    };</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#endif //XY_AUDIO_LISTENER_HPP_</span></div>
-<div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xygine namespace. </div><div class="ttdef"><b>Definition:</b> App.hpp:55</div></div>
-<div class="ttc" id="classxy_1_1_component_html"><div class="ttname"><a href="classxy_1_1_component.html">xy::Component</a></div><div class="ttdoc">Abstract base class for creating new components. </div><div class="ttdef"><b>Definition:</b> Component.hpp:59</div></div>
-<div class="ttc" id="classxy_1_1_audio_listener_html_ac30c7c5205c75d7c68c88f91551b3800"><div class="ttname"><a href="classxy_1_1_audio_listener.html#ac30c7c5205c75d7c68c88f91551b3800">xy::AudioListener::type</a></div><div class="ttdeci">Component::Type type() const  override</div><div class="ttdoc">Returns the general type of component. </div><div class="ttdef"><b>Definition:</b> AudioListener.hpp:70</div></div>
-<div class="ttc" id="classxy_1_1_audio_listener_html_a1aaec15f7ff7f497238245b11f6258e2"><div class="ttname"><a href="classxy_1_1_audio_listener.html#a1aaec15f7ff7f497238245b11f6258e2">xy::AudioListener::MaxVolume</a></div><div class="ttdeci">static const float MaxVolume</div><div class="ttdoc">Maximum allowed volume for any audio. </div><div class="ttdef"><b>Definition:</b> AudioListener.hpp:89</div></div>
-<div class="ttc" id="classxy_1_1_message_bus_html"><div class="ttname"><a href="classxy_1_1_message_bus.html">xy::MessageBus</a></div><div class="ttdoc">System wide message bus for custom event messaging. </div><div class="ttdef"><b>Definition:</b> MessageBus.hpp:251</div></div>
-<div class="ttc" id="classxy_1_1_audio_source_html"><div class="ttname"><a href="classxy_1_1_audio_source.html">xy::AudioSource</a></div><div class="ttdoc">Represents a sound source in the scene. </div><div class="ttdef"><b>Definition:</b> AudioSource.hpp:48</div></div>
-<div class="ttc" id="classxy_1_1_entity_html"><div class="ttname"><a href="classxy_1_1_entity.html">xy::Entity</a></div><div class="ttdoc">Entity class. </div><div class="ttdef"><b>Definition:</b> Entity.hpp:63</div></div>
-<div class="ttc" id="classxy_1_1_component_html_a9b98d49ac2d36fc3539f27c67f44fc19"><div class="ttname"><a href="classxy_1_1_component.html#a9b98d49ac2d36fc3539f27c67f44fc19">xy::Component::Type</a></div><div class="ttdeci">Type</div><div class="ttdoc">Component type. </div><div class="ttdef"><b>Definition:</b> Component.hpp:94</div></div>
-<div class="ttc" id="classxy_1_1_audio_listener_html"><div class="ttname"><a href="classxy_1_1_audio_listener.html">xy::AudioListener</a></div><div class="ttdoc">Audio listener component. </div><div class="ttdef"><b>Definition:</b> AudioListener.hpp:61</div></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif //XY_AUDIO_LISTENER_HPP_</span></div>
+<div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioSourceImpl.hpp:39</div></div>
+<div class="ttc" id="classxy_1_1_audio_listener_html_a820906a9ef455e0f0293f08055c8d14d"><div class="ttname"><a href="classxy_1_1_audio_listener.html#a820906a9ef455e0f0293f08055c8d14d">xy::AudioListener::setVolume</a></div><div class="ttdeci">void setVolume(float volume)</div><div class="ttdoc">Sets the overall volume of the Listener. This will affect the perceived volume of all sounds being he...</div><div class="ttdef"><b>Definition:</b> AudioListener.hpp:55</div></div>
+<div class="ttc" id="classxy_1_1_audio_system_html"><div class="ttname"><a href="classxy_1_1_audio_system.html">xy::AudioSystem</a></div><div class="ttdoc">Audio System. While AudioEmitter components will still be audible without and active AudioSystem...</div><div class="ttdef"><b>Definition:</b> AudioSystem.hpp:42</div></div>
+<div class="ttc" id="classxy_1_1_audio_listener_html_ab8e071ce87b2dd6ef3cb09faced17234"><div class="ttname"><a href="classxy_1_1_audio_listener.html#ab8e071ce87b2dd6ef3cb09faced17234">xy::AudioListener::getVolume</a></div><div class="ttdeci">float getVolume() const </div><div class="ttdoc">Returns the current volume of the listener. </div><div class="ttdef"><b>Definition:</b> AudioListener.hpp:63</div></div>
+<div class="ttc" id="classxy_1_1_audio_listener_html"><div class="ttname"><a href="classxy_1_1_audio_listener.html">xy::AudioListener</a></div><div class="ttdoc">Audio Listener component. The AudioListener component defines the point at which the active AudioSyst...</div><div class="ttdef"><b>Definition:</b> AudioListener.hpp:45</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xygine: xy::PostProcess Class Reference</title>
+<title>xyginext: xy::PostProcess Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,10 +18,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">xygine
-   &#160;<span id="projectnumber">0.1.0</span>
+   <div id="projectname">xyginext
+   &#160;<span id="projectnumber">0.2.0</span>
    </div>
-   <div id="projectbrief">SFML Based 2D Game Creation Framework</div>
+   <div id="projectbrief">Second generation of xygine game creation framework</div>
   </td>
  </tr>
  </tbody>
@@ -52,10 +52,9 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="classxy_1_1_post_process-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -73,7 +72,7 @@ Inheritance diagram for xy::PostProcess:</div>
  <div class="center">
   <img src="classxy_1_1_post_process.png" usemap="#xy::PostProcess_map" alt=""/>
   <map id="xy::PostProcess_map" name="xy::PostProcess_map">
-<area href="classxy_1_1_post_antique.html" alt="xy::PostAntique" shape="rect" coords="0,56,115,80"/>
+<area href="classxy_1_1_post_antique.html" title="Antique Post process effect. Creates an old &#39;filmic&#39; look, with dust, jitter and desaturation. " alt="xy::PostAntique" shape="rect" coords="0,56,115,80"/>
 <area href="classxy_1_1_post_bloom.html" title="Bloom post process effect. " alt="xy::PostBloom" shape="rect" coords="125,56,240,80"/>
 <area href="classxy_1_1_post_blur.html" title="Post process effect which applies a screen-wide gaussian blur. This effect can be enabled and disable..." alt="xy::PostBlur" shape="rect" coords="250,56,365,80"/>
 <area href="classxy_1_1_post_chrome_ab.html" title="Creates a Chromatic Abberation effect. " alt="xy::PostChromeAb" shape="rect" coords="375,56,490,80"/>
@@ -81,12 +80,6 @@ Inheritance diagram for xy::PostProcess:</div>
 </map>
  </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structxy_1_1_post_process_1_1_message_handler.html">MessageHandler</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Post Process <a class="el" href="classxy_1_1_message.html" title="Message class. ">Message</a> Handler.  <a href="structxy_1_1_post_process_1_1_message_handler.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:af457389c98af534328797d8b1da143e9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af457389c98af534328797d8b1da143e9"></a>
@@ -98,59 +91,47 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a38ee7e8b866f4ca98700665e7a362f88"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a38ee7e8b866f4ca98700665e7a362f88"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>PostProcess</b> (const <a class="el" href="classxy_1_1_post_process.html">PostProcess</a> &amp;)=delete</td></tr>
 <tr class="separator:a38ee7e8b866f4ca98700665e7a362f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a449318f61871cb5e8f9af61c42c3d365"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a449318f61871cb5e8f9af61c42c3d365"></a>
-const <a class="el" href="classxy_1_1_post_process.html">PostProcess</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classxy_1_1_post_process.html">PostProcess</a> &amp;)=delete</td></tr>
-<tr class="separator:a449318f61871cb5e8f9af61c42c3d365"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8659dc1836551114479fa8f028fed992"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8659dc1836551114479fa8f028fed992"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>PostProcess</b> (<a class="el" href="classxy_1_1_post_process.html">PostProcess</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a8659dc1836551114479fa8f028fed992"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae9785dbec802e4e28e09a9980fe2fa0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae9785dbec802e4e28e09a9980fe2fa0"></a>
+<a class="el" href="classxy_1_1_post_process.html">PostProcess</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classxy_1_1_post_process.html">PostProcess</a> &amp;)=delete</td></tr>
+<tr class="separator:aae9785dbec802e4e28e09a9980fe2fa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa561f8b635c86df4555670333681ae7d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa561f8b635c86df4555670333681ae7d"></a>
+<a class="el" href="classxy_1_1_post_process.html">PostProcess</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classxy_1_1_post_process.html">PostProcess</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:aa561f8b635c86df4555670333681ae7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c555911359292b6e33797bfbbbb665b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_post_process.html#a1c555911359292b6e33797bfbbbb665b">apply</a> (const sf::RenderTexture &amp;, sf::RenderTarget &amp;)=0</td></tr>
 <tr class="memdesc:a1c555911359292b6e33797bfbbbb665b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the effect.  <a href="#a1c555911359292b6e33797bfbbbb665b">More...</a><br /></td></tr>
 <tr class="separator:a1c555911359292b6e33797bfbbbb665b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fdfdb66ddd2f82f80e45796cbbb8b2b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_post_process.html#a7fdfdb66ddd2f82f80e45796cbbb8b2b">update</a> (float)</td></tr>
-<tr class="memdesc:a7fdfdb66ddd2f82f80e45796cbbb8b2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the effect.  <a href="#a7fdfdb66ddd2f82f80e45796cbbb8b2b">More...</a><br /></td></tr>
+<tr class="memitem:a7fdfdb66ddd2f82f80e45796cbbb8b2b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7fdfdb66ddd2f82f80e45796cbbb8b2b"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_post_process.html#a7fdfdb66ddd2f82f80e45796cbbb8b2b">update</a> (float)</td></tr>
+<tr class="memdesc:a7fdfdb66ddd2f82f80e45796cbbb8b2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the effect. Some effects may require shader parameters to be updated over time. This optionally overridable function passes in the current frame time and allows updating those parameters. This is called automatically when the effect is added to a <a class="el" href="classxy_1_1_scene.html" title="Encapsulates a single scene. The scene class contains everything needed to create a scene graph by en...">Scene</a>, but will need to be called manually when using the effect on its own. <br /></td></tr>
 <tr class="separator:a7fdfdb66ddd2f82f80e45796cbbb8b2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac77a5aeaff28408bc209feecc7e46206"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_post_process.html#ac77a5aeaff28408bc209feecc7e46206">handleMessage</a> (const <a class="el" href="classxy_1_1_message.html">Message</a> &amp;)</td></tr>
-<tr class="memdesc:ac77a5aeaff28408bc209feecc7e46206"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used internally by xygine to call any message handler callbacks associated with a post process effect when an effect is added to a <a class="el" href="classxy_1_1_scene.html" title="Scene class. ">Scene</a>. This should be called manually when explicitly applying post process effects and message handling is required.  <a href="#ac77a5aeaff28408bc209feecc7e46206">More...</a><br /></td></tr>
-<tr class="separator:ac77a5aeaff28408bc209feecc7e46206"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ff8d0c57ae0ab6859afd6b6b2e65e98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_post_process.html#a4ff8d0c57ae0ab6859afd6b6b2e65e98">addMessageHandler</a> (const <a class="el" href="structxy_1_1_post_process_1_1_message_handler.html">MessageHandler</a> &amp;)</td></tr>
-<tr class="memdesc:a4ff8d0c57ae0ab6859afd6b6b2e65e98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a message handler to the list of message handling callbacks for this effect.  <a href="#a4ff8d0c57ae0ab6859afd6b6b2e65e98">More...</a><br /></td></tr>
-<tr class="separator:a4ff8d0c57ae0ab6859afd6b6b2e65e98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0701b83f3f8a45f30ddc9f83cc0493d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa0701b83f3f8a45f30ddc9f83cc0493d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>resizeBuffer</b> (sf::Int32 w, sf::Int32 h)</td></tr>
+<tr class="separator:aa0701b83f3f8a45f30ddc9f83cc0493d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a8d5b2d0d790dee99a6e8d459ffa1c784"><td class="memTemplParams" colspan="2"><a class="anchor" id="a8d5b2d0d790dee99a6e8d459ffa1c784"></a>
-template&lt;typename T , typename... Args&gt; </td></tr>
-<tr class="memitem:a8d5b2d0d790dee99a6e8d459ffa1c784"><td class="memTemplItemLeft" align="right" valign="top">static Ptr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxy_1_1_post_process.html#a8d5b2d0d790dee99a6e8d459ffa1c784">create</a> (Args &amp;&amp;...args)</td></tr>
-<tr class="memdesc:a8d5b2d0d790dee99a6e8d459ffa1c784"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility function for creating post process effects. <br /></td></tr>
-<tr class="separator:a8d5b2d0d790dee99a6e8d459ffa1c784"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a6a377981d5f57e800868335e85af4d18"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a377981d5f57e800868335e85af4d18"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_post_process.html#a6a377981d5f57e800868335e85af4d18">bufferResized</a> ()</td></tr>
+<tr class="memdesc:a6a377981d5f57e800868335e85af4d18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the main output buffer resized. Implement this in post processes which contain intermediate buffers which need to be updated. <br /></td></tr>
+<tr class="separator:a6a377981d5f57e800868335e85af4d18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdd27ffc2527bbcb941969623180bfbc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acdd27ffc2527bbcb941969623180bfbc"></a>
+sf::Vector2i&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_post_process.html#acdd27ffc2527bbcb941969623180bfbc">getBufferSize</a> () const </td></tr>
+<tr class="memdesc:acdd27ffc2527bbcb941969623180bfbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current buffer size. <br /></td></tr>
+<tr class="separator:acdd27ffc2527bbcb941969623180bfbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
 Static Protected Member Functions</h2></td></tr>
-<tr class="memitem:a9b6b763858aeadd71a3e7ad40e1157a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b6b763858aeadd71a3e7ad40e1157a3"></a>
+<tr class="memitem:ac40537ea7a339b60d7240f620450d24b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac40537ea7a339b60d7240f620450d24b"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>applyShader</b> (const sf::Shader &amp;, sf::RenderTarget &amp;)</td></tr>
-<tr class="separator:a9b6b763858aeadd71a3e7ad40e1157a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:ac40537ea7a339b60d7240f620450d24b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Abstract base class for full screen post processes. </p>
 <p>Post processes can be added to a scene so that they are applied after a scene is rendered. Multiple post processes can be chained but be aware that too many will affect performance. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a4ff8d0c57ae0ab6859afd6b6b2e65e98"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void PostProcess::addMessageHandler </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structxy_1_1_post_process_1_1_message_handler.html">MessageHandler</a> &amp;&#160;</td>
-          <td class="paramname"><em>mh</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Adds a message handler to the list of message handling callbacks for this effect. </p>
-<p>Custom message handlers can be added to any instance of a post process via the <a class="el" href="structxy_1_1_post_process_1_1_message_handler.html" title="Post Process Message Handler. ">MessageHandler</a> struct. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="structxy_1_1_post_process_1_1_message_handler.html" title="Post Process Message Handler. ">MessageHandler</a> </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="a1c555911359292b6e33797bfbbbb665b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -193,60 +174,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>applyShader</b
 </dl>
 <p>The source and destinations are handled automatically by xygine when a post process effect is added to a scene, but must be specified maunally when using the effect outside the scene rendering. </p>
 
-<p>Implemented in <a class="el" href="classxy_1_1_post_chrome_ab.html#a7a7227de77eac69d257a6ee3cdb8cad3">xy::PostChromeAb</a>, <a class="el" href="classxy_1_1_post_bloom.html#aab51572a5ba4a5bda768f96a912b055e">xy::PostBloom</a>, <a class="el" href="classxy_1_1_post_blur.html#ae9828e3b05227052e6aa61b9f7a27507">xy::PostBlur</a>, <a class="el" href="classxy_1_1_post_old_school.html#ac2b142616d9ee8c45126974abe45cf9f">xy::PostOldSchool</a>, and <a class="el" href="classxy_1_1_post_antique.html#a4a4e434085230f5b0b0423fe660789c9">xy::PostAntique</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ac77a5aeaff28408bc209feecc7e46206"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void PostProcess::handleMessage </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classxy_1_1_message.html">Message</a> &amp;&#160;</td>
-          <td class="paramname"><em>msg</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Used internally by xygine to call any message handler callbacks associated with a post process effect when an effect is added to a <a class="el" href="classxy_1_1_scene.html" title="Scene class. ">Scene</a>. This should be called manually when explicitly applying post process effects and message handling is required. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname"><a class="el" href="classxy_1_1_message.html" title="Message class. ">Message</a></td><td>Reference to message passed to callbacks </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a7fdfdb66ddd2f82f80e45796cbbb8b2b"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void xy::PostProcess::update </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Updates the effect. </p>
-<p>Some effects may require shader parameters to be updated over time. This optionally overridable function passes in the current frame time and allows updating those parameters. This is called automatically when the effect is added to a <a class="el" href="classxy_1_1_scene.html" title="Scene class. ">Scene</a>, but will need to be called manually when using the effect on its own. </p>
-
-<p>Reimplemented in <a class="el" href="classxy_1_1_post_chrome_ab.html#ae58410722d20ff42953b6f51d771f68c">xy::PostChromeAb</a>, and <a class="el" href="classxy_1_1_post_antique.html#aaed496eef91810262e27ba90e96f5e2b">xy::PostAntique</a>.</p>
+<p>Implemented in <a class="el" href="classxy_1_1_post_chrome_ab.html#aba1e6387628c906749ec92475b044d4e">xy::PostChromeAb</a>, <a class="el" href="classxy_1_1_post_bloom.html#abc4dc2a9c65b22cf315ddd5a2f63975b">xy::PostBloom</a>, <a class="el" href="classxy_1_1_post_blur.html#a9660b7e45d37203dbed9ab7a6babfbfa">xy::PostBlur</a>, <a class="el" href="classxy_1_1_post_old_school.html#aa2c1ef7bed3357e100db2e890dcbfbc6">xy::PostOldSchool</a>, and <a class="el" href="classxy_1_1_post_antique.html#a616504b780515bb59da5c70fa1112d45">xy::PostAntique</a>.</p>
 
 </div>
 </div>

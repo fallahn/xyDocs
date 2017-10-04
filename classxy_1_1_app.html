@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xygine: xy::App Class Reference</title>
+<title>xyginext: xy::App Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,10 +18,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">xygine
-   &#160;<span id="projectnumber">0.1.0</span>
+   <div id="projectname">xyginext
+   &#160;<span id="projectnumber">0.2.0</span>
    </div>
-   <div id="projectbrief">SFML Based 2D Game Creation Framework</div>
+   <div id="projectbrief">Second generation of xygine game creation framework</div>
   </td>
  </tr>
  </tbody>
@@ -56,6 +56,7 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classxy_1_1_app-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">xy::App Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -69,12 +70,6 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structxy_1_1_app_1_1_audio_settings.html">AudioSettings</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Audio settings struct.  <a href="structxy_1_1_app_1_1_audio_settings.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structxy_1_1_app_1_1_game_settings.html">GameSettings</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Game settings struct.  <a href="structxy_1_1_app_1_1_game_settings.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structxy_1_1_app_1_1_video_settings.html">VideoSettings</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structxy_1_1_app_1_1_video_settings.html" title="VideoSettings struct. ">VideoSettings</a> struct.  <a href="structxy_1_1_app_1_1_video_settings.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -101,9 +96,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#a3e7ee0e1da99f89ac8e9bb446f711066">resume</a> ()</td></tr>
 <tr class="memdesc:a3e7ee0e1da99f89ac8e9bb446f711066"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resumes the app's update function, if it is paused. <br /></td></tr>
 <tr class="separator:a3e7ee0e1da99f89ac8e9bb446f711066"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7743efdc87b9693288930528720b077f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structxy_1_1_app_1_1_audio_settings.html">AudioSettings</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#a7743efdc87b9693288930528720b077f">getAudioSettings</a> () const </td></tr>
-<tr class="memdesc:a7743efdc87b9693288930528720b077f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the struct containing the current audio settings.  <a href="#a7743efdc87b9693288930528720b077f">More...</a><br /></td></tr>
-<tr class="separator:a7743efdc87b9693288930528720b077f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8094bff3ce61c43695f271292ea2d42e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8094bff3ce61c43695f271292ea2d42e"></a>
 const <a class="el" href="structxy_1_1_app_1_1_video_settings.html">VideoSettings</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#a8094bff3ce61c43695f271292ea2d42e">getVideoSettings</a> () const </td></tr>
 <tr class="memdesc:a8094bff3ce61c43695f271292ea2d42e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to a struct containing the current Video settings. <br /></td></tr>
@@ -111,26 +103,9 @@ const <a class="el" href="structxy_1_1_app_1_1_video_settings.html">VideoSetting
 <tr class="memitem:a5510c2a12f5f5d35d659519003868bc2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#a5510c2a12f5f5d35d659519003868bc2">applyVideoSettings</a> (const <a class="el" href="structxy_1_1_app_1_1_video_settings.html">VideoSettings</a> &amp;)</td></tr>
 <tr class="memdesc:a5510c2a12f5f5d35d659519003868bc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a given set of video settings.  <a href="#a5510c2a12f5f5d35d659519003868bc2">More...</a><br /></td></tr>
 <tr class="separator:a5510c2a12f5f5d35d659519003868bc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3189eeb72fde935322b3e08006efd07e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3189eeb72fde935322b3e08006efd07e"></a>
-const <a class="el" href="structxy_1_1_app_1_1_game_settings.html">GameSettings</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#a3189eeb72fde935322b3e08006efd07e">getGameSettings</a> () const </td></tr>
-<tr class="memdesc:a3189eeb72fde935322b3e08006efd07e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the struct containing the current game settings. <br /></td></tr>
-<tr class="separator:a3189eeb72fde935322b3e08006efd07e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0619a6e4917f3efe73d9b24787ad3c20"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classxy_1_1_message_bus.html">MessageBus</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#a0619a6e4917f3efe73d9b24787ad3c20">getMessageBus</a> ()</td></tr>
 <tr class="memdesc:a0619a6e4917f3efe73d9b24787ad3c20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the message bus.  <a href="#a0619a6e4917f3efe73d9b24787ad3c20">More...</a><br /></td></tr>
 <tr class="separator:a0619a6e4917f3efe73d9b24787ad3c20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a552f66a89f94f3b9912a1a3ec96f20d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#a552f66a89f94f3b9912a1a3ec96f20d5">addScore</a> (const std::string &amp;name, int value)</td></tr>
-<tr class="memdesc:a552f66a89f94f3b9912a1a3ec96f20d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a name / value pair to the score board.  <a href="#a552f66a89f94f3b9912a1a3ec96f20d5">More...</a><br /></td></tr>
-<tr class="separator:a552f66a89f94f3b9912a1a3ec96f20d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3d32a8a6ae8cca303ee00d35d8b8731"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="structxy_1_1_scores_1_1_item.html">Scores::Item</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#ab3d32a8a6ae8cca303ee00d35d8b8731">getScores</a> () const </td></tr>
-<tr class="memdesc:ab3d32a8a6ae8cca303ee00d35d8b8731"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector containing the scores loaded from an external file.  <a href="#ab3d32a8a6ae8cca303ee00d35d8b8731">More...</a><br /></td></tr>
-<tr class="separator:ab3d32a8a6ae8cca303ee00d35d8b8731"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa46ed45b517434661f2e2bbece150542"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa46ed45b517434661f2e2bbece150542"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#aa46ed45b517434661f2e2bbece150542">getLastScoreIndex</a> () const </td></tr>
-<tr class="memdesc:aa46ed45b517434661f2e2bbece150542"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the index in the score list of the last score to be added. <br /></td></tr>
-<tr class="separator:aa46ed45b517434661f2e2bbece150542"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a072b3c0d70e9ceaeb2b281050d7c5989"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#a072b3c0d70e9ceaeb2b281050d7c5989">setPlayerInitials</a> (const std::string &amp;)</td></tr>
-<tr class="memdesc:a072b3c0d70e9ceaeb2b281050d7c5989"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current player's initials.  <a href="#a072b3c0d70e9ceaeb2b281050d7c5989">More...</a><br /></td></tr>
-<tr class="separator:a072b3c0d70e9ceaeb2b281050d7c5989"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae52dd3e4d9f3da4ef2570c65898abfa1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae52dd3e4d9f3da4ef2570c65898abfa1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#ae52dd3e4d9f3da4ef2570c65898abfa1">setWindowTitle</a> (const std::string &amp;)</td></tr>
 <tr class="memdesc:ae52dd3e4d9f3da4ef2570c65898abfa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the window title. Prefer this when setting the window title over setting it directly as it will ensure the title is maintained when switching video modes. <br /></td></tr>
@@ -142,21 +117,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a27baf3474eff3b2a5bbee8e01e6bc634"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a27baf3474eff3b2a5bbee8e01e6bc634"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#a27baf3474eff3b2a5bbee8e01e6bc634">addUserWindow</a> (const std::function&lt; void()&gt; &amp;, const void *=nullptr)</td></tr>
-<tr class="memdesc:a27baf3474eff3b2a5bbee8e01e6bc634"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows adding a custom imGui based window. Drawing imGui windows directly within the update loop may cause flickering on occassions when the <a class="el" href="classxy_1_1_app.html" title="Abstract base class for new games or applications. ">App</a> is updated more than once in a single frame. Adding a window function here ensures that it is drawn correctly. To help prevent registering the same window multiple times a pointer to the registering object can optionally passed to this function. Using the same pointer with removeUserWindow() will remove the function, for example when the registering object is destroyed. <br /></td></tr>
-<tr class="separator:a27baf3474eff3b2a5bbee8e01e6bc634"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a289e2574a5bafef2cb0226060fbe8351"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a289e2574a5bafef2cb0226060fbe8351"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#a289e2574a5bafef2cb0226060fbe8351">removeUserWindows</a> (const void *)</td></tr>
-<tr class="memdesc:a289e2574a5bafef2cb0226060fbe8351"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a registered user window if it exists. Care should be taken to remove user windows which are registered by objects which no longer exist, so that invalid window functions are not called. Passing in a pointer to an object, usually via its destructor, will make sure any windows that object registered via <a class="el" href="classxy_1_1_app.html#a27baf3474eff3b2a5bbee8e01e6bc634" title="Allows adding a custom imGui based window. Drawing imGui windows directly within the update loop may ...">addUserWindow()</a> will be removed. <br /></td></tr>
-<tr class="separator:a289e2574a5bafef2cb0226060fbe8351"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae376a6402cd02b8f2b4c910c1864b98b"><td class="memItemLeft" align="right" valign="top">static sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#ae376a6402cd02b8f2b4c910c1864b98b">getMouseWorldPosition</a> ()</td></tr>
-<tr class="memdesc:ae376a6402cd02b8f2b4c910c1864b98b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the mouse position in world coordinates.  <a href="#ae376a6402cd02b8f2b4c910c1864b98b">More...</a><br /></td></tr>
-<tr class="separator:ae376a6402cd02b8f2b4c910c1864b98b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbab85320506abb70611550426af9097"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acbab85320506abb70611550426af9097"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#acbab85320506abb70611550426af9097">setMouseCursorVisible</a> (bool)</td></tr>
-<tr class="memdesc:acbab85320506abb70611550426af9097"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the visibility of the mouse cursor. Prefer this to setting via the render window directly to allow imgui windows to correctly display/hide the mouse based on their visibility status. <br /></td></tr>
-<tr class="separator:acbab85320506abb70611550426af9097"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06cb5cecd2e2217adfdc2c158be066be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a06cb5cecd2e2217adfdc2c158be066be"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#a06cb5cecd2e2217adfdc2c158be066be">quit</a> ()</td></tr>
 <tr class="memdesc:a06cb5cecd2e2217adfdc2c158be066be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Quits the application. <br /></td></tr>
@@ -169,13 +129,21 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 static sf::Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#a98861274f6b13462c6e2051d2a692aff">getClearColour</a> ()</td></tr>
 <tr class="memdesc:a98861274f6b13462c6e2051d2a692aff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current clear colour of the app render window. <br /></td></tr>
 <tr class="separator:a98861274f6b13462c6e2051d2a692aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3b5bbac20acc803473be6b050737082"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac3b5bbac20acc803473be6b050737082"></a>
+static sf::RenderWindow &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#ac3b5bbac20acc803473be6b050737082">getRenderWindow</a> ()</td></tr>
+<tr class="memdesc:ac3b5bbac20acc803473be6b050737082"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the current render window. <br /></td></tr>
+<tr class="separator:ac3b5bbac20acc803473be6b050737082"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6f3362bdc5ff840e0677bb075a7f0e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae6f3362bdc5ff840e0677bb075a7f0e5"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#ae6f3362bdc5ff840e0677bb075a7f0e5">printStat</a> (const std::string &amp;, const std::string &amp;)</td></tr>
+<tr class="memdesc:ae6f3362bdc5ff840e0677bb075a7f0e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the name/value pair to the stats window. <br /></td></tr>
+<tr class="separator:ae6f3362bdc5ff840e0677bb075a7f0e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a874d6a33e067c7d1ea6e780fe6b3ba60"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a874d6a33e067c7d1ea6e780fe6b3ba60"></a>
+static <a class="el" href="classxy_1_1_app.html">App</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#a874d6a33e067c7d1ea6e780fe6b3ba60">getActiveInstance</a> ()</td></tr>
+<tr class="memdesc:a874d6a33e067c7d1ea6e780fe6b3ba60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the active <a class="el" href="classxy_1_1_app.html" title="Abstract base class for new games or applications. ">App</a> instance. <br /></td></tr>
+<tr class="separator:a874d6a33e067c7d1ea6e780fe6b3ba60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a339654bddd7f314fe858c4b7fdf6d810"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a339654bddd7f314fe858c4b7fdf6d810"></a>
-sf::RenderWindow &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#a339654bddd7f314fe858c4b7fdf6d810">getRenderWindow</a> ()</td></tr>
-<tr class="memdesc:a339654bddd7f314fe858c4b7fdf6d810"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the current render window. <br /></td></tr>
-<tr class="separator:a339654bddd7f314fe858c4b7fdf6d810"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70cfd11d77a4e0539129834dc035d31c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#a70cfd11d77a4e0539129834dc035d31c">handleEvent</a> (const sf::Event &amp;)=0</td></tr>
 <tr class="memdesc:a70cfd11d77a4e0539129834dc035d31c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for despatching all window events.  <a href="#a70cfd11d77a4e0539129834dc035d31c">More...</a><br /></td></tr>
 <tr class="separator:a70cfd11d77a4e0539129834dc035d31c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -198,6 +166,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:a0b30493a47af9e4f3bc31645a68c2054"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#a0b30493a47af9e4f3bc31645a68c2054">finalise</a> ()</td></tr>
 <tr class="memdesc:a0b30493a47af9e4f3bc31645a68c2054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the application shuts down.  <a href="#a0b30493a47af9e4f3bc31645a68c2054">More...</a><br /></td></tr>
 <tr class="separator:a0b30493a47af9e4f3bc31645a68c2054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a1b0753748a606d0b9334b30349d720a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b0753748a606d0b9334b30349d720a6"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>GuiClient</b></td></tr>
+<tr class="separator:a1b0753748a606d0b9334b30349d720a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Abstract base class for new games or applications. </p>
@@ -219,7 +193,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <p>Constructor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sf::ContextSettings.</td><td>Default context settings are supplied when inherting the <a class="el" href="classxy_1_1_app.html" title="Abstract base class for new games or applications. ">App</a> class, but provide the option to request a specific context if needed. For example when creating a game which uses the <a class="el" href="classxy_1_1_model.html" title="Allows attaching a 3D mesh and a set of materials to an entity in the scene. While the model is fully...">Model</a> component (or other 3D features) a context with OpenGL version 3.2 or higher is needed, as well as a depth buffer. </td></tr>
+    <tr><td class="paramname">sf::ContextSettings.</td><td>Default context settings are supplied when inherting the <a class="el" href="classxy_1_1_app.html" title="Abstract base class for new games or applications. ">App</a> class, but provide the option to request a specific context if needed. For example when creating a game which uses the Model component (or other 3D features) a context with OpenGL version 3.2 or higher is needed, as well as a depth buffer. </td></tr>
   </table>
   </dd>
 </dl>
@@ -227,35 +201,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a552f66a89f94f3b9912a1a3ec96f20d5"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void xy::App::addScore </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Add a name / value pair to the score board. </p>
-<p>The app contains a list of scores along with player names which are written to an external file on exit. </p>
-
-</div>
-</div>
 <a class="anchor" id="a5510c2a12f5f5d35d659519003868bc2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -271,7 +216,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><div class="memdoc">
 
 <p>Applies a given set of video settings. </p>
-<p>Video settings can be updated va the messaging system or by providing this function with a struct containing the desired settings. If requested settings are invalid for any reason the settigns will not be applied and a message will be printed when in debug mode. </p>
+<p>This is the preferred method for resizing the window, as SFML does not raise Resized events when calling Window::setSize(). This function ensures a message is posted to the message bus in such cases, so that active scenes and states can correctly re-calculate the render view. </p>
 
 </div>
 </div>
@@ -301,24 +246,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 </div>
 </div>
-<a class="anchor" id="a7743efdc87b9693288930528720b077f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="structxy_1_1_app_1_1_audio_settings.html">AudioSettings</a>&amp; xy::App::getAudioSettings </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns a reference to the struct containing the current audio settings. </p>
-<p>Audio settings properties are updated via the messaging system </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classxy_1_1_message_bus.html" title="System wide message bus for custom event messaging. ">MessageBus</a> </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="a0619a6e4917f3efe73d9b24787ad3c20"></a>
 <div class="memitem">
 <div class="memproto">
@@ -334,50 +261,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <p>Returns a reference to the message bus. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classxy_1_1_message_bus.html" title="System wide message bus for custom event messaging. ">MessageBus</a> </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ae376a6402cd02b8f2b4c910c1864b98b"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static sf::Vector2f xy::App::getMouseWorldPosition </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the mouse position in world coordinates. </p>
-<p>This is only valid while an instance of the app is running and will cause an assertion error otherwise </p>
-
-</div>
-</div>
-<a class="anchor" id="ab3d32a8a6ae8cca303ee00d35d8b8731"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::vector&lt;<a class="el" href="structxy_1_1_scores_1_1_item.html">Scores::Item</a>&gt;&amp; xy::App::getScores </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns a vector containing the scores loaded from an external file. </p>
-<p>The vector can be used to display name / value lists in menus or high score tables </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classxy_1_1_u_i_1_1_score_list.html" title="An animated scrolling list of items for displaying scores. Designed for specifically displaying xy::S...">UI::ScoreList</a> </dd></dl>
 
 </div>
 </div>
@@ -502,25 +385,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <p>Starts the application. </p>
 <p>This should be called once from within main() This will start the application and enter the game loop </p>
-
-</div>
-</div>
-<a class="anchor" id="a072b3c0d70e9ceaeb2b281050d7c5989"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void xy::App::setPlayerInitials </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets the current player's initials. </p>
-<p>The initials can be displayed throughout the game, and can be written to the score list </p>
 
 </div>
 </div>

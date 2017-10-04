@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xygine: xy::State Class Reference</title>
+<title>xyginext: xy::State Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,10 +18,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">xygine
-   &#160;<span id="projectnumber">0.1.0</span>
+   <div id="projectname">xyginext
+   &#160;<span id="projectnumber">0.2.0</span>
    </div>
-   <div id="projectbrief">SFML Based 2D Game Creation Framework</div>
+   <div id="projectbrief">Second generation of xygine game creation framework</div>
   </td>
  </tr>
  </tbody>
@@ -81,9 +81,9 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>Ptr</b> = std::uniqu
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8d73a9588ba4f39d02ebe2232bca4387"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_state.html#a8d73a9588ba4f39d02ebe2232bca4387">State</a> (<a class="el" href="classxy_1_1_state_stack.html">StateStack</a> &amp;stateStack, <a class="el" href="structxy_1_1_state_1_1_context.html">Context</a> context)</td></tr>
-<tr class="memdesc:a8d73a9588ba4f39d02ebe2232bca4387"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a8d73a9588ba4f39d02ebe2232bca4387">More...</a><br /></td></tr>
-<tr class="separator:a8d73a9588ba4f39d02ebe2232bca4387"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d19f92507f6c1952f8d1982ac00cd34"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_state.html#a0d19f92507f6c1952f8d1982ac00cd34">State</a> (<a class="el" href="classxy_1_1_state_stack.html">StateStack</a> &amp;stateStack, <a class="el" href="structxy_1_1_state_1_1_context.html">Context</a> context)</td></tr>
+<tr class="memdesc:a0d19f92507f6c1952f8d1982ac00cd34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a0d19f92507f6c1952f8d1982ac00cd34">More...</a><br /></td></tr>
+<tr class="separator:a0d19f92507f6c1952f8d1982ac00cd34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a1e2154b606f20919eb1011ab0e30c4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a1e2154b606f20919eb1011ab0e30c4"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>State</b> (const <a class="el" href="classxy_1_1_state.html">State</a> &amp;)=delete</td></tr>
 <tr class="separator:a4a1e2154b606f20919eb1011ab0e30c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -106,49 +106,49 @@ const <a class="el" href="classxy_1_1_state.html">State</a> &amp;&#160;</td><td 
 virtual StateID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_state.html#a05543625dbec59601ee97a72742ca89a">stateID</a> () const  =0</td></tr>
 <tr class="memdesc:a05543625dbec59601ee97a72742ca89a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the unique ID of this state. <br /></td></tr>
 <tr class="separator:a05543625dbec59601ee97a72742ca89a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9870f49da1bb34f8607b42ede23c1a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_state.html#ab9870f49da1bb34f8607b42ede23c1a5">setContext</a> (<a class="el" href="structxy_1_1_state_1_1_context.html">Context</a>)</td></tr>
-<tr class="memdesc:ab9870f49da1bb34f8607b42ede23c1a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a new context for this state.  <a href="#ab9870f49da1bb34f8607b42ede23c1a5">More...</a><br /></td></tr>
-<tr class="separator:ab9870f49da1bb34f8607b42ede23c1a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade1b30d01d35eb703075e3c84d13e60a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_state.html#ade1b30d01d35eb703075e3c84d13e60a">setContext</a> (<a class="el" href="structxy_1_1_state_1_1_context.html">Context</a>)</td></tr>
+<tr class="memdesc:ade1b30d01d35eb703075e3c84d13e60a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a new context for this state.  <a href="#ade1b30d01d35eb703075e3c84d13e60a">More...</a><br /></td></tr>
+<tr class="separator:ade1b30d01d35eb703075e3c84d13e60a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a809df3f1f95672669105c257b7698154"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_state.html#a809df3f1f95672669105c257b7698154">requestStackPush</a> (StateID id)</td></tr>
-<tr class="memdesc:a809df3f1f95672669105c257b7698154"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request a new instance of a state with the given ID be pushed on top of the state stack to which this state belongs.  <a href="#a809df3f1f95672669105c257b7698154">More...</a><br /></td></tr>
-<tr class="separator:a809df3f1f95672669105c257b7698154"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa418660892d6161772c907bd8d70f910"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa418660892d6161772c907bd8d70f910"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_state.html#aa418660892d6161772c907bd8d70f910">requestStackPop</a> ()</td></tr>
-<tr class="memdesc:aa418660892d6161772c907bd8d70f910"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request that the state on top of the stack to which this state belongs is popped (and therefore destroyed) <br /></td></tr>
-<tr class="separator:aa418660892d6161772c907bd8d70f910"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0540b348f0a6774bcdb4fbf8a359791d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0540b348f0a6774bcdb4fbf8a359791d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_state.html#a0540b348f0a6774bcdb4fbf8a359791d">requestStackClear</a> ()</td></tr>
-<tr class="memdesc:a0540b348f0a6774bcdb4fbf8a359791d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request that all active states in the stack to which this state belongs are destroyed. <br /></td></tr>
-<tr class="separator:a0540b348f0a6774bcdb4fbf8a359791d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa54fc68acd982076e838c0eff60b51a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa54fc68acd982076e838c0eff60b51a3"></a>
-<a class="el" href="structxy_1_1_state_1_1_context.html">Context</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_state.html#aa54fc68acd982076e838c0eff60b51a3">getContext</a> () const </td></tr>
-<tr class="memdesc:aa54fc68acd982076e838c0eff60b51a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of the state's current context. <br /></td></tr>
-<tr class="separator:aa54fc68acd982076e838c0eff60b51a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4a02041c5730fce5db71c8b2eefd793"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_state.html#ae4a02041c5730fce5db71c8b2eefd793">launchLoadingScreen</a> ()</td></tr>
-<tr class="separator:ae4a02041c5730fce5db71c8b2eefd793"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb05db8d081ccdd2eb89c35025f6cc28"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb05db8d081ccdd2eb89c35025f6cc28"></a>
+<tr class="memitem:abc24831d098e66471e273842d24a1ff2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_state.html#abc24831d098e66471e273842d24a1ff2">requestStackPush</a> (StateID id)</td></tr>
+<tr class="memdesc:abc24831d098e66471e273842d24a1ff2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request a new instance of a state with the given ID be pushed on top of the state stack to which this state belongs.  <a href="#abc24831d098e66471e273842d24a1ff2">More...</a><br /></td></tr>
+<tr class="separator:abc24831d098e66471e273842d24a1ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1789ea91cf989a5f25251d530a27fe44"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1789ea91cf989a5f25251d530a27fe44"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_state.html#a1789ea91cf989a5f25251d530a27fe44">requestStackPop</a> ()</td></tr>
+<tr class="memdesc:a1789ea91cf989a5f25251d530a27fe44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request that the state on top of the stack to which this state belongs is popped (and therefore destroyed) <br /></td></tr>
+<tr class="separator:a1789ea91cf989a5f25251d530a27fe44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7459c6b6e32574fe89abd1aeb7e32bd9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7459c6b6e32574fe89abd1aeb7e32bd9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_state.html#a7459c6b6e32574fe89abd1aeb7e32bd9">requestStackClear</a> ()</td></tr>
+<tr class="memdesc:a7459c6b6e32574fe89abd1aeb7e32bd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request that all active states in the stack to which this state belongs are destroyed. <br /></td></tr>
+<tr class="separator:a7459c6b6e32574fe89abd1aeb7e32bd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46ac15e1e2f9b9c63fd06eb59d6df3d4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46ac15e1e2f9b9c63fd06eb59d6df3d4"></a>
+<a class="el" href="structxy_1_1_state_1_1_context.html">Context</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_state.html#a46ac15e1e2f9b9c63fd06eb59d6df3d4">getContext</a> () const </td></tr>
+<tr class="memdesc:a46ac15e1e2f9b9c63fd06eb59d6df3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of the state's current context. <br /></td></tr>
+<tr class="separator:a46ac15e1e2f9b9c63fd06eb59d6df3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed3772ca1f55544497734edb93865c8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_state.html#aed3772ca1f55544497734edb93865c8b">launchLoadingScreen</a> ()</td></tr>
+<tr class="separator:aed3772ca1f55544497734edb93865c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae11ff42f291f0cdf49e9fc010bf8a3fa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae11ff42f291f0cdf49e9fc010bf8a3fa"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>quitLoadingScreen</b> ()</td></tr>
-<tr class="separator:abb05db8d081ccdd2eb89c35025f6cc28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab37088c2222a4362e0d23d1efcfc057f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_state.html#ab37088c2222a4362e0d23d1efcfc057f">updateLoadingScreen</a> (float dt, sf::RenderWindow &amp;)</td></tr>
-<tr class="separator:ab37088c2222a4362e0d23d1efcfc057f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8933008d3e82ab947ef6b5c572f4e8e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8933008d3e82ab947ef6b5c572f4e8e1"></a>
-std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_state.html#a8933008d3e82ab947ef6b5c572f4e8e1">getStateCount</a> () const </td></tr>
-<tr class="memdesc:a8933008d3e82ab947ef6b5c572f4e8e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of active states on this state's stack. <br /></td></tr>
-<tr class="separator:a8933008d3e82ab947ef6b5c572f4e8e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:ae11ff42f291f0cdf49e9fc010bf8a3fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb978c391f0db5e44102e26f78f3e39e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_state.html#aeb978c391f0db5e44102e26f78f3e39e">updateLoadingScreen</a> (float dt, sf::RenderWindow &amp;)</td></tr>
+<tr class="separator:aeb978c391f0db5e44102e26f78f3e39e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affafb45971f52c442f750e60d5e4f295"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="affafb45971f52c442f750e60d5e4f295"></a>
+std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_state.html#affafb45971f52c442f750e60d5e4f295">getStateCount</a> () const </td></tr>
+<tr class="memdesc:affafb45971f52c442f750e60d5e4f295"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of active states on this state's stack. <br /></td></tr>
+<tr class="separator:affafb45971f52c442f750e60d5e4f295"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Abstract base class for xygine states. </p>
 <p>States are used in conjunction with the <a class="el" href="classxy_1_1_state_stack.html" title="Maintains a stack of active states. ">StateStack</a> to encapsulate the data required to display different states such as the main menu, pause screen, or game state </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a8d73a9588ba4f39d02ebe2232bca4387"></a>
+<a class="anchor" id="a0d19f92507f6c1952f8d1982ac00cd34"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">State::State </td>
+          <td class="memname">xy::State::State </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classxy_1_1_state_stack.html">StateStack</a> &amp;&#160;</td>
           <td class="paramname"><em>stateStack</em>, </td>
@@ -201,7 +201,7 @@ std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </div><div class="memdoc">
 
 <p>Function to handle drawing. </p>
-<p>The <a class="el" href="classxy_1_1_app.html" title="Abstract base class for new games or applications. ">App</a> derived class should handle the clear() and display() functions outside of the state stack to which this state belongs so any drawing can be done here via <a class="el" href="classxy_1_1_state.html#aa54fc68acd982076e838c0eff60b51a3" title="Returns a copy of the state&#39;s current context. ">getContext()</a>.renderWindow </p>
+<p>The <a class="el" href="classxy_1_1_app.html" title="Abstract base class for new games or applications. ">App</a> derived class should handle the clear() and display() functions outside of the state stack to which this state belongs so any drawing can be done here via <a class="el" href="classxy_1_1_state.html#a46ac15e1e2f9b9c63fd06eb59d6df3d4" title="Returns a copy of the state&#39;s current context. ">getContext()</a>.renderWindow </p>
 
 </div>
 </div>
@@ -255,11 +255,11 @@ std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </div><div class="memdoc">
 
 <p>Receives system messages from the message bus via the state stack to which the state belongs. </p>
-<p>Messages can either be handle here, passed on to state members (such as a <a class="el" href="classxy_1_1_scene.html" title="Scene class. ">Scene</a>) or both. </p>
+<p>Messages can either be handle here, passed on to state members (such as a <a class="el" href="classxy_1_1_scene.html" title="Encapsulates a single scene. The scene class contains everything needed to create a scene graph by en...">Scene</a>) or both. </p>
 
 </div>
 </div>
-<a class="anchor" id="ae4a02041c5730fce5db71c8b2eefd793"></a>
+<a class="anchor" id="aed3772ca1f55544497734edb93865c8b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -267,7 +267,7 @@ std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void State::launchLoadingScreen </td>
+          <td class="memname">void xy::State::launchLoadingScreen </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -283,7 +283,7 @@ std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 
 </div>
 </div>
-<a class="anchor" id="a809df3f1f95672669105c257b7698154"></a>
+<a class="anchor" id="abc24831d098e66471e273842d24a1ff2"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -291,7 +291,7 @@ std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void State::requestStackPush </td>
+          <td class="memname">void xy::State::requestStackPush </td>
           <td>(</td>
           <td class="paramtype">StateID&#160;</td>
           <td class="paramname"><em>id</em></td><td>)</td>
@@ -315,15 +315,15 @@ std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 
 </div>
 </div>
-<a class="anchor" id="ab9870f49da1bb34f8607b42ede23c1a5"></a>
+<a class="anchor" id="ade1b30d01d35eb703075e3c84d13e60a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void State::setContext </td>
+          <td class="memname">void xy::State::setContext </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structxy_1_1_state_1_1_context.html">Context</a>&#160;</td>
-          <td class="paramname"><em>c</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -357,11 +357,11 @@ std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </div><div class="memdoc">
 
 <p>Passes in the frame time once per frame. </p>
-<p>Members of the state such as a <a class="el" href="classxy_1_1_scene.html" title="Scene class. ">Scene</a> object can be updated here. </p>
+<p>Members of the state such as a <a class="el" href="classxy_1_1_scene.html" title="Encapsulates a single scene. The scene class contains everything needed to create a scene graph by en...">Scene</a> object can be updated here. </p>
 
 </div>
 </div>
-<a class="anchor" id="ab37088c2222a4362e0d23d1efcfc057f"></a>
+<a class="anchor" id="aeb978c391f0db5e44102e26f78f3e39e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -369,7 +369,7 @@ std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void State::updateLoadingScreen </td>
+          <td class="memname">virtual void xy::State::updateLoadingScreen </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>dt</em>, </td>
@@ -378,7 +378,7 @@ std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">sf::RenderWindow &amp;&#160;</td>
-          <td class="paramname"><em>rw</em>&#160;</td>
+          <td class="paramname">&#160;</td>
         </tr>
         <tr>
           <td></td>

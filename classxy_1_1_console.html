@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xygine: xy::Console Class Reference</title>
+<title>xyginext: xy::Console Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,10 +18,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">xygine
-   &#160;<span id="projectnumber">0.1.0</span>
+   <div id="projectname">xyginext
+   &#160;<span id="projectnumber">0.2.0</span>
    </div>
-   <div id="projectbrief">SFML Based 2D Game Creation Framework</div>
+   <div id="projectbrief">Second generation of xygine game creation framework</div>
   </td>
  </tr>
  </tbody>
@@ -53,6 +53,7 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classxy_1_1_console-members.html">List of all members</a>  </div>
@@ -61,49 +62,85 @@
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classxy_1_1_console.html" title="Console class The console is used to display messages and xygine specific information as well as allo...">Console</a> class The console is used to display messages and xygine specific information as well as allow input of commands registered with the console class.  
+<p><a class="el" href="classxy_1_1_console.html" title="Console class. The console class provides a feedback window and interface with xygine. Any class can register a command with the console as long as it inherits the ConsoleClient interface. ">Console</a> class. The console class provides a feedback window and interface with xygine. Any class can register a command with the console as long as it inherits the <a class="el" href="classxy_1_1_console_client.html" title="Interface for registering console commands. To register a command with the console a class needs to i...">ConsoleClient</a> interface.  
  <a href="classxy_1_1_console.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_console_8hpp_source.html">Console.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a84f492258d94d097ed81aeb2a87d7ba5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84f492258d94d097ed81aeb2a87d7ba5"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Command</b> = std::function&lt; void(const std::string &amp;)&gt;</td></tr>
+<tr class="memitem:a84f492258d94d097ed81aeb2a87d7ba5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_console.html#a84f492258d94d097ed81aeb2a87d7ba5">Command</a> = std::function&lt; void(const std::string &amp;)&gt;</td></tr>
 <tr class="separator:a84f492258d94d097ed81aeb2a87d7ba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a74e04c4e3a41b1aad333b2ff9ca23be0"><td class="memTemplParams" colspan="2"><a class="anchor" id="a74e04c4e3a41b1aad333b2ff9ca23be0"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a74e04c4e3a41b1aad333b2ff9ca23be0"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getConvarValue</b> (const std::string &amp;name)</td></tr>
+<tr class="separator:a74e04c4e3a41b1aad333b2ff9ca23be0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b15e4dc1290db5c49f2f8bc92a96405"><td class="memTemplParams" colspan="2"><a class="anchor" id="a2b15e4dc1290db5c49f2f8bc92a96405"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a2b15e4dc1290db5c49f2f8bc92a96405"><td class="memTemplItemLeft" align="right" valign="top">sf::Int32&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getConvarValue</b> (const std::string &amp;name)</td></tr>
+<tr class="separator:a2b15e4dc1290db5c49f2f8bc92a96405"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade2152481f350c52dfd14a0acf7f0b8e"><td class="memTemplParams" colspan="2"><a class="anchor" id="ade2152481f350c52dfd14a0acf7f0b8e"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:ade2152481f350c52dfd14a0acf7f0b8e"><td class="memTemplItemLeft" align="right" valign="top">float&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getConvarValue</b> (const std::string &amp;name)</td></tr>
+<tr class="separator:ade2152481f350c52dfd14a0acf7f0b8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90cae6a7bfdeb792d91b2ecb97515d1b"><td class="memTemplParams" colspan="2"><a class="anchor" id="a90cae6a7bfdeb792d91b2ecb97515d1b"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a90cae6a7bfdeb792d91b2ecb97515d1b"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getConvarValue</b> (const std::string &amp;name)</td></tr>
+<tr class="separator:a90cae6a7bfdeb792d91b2ecb97515d1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a9bb304a0045f46f01cfc1136f3fffe13"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9bb304a0045f46f01cfc1136f3fffe13"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_console.html#a9bb304a0045f46f01cfc1136f3fffe13">print</a> (const std::string &amp;)</td></tr>
-<tr class="memdesc:a9bb304a0045f46f01cfc1136f3fffe13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the given string to the console. <br /></td></tr>
-<tr class="separator:a9bb304a0045f46f01cfc1136f3fffe13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53b5fb3d1d7905b5b70e073ae3eae890"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53b5fb3d1d7905b5b70e073ae3eae890"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_console.html#a53b5fb3d1d7905b5b70e073ae3eae890">show</a> ()</td></tr>
-<tr class="memdesc:a53b5fb3d1d7905b5b70e073ae3eae890"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggles console visibility. <br /></td></tr>
-<tr class="separator:a53b5fb3d1d7905b5b70e073ae3eae890"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa531abac8b91fe26f46adb8aa5dc3998"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_console.html#aa531abac8b91fe26f46adb8aa5dc3998">addCommand</a> (const std::string &amp;name, const Command &amp;command, const void *owner=nullptr)</td></tr>
-<tr class="memdesc:aa531abac8b91fe26f46adb8aa5dc3998"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an executable command.  <a href="#aa531abac8b91fe26f46adb8aa5dc3998">More...</a><br /></td></tr>
-<tr class="separator:aa531abac8b91fe26f46adb8aa5dc3998"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a325f2027f9421878288aa3dd863db034"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a325f2027f9421878288aa3dd863db034"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_console.html#a325f2027f9421878288aa3dd863db034">unregisterCommands</a> (const void *)</td></tr>
-<tr class="memdesc:a325f2027f9421878288aa3dd863db034"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregisters any commands registered by the objected pointed to by the given parameter. For example: should a command be registered by an object which captures local varibles via a lambda, then those variables will no longer exist when the registering objected is destroyed. This will lead to undefined behaviour when calling such a command. To help negate this commands can be registered with a pointer to the registering object: addCommand("close", myCommand, (void*)this); Then, when the registering object is being destroyed, via its destructor a call to unregisterCommands((void*)this) will unregister all commands from the console, so that trying to execute them will result in defined (non) behaviour. <br /></td></tr>
-<tr class="separator:a325f2027f9421878288aa3dd863db034"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f51f7ecce0f4758a65503979a4a840c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f51f7ecce0f4758a65503979a4a840c"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_console.html#a9f51f7ecce0f4758a65503979a4a840c">doCommand</a> (const std::string &amp;)</td></tr>
-<tr class="memdesc:a9f51f7ecce0f4758a65503979a4a840c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the given command line. Allows programatically executing an arbitrary console command. <br /></td></tr>
-<tr class="separator:a9f51f7ecce0f4758a65503979a4a840c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ea210bebca681a9ec2ab2eadcd8dc74"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ea210bebca681a9ec2ab2eadcd8dc74"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_console.html#a4ea210bebca681a9ec2ab2eadcd8dc74">print</a> (const std::string &amp;)</td></tr>
+<tr class="memdesc:a4ea210bebca681a9ec2ab2eadcd8dc74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the given string to the console window. <br /></td></tr>
+<tr class="separator:a4ea210bebca681a9ec2ab2eadcd8dc74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bea8b276406881b7d35836d546846f2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8bea8b276406881b7d35836d546846f2"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_console.html#a8bea8b276406881b7d35836d546846f2">show</a> ()</td></tr>
+<tr class="memdesc:a8bea8b276406881b7d35836d546846f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggles the console window visibility. <br /></td></tr>
+<tr class="separator:a8bea8b276406881b7d35836d546846f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac44f4fc37fe6ddf25a580c57e8c6d4d6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac44f4fc37fe6ddf25a580c57e8c6d4d6"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_console.html#ac44f4fc37fe6ddf25a580c57e8c6d4d6">doCommand</a> (const std::string &amp;)</td></tr>
+<tr class="memdesc:ac44f4fc37fe6ddf25a580c57e8c6d4d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the given command line. Allows for programatically executing arbitrary commands. <br /></td></tr>
+<tr class="separator:ac44f4fc37fe6ddf25a580c57e8c6d4d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5164b01bead86b785ceebae654cf51e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_console.html#ae5164b01bead86b785ceebae654cf51e">addConvar</a> (const std::string &amp;name, const std::string &amp;value, const std::string &amp;helpText=std::string())</td></tr>
+<tr class="memdesc:ae5164b01bead86b785ceebae654cf51e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a convar it if it doesn't exist.  <a href="#ae5164b01bead86b785ceebae654cf51e">More...</a><br /></td></tr>
+<tr class="separator:ae5164b01bead86b785ceebae654cf51e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40c2fdf90c17083c68054627523e4e1f"><td class="memTemplParams" colspan="2"><a class="anchor" id="a40c2fdf90c17083c68054627523e4e1f"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a40c2fdf90c17083c68054627523e4e1f"><td class="memTemplItemLeft" align="right" valign="top">static T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxy_1_1_console.html#a40c2fdf90c17083c68054627523e4e1f">getConvarValue</a> (const std::string &amp;convar)</td></tr>
+<tr class="memdesc:a40c2fdf90c17083c68054627523e4e1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to retrieve the current value of the given console variable. <br /></td></tr>
+<tr class="separator:a40c2fdf90c17083c68054627523e4e1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:a4097b3e04a4f8ece21f5abe1b10e6323"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4097b3e04a4f8ece21f5abe1b10e6323"></a>
 class&#160;</td><td class="memItemRight" valign="bottom"><b>App</b></td></tr>
 <tr class="separator:a4097b3e04a4f8ece21f5abe1b10e6323"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f3586d5ea918df2795186775e365153"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8f3586d5ea918df2795186775e365153"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>ConsoleClient</b></td></tr>
+<tr class="separator:a8f3586d5ea918df2795186775e365153"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classxy_1_1_console.html" title="Console class The console is used to display messages and xygine specific information as well as allo...">Console</a> class The console is used to display messages and xygine specific information as well as allow input of commands registered with the console class. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aa531abac8b91fe26f46adb8aa5dc3998"></a>
+<div class="textblock"><p><a class="el" href="classxy_1_1_console.html" title="Console class. The console class provides a feedback window and interface with xygine. Any class can register a command with the console as long as it inherits the ConsoleClient interface. ">Console</a> class. The console class provides a feedback window and interface with xygine. Any class can register a command with the console as long as it inherits the <a class="el" href="classxy_1_1_console_client.html" title="Interface for registering console commands. To register a command with the console a class needs to i...">ConsoleClient</a> interface. </p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="a84f492258d94d097ed81aeb2a87d7ba5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classxy_1_1_console.html#a84f492258d94d097ed81aeb2a87d7ba5">xy::Console::Command</a> =  std::function&lt;void(const std::string&amp;)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="structxy_1_1_command.html" title="Command struct. Each command encapsulates a mask of target IDs as well as a command in the form of a ...">Command</a> functions are registered with their associated string, and executed when that string is entered into the consle window. Any further characters entered after the command are passed into the command function as a paramter. If this is a list of paramters it is up to the command function implementation to properly parse the given string. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ae5164b01bead86b785ceebae654cf51e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -111,7 +148,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>App</b></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Console::addCommand </td>
+          <td class="memname">static void xy::Console::addConvar </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>name</em>, </td>
@@ -119,14 +156,14 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>App</b></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Command &amp;&#160;</td>
-          <td class="paramname"><em>command</em>, </td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const void *&#160;</td>
-          <td class="paramname"><em>owner</em> = <code>nullptr</code>&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>helpText</em> = <code>std::string()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -141,12 +178,12 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>App</b></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Adds an executable command. </p>
+<p>Adds a convar it if it doesn't exist. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">name</td><td>String to enter to execute this command </td></tr>
-    <tr><td class="paramname">command</td><td>instance of a std::function matching the Console::Command signature. The string parameter for the command should contain any optional paramters used by the command. <a class="el" href="namespacexy_1_1_util_1_1_string.html" title="String manipulation functions. ">xy::Util::String</a> can be used to aid string management such as splitting multiple parameters inside the command </td></tr>
-    <tr><td class="paramname">owner</td><td>Optional pointer to an object registering a command which can be used to unregister a command should that object no longer exist. See <a class="el" href="classxy_1_1_console.html#a325f2027f9421878288aa3dd863db034" title="Unregisters any commands registered by the objected pointed to by the given parameter. For example: should a command be registered by an object which captures local varibles via a lambda, then those variables will no longer exist when the registering objected is destroyed. This will lead to undefined behaviour when calling such a command. To help negate this commands can be registered with a pointer to the registering object: addCommand(&quot;close&quot;, myCommand, (void*)this); Then, when the registering object is being destroyed, via its destructor a call to unregisterCommands((void*)this) will unregister all commands from the console, so that trying to execute them will result in defined (non) behaviour. ">unregisterCommands()</a> </td></tr>
+    <tr><td class="paramname">name</td><td>Name of the variable as it appears in the console. </td></tr>
+    <tr><td class="paramname">value</td><td>the default value of the variable </td></tr>
+    <tr><td class="paramname">helpText</td><td>Optional string describing the variable which appears the console when search for variable names. </td></tr>
   </table>
   </dd>
 </dl>

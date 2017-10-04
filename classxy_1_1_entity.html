@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xygine: xy::Entity Class Reference</title>
+<title>xyginext: xy::Entity Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,10 +18,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">xygine
-   &#160;<span id="projectnumber">0.1.0</span>
+   <div id="projectname">xyginext
+   &#160;<span id="projectnumber">0.2.0</span>
    </div>
-   <div id="projectbrief">SFML Based 2D Game Creation Framework</div>
+   <div id="projectbrief">Second generation of xygine game creation framework</div>
   </td>
  </tr>
  </tbody>
@@ -52,514 +52,154 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classxy_1_1_entity-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">xy::Entity Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classxy_1_1_entity.html" title="Entity class. ">Entity</a> class.  
+<p><a class="el" href="classxy_1_1_entity.html" title="Entity class - Basically just an ID. The ID is generated as a combination of the index in the memory ...">Entity</a> class - Basically just an ID. The ID is generated as a combination of the index in the memory pool and the generation - that is the nth time the index has been used.  
  <a href="classxy_1_1_entity.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_entity_8hpp_source.html">Entity.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for xy::Entity:</div>
-<div class="dyncontent">
- <div class="center">
-  <img src="classxy_1_1_entity.png" usemap="#xy::Entity_map" alt=""/>
-  <map id="xy::Entity_map" name="xy::Entity_map">
-</map>
- </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:aba88c6429f5acb090a31f35404215c99"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba88c6429f5acb090a31f35404215c99"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Ptr</b> = <a class="el" href="classxy_1_1_detail_1_1_object_pool.html">Detail::ObjectPool</a>&lt; <a class="el" href="classxy_1_1_entity.html">Entity</a> &gt;::Ptr</td></tr>
-<tr class="separator:aba88c6429f5acb090a31f35404215c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95341ecb53f3307c8c15753ffcd8b203"><td class="memTemplParams" colspan="2"><a class="anchor" id="a95341ecb53f3307c8c15753ffcd8b203"></a>
-template&lt;typename CONDITION &gt; </td></tr>
-<tr class="memitem:a95341ecb53f3307c8c15753ffcd8b203"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>enable_if</b> = typename std::enable_if&lt; CONDITION::value &gt;::type</td></tr>
-<tr class="separator:a95341ecb53f3307c8c15753ffcd8b203"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a188c4358c45b0ac0bdfe36bcff655145"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a188c4358c45b0ac0bdfe36bcff655145"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>ID</b> = sf::Uint32</td></tr>
+<tr class="separator:a188c4358c45b0ac0bdfe36bcff655145"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8e5af8383d57a0b3cdb607b29feac59"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad8e5af8383d57a0b3cdb607b29feac59"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>Generation</b> = sf::Uint8</td></tr>
+<tr class="separator:ad8e5af8383d57a0b3cdb607b29feac59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ade93780a8c5830bb8c9fe2aac7e5e768"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade93780a8c5830bb8c9fe2aac7e5e768"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Entity</b> (<a class="el" href="classxy_1_1_message_bus.html">MessageBus</a> &amp;, const Priv &amp;)</td></tr>
-<tr class="separator:ade93780a8c5830bb8c9fe2aac7e5e768"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa640e9cdd3e9bf848e6332c84dcb00dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa640e9cdd3e9bf848e6332c84dcb00dc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Entity</b> (const <a class="el" href="classxy_1_1_entity.html">Entity</a> &amp;)=delete</td></tr>
-<tr class="separator:aa640e9cdd3e9bf848e6332c84dcb00dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1477bff350fbcdcdf2d73abeeac021c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1477bff350fbcdcdf2d73abeeac021c"></a>
-<a class="el" href="classxy_1_1_entity.html">Entity</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classxy_1_1_entity.html">Entity</a> &amp;)=delete</td></tr>
-<tr class="separator:af1477bff350fbcdcdf2d73abeeac021c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bc72f2b3d379b877bb4d65b07ce33b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classxy_1_1_entity.html">Entity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#a1bc72f2b3d379b877bb4d65b07ce33b7">addChild</a> (Ptr &amp;)</td></tr>
-<tr class="memdesc:a1bc72f2b3d379b877bb4d65b07ce33b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds another entity as a child of this one.  <a href="#a1bc72f2b3d379b877bb4d65b07ce33b7">More...</a><br /></td></tr>
-<tr class="separator:a1bc72f2b3d379b877bb4d65b07ce33b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5f5f5057ab81b216f76718a0f777a48"><td class="memItemLeft" align="right" valign="top">Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#aa5f5f5057ab81b216f76718a0f777a48">removeChild</a> (<a class="el" href="classxy_1_1_entity.html">Entity</a> &amp;)</td></tr>
-<tr class="memdesc:aa5f5f5057ab81b216f76718a0f777a48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a child entity.  <a href="#aa5f5f5057ab81b216f76718a0f777a48">More...</a><br /></td></tr>
-<tr class="separator:aa5f5f5057ab81b216f76718a0f777a48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4094e64eff74a095de6ff90d3a9ceb8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4094e64eff74a095de6ff90d3a9ceb8"></a>
-const std::vector&lt; Ptr &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#ab4094e64eff74a095de6ff90d3a9ceb8">getChildren</a> () const </td></tr>
-<tr class="memdesc:ab4094e64eff74a095de6ff90d3a9ceb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the vector containing all of this entity's children. <br /></td></tr>
-<tr class="separator:ab4094e64eff74a095de6ff90d3a9ceb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0ba5cc1c4c5bd88abedffdee252c3e9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac0ba5cc1c4c5bd88abedffdee252c3e9"></a>
-std::vector&lt; Ptr &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getChildren</b> ()</td></tr>
-<tr class="separator:ac0ba5cc1c4c5bd88abedffdee252c3e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7947ceb08aa24a02e08a4c3c199f5c1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classxy_1_1_entity.html">Entity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#a7947ceb08aa24a02e08a4c3c199f5c1e">findEntity</a> (sf::Uint64)</td></tr>
-<tr class="memdesc:a7947ceb08aa24a02e08a4c3c199f5c1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Searches the <a class="el" href="classxy_1_1_entity.html" title="Entity class. ">Entity</a>'s children recursively for and entity with the given ID.  <a href="#a7947ceb08aa24a02e08a4c3c199f5c1e">More...</a><br /></td></tr>
-<tr class="separator:a7947ceb08aa24a02e08a4c3c199f5c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a62f5a318b4ea05322d3f8cf8f710ff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a62f5a318b4ea05322d3f8cf8f710ff"></a>
-<a class="el" href="classxy_1_1_entity.html">Entity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#a1a62f5a318b4ea05322d3f8cf8f710ff">getRoot</a> ()</td></tr>
-<tr class="memdesc:a1a62f5a318b4ea05322d3f8cf8f710ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the root node of this entity's hierachy. <br /></td></tr>
-<tr class="separator:a1a62f5a318b4ea05322d3f8cf8f710ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3d64551dd021f4a9c7c6d5eab01e149"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3d64551dd021f4a9c7c6d5eab01e149"></a>
-sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#aa3d64551dd021f4a9c7c6d5eab01e149">getWorldPosition</a> () const </td></tr>
-<tr class="memdesc:aa3d64551dd021f4a9c7c6d5eab01e149"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the entity's position in world coordinates. <br /></td></tr>
-<tr class="separator:aa3d64551dd021f4a9c7c6d5eab01e149"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcb4daa075d23dd644fd89e620026095"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afcb4daa075d23dd644fd89e620026095"></a>
-sf::Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#afcb4daa075d23dd644fd89e620026095">getWorldTransform</a> () const </td></tr>
-<tr class="memdesc:afcb4daa075d23dd644fd89e620026095"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the world transform of this entity including any applied to it by parent entities. <br /></td></tr>
-<tr class="separator:afcb4daa075d23dd644fd89e620026095"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1e47cd1afff4c9d6452e13f39b89698"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac1e47cd1afff4c9d6452e13f39b89698"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#ac1e47cd1afff4c9d6452e13f39b89698">setWorldPosition</a> (sf::Vector2f)</td></tr>
-<tr class="memdesc:ac1e47cd1afff4c9d6452e13f39b89698"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the position of this entity in world coordinates. <br /></td></tr>
-<tr class="separator:ac1e47cd1afff4c9d6452e13f39b89698"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21ab7babefa5e4525535a76cef1415f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#a21ab7babefa5e4525535a76cef1415f2">update</a> (float dt)</td></tr>
-<tr class="memdesc:a21ab7babefa5e4525535a76cef1415f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the entity.  <a href="#a21ab7babefa5e4525535a76cef1415f2">More...</a><br /></td></tr>
-<tr class="separator:a21ab7babefa5e4525535a76cef1415f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9373441bc3fd860edfe76942e7832b3e"><td class="memTemplParams" colspan="2">template&lt;typename T , enable_if&lt; std::is_base_of&lt; Component, T &gt;&gt; ...&gt; </td></tr>
-<tr class="memitem:a9373441bc3fd860edfe76942e7832b3e"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#a9373441bc3fd860edfe76942e7832b3e">addComponent</a> (std::unique_ptr&lt; T &gt; &amp;component)</td></tr>
-<tr class="memdesc:a9373441bc3fd860edfe76942e7832b3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a component to the entity.  <a href="#a9373441bc3fd860edfe76942e7832b3e">More...</a><br /></td></tr>
-<tr class="separator:a9373441bc3fd860edfe76942e7832b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fa28ed683bff48972b752f6fa01e81b"><td class="memTemplParams" colspan="2">template&lt;typename T , enable_if&lt; std::is_base_of&lt; Component, T &gt;&gt; ...&gt; </td></tr>
-<tr class="memitem:a7fa28ed683bff48972b752f6fa01e81b"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#a7fa28ed683bff48972b752f6fa01e81b">getComponent</a> (const std::string &amp;name) const </td></tr>
-<tr class="memdesc:a7fa28ed683bff48972b752f6fa01e81b"><td class="mdescLeft">&#160;</td><td class="mdescRight">finds a commponent with a given name  <a href="#a7fa28ed683bff48972b752f6fa01e81b">More...</a><br /></td></tr>
-<tr class="separator:a7fa28ed683bff48972b752f6fa01e81b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af33ac2d16631af2ee0a84d4d6fa3ac8d"><td class="memTemplParams" colspan="2">template&lt;typename T , enable_if&lt; std::is_base_of&lt; Component, T &gt;&gt; ...&gt; </td></tr>
-<tr class="memitem:af33ac2d16631af2ee0a84d4d6fa3ac8d"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#af33ac2d16631af2ee0a84d4d6fa3ac8d">getComponent</a> () const </td></tr>
-<tr class="memdesc:af33ac2d16631af2ee0a84d4d6fa3ac8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find a component by type.  <a href="#af33ac2d16631af2ee0a84d4d6fa3ac8d">More...</a><br /></td></tr>
-<tr class="separator:af33ac2d16631af2ee0a84d4d6fa3ac8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd5c4b04ec95970b2a454c1187142025"><td class="memTemplParams" colspan="2">template&lt;typename T , enable_if&lt; std::is_base_of&lt; Component, T &gt;&gt; ...&gt; </td></tr>
-<tr class="memitem:afd5c4b04ec95970b2a454c1187142025"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; T * &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#afd5c4b04ec95970b2a454c1187142025">getComponents</a> () const </td></tr>
-<tr class="memdesc:afd5c4b04ec95970b2a454c1187142025"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector of pointers to all components of type T.  <a href="#afd5c4b04ec95970b2a454c1187142025">More...</a><br /></td></tr>
-<tr class="separator:afd5c4b04ec95970b2a454c1187142025"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a902f57d6801f128659984fecf1ab318a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a902f57d6801f128659984fecf1ab318a"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#a902f57d6801f128659984fecf1ab318a">removeComponent</a> (const T *component)</td></tr>
-<tr class="memdesc:a902f57d6801f128659984fecf1ab318a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a component if it exists.  <a href="#a902f57d6801f128659984fecf1ab318a">More...</a><br /></td></tr>
-<tr class="separator:a902f57d6801f128659984fecf1ab318a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a691dbe5f9ec930c27af2af0b97907a9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#a691dbe5f9ec930c27af2af0b97907a9e">destroy</a> ()</td></tr>
-<tr class="memdesc:a691dbe5f9ec930c27af2af0b97907a9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark this entity to be destroyed.  <a href="#a691dbe5f9ec930c27af2af0b97907a9e">More...</a><br /></td></tr>
-<tr class="separator:a691dbe5f9ec930c27af2af0b97907a9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66f3aa83ccee97926a517a3dbd9010b0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66f3aa83ccee97926a517a3dbd9010b0"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#a66f3aa83ccee97926a517a3dbd9010b0">destroyed</a> () const </td></tr>
-<tr class="memdesc:a66f3aa83ccee97926a517a3dbd9010b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this entity is marked for destruction on the next frame. <br /></td></tr>
-<tr class="separator:a66f3aa83ccee97926a517a3dbd9010b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5dde2326092f2d702ca8df002ff96e13"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5dde2326092f2d702ca8df002ff96e13"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#a5dde2326092f2d702ca8df002ff96e13">setUID</a> (sf::Uint64)</td></tr>
-<tr class="memdesc:a5dde2326092f2d702ca8df002ff96e13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the entity's unique identifier. Normally this should not be set manually but may be useful when syncronising scenes across a network. <br /></td></tr>
-<tr class="separator:a5dde2326092f2d702ca8df002ff96e13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57349f0319922ff99089d94e5f8875d7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a57349f0319922ff99089d94e5f8875d7"></a>
-sf::Uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#a57349f0319922ff99089d94e5f8875d7">getUID</a> () const </td></tr>
-<tr class="memdesc:a57349f0319922ff99089d94e5f8875d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Unique ID (UID) of the entity. <br /></td></tr>
-<tr class="separator:a57349f0319922ff99089d94e5f8875d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d1ac7eb8655dcee708afe32fa6f173b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#a8d1ac7eb8655dcee708afe32fa6f173b">handleMessage</a> (const <a class="el" href="classxy_1_1_message.html">Message</a> &amp;)</td></tr>
-<tr class="memdesc:a8d1ac7eb8655dcee708afe32fa6f173b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes system messages on to attach components.  <a href="#a8d1ac7eb8655dcee708afe32fa6f173b">More...</a><br /></td></tr>
-<tr class="separator:a8d1ac7eb8655dcee708afe32fa6f173b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a923c9b9e44218ef9862e60c65e80fb47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#a923c9b9e44218ef9862e60c65e80fb47">setScene</a> (<a class="el" href="classxy_1_1_scene.html">Scene</a> *)</td></tr>
-<tr class="memdesc:a923c9b9e44218ef9862e60c65e80fb47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the entity's <a class="el" href="classxy_1_1_scene.html" title="Scene class. ">Scene</a> pointer.  <a href="#a923c9b9e44218ef9862e60c65e80fb47">More...</a><br /></td></tr>
-<tr class="separator:a923c9b9e44218ef9862e60c65e80fb47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacf090f6868cfe1dc4aa3b4ec5c1f3d1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aacf090f6868cfe1dc4aa3b4ec5c1f3d1"></a>
-<a class="el" href="classxy_1_1_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#aacf090f6868cfe1dc4aa3b4ec5c1f3d1">getScene</a> ()</td></tr>
-<tr class="memdesc:aacf090f6868cfe1dc4aa3b4ec5c1f3d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the <a class="el" href="classxy_1_1_scene.html" title="Scene class. ">Scene</a> to which this entity belongs else returns nullptr if not yet added to a scene. <br /></td></tr>
-<tr class="separator:aacf090f6868cfe1dc4aa3b4ec5c1f3d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea95b74ef30324a09fe64cda966c7208"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea95b74ef30324a09fe64cda966c7208"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#aea95b74ef30324a09fe64cda966c7208">doCommand</a> (const <a class="el" href="structxy_1_1_command.html">Command</a> &amp;, float)</td></tr>
-<tr class="memdesc:aea95b74ef30324a09fe64cda966c7208"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used by the <a class="el" href="classxy_1_1_scene.html" title="Scene class. ">Scene</a> to execute commands targeted at this entity. <br /></td></tr>
-<tr class="separator:aea95b74ef30324a09fe64cda966c7208"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbf778b352a7973747bc626f908c6d71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#adbf778b352a7973747bc626f908c6d71">addCommandCategories</a> (sf::Int32)</td></tr>
-<tr class="memdesc:adbf778b352a7973747bc626f908c6d71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a command category to this entity.  <a href="#adbf778b352a7973747bc626f908c6d71">More...</a><br /></td></tr>
-<tr class="separator:adbf778b352a7973747bc626f908c6d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05ba8bed0ee3682285386a0da45ca9df"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05ba8bed0ee3682285386a0da45ca9df"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#a05ba8bed0ee3682285386a0da45ca9df">hasCommandCategories</a> (sf::Int32)</td></tr>
-<tr class="memdesc:a05ba8bed0ee3682285386a0da45ca9df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this <a class="el" href="classxy_1_1_entity.html" title="Entity class. ">Entity</a> belongs to any of the given categories. <br /></td></tr>
-<tr class="separator:a05ba8bed0ee3682285386a0da45ca9df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af61cdcf152f5c265b27b723edda278c4"><td class="memItemLeft" align="right" valign="top">sf::Uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#af61cdcf152f5c265b27b723edda278c4">size</a> () const </td></tr>
-<tr class="memdesc:af61cdcf152f5c265b27b723edda278c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total number of entities parented to this one IE the depth of the entity in the scene graph.  <a href="#af61cdcf152f5c265b27b723edda278c4">More...</a><br /></td></tr>
-<tr class="separator:af61cdcf152f5c265b27b723edda278c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0220a155fead824ed40993e65208bf4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#ac0220a155fead824ed40993e65208bf4">getVertices</a> (std::vector&lt; sf::Vertex &gt; &amp;)</td></tr>
-<tr class="memdesc:ac0220a155fead824ed40993e65208bf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vertices used to draw the entity's AABB.  <a href="#ac0220a155fead824ed40993e65208bf4">More...</a><br /></td></tr>
-<tr class="separator:ac0220a155fead824ed40993e65208bf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba383531d3f122c56ecaf0ab1b94f6ee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba383531d3f122c56ecaf0ab1b94f6ee"></a>
-sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#aba383531d3f122c56ecaf0ab1b94f6ee">globalBounds</a> () const </td></tr>
-<tr class="memdesc:aba383531d3f122c56ecaf0ab1b94f6ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the sum global bounds of the entity composed of the AABBs of all of its drawables (if any). Can be used in collision detection, and is used by the <a class="el" href="classxy_1_1_scene.html" title="Scene class. ">Scene</a> class to draw debug output. Requires custom drawable components to override the globalBounds function to return the drawable's AABB relative to its parent entity. <br /></td></tr>
-<tr class="separator:aba383531d3f122c56ecaf0ab1b94f6ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a380f1b4e36b9a9df0a146914cfedafdc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a380f1b4e36b9a9df0a146914cfedafdc"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Entity</b> (ID index=std::numeric_limits&lt; ID &gt;::max(), Generation generation=0)</td></tr>
+<tr class="separator:a380f1b4e36b9a9df0a146914cfedafdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3715ca75d65cf9286194f1ca04f0dd79"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3715ca75d65cf9286194f1ca04f0dd79"></a>
+ID&#160;</td><td class="memItemRight" valign="bottom"><b>getIndex</b> () const </td></tr>
+<tr class="separator:a3715ca75d65cf9286194f1ca04f0dd79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a237d8a5d5f847c28f82dbb2f362a9b0a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a237d8a5d5f847c28f82dbb2f362a9b0a"></a>
+Generation&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#a237d8a5d5f847c28f82dbb2f362a9b0a">getGeneration</a> () const </td></tr>
+<tr class="memdesc:a237d8a5d5f847c28f82dbb2f362a9b0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the generation of this entity. <br /></td></tr>
+<tr class="separator:a237d8a5d5f847c28f82dbb2f362a9b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e5d9585bcd82cb3b2e42a1d3fb29dab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#a2e5d9585bcd82cb3b2e42a1d3fb29dab">destroyed</a> () const </td></tr>
+<tr class="memdesc:a2e5d9585bcd82cb3b2e42a1d3fb29dab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks the entity for destruction.  <a href="#a2e5d9585bcd82cb3b2e42a1d3fb29dab">More...</a><br /></td></tr>
+<tr class="separator:a2e5d9585bcd82cb3b2e42a1d3fb29dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47a296f80078e6750f9494b1f72ccd2e"><td class="memTemplParams" colspan="2"><a class="anchor" id="a47a296f80078e6750f9494b1f72ccd2e"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a47a296f80078e6750f9494b1f72ccd2e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#a47a296f80078e6750f9494b1f72ccd2e">addComponent</a> (const T &amp;)</td></tr>
+<tr class="memdesc:a47a296f80078e6750f9494b1f72ccd2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a copy of the given instance of a component to the entity. <br /></td></tr>
+<tr class="separator:a47a296f80078e6750f9494b1f72ccd2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23df6458b1a7ce8fa93522dc6c14bbdb"><td class="memTemplParams" colspan="2"><a class="anchor" id="a23df6458b1a7ce8fa93522dc6c14bbdb"></a>
+template&lt;typename T , typename... Args&gt; </td></tr>
+<tr class="memitem:a23df6458b1a7ce8fa93522dc6c14bbdb"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>addComponent</b> (Args &amp;&amp;...)</td></tr>
+<tr class="separator:a23df6458b1a7ce8fa93522dc6c14bbdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a599eb184dd8cb08ed805ee424e9dd67a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a599eb184dd8cb08ed805ee424e9dd67a"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#a599eb184dd8cb08ed805ee424e9dd67a">hasComponent</a> () const </td></tr>
+<tr class="memdesc:a599eb184dd8cb08ed805ee424e9dd67a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the component of this type if it exists.  <a href="#a599eb184dd8cb08ed805ee424e9dd67a">More...</a><br /></td></tr>
+<tr class="separator:a599eb184dd8cb08ed805ee424e9dd67a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a988a8795fa62353f350a0bcac4a4b4a3"><td class="memTemplParams" colspan="2"><a class="anchor" id="a988a8795fa62353f350a0bcac4a4b4a3"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a988a8795fa62353f350a0bcac4a4b4a3"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#a988a8795fa62353f350a0bcac4a4b4a3">getComponent</a> ()</td></tr>
+<tr class="memdesc:a988a8795fa62353f350a0bcac4a4b4a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the component if it exists. <br /></td></tr>
+<tr class="separator:a988a8795fa62353f350a0bcac4a4b4a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3649a738c5611e3c013241f7396f1dd5"><td class="memTemplParams" colspan="2"><a class="anchor" id="a3649a738c5611e3c013241f7396f1dd5"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a3649a738c5611e3c013241f7396f1dd5"><td class="memTemplItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getComponent</b> () const </td></tr>
+<tr class="separator:a3649a738c5611e3c013241f7396f1dd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91984ed5dfc1a58fb573034604365d28"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a91984ed5dfc1a58fb573034604365d28"></a>
+const ComponentMask &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#a91984ed5dfc1a58fb573034604365d28">getComponentMask</a> () const </td></tr>
+<tr class="memdesc:a91984ed5dfc1a58fb573034604365d28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the CompnentMask associated with this entity. <br /></td></tr>
+<tr class="separator:a91984ed5dfc1a58fb573034604365d28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cad8604463295b7a3175f5c27f952f0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6cad8604463295b7a3175f5c27f952f0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (<a class="el" href="classxy_1_1_entity.html">Entity</a> r)</td></tr>
+<tr class="separator:a6cad8604463295b7a3175f5c27f952f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7871f0bfcf1d3bf319084070133a67b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac7871f0bfcf1d3bf319084070133a67b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (<a class="el" href="classxy_1_1_entity.html">Entity</a> r)</td></tr>
+<tr class="separator:ac7871f0bfcf1d3bf319084070133a67b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af62847aac5179f481f66960b55dc7711"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af62847aac5179f481f66960b55dc7711"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;</b> (<a class="el" href="classxy_1_1_entity.html">Entity</a> r)</td></tr>
+<tr class="separator:af62847aac5179f481f66960b55dc7711"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a132f02d0e19588c24b752aef8dd8a677"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a132f02d0e19588c24b752aef8dd8a677"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;=</b> (<a class="el" href="classxy_1_1_entity.html">Entity</a> r)</td></tr>
+<tr class="separator:a132f02d0e19588c24b752aef8dd8a677"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad24ce887caaade689ce8d4a913797878"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad24ce887caaade689ce8d4a913797878"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;</b> (<a class="el" href="classxy_1_1_entity.html">Entity</a> r)</td></tr>
+<tr class="separator:ad24ce887caaade689ce8d4a913797878"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a863a8ac20d3f668533f44f24af8a34e3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a863a8ac20d3f668533f44f24af8a34e3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;=</b> (<a class="el" href="classxy_1_1_entity.html">Entity</a> r)</td></tr>
+<tr class="separator:a863a8ac20d3f668533f44f24af8a34e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1501361a2a56279a912ad62522aaae4"><td class="memTemplParams" colspan="2"><a class="anchor" id="aa1501361a2a56279a912ad62522aaae4"></a>
+template&lt;typename T , typename... Args&gt; </td></tr>
+<tr class="memitem:aa1501361a2a56279a912ad62522aaae4"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>addComponent</b> (Args &amp;&amp;...args)</td></tr>
+<tr class="separator:aa1501361a2a56279a912ad62522aaae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35b8cdaa5cde5e4f448a7751f2dfa5f9"><td class="memTemplParams" colspan="2"><a class="anchor" id="a35b8cdaa5cde5e4f448a7751f2dfa5f9"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a35b8cdaa5cde5e4f448a7751f2dfa5f9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>addComponent</b> (const T &amp;component)</td></tr>
+<tr class="separator:a35b8cdaa5cde5e4f448a7751f2dfa5f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1501361a2a56279a912ad62522aaae4"><td class="memTemplParams" colspan="2"><a class="anchor" id="aa1501361a2a56279a912ad62522aaae4"></a>
+template&lt;typename T , typename... Args&gt; </td></tr>
+<tr class="memitem:aa1501361a2a56279a912ad62522aaae4"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>addComponent</b> (Args &amp;&amp;...args)</td></tr>
+<tr class="separator:aa1501361a2a56279a912ad62522aaae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a599eb184dd8cb08ed805ee424e9dd67a"><td class="memTemplParams" colspan="2"><a class="anchor" id="a599eb184dd8cb08ed805ee424e9dd67a"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a599eb184dd8cb08ed805ee424e9dd67a"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>hasComponent</b> () const </td></tr>
+<tr class="separator:a599eb184dd8cb08ed805ee424e9dd67a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f84fb31ceffbb55937a2e717d37c274"><td class="memTemplParams" colspan="2"><a class="anchor" id="a8f84fb31ceffbb55937a2e717d37c274"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a8f84fb31ceffbb55937a2e717d37c274"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getComponent</b> ()</td></tr>
+<tr class="separator:a8f84fb31ceffbb55937a2e717d37c274"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1906855c41f3c0804c3e3b86126d51b7"><td class="memTemplParams" colspan="2"><a class="anchor" id="a1906855c41f3c0804c3e3b86126d51b7"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a1906855c41f3c0804c3e3b86126d51b7"><td class="memTemplItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getComponent</b> () const </td></tr>
+<tr class="separator:a1906855c41f3c0804c3e3b86126d51b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a587d59a41095aa46d0a7552d6d8b43b7"><td class="memItemLeft" align="right" valign="top">static Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#a587d59a41095aa46d0a7552d6d8b43b7">create</a> (<a class="el" href="classxy_1_1_message_bus.html">MessageBus</a> &amp;)</td></tr>
-<tr class="memdesc:a587d59a41095aa46d0a7552d6d8b43b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory function for Entities.  <a href="#a587d59a41095aa46d0a7552d6d8b43b7">More...</a><br /></td></tr>
-<tr class="separator:a587d59a41095aa46d0a7552d6d8b43b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a6f579cda6059d102e9074e11a27e0282"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f579cda6059d102e9074e11a27e0282"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>EntityManager</b></td></tr>
+<tr class="separator:a6f579cda6059d102e9074e11a27e0282"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acebd80d4053c215a901c2e7647f5b151"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acebd80d4053c215a901c2e7647f5b151"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;</b> (const <a class="el" href="classxy_1_1_entity.html">Entity</a> &amp;l, const <a class="el" href="classxy_1_1_entity.html">Entity</a> &amp;r)</td></tr>
+<tr class="separator:acebd80d4053c215a901c2e7647f5b151"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18b2eb011a46b567fb926c4634f35994"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a18b2eb011a46b567fb926c4634f35994"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="classxy_1_1_entity.html">Entity</a> &amp;l, const <a class="el" href="classxy_1_1_entity.html">Entity</a> &amp;r)</td></tr>
+<tr class="separator:a18b2eb011a46b567fb926c4634f35994"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classxy_1_1_entity.html" title="Entity class. ">Entity</a> class. </p>
-<p>Entities represent a transform within a scene, and allow creation of game objects via composition - attaching multiple Components to define the look and behaviour of an in-game entity. Entities are memory managed to help prevent fragmentation of the heap and improve data locality, therefore entities must be created via the <a class="el" href="classxy_1_1_entity.html#a587d59a41095aa46d0a7552d6d8b43b7" title="Factory function for Entities. ">create()</a> factory function.</p>
-<p>Returned entities are unique_ptrs and therefore typical ownership semantics should be considered. Once an entity is added to a scene the scene will take ownership, invalidating the original reference. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classxy_1_1_scene.html" title="Scene class. ">Scene</a> </dd></dl>
+<div class="textblock"><p><a class="el" href="classxy_1_1_entity.html" title="Entity class - Basically just an ID. The ID is generated as a combination of the index in the memory ...">Entity</a> class - Basically just an ID. The ID is generated as a combination of the index in the memory pool and the generation - that is the nth time the index has been used. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a1bc72f2b3d379b877bb4d65b07ce33b7"></a>
+<a class="anchor" id="a2e5d9585bcd82cb3b2e42a1d3fb29dab"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classxy_1_1_entity.html">Entity</a> * Entity::addChild </td>
-          <td>(</td>
-          <td class="paramtype">Entity::Ptr &amp;&#160;</td>
-          <td class="paramname"><em>child</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Adds another entity as a child of this one. </p>
-<p>Entities can have a child / parent relationship where child entities first take on the transform of their parent before applying their own. Adding a child to an entity means that the parent takes ownership, invalidating the original child pointer. There the function returns a pointer to the hild once it has been added. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname"><a class="el" href="classxy_1_1_entity.html" title="Entity class. ">Entity</a></td><td>entity to add as a child to this one </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Pointer to newly added child </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="adbf778b352a7973747bc626f908c6d71"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Entity::addCommandCategories </td>
-          <td>(</td>
-          <td class="paramtype">sf::Int32&#160;</td>
-          <td class="paramname"><em>mask</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Add a command category to this entity. </p>
-<p>Entities can belong to multiple command categories which are OR'd together. Any commands targeting a category to which this entity belongs are executed on this entity </p>
-
-</div>
-</div>
-<a class="anchor" id="a9373441bc3fd860edfe76942e7832b3e"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , enable_if&lt; std::is_base_of&lt; Component, T &gt;&gt; ...&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">T* xy::Entity::addComponent </td>
-          <td>(</td>
-          <td class="paramtype">std::unique_ptr&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>component</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Adds a component to the entity. </p>
-<p>Added components must be derived from the <a class="el" href="classxy_1_1_component.html" title="Abstract base class for creating new components. ">Component</a> class </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classxy_1_1_component.html" title="Abstract base class for creating new components. ">Component</a> </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a587d59a41095aa46d0a7552d6d8b43b7"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Entity::Ptr Entity::create </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classxy_1_1_message_bus.html">MessageBus</a> &amp;&#160;</td>
-          <td class="paramname"><em>mb</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Factory function for Entities. </p>
-<p>Entities can only be created via this function, to allow xygine to internally manage the memory allocated. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname"><a class="el" href="classxy_1_1_message_bus.html" title="System wide message bus for custom event messaging. ">MessageBus</a></td><td>Reference to the system message bus </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a691dbe5f9ec930c27af2af0b97907a9e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Entity::destroy </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Mark this entity to be destroyed. </p>
-<p>Entities are not destroyed immediately, rather are marked for destruction on the next frame to ensure the entity is in a safe state to be destroyed. Destroying an entity also deletes all attached components so care should be taken when keeping any references which will become invalidated. When an entity is destroyed a message containing the entity ID is emitted over the message bus. </p>
-
-</div>
-</div>
-<a class="anchor" id="a7947ceb08aa24a02e08a4c3c199f5c1e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classxy_1_1_entity.html">Entity</a> * Entity::findEntity </td>
-          <td>(</td>
-          <td class="paramtype">sf::Uint64&#160;</td>
-          <td class="paramname"><em>uid</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Searches the <a class="el" href="classxy_1_1_entity.html" title="Entity class. ">Entity</a>'s children recursively for and entity with the given ID. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">UID</td><td>of the entity to find </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Pointer to entity if it is found, else returns nullptr </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a7fa28ed683bff48972b752f6fa01e81b"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , enable_if&lt; std::is_base_of&lt; Component, T &gt;&gt; ...&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">T* xy::Entity::getComponent </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>finds a commponent with a given name </p>
-<dl class="section return"><dt>Returns</dt><dd>Pointer to the component if it is found, else returns nullptr </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="af33ac2d16631af2ee0a84d4d6fa3ac8d"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , enable_if&lt; std::is_base_of&lt; Component, T &gt;&gt; ...&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">T* xy::Entity::getComponent </td>
+          <td class="memname">bool xy::Entity::destroyed </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Find a component by type. </p>
-<p>If multiple components of the same type are attached this function only returns the first instance found. </p><dl class="section return"><dt>Returns</dt><dd>Pointer to component if it is found, else returns nullptr </dd></dl>
+<p>Marks the entity for destruction. </p>
+<p>Returns true if the entity is marked for destruction </p>
 
 </div>
 </div>
-<a class="anchor" id="afd5c4b04ec95970b2a454c1187142025"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , enable_if&lt; std::is_base_of&lt; Component, T &gt;&gt; ...&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;T*&gt; xy::Entity::getComponents </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a vector of pointers to all components of type T. </p>
-<p>If no components are found the vector is empty </p>
-
-</div>
-</div>
-<a class="anchor" id="ac0220a155fead824ed40993e65208bf4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Entity::getVertices </td>
-          <td>(</td>
-          <td class="paramtype">std::vector&lt; sf::Vertex &gt; &amp;&#160;</td>
-          <td class="paramname"><em>verts</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the vertices used to draw the entity's AABB. </p>
-<p>Used by the <a class="el" href="classxy_1_1_scene.html" title="Scene class. ">Scene</a> class when drawing debug output </p>
-
-</div>
-</div>
-<a class="anchor" id="a8d1ac7eb8655dcee708afe32fa6f173b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Entity::handleMessage </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classxy_1_1_message.html">Message</a> &amp;&#160;</td>
-          <td class="paramname"><em>msg</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Passes system messages on to attach components. </p>
-<p>This is called automatically on entities belonging to a scene </p>
-
-</div>
-</div>
-<a class="anchor" id="aa5f5f5057ab81b216f76718a0f777a48"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Entity::Ptr Entity::removeChild </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classxy_1_1_entity.html">Entity</a> &amp;&#160;</td>
-          <td class="paramname"><em>child</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Removes a child entity. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname"><a class="el" href="classxy_1_1_entity.html" title="Entity class. ">Entity</a></td><td>reference to the child to remove </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Ptr to the removed child </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a902f57d6801f128659984fecf1ab318a"></a>
+<a class="anchor" id="a599eb184dd8cb08ed805ee424e9dd67a"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt;T&gt; xy::Entity::removeComponent </td>
-          <td>(</td>
-          <td class="paramtype">const T *&#160;</td>
-          <td class="paramname"><em>component</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Removes a component if it exists. </p>
-<dl class="section return"><dt>Returns</dt><dd>Original component if it is found or nullptr</dd></dl>
-<p>Returning the original component allows ownership to be taken by another entity. If nothing is done with the returned <a class="el" href="classxy_1_1_component.html" title="Abstract base class for creating new components. ">Component</a> then the component is automatically destroyed. </p>
-
-</div>
-</div>
-<a class="anchor" id="a923c9b9e44218ef9862e60c65e80fb47"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Entity::setScene </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classxy_1_1_scene.html">Scene</a> *&#160;</td>
-          <td class="paramname"><em>scene</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets the entity's <a class="el" href="classxy_1_1_scene.html" title="Scene class. ">Scene</a> pointer. </p>
-<p>Used internally by xygine </p>
-
-</div>
-</div>
-<a class="anchor" id="af61cdcf152f5c265b27b723edda278c4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">sf::Uint32 Entity::size </td>
+          <td class="memname">bool xy::Entity::hasComponent </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -567,27 +207,8 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the total number of entities parented to this one IE the depth of the entity in the scene graph. </p>
-<p>The size returned includes this entity, so an entity with no parents will return 1, and an entity belonging to a <a class="el" href="classxy_1_1_scene.html" title="Scene class. ">Scene</a> will always return at least 2. </p>
-
-</div>
-</div>
-<a class="anchor" id="a21ab7babefa5e4525535a76cef1415f2"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Entity::update </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>dt</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Updates the entity. </p>
-<p>The current frame time is passed to the entity, which then updates any attached components. This is automatically called on entities belonging to a scene and doesn't require manual usage. </p>
+<p>Removes the component of this type if it exists. </p>
+<p>returns true if the component type exists on thie entity </p>
 
 </div>
 </div>

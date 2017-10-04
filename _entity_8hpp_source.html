@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xygine: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xygine/include/xygine/Entity.hpp Source File</title>
+<title>xyginext: C:/Users/Matt/Documents/Visual Studio 2017/Projects/xygineXT/xyginext/include/xyginext/ecs/Entity.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,10 +18,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">xygine
-   &#160;<span id="projectnumber">0.1.0</span>
+   <div id="projectname">xyginext
+   &#160;<span id="projectnumber">0.2.0</span>
    </div>
-   <div id="projectbrief">SFML Based 2D Game Creation Framework</div>
+   <div id="projectbrief">Second generation of xygine game creation framework</div>
   </td>
  </tr>
  </tbody>
@@ -44,7 +44,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_4d209b5b760f516cd5a2179341e2b1c7.html">xygine</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_efb0e9b2b77ba75392bcf64fcf40cd77.html">include</a></li><li class="navelem"><a class="el" href="dir_e1acbbb56b05dac1d2df5cc4492ca74b.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_4aede1d1632dac51d267b8924e46a8b9.html">ecs</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -53,10 +53,10 @@
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">© Matt Marchant 2014 - 2017</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">(c) Matt Marchant 2017</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">http://trederia.blogspot.com</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">xygine - Zlib license.</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">xygineXT - Zlib license.</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">This software is provided &#39;as-is&#39;, without any express or</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">implied warranty. In no event will the authors be held</span></div>
@@ -79,236 +79,183 @@
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">source distribution.</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">*********************************************************************/</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">//an entity defined by its collection of components</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#ifndef XY_ENTITY_HPP_</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define XY_ENTITY_HPP_</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;xygine/Log.hpp&gt;</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;xygine/Command.hpp&gt;</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;xygine/components/Component.hpp&gt;</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &lt;xygine/detail/ObjectPool.hpp&gt;</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics/Transformable.hpp&gt;</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics/Drawable.hpp&gt;</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics/Vertex.hpp&gt;</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#ifndef XY_ENTITY_HPP_</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define XY_ENTITY_HPP_</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classxy_1_1_entity_manager.html#aa23616f1c8b573f3430ba4f1d4968da9">   30</a></span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;xyginext/core/Assert.hpp&gt;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;xyginext/Config.hpp&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;xyginext/ecs/ComponentPool.hpp&gt;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;xyginext/ecs/Component.hpp&gt;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;SFML/Config.hpp&gt;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;bitset&gt;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;deque&gt;</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;type_traits&gt;</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacexy.html">xy</a></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">class </span>Scene;</div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classxy_1_1_entity.html">   63</a></span>&#160;    <span class="keyword">class </span>XY_EXPORT_API <a class="code" href="classxy_1_1_entity.html">Entity</a> final : <span class="keyword">public</span> sf::Transformable, <span class="keyword">public</span> sf::Drawable</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keyword">using</span> Ptr = Detail::ObjectPool&lt;Entity&gt;::Ptr;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">class </span>Priv final {};</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;limits&gt;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacexy.html">xy</a></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classxy_1_1_entity_manager.html#acbf661a5553ac960ce6744a2cafa343f">   46</a></span>&#160;{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">namespace </span>Detail</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">enum</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            MaxComponents = 64, <span class="comment">//this is max number of types on a single entity</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            IndexBits = 24,</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classxy_1_1_entity.html#a599eb184dd8cb08ed805ee424e9dd67a">   53</a></span>&#160;            GenerationBits = 8,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            MinFreeIDs = 1024 <span class="comment">//after this generation is incremented and we go back to zero</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        };</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">using</span> ComponentMask = std::bitset&lt;Detail::MaxComponents&gt;;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">class </span>EntityManager;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classxy_1_1_entity.html#a988a8795fa62353f350a0bcac4a4b4a3">   60</a></span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classxy_1_1_entity.html">   67</a></span>&#160;    <span class="keyword">class </span>XY_EXPORT_API <a class="code" href="classxy_1_1_entity.html">Entity</a> final</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    {</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> CONDITION&gt;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keyword">using</span> enable_if = <span class="keyword">typename</span> std::enable_if&lt;CONDITION::value&gt;::type;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classxy_1_1_entity.html">Entity</a>(<a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>&amp;, <span class="keyword">const</span> Priv&amp;);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        ~<a class="code" href="classxy_1_1_entity.html">Entity</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="classxy_1_1_entity.html">Entity</a>(<span class="keyword">const</span> <a class="code" href="classxy_1_1_entity.html">Entity</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="classxy_1_1_entity.html">Entity</a>&amp; operator = (<span class="keyword">const</span> <a class="code" href="classxy_1_1_entity.html">Entity</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keyword">static</span> Ptr create(<a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>&amp;);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <a class="code" href="classxy_1_1_entity.html">Entity</a>* addChild(Ptr&amp;);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        Ptr removeChild(<a class="code" href="classxy_1_1_entity.html">Entity</a>&amp;);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keyword">const</span> std::vector&lt;Ptr&gt;&amp; getChildren() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        std::vector&lt;Ptr&gt;&amp; getChildren();</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <a class="code" href="classxy_1_1_entity.html">Entity</a>* findEntity(sf::Uint64);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <a class="code" href="classxy_1_1_entity.html">Entity</a>* getRoot();</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        sf::Vector2f getWorldPosition() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        sf::Transform getWorldTransform() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordtype">void</span> setWorldPosition(sf::Vector2f);</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="keywordtype">void</span> update(<span class="keywordtype">float</span> dt);</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, enable_if&lt;std::is_base_of&lt;Component, T&gt;&gt;...&gt;</div>
-<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="classxy_1_1_entity.html#a9373441bc3fd860edfe76942e7832b3e">  153</a></span>&#160;        T* <a class="code" href="classxy_1_1_entity.html#a9373441bc3fd860edfe76942e7832b3e">addComponent</a>(std::unique_ptr&lt;T&gt;&amp; component)</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        {</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            T* ret = component.get();</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            Component::Ptr c(static_cast&lt;Component*&gt;(component.release()));</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            <span class="keywordflow">if</span> (c-&gt;type() == Component::Type::Drawable)</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            {</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                <span class="comment">//store a reference to drawables so they can be drawn</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                m_drawables.push_back(dynamic_cast&lt;sf::Drawable*&gt;(c.get()));</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                m_boundedComponents.push_back(c.get());</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            }</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c-&gt;type() == Component::Type::Mesh)</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            {</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                m_boundedComponents.push_back(c.get());</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            }</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            c-&gt;setParentUID(m_uid);</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            c-&gt;onStart(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            </div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            m_pendingComponents.push_back(std::move(c));</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        }</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, enable_if&lt;std::is_base_of&lt;Component, T&gt;&gt;...&gt;</div>
-<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="classxy_1_1_entity.html#a7fa28ed683bff48972b752f6fa01e81b">  179</a></span>&#160;        T* <a class="code" href="classxy_1_1_entity.html#a7fa28ed683bff48972b752f6fa01e81b">getComponent</a>(<span class="keyword">const</span> std::string&amp; name)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="keywordflow">if</span> (name.empty()) <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            <span class="keyword">auto</span> result = std::find_if(m_components.begin(), m_components.end(), FindByName(name));</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            <span class="keywordflow">if</span> (result == m_components.end())</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            {</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                result = std::find_if(m_pendingComponents.begin(), m_pendingComponents.end(), FindByName(name));</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                <span class="keywordflow">if</span> (result == m_pendingComponents.end())</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                {</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                }</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            }</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">dynamic_cast&lt;</span>T*<span class="keyword">&gt;</span>(result-&gt;get());</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        }</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, enable_if&lt;std::is_base_of&lt;Component, T&gt;&gt;...&gt;</div>
-<div class="line"><a name="l00204"></a><span class="lineno"><a class="line" href="classxy_1_1_entity.html#af33ac2d16631af2ee0a84d4d6fa3ac8d">  204</a></span>&#160;        T* <a class="code" href="classxy_1_1_entity.html#af33ac2d16631af2ee0a84d4d6fa3ac8d">getComponent</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            std::type_index idx(<span class="keyword">typeid</span>(T));</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            <span class="keyword">auto</span> result = std::find_if(m_components.begin(), m_components.end(), FindByTypeIndex(idx));</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            <span class="keywordflow">if</span> (result == m_components.end())</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            {</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                result = std::find_if(m_pendingComponents.begin(), m_pendingComponents.end(), FindByTypeIndex(idx));</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                <span class="keywordflow">if</span> (result == m_pendingComponents.end())</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                {</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                }</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            }</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">dynamic_cast&lt;</span>T*<span class="keyword">&gt;</span>(result-&gt;get());</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        }</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, enable_if&lt;std::is_base_of&lt;Component, T&gt;&gt;...&gt;</div>
-<div class="line"><a name="l00224"></a><span class="lineno"><a class="line" href="classxy_1_1_entity.html#afd5c4b04ec95970b2a454c1187142025">  224</a></span>&#160;        std::vector&lt;T*&gt; <a class="code" href="classxy_1_1_entity.html#afd5c4b04ec95970b2a454c1187142025">getComponents</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            std::vector&lt;T*&gt; retval;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            std::type_index idx(<span class="keyword">typeid</span>(T));</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; c : m_components)</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            {</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                <span class="keywordflow">if</span> (c-&gt;uniqueType() == idx)</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                {</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                    retval.push_back(dynamic_cast&lt;T*&gt;(c.get()));</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                }</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            }</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; c : m_pendingComponents)</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            {</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                <span class="keywordflow">if</span> (c-&gt;uniqueType() == idx)</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                {</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                    retval.push_back(dynamic_cast&lt;T*&gt;(c.get()));</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                }</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            }</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <span class="keywordflow">return</span> std::move(retval);</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        }</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00254"></a><span class="lineno"><a class="line" href="classxy_1_1_entity.html#a902f57d6801f128659984fecf1ab318a">  254</a></span>&#160;        std::unique_ptr&lt;T&gt; <a class="code" href="classxy_1_1_entity.html#a902f57d6801f128659984fecf1ab318a">removeComponent</a>(<span class="keyword">const</span> T* component)</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        {</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            static_assert(std::is_base_of&lt;Component, T&gt;::value, <span class="stringliteral">&quot;Must be a component&quot;</span>);</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            <span class="keyword">auto</span> it = std::find_if(m_components.begin(), m_components.end(), </div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                [component](<span class="keyword">const</span> Component::Ptr&amp; ptr)</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            {</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                <span class="keywordflow">return</span> ptr.get() == component;</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            });</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            <span class="keywordflow">if</span> (it != m_components.end())</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            {</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                std::unique_ptr&lt;T&gt; retVal(dynamic_cast&lt;T*&gt;(it-&gt;release()));</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                m_components.erase(it);</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                <span class="keywordflow">if</span> (component-&gt;type() == Component::Type::Drawable)</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                {</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                    m_drawables.erase(std::remove_if(m_drawables.begin(), m_drawables.end(), [component](<span class="keyword">const</span> sf::Drawable* ptr)</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                    {</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                        <span class="keywordflow">return</span> ptr == <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span>sf::Drawable*<span class="keyword">&gt;</span>(component);</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                    }), m_drawables.end());</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                }</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                m_boundedComponents.erase(std::remove_if(m_boundedComponents.begin(), m_boundedComponents.end(),</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                    [component](<span class="keyword">const</span> <a class="code" href="classxy_1_1_component.html">Component</a>* p)</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                {</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                    <span class="keywordflow">return</span> p == <span class="keyword">static_cast&lt;</span><a class="code" href="classxy_1_1_component.html">Component</a>*<span class="keyword">&gt;</span>(component);</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                }), m_boundedComponents.end());</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                retVal-&gt;setParentUID(0u);</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                <span class="keywordflow">return</span> std::move(retVal);</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            }</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        }</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="keywordtype">void</span> destroy();</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <span class="keywordtype">bool</span> destroyed() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="keywordtype">void</span> setUID(sf::Uint64);</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        sf::Uint64 getUID() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <span class="keywordtype">void</span> handleMessage(<span class="keyword">const</span> <a class="code" href="classxy_1_1_message.html">Message</a>&amp;);</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        <span class="keywordtype">void</span> setScene(<a class="code" href="classxy_1_1_scene.html">Scene</a>*);</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        <a class="code" href="classxy_1_1_scene.html">Scene</a>* getScene();</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        <span class="keywordtype">bool</span> doCommand(<span class="keyword">const</span> <a class="code" href="structxy_1_1_command.html">Command</a>&amp;, <span class="keywordtype">float</span>);</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        <span class="keywordtype">void</span> addCommandCategories(sf::Int32);</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        <span class="keywordtype">bool</span> hasCommandCategories(sf::Int32);</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        sf::Uint32 size() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        <span class="keywordtype">void</span> getVertices(std::vector&lt;sf::Vertex&gt;&amp;);</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        sf::FloatRect globalBounds() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        <span class="keywordtype">bool</span> m_destroyed;</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        sf::Uint64 m_uid;</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>&amp; m_messageBus;</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        sf::Int32 m_commandCategories;</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        std::vector&lt;std::unique_ptr&lt;Component&gt;&gt; m_pendingComponents;</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        std::vector&lt;std::unique_ptr&lt;Component&gt;&gt; m_components;</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        std::vector&lt;sf::Drawable*&gt; m_drawables;</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        std::vector&lt;Component*&gt; m_boundedComponents;</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        std::vector&lt;Ptr&gt; m_children;</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        std::vector&lt;Entity*&gt; m_deadChildren;</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        <a class="code" href="classxy_1_1_entity.html">Entity</a>* m_parent;</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        <a class="code" href="classxy_1_1_scene.html">Scene</a>* m_scene;</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;        </div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        <span class="keywordtype">void</span> draw(sf::RenderTarget&amp; rt, sf::RenderStates state) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        <span class="keywordtype">void</span> drawSelf(sf::RenderTarget&amp;, sf::RenderStates) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        <span class="keyword">struct </span>FindByName</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        {</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;            FindByName(<span class="keyword">const</span> std::string&amp; name) : m_name(name){}</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;            <span class="keywordtype">bool</span> operator()(<span class="keyword">const</span> Component::Ptr&amp; c){ <span class="keywordflow">return</span> (c &amp;&amp; c-&gt;getName() == m_name); }</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;            std::string m_name;</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        };</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        <span class="keyword">struct </span>FindByTypeIndex</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        {</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;            FindByTypeIndex(<span class="keyword">const</span> std::type_index&amp; ti) : m_ti(ti){}</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;            <span class="keywordtype">bool</span> operator() (<span class="keyword">const</span> Component::Ptr&amp; c) { <span class="keywordflow">return</span> c-&gt;uniqueType() == m_ti; }</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;            <span class="keyword">const</span> std::type_index&amp; m_ti;</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;        };</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    };</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;}</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;<span class="preprocessor">#endif //XY_ENTITY_HPP_</span></div>
-<div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xygine namespace. </div><div class="ttdef"><b>Definition:</b> App.hpp:55</div></div>
-<div class="ttc" id="classxy_1_1_component_html"><div class="ttname"><a href="classxy_1_1_component.html">xy::Component</a></div><div class="ttdoc">Abstract base class for creating new components. </div><div class="ttdef"><b>Definition:</b> Component.hpp:59</div></div>
-<div class="ttc" id="classxy_1_1_entity_html_a902f57d6801f128659984fecf1ab318a"><div class="ttname"><a href="classxy_1_1_entity.html#a902f57d6801f128659984fecf1ab318a">xy::Entity::removeComponent</a></div><div class="ttdeci">std::unique_ptr&lt; T &gt; removeComponent(const T *component)</div><div class="ttdoc">Removes a component if it exists. </div><div class="ttdef"><b>Definition:</b> Entity.hpp:254</div></div>
-<div class="ttc" id="classxy_1_1_message_bus_html"><div class="ttname"><a href="classxy_1_1_message_bus.html">xy::MessageBus</a></div><div class="ttdoc">System wide message bus for custom event messaging. </div><div class="ttdef"><b>Definition:</b> MessageBus.hpp:251</div></div>
-<div class="ttc" id="classxy_1_1_entity_html_af33ac2d16631af2ee0a84d4d6fa3ac8d"><div class="ttname"><a href="classxy_1_1_entity.html#af33ac2d16631af2ee0a84d4d6fa3ac8d">xy::Entity::getComponent</a></div><div class="ttdeci">T * getComponent() const </div><div class="ttdoc">Find a component by type. </div><div class="ttdef"><b>Definition:</b> Entity.hpp:204</div></div>
-<div class="ttc" id="classxy_1_1_entity_html_a7fa28ed683bff48972b752f6fa01e81b"><div class="ttname"><a href="classxy_1_1_entity.html#a7fa28ed683bff48972b752f6fa01e81b">xy::Entity::getComponent</a></div><div class="ttdeci">T * getComponent(const std::string &amp;name) const </div><div class="ttdoc">finds a commponent with a given name </div><div class="ttdef"><b>Definition:</b> Entity.hpp:179</div></div>
-<div class="ttc" id="classxy_1_1_message_html"><div class="ttname"><a href="classxy_1_1_message.html">xy::Message</a></div><div class="ttdoc">Message class. </div><div class="ttdef"><b>Definition:</b> MessageBus.hpp:79</div></div>
-<div class="ttc" id="structxy_1_1_command_html"><div class="ttname"><a href="structxy_1_1_command.html">xy::Command</a></div><div class="ttdoc">Command struct. </div><div class="ttdef"><b>Definition:</b> Command.hpp:46</div></div>
-<div class="ttc" id="classxy_1_1_entity_html_a9373441bc3fd860edfe76942e7832b3e"><div class="ttname"><a href="classxy_1_1_entity.html#a9373441bc3fd860edfe76942e7832b3e">xy::Entity::addComponent</a></div><div class="ttdeci">T * addComponent(std::unique_ptr&lt; T &gt; &amp;component)</div><div class="ttdoc">Adds a component to the entity. </div><div class="ttdef"><b>Definition:</b> Entity.hpp:153</div></div>
-<div class="ttc" id="classxy_1_1_entity_html"><div class="ttname"><a href="classxy_1_1_entity.html">xy::Entity</a></div><div class="ttdoc">Entity class. </div><div class="ttdef"><b>Definition:</b> Entity.hpp:63</div></div>
-<div class="ttc" id="classxy_1_1_scene_html"><div class="ttname"><a href="classxy_1_1_scene.html">xy::Scene</a></div><div class="ttdoc">Scene class. </div><div class="ttdef"><b>Definition:</b> Scene.hpp:56</div></div>
-<div class="ttc" id="classxy_1_1_entity_html_afd5c4b04ec95970b2a454c1187142025"><div class="ttname"><a href="classxy_1_1_entity.html#afd5c4b04ec95970b2a454c1187142025">xy::Entity::getComponents</a></div><div class="ttdeci">std::vector&lt; T * &gt; getComponents() const </div><div class="ttdoc">Returns a vector of pointers to all components of type T. </div><div class="ttdef"><b>Definition:</b> Entity.hpp:224</div></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">using</span> ID = sf::Uint32;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">using</span> Generation = sf::Uint8;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="classxy_1_1_entity.html">Entity</a>(ID index = std::numeric_limits&lt;ID&gt;::max(), Generation generation = 0);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="comment">/*</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classxy_1_1_entity_manager.html#a8f41b55d64dda9f3650071395dbb05c9">   76</a></span>&#160;<span class="comment">        \brief Returns the index of this entity</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">        */</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        ID getIndex() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        Generation getGeneration() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="comment">//void destroy();</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordtype">bool</span> destroyed() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordtype">void</span> addComponent(<span class="keyword">const</span> T&amp;);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="comment">/*</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">        \brief Constructs a component from the given parameters,</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">        adds it to the entity and returns a reference to it</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">        */</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        T&amp; addComponent(Args&amp;&amp;...);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="comment">/*template &lt;typename T&gt;</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">        void removeComponent()*/</span>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordtype">bool</span> hasComponent() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        T&amp; getComponent();</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keyword">const</span> T&amp; getComponent() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keyword">const</span> ComponentMask&amp; getComponentMask() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordtype">bool</span> operator == (<a class="code" href="classxy_1_1_entity.html">Entity</a> r)</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        {</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            <span class="keywordflow">return</span> getIndex() == r.getIndex();</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        }</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keywordtype">bool</span> operator != (<a class="code" href="classxy_1_1_entity.html">Entity</a> r)</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            <span class="keywordflow">return</span> getIndex() != r.getIndex();</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        }</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="keywordtype">bool</span> operator &lt; (Entity r)</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            <span class="keywordflow">return</span> getIndex() &lt; r.getIndex();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordtype">bool</span> operator &lt;= (Entity r)</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <span class="keywordflow">return</span> getIndex() &lt;= r.getIndex();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        }</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordtype">bool</span> operator &gt; (Entity r)</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        {</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <span class="keywordflow">return</span> getIndex() &gt; r.getIndex();</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        }</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keywordtype">bool</span> operator &gt;= (Entity r)</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="keywordflow">return</span> getIndex() &gt;= r.getIndex();</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keyword">friend</span> <span class="keywordtype">bool</span> operator &lt; (<span class="keyword">const</span> Entity&amp; l, <span class="keyword">const</span> Entity&amp; r)</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            <span class="keywordflow">return</span> (l.getIndex() &lt; r.getIndex());</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        }</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keyword">friend</span> <span class="keywordtype">bool</span> operator == (<span class="keyword">const</span> Entity&amp; l, <span class="keyword">const</span> Entity&amp; r)</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            <span class="keywordflow">return</span> (l.getIndex() == r.getIndex());</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        }</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        ID m_id;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        EntityManager* m_entityManager;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span>EntityManager;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    };</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keyword">class </span>MessageBus;</div>
+<div class="line"><a name="l00181"></a><span class="lineno"><a class="line" href="classxy_1_1_entity_manager.html">  181</a></span>&#160;    <span class="keyword">class </span>XY_EXPORT_API <a class="code" href="classxy_1_1_entity_manager.html">EntityManager</a> final</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    {</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classxy_1_1_entity_manager.html">EntityManager</a>(<a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>&amp;);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        ~<a class="code" href="classxy_1_1_entity_manager.html">EntityManager</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <a class="code" href="classxy_1_1_entity_manager.html">EntityManager</a>(<span class="keyword">const</span> <a class="code" href="classxy_1_1_entity_manager.html">EntityManager</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <a class="code" href="classxy_1_1_entity_manager.html">EntityManager</a>(<span class="keyword">const</span> <a class="code" href="classxy_1_1_entity_manager.html">EntityManager</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <a class="code" href="classxy_1_1_entity_manager.html">EntityManager</a>&amp; operator = (<span class="keyword">const</span> <a class="code" href="classxy_1_1_entity_manager.html">EntityManager</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <a class="code" href="classxy_1_1_entity_manager.html">EntityManager</a>&amp; operator = (<span class="keyword">const</span> <a class="code" href="classxy_1_1_entity_manager.html">EntityManager</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <a class="code" href="classxy_1_1_entity.html">Entity</a> createEntity();</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="keywordtype">void</span> destroyEntity(<a class="code" href="classxy_1_1_entity.html">Entity</a>);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="keywordtype">bool</span> entityDestroyed(<a class="code" href="classxy_1_1_entity.html">Entity</a>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <a class="code" href="classxy_1_1_entity.html">Entity</a> getEntity(Entity::ID) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        <span class="keywordtype">void</span> addComponent(<a class="code" href="classxy_1_1_entity.html">Entity</a>, T);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        T&amp; addComponent(<a class="code" href="classxy_1_1_entity.html">Entity</a>, Args&amp;&amp;... args);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="comment">/*template &lt;typename T&gt;</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="comment">        void removeComponent(Entity);*/</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keywordtype">bool</span> hasComponent(<a class="code" href="classxy_1_1_entity.html">Entity</a>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        T&amp; getComponent(<a class="code" href="classxy_1_1_entity.html">Entity</a>);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="keyword">const</span> ComponentMask&amp; getComponentMask(<a class="code" href="classxy_1_1_entity.html">Entity</a>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keywordtype">bool</span> owns(<a class="code" href="classxy_1_1_entity.html">Entity</a>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        <a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>&amp; m_messageBus;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        std::deque&lt;Entity::ID&gt; m_freeIDs;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        std::vector&lt;Entity::Generation&gt; m_generations; <span class="comment">// &lt; indexed by entity ID</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        std::vector&lt;std::unique_ptr&lt;Detail::Pool&gt;&gt; m_componentPools; <span class="comment">// &lt; index is component ID. Pool index is entity ID.</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        std::vector&lt;ComponentMask&gt; m_componentMasks;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <a class="code" href="classxy_1_1_detail_1_1_component_pool.html">Detail::ComponentPool&lt;T&gt;</a>&amp; getPool();</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    };</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="preprocessor">#include &quot;Entity.inl&quot;</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="preprocessor">#include &quot;EntityManager.inl&quot;</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;}</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;XY_EXPORT_API <span class="keywordtype">bool</span> operator &lt; (<span class="keyword">const</span> <a class="code" href="classxy_1_1_entity.html">xy::Entity</a>&amp; l, <span class="keyword">const</span> <a class="code" href="classxy_1_1_entity.html">xy::Entity</a>&amp; r);</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="preprocessor">#endif //XY_ENTITY_HPP_</span></div>
+<div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioSourceImpl.hpp:39</div></div>
+<div class="ttc" id="classxy_1_1_message_bus_html"><div class="ttname"><a href="classxy_1_1_message_bus.html">xy::MessageBus</a></div><div class="ttdoc">System wide message bus for custom event messaging. </div><div class="ttdef"><b>Definition:</b> MessageBus.hpp:58</div></div>
+<div class="ttc" id="classxy_1_1_entity_html"><div class="ttname"><a href="classxy_1_1_entity.html">xy::Entity</a></div><div class="ttdoc">Entity class - Basically just an ID. The ID is generated as a combination of the index in the memory ...</div><div class="ttdef"><b>Definition:</b> Entity.hpp:67</div></div>
+<div class="ttc" id="classxy_1_1_detail_1_1_component_pool_html"><div class="ttname"><a href="classxy_1_1_detail_1_1_component_pool.html">xy::Detail::ComponentPool</a></div><div class="ttdoc">memory pooling for components - TODO map component to ID </div><div class="ttdef"><b>Definition:</b> ComponentPool.hpp:50</div></div>
+<div class="ttc" id="classxy_1_1_entity_manager_html"><div class="ttname"><a href="classxy_1_1_entity_manager.html">xy::EntityManager</a></div><div class="ttdoc">Manages the relationship between an Entity and its components. </div><div class="ttdef"><b>Definition:</b> Entity.hpp:181</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xygine: xy::ParticleSystem Class Reference</title>
+<title>xyginext: xy::ParticleSystem Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,10 +18,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">xygine
-   &#160;<span id="projectnumber">0.1.0</span>
+   <div id="projectname">xyginext
+   &#160;<span id="projectnumber">0.2.0</span>
    </div>
-   <div id="projectbrief">SFML Based 2D Game Creation Framework</div>
+   <div id="projectbrief">Second generation of xygine game creation framework</div>
   </td>
  </tr>
  </tbody>
@@ -53,7 +53,6 @@
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classxy_1_1_particle_system-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -61,7 +60,7 @@
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="structxy_1_1_particle.html" title="Struct containing properties for particles used in the particle system component. ...">Particle</a> System <a class="el" href="classxy_1_1_component.html" title="Abstract base class for creating new components. ">Component</a>.  
+<p><a class="el" href="classxy_1_1_particle_system.html" title="ParticleSystem. Responsible for updating all ParticelEmitter components in the scene, and rendering the output. ">ParticleSystem</a>. Responsible for updating all ParticelEmitter components in the scene, and rendering the output.  
  <a href="classxy_1_1_particle_system.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_particle_system_8hpp_source.html">ParticleSystem.hpp</a>&gt;</code></p>
@@ -71,800 +70,108 @@ Inheritance diagram for xy::ParticleSystem:</div>
  <div class="center">
   <img src="classxy_1_1_particle_system.png" usemap="#xy::ParticleSystem_map" alt=""/>
   <map id="xy::ParticleSystem_map" name="xy::ParticleSystem_map">
-<area href="classxy_1_1_component.html" title="Abstract base class for creating new components. " alt="xy::Component" shape="rect" coords="0,0,114,24"/>
+<area href="classxy_1_1_system.html" title="Base class for systems. Systems should all derive from this base class, and instanciated before any e..." alt="xy::System" shape="rect" coords="0,0,114,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_particle_system_1_1_definition.html">Definition</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structxy_1_1_particle.html" title="Struct containing properties for particles used in the particle system component. ...">Particle</a> System preset.  <a href="classxy_1_1_particle_system_1_1_definition.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a4a30e18ea3405e8a063c154098c8e9f3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a30e18ea3405e8a063c154098c8e9f3"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Affector</b> = std::function&lt; void(<a class="el" href="structxy_1_1_particle.html">Particle</a> &amp;p, float dt)&gt;</td></tr>
-<tr class="separator:a4a30e18ea3405e8a063c154098c8e9f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7eb5e46ca874ca390a14a2e211d0f735"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7eb5e46ca874ca390a14a2e211d0f735"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Ptr</b> = std::unique_ptr&lt; <a class="el" href="classxy_1_1_particle_system.html">ParticleSystem</a> &gt;</td></tr>
-<tr class="separator:a7eb5e46ca874ca390a14a2e211d0f735"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_types_classxy_1_1_component"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classxy_1_1_component')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classxy_1_1_component.html">xy::Component</a></td></tr>
-<tr class="memitem:a9b98d49ac2d36fc3539f27c67f44fc19 inherit pub_types_classxy_1_1_component"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_component.html#a9b98d49ac2d36fc3539f27c67f44fc19">Type</a> { <b>Drawable</b>, 
-<b>Physics</b>, 
-<b>Script</b>, 
-<b>Mesh</b>
- }<tr class="memdesc:a9b98d49ac2d36fc3539f27c67f44fc19"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classxy_1_1_component.html" title="Abstract base class for creating new components. ">Component</a> type.  <a href="classxy_1_1_component.html#a9b98d49ac2d36fc3539f27c67f44fc19">More...</a><br /></td></tr>
-<tr class="separator:a9b98d49ac2d36fc3539f27c67f44fc19 inherit pub_types_classxy_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</td></tr>
-<tr class="memitem:a6643d83b72828b1021615f13a63fe17f inherit pub_types_classxy_1_1_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6643d83b72828b1021615f13a63fe17f"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Ptr</b> = std::unique_ptr&lt; <a class="el" href="classxy_1_1_component.html">Component</a> &gt;</td></tr>
-<tr class="separator:a6643d83b72828b1021615f13a63fe17f inherit pub_types_classxy_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c34aceace1ab3b0394f44e5b855b4ab inherit pub_types_classxy_1_1_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c34aceace1ab3b0394f44e5b855b4ab"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>UniqueType</b> = std::type_index</td></tr>
-<tr class="separator:a4c34aceace1ab3b0394f44e5b855b4ab inherit pub_types_classxy_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1422504bc3d6c299553841939ebd2ef7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1422504bc3d6c299553841939ebd2ef7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ParticleSystem</b> (<a class="el" href="classxy_1_1_message_bus.html">MessageBus</a> &amp;)</td></tr>
-<tr class="separator:a1422504bc3d6c299553841939ebd2ef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab5fa0076f5f262916d945291bfef287"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classxy_1_1_component.html#a9b98d49ac2d36fc3539f27c67f44fc19">Component::Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_particle_system.html#aab5fa0076f5f262916d945291bfef287">type</a> () const  override</td></tr>
-<tr class="memdesc:aab5fa0076f5f262916d945291bfef287"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the general type of component.  <a href="#aab5fa0076f5f262916d945291bfef287">More...</a><br /></td></tr>
-<tr class="separator:aab5fa0076f5f262916d945291bfef287"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79be6dbbf4ea9847af51250be238ea54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_particle_system.html#a79be6dbbf4ea9847af51250be238ea54">entityUpdate</a> (<a class="el" href="classxy_1_1_entity.html">Entity</a> &amp;, float) override</td></tr>
-<tr class="memdesc:a79be6dbbf4ea9847af51250be238ea54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to update the component's state.  <a href="#a79be6dbbf4ea9847af51250be238ea54">More...</a><br /></td></tr>
-<tr class="separator:a79be6dbbf4ea9847af51250be238ea54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2090503f9641e56505fa20c3de86d22f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_particle_system.html#a2090503f9641e56505fa20c3de86d22f">onParentDestroyed</a> (<a class="el" href="classxy_1_1_entity.html">Entity</a> &amp;) override</td></tr>
-<tr class="memdesc:a2090503f9641e56505fa20c3de86d22f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notification of parent entity's impending destruction.  <a href="#a2090503f9641e56505fa20c3de86d22f">More...</a><br /></td></tr>
-<tr class="separator:a2090503f9641e56505fa20c3de86d22f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21c5f4daa296dc9548d98762c8d7a6f9"><td class="memItemLeft" align="right" valign="top">sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_particle_system.html#a21c5f4daa296dc9548d98762c8d7a6f9">localBounds</a> () const  override</td></tr>
-<tr class="memdesc:a21c5f4daa296dc9548d98762c8d7a6f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the AABB of the component in local space.  <a href="#a21c5f4daa296dc9548d98762c8d7a6f9">More...</a><br /></td></tr>
-<tr class="separator:a21c5f4daa296dc9548d98762c8d7a6f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae795febaa102e8b0cbbb5056f1d9a89"><td class="memItemLeft" align="right" valign="top">sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_particle_system.html#aae795febaa102e8b0cbbb5056f1d9a89">globalBounds</a> () const  override</td></tr>
-<tr class="memdesc:aae795febaa102e8b0cbbb5056f1d9a89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the AABB of the component in world space.  <a href="#aae795febaa102e8b0cbbb5056f1d9a89">More...</a><br /></td></tr>
-<tr class="separator:aae795febaa102e8b0cbbb5056f1d9a89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0280884d04bd74dad71d80cea806af0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_particle_system.html#ab0280884d04bd74dad71d80cea806af0">setTexture</a> (const sf::Texture &amp;t)</td></tr>
-<tr class="memdesc:ab0280884d04bd74dad71d80cea806af0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the optional texture to be used by the particle system.  <a href="#ab0280884d04bd74dad71d80cea806af0">More...</a><br /></td></tr>
-<tr class="separator:ab0280884d04bd74dad71d80cea806af0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae214c2a1a0f63a6419b695883ee6574c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_particle_system.html#ae214c2a1a0f63a6419b695883ee6574c">setColour</a> (const sf::Color &amp;colour)</td></tr>
-<tr class="memdesc:ae214c2a1a0f63a6419b695883ee6574c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the colour with which the particle system is multiplied.  <a href="#ae214c2a1a0f63a6419b695883ee6574c">More...</a><br /></td></tr>
-<tr class="separator:ae214c2a1a0f63a6419b695883ee6574c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49c771ef507dd6de271d27c0fb6fcb3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_particle_system.html#a49c771ef507dd6de271d27c0fb6fcb3c">setBlendMode</a> (sf::BlendMode mode)</td></tr>
-<tr class="memdesc:a49c771ef507dd6de271d27c0fb6fcb3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the blend mode used when drawing the particle system.  <a href="#a49c771ef507dd6de271d27c0fb6fcb3c">More...</a><br /></td></tr>
-<tr class="separator:a49c771ef507dd6de271d27c0fb6fcb3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a376c19f18a1c2fe055686fc93df56c52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_particle_system.html#a376c19f18a1c2fe055686fc93df56c52">setShader</a> (sf::Shader &amp;shader)</td></tr>
-<tr class="memdesc:a376c19f18a1c2fe055686fc93df56c52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets an optional shader to be used when drawing the particle system.  <a href="#a376c19f18a1c2fe055686fc93df56c52">More...</a><br /></td></tr>
-<tr class="separator:a376c19f18a1c2fe055686fc93df56c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf421916fd148a5b55eb1c991b40b29f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_particle_system.html#abf421916fd148a5b55eb1c991b40b29f">setParticleSize</a> (const sf::Vector2f &amp;size)</td></tr>
-<tr class="memdesc:abf421916fd148a5b55eb1c991b40b29f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the initial size of the particles emitted by the particle system.  <a href="#abf421916fd148a5b55eb1c991b40b29f">More...</a><br /></td></tr>
-<tr class="separator:abf421916fd148a5b55eb1c991b40b29f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0801fcbd87ebcf1fda8a985ba5c42595"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_particle_system.html#a0801fcbd87ebcf1fda8a985ba5c42595">setPosition</a> (const sf::Vector2f &amp;position)</td></tr>
-<tr class="memdesc:a0801fcbd87ebcf1fda8a985ba5c42595"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the initial position of emitted particles relative the component's parent entity's world position.  <a href="#a0801fcbd87ebcf1fda8a985ba5c42595">More...</a><br /></td></tr>
-<tr class="separator:a0801fcbd87ebcf1fda8a985ba5c42595"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd345d21f532065c8019d7a65d01c5ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afd345d21f532065c8019d7a65d01c5ac"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>move</b> (const sf::Vector2f &amp;amount)</td></tr>
-<tr class="separator:afd345d21f532065c8019d7a65d01c5ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af278ec4e76d4e7a07f040ba5a6be2c13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_particle_system.html#af278ec4e76d4e7a07f040ba5a6be2c13">followParent</a> (bool)</td></tr>
-<tr class="memdesc:af278ec4e76d4e7a07f040ba5a6be2c13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether the emitted particles should follow the parent entity once emitted.  <a href="#af278ec4e76d4e7a07f040ba5a6be2c13">More...</a><br /></td></tr>
-<tr class="separator:af278ec4e76d4e7a07f040ba5a6be2c13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a020d3247c60e15182e7e0c803ea7e21e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_particle_system.html#a020d3247c60e15182e7e0c803ea7e21e">setParticleLifetime</a> (float time)</td></tr>
-<tr class="memdesc:a020d3247c60e15182e7e0c803ea7e21e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the particle lifetime.  <a href="#a020d3247c60e15182e7e0c803ea7e21e">More...</a><br /></td></tr>
-<tr class="separator:a020d3247c60e15182e7e0c803ea7e21e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4cc6aa0b9fc18d5991cd4cab61e8428"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_particle_system.html#ab4cc6aa0b9fc18d5991cd4cab61e8428">setLifetimeVariance</a> (float amount)</td></tr>
-<tr class="memdesc:ab4cc6aa0b9fc18d5991cd4cab61e8428"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the amount by with particle lifetime should vary.  <a href="#ab4cc6aa0b9fc18d5991cd4cab61e8428">More...</a><br /></td></tr>
-<tr class="separator:ab4cc6aa0b9fc18d5991cd4cab61e8428"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2aba3380fd2486484918a8a176f3ac0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_particle_system.html#a2aba3380fd2486484918a8a176f3ac0e">setInitialVelocity</a> (const sf::Vector2f &amp;vel)</td></tr>
-<tr class="memdesc:a2aba3380fd2486484918a8a176f3ac0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the initial velocity of emitted particles.  <a href="#a2aba3380fd2486484918a8a176f3ac0e">More...</a><br /></td></tr>
-<tr class="separator:a2aba3380fd2486484918a8a176f3ac0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af91fdddcbb866e3a052c58e66cf30ad7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_particle_system.html#af91fdddcbb866e3a052c58e66cf30ad7">setRandomInitialVelocity</a> (const std::vector&lt; sf::Vector2f &gt; &amp;randValues)</td></tr>
-<tr class="memdesc:af91fdddcbb866e3a052c58e66cf30ad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable spawning particles with pseudo random initial velocities.  <a href="#af91fdddcbb866e3a052c58e66cf30ad7">More...</a><br /></td></tr>
-<tr class="separator:af91fdddcbb866e3a052c58e66cf30ad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a351f2394dc4bc92eeaaa25640b689ba4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_particle_system.html#a351f2394dc4bc92eeaaa25640b689ba4">setInertia</a> (const sf::Vector2f &amp;)</td></tr>
-<tr class="memdesc:a351f2394dc4bc92eeaaa25640b689ba4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the inertia of the particle system.  <a href="#a351f2394dc4bc92eeaaa25640b689ba4">More...</a><br /></td></tr>
-<tr class="separator:a351f2394dc4bc92eeaaa25640b689ba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1199d7db0839308d3146b7c25a1a86c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_particle_system.html#a1199d7db0839308d3146b7c25a1a86c4">setEmitRate</a> (float rate)</td></tr>
-<tr class="memdesc:a1199d7db0839308d3146b7c25a1a86c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the particle emit rate.  <a href="#a1199d7db0839308d3146b7c25a1a86c4">More...</a><br /></td></tr>
-<tr class="separator:a1199d7db0839308d3146b7c25a1a86c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa510ef6b40e8c033a78930c8d38e6cb2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_particle_system.html#aa510ef6b40e8c033a78930c8d38e6cb2">setRandomInitialPosition</a> (const std::vector&lt; sf::Vector2f &gt; &amp;)</td></tr>
-<tr class="memdesc:aa510ef6b40e8c033a78930c8d38e6cb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tells the particle system to emit particles at a pseudo random position relative to the emitter position.  <a href="#aa510ef6b40e8c033a78930c8d38e6cb2">More...</a><br /></td></tr>
-<tr class="separator:aa510ef6b40e8c033a78930c8d38e6cb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab22d25010913d3694de6fe17682ea25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_particle_system.html#aab22d25010913d3694de6fe17682ea25">addAffector</a> (Affector &amp;a)</td></tr>
-<tr class="memdesc:aab22d25010913d3694de6fe17682ea25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a ParticleAffector to the particle system.  <a href="#aab22d25010913d3694de6fe17682ea25">More...</a><br /></td></tr>
-<tr class="separator:aab22d25010913d3694de6fe17682ea25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d47804cb0bd5887c51e16031adacbc1"><td class="memTemplParams" colspan="2"><a class="anchor" id="a5d47804cb0bd5887c51e16031adacbc1"></a>
+<tr class="memitem:a8c6cab1fe5e4176ddfc8504b8ac160ee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c6cab1fe5e4176ddfc8504b8ac160ee"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ParticleSystem</b> (<a class="el" href="classxy_1_1_message_bus.html">xy::MessageBus</a> &amp;)</td></tr>
+<tr class="separator:a8c6cab1fe5e4176ddfc8504b8ac160ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a1c657fdcb860b859e33b0ee8be6624"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a1c657fdcb860b859e33b0ee8be6624"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ParticleSystem</b> (const <a class="el" href="classxy_1_1_particle_system.html">ParticleSystem</a> &amp;)=delete</td></tr>
+<tr class="separator:a6a1c657fdcb860b859e33b0ee8be6624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89af0f2c778e1b36fb87218bf7f272e8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a89af0f2c778e1b36fb87218bf7f272e8"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ParticleSystem</b> (<a class="el" href="classxy_1_1_particle_system.html">ParticleSystem</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a89af0f2c778e1b36fb87218bf7f272e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3099d51400f67095f2d2ab6e5c908c16"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3099d51400f67095f2d2ab6e5c908c16"></a>
+<a class="el" href="classxy_1_1_particle_system.html">ParticleSystem</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classxy_1_1_particle_system.html">ParticleSystem</a> &amp;)=delete</td></tr>
+<tr class="separator:a3099d51400f67095f2d2ab6e5c908c16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e3d625fe6473b0ff14102cc18dd53e3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e3d625fe6473b0ff14102cc18dd53e3"></a>
+<a class="el" href="classxy_1_1_particle_system.html">ParticleSystem</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classxy_1_1_particle_system.html">ParticleSystem</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a4e3d625fe6473b0ff14102cc18dd53e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af87fbd621bf4008fc5e9074b21f30ffc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af87fbd621bf4008fc5e9074b21f30ffc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_particle_system.html#af87fbd621bf4008fc5e9074b21f30ffc">process</a> (float) override</td></tr>
+<tr class="memdesc:af87fbd621bf4008fc5e9074b21f30ffc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this for system specific processing to entities. <br /></td></tr>
+<tr class="separator:af87fbd621bf4008fc5e9074b21f30ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classxy_1_1_system"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classxy_1_1_system')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classxy_1_1_system.html">xy::System</a></td></tr>
+<tr class="memitem:aa17bed267803af1928e2e8d0a45be700 inherit pub_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa17bed267803af1928e2e8d0a45be700"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#aa17bed267803af1928e2e8d0a45be700">System</a> (<a class="el" href="classxy_1_1_message_bus.html">MessageBus</a> &amp;mb, UniqueType t)</td></tr>
+<tr class="memdesc:aa17bed267803af1928e2e8d0a45be700 inherit pub_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. Pass in a reference to the concrete implementation to generate a unique type ID for this system. <br /></td></tr>
+<tr class="separator:aa17bed267803af1928e2e8d0a45be700 inherit pub_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99504ede1e0567b27d608e4897c688b4 inherit pub_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a99504ede1e0567b27d608e4897c688b4"></a>
+UniqueType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#a99504ede1e0567b27d608e4897c688b4">getType</a> () const </td></tr>
+<tr class="memdesc:a99504ede1e0567b27d608e4897c688b4 inherit pub_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the unique type ID of the system. <br /></td></tr>
+<tr class="separator:a99504ede1e0567b27d608e4897c688b4 inherit pub_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a913283c245019d2e7fb538d4223623c7 inherit pub_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a913283c245019d2e7fb538d4223623c7"></a>
+std::vector&lt; <a class="el" href="classxy_1_1_entity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#a913283c245019d2e7fb538d4223623c7">getEntities</a> () const </td></tr>
+<tr class="memdesc:a913283c245019d2e7fb538d4223623c7 inherit pub_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of entities that this system is currently interested in. <br /></td></tr>
+<tr class="separator:a913283c245019d2e7fb538d4223623c7 inherit pub_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50e854adba9cfc2a4d5ecac8f162d4b0 inherit pub_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50e854adba9cfc2a4d5ecac8f162d4b0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#a50e854adba9cfc2a4d5ecac8f162d4b0">addEntity</a> (<a class="el" href="classxy_1_1_entity.html">Entity</a>)</td></tr>
+<tr class="memdesc:a50e854adba9cfc2a4d5ecac8f162d4b0 inherit pub_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an entity to the list to process. <br /></td></tr>
+<tr class="separator:a50e854adba9cfc2a4d5ecac8f162d4b0 inherit pub_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33781578e384b522dc8bd2125bb0174f inherit pub_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a33781578e384b522dc8bd2125bb0174f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#a33781578e384b522dc8bd2125bb0174f">removeEntity</a> (<a class="el" href="classxy_1_1_entity.html">Entity</a>)</td></tr>
+<tr class="memdesc:a33781578e384b522dc8bd2125bb0174f inherit pub_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes an entity from the list to process. <br /></td></tr>
+<tr class="separator:a33781578e384b522dc8bd2125bb0174f inherit pub_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadfce231fab86ef5f1d96bcb1c50b16f inherit pub_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aadfce231fab86ef5f1d96bcb1c50b16f"></a>
+const ComponentMask &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#aadfce231fab86ef5f1d96bcb1c50b16f">getComponentMask</a> () const </td></tr>
+<tr class="memdesc:aadfce231fab86ef5f1d96bcb1c50b16f inherit pub_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the component mask used to mask entities with corresponding components for this system to process. <br /></td></tr>
+<tr class="separator:aadfce231fab86ef5f1d96bcb1c50b16f inherit pub_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dcd580be2c87a7a77e5699cec24ca46 inherit pub_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1dcd580be2c87a7a77e5699cec24ca46"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#a1dcd580be2c87a7a77e5699cec24ca46">handleMessage</a> (const <a class="el" href="classxy_1_1_message.html">Message</a> &amp;)</td></tr>
+<tr class="memdesc:a1dcd580be2c87a7a77e5699cec24ca46 inherit pub_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to process any incoming system messages. <br /></td></tr>
+<tr class="separator:a1dcd580be2c87a7a77e5699cec24ca46 inherit pub_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69d9358bee5a6bbf68a23176aacbdad9 inherit pub_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a69d9358bee5a6bbf68a23176aacbdad9"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#a69d9358bee5a6bbf68a23176aacbdad9">isActive</a> () const </td></tr>
+<tr class="memdesc:a69d9358bee5a6bbf68a23176aacbdad9 inherit pub_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the system is currently active. Systems can be activeated and deactivated with <a class="el" href="classxy_1_1_scene.html#ab491978db13ed6bd0673a6137309570e" title="Sets the given system type active or inactive in the scene. Inactive systems are moved from the proce...">Scene::setSystemActive()</a> <br /></td></tr>
+<tr class="separator:a69d9358bee5a6bbf68a23176aacbdad9 inherit pub_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07c94f83c2346844be4e568c9d78823b inherit pub_methods_classxy_1_1_system"><td class="memTemplParams" colspan="2"><a class="anchor" id="a07c94f83c2346844be4e568c9d78823b"></a>
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a5d47804cb0bd5887c51e16031adacbc1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>addAffector</b> (T &amp;affector)</td></tr>
-<tr class="separator:a5d47804cb0bd5887c51e16031adacbc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74eb2a0249521427da2e84494b39f63e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_particle_system.html#a74eb2a0249521427da2e84494b39f63e">start</a> (sf::Uint8 releaseCount=1, float delay=0.f, float duration=0.f)</td></tr>
-<tr class="memdesc:a74eb2a0249521427da2e84494b39f63e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the particle system.  <a href="#a74eb2a0249521427da2e84494b39f63e">More...</a><br /></td></tr>
-<tr class="separator:a74eb2a0249521427da2e84494b39f63e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f3ecc8b8925720650491f2828ccef4d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f3ecc8b8925720650491f2828ccef4d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_particle_system.html#a4f3ecc8b8925720650491f2828ccef4d">started</a> () const </td></tr>
-<tr class="memdesc:a4f3ecc8b8925720650491f2828ccef4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the particle system is currently started and emitting particles. <br /></td></tr>
-<tr class="separator:a4f3ecc8b8925720650491f2828ccef4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9f66f706dc9ac2dd2822fe64f64c595"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab9f66f706dc9ac2dd2822fe64f64c595"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_particle_system.html#ab9f66f706dc9ac2dd2822fe64f64c595">stop</a> ()</td></tr>
-<tr class="memdesc:ab9f66f706dc9ac2dd2822fe64f64c595"><td class="mdescLeft">&#160;</td><td class="mdescRight">stops the particle system from emitting particles <br /></td></tr>
-<tr class="separator:ab9f66f706dc9ac2dd2822fe64f64c595"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72cad1a791e8406014889ce02f9848aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_particle_system.html#a72cad1a791e8406014889ce02f9848aa">update</a> (float dt)</td></tr>
-<tr class="memdesc:a72cad1a791e8406014889ce02f9848aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows xygine to update the particle system.  <a href="#a72cad1a791e8406014889ce02f9848aa">More...</a><br /></td></tr>
-<tr class="separator:a72cad1a791e8406014889ce02f9848aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2fddb01d36ce21c3ee9eafde25ba95d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_particle_system.html#ab2fddb01d36ce21c3ee9eafde25ba95d">active</a> () const </td></tr>
-<tr class="memdesc:ab2fddb01d36ce21c3ee9eafde25ba95d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this is an active particle system.  <a href="#ab2fddb01d36ce21c3ee9eafde25ba95d">More...</a><br /></td></tr>
-<tr class="separator:ab2fddb01d36ce21c3ee9eafde25ba95d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbddad271968d85f2a87c4f12af0bc84"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adbddad271968d85f2a87c4f12af0bc84"></a>
-sf::Uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_particle_system.html#adbddad271968d85f2a87c4f12af0bc84">getParticleCount</a> () const </td></tr>
-<tr class="memdesc:adbddad271968d85f2a87c4f12af0bc84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of currently active particles. <br /></td></tr>
-<tr class="separator:adbddad271968d85f2a87c4f12af0bc84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classxy_1_1_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classxy_1_1_component')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classxy_1_1_component.html">xy::Component</a></td></tr>
-<tr class="memitem:acf796948b8698892f7e966e1e695d2f3 inherit pub_methods_classxy_1_1_component"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:acf796948b8698892f7e966e1e695d2f3 inherit pub_methods_classxy_1_1_component"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxy_1_1_component.html#acf796948b8698892f7e966e1e695d2f3">Component</a> (<a class="el" href="classxy_1_1_message_bus.html">MessageBus</a> &amp;m, T *)</td></tr>
-<tr class="memdesc:acf796948b8698892f7e966e1e695d2f3 inherit pub_methods_classxy_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classxy_1_1_component.html" title="Abstract base class for creating new components. ">Component</a> constructor.  <a href="#acf796948b8698892f7e966e1e695d2f3">More...</a><br /></td></tr>
-<tr class="separator:acf796948b8698892f7e966e1e695d2f3 inherit pub_methods_classxy_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf847f803b7aea200df361c1c4145d37 inherit pub_methods_classxy_1_1_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf847f803b7aea200df361c1c4145d37"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Component</b> (const <a class="el" href="classxy_1_1_component.html">Component</a> &amp;)=delete</td></tr>
-<tr class="separator:abf847f803b7aea200df361c1c4145d37 inherit pub_methods_classxy_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d069b6bc30bc006152df3bb148d313a inherit pub_methods_classxy_1_1_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2d069b6bc30bc006152df3bb148d313a"></a>
-const <a class="el" href="classxy_1_1_component.html">Component</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classxy_1_1_component.html">Component</a> &amp;)=delete</td></tr>
-<tr class="separator:a2d069b6bc30bc006152df3bb148d313a inherit pub_methods_classxy_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e89263d98ac457f01c4976309abf262 inherit pub_methods_classxy_1_1_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e89263d98ac457f01c4976309abf262"></a>
-const UniqueType &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>uniqueType</b> () const </td></tr>
-<tr class="separator:a9e89263d98ac457f01c4976309abf262 inherit pub_methods_classxy_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ec86f8fbcf630e9846b93b2ce67468b inherit pub_methods_classxy_1_1_component"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_component.html#a9ec86f8fbcf630e9846b93b2ce67468b">handleMessage</a> (const <a class="el" href="classxy_1_1_message.html">Message</a> &amp;)</td></tr>
-<tr class="memdesc:a9ec86f8fbcf630e9846b93b2ce67468b inherit pub_methods_classxy_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classxy_1_1_message.html" title="Message class. ">Message</a> handler.  <a href="#a9ec86f8fbcf630e9846b93b2ce67468b">More...</a><br /></td></tr>
-<tr class="separator:a9ec86f8fbcf630e9846b93b2ce67468b inherit pub_methods_classxy_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b19ca7c88b04cae95e189c85bc1d2b1 inherit pub_methods_classxy_1_1_component"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_component.html#a0b19ca7c88b04cae95e189c85bc1d2b1">addMessageHandler</a> (const <a class="el" href="structxy_1_1_component_1_1_message_handler.html">MessageHandler</a> &amp;)</td></tr>
-<tr class="memdesc:a0b19ca7c88b04cae95e189c85bc1d2b1 inherit pub_methods_classxy_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a message handler to the component.  <a href="#a0b19ca7c88b04cae95e189c85bc1d2b1">More...</a><br /></td></tr>
-<tr class="separator:a0b19ca7c88b04cae95e189c85bc1d2b1 inherit pub_methods_classxy_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a416470e22e6251fe3cf37dfeb112ae17 inherit pub_methods_classxy_1_1_component"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_component.html#a416470e22e6251fe3cf37dfeb112ae17">onStart</a> (<a class="el" href="classxy_1_1_entity.html">Entity</a> &amp;)</td></tr>
-<tr class="memdesc:a416470e22e6251fe3cf37dfeb112ae17 inherit pub_methods_classxy_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">onStart event  <a href="#a416470e22e6251fe3cf37dfeb112ae17">More...</a><br /></td></tr>
-<tr class="separator:a416470e22e6251fe3cf37dfeb112ae17 inherit pub_methods_classxy_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e8a1c13cfa6bf98d6a118b726ce699f inherit pub_methods_classxy_1_1_component"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_component.html#a8e8a1c13cfa6bf98d6a118b726ce699f">onDelayedStart</a> (<a class="el" href="classxy_1_1_entity.html">Entity</a> &amp;)</td></tr>
-<tr class="separator:a8e8a1c13cfa6bf98d6a118b726ce699f inherit pub_methods_classxy_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ffe59bf3ac18fa3f5141edaa222603e inherit pub_methods_classxy_1_1_component"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_component.html#a2ffe59bf3ac18fa3f5141edaa222603e">destroy</a> ()</td></tr>
-<tr class="memdesc:a2ffe59bf3ac18fa3f5141edaa222603e inherit pub_methods_classxy_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys this component.  <a href="#a2ffe59bf3ac18fa3f5141edaa222603e">More...</a><br /></td></tr>
-<tr class="separator:a2ffe59bf3ac18fa3f5141edaa222603e inherit pub_methods_classxy_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e21c01509dacf9ccb0d1b68e490685a inherit pub_methods_classxy_1_1_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e21c01509dacf9ccb0d1b68e490685a"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_component.html#a9e21c01509dacf9ccb0d1b68e490685a">destroyed</a> () const </td></tr>
-<tr class="memdesc:a9e21c01509dacf9ccb0d1b68e490685a inherit pub_methods_classxy_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the component has been marked for destruction. <br /></td></tr>
-<tr class="separator:a9e21c01509dacf9ccb0d1b68e490685a inherit pub_methods_classxy_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a597147c68bb08585374b124a332303 inherit pub_methods_classxy_1_1_component"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_component.html#a0a597147c68bb08585374b124a332303">setParentUID</a> (sf::Uint64 uid)</td></tr>
-<tr class="memdesc:a0a597147c68bb08585374b124a332303 inherit pub_methods_classxy_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the parent UID of the component.  <a href="#a0a597147c68bb08585374b124a332303">More...</a><br /></td></tr>
-<tr class="separator:a0a597147c68bb08585374b124a332303 inherit pub_methods_classxy_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8dcf4398404e74cc8481544dcff98106 inherit pub_methods_classxy_1_1_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8dcf4398404e74cc8481544dcff98106"></a>
-sf::Uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_component.html#a8dcf4398404e74cc8481544dcff98106">getParentUID</a> () const </td></tr>
-<tr class="memdesc:a8dcf4398404e74cc8481544dcff98106 inherit pub_methods_classxy_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the UID of this component's parent. <br /></td></tr>
-<tr class="separator:a8dcf4398404e74cc8481544dcff98106 inherit pub_methods_classxy_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5122f14b521bcabb964660474c79ad7 inherit pub_methods_classxy_1_1_component"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_component.html#ac5122f14b521bcabb964660474c79ad7">setName</a> (const std::string &amp;)</td></tr>
-<tr class="memdesc:ac5122f14b521bcabb964660474c79ad7 inherit pub_methods_classxy_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the name of this component.  <a href="#ac5122f14b521bcabb964660474c79ad7">More...</a><br /></td></tr>
-<tr class="separator:ac5122f14b521bcabb964660474c79ad7 inherit pub_methods_classxy_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a277ce4c8e0b857eb004b54691b14b2b1 inherit pub_methods_classxy_1_1_component"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_component.html#a277ce4c8e0b857eb004b54691b14b2b1">getName</a> () const </td></tr>
-<tr class="memdesc:a277ce4c8e0b857eb004b54691b14b2b1 inherit pub_methods_classxy_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the component's name if it has one.  <a href="#a277ce4c8e0b857eb004b54691b14b2b1">More...</a><br /></td></tr>
-<tr class="separator:a277ce4c8e0b857eb004b54691b14b2b1 inherit pub_methods_classxy_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07c94f83c2346844be4e568c9d78823b inherit pub_methods_classxy_1_1_system"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>requireComponent</b> ()</td></tr>
+<tr class="separator:a07c94f83c2346844be4e568c9d78823b inherit pub_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3f31570adfc27c0efa51677b4b7ff59 inherit pub_methods_classxy_1_1_system"><td class="memTemplParams" colspan="2"><a class="anchor" id="ac3f31570adfc27c0efa51677b4b7ff59"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ac3f31570adfc27c0efa51677b4b7ff59 inherit pub_methods_classxy_1_1_system"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>postMessage</b> (Message::ID id)</td></tr>
+<tr class="separator:ac3f31570adfc27c0efa51677b4b7ff59 inherit pub_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_static_methods_classxy_1_1_component"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classxy_1_1_component')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classxy_1_1_component.html">xy::Component</a></td></tr>
-<tr class="memitem:ae146a7c4a721b085b352f0dcd8e4587e inherit pub_static_methods_classxy_1_1_component"><td class="memTemplParams" colspan="2"><a class="anchor" id="ae146a7c4a721b085b352f0dcd8e4587e"></a>
-template&lt;typename T , typename... Args&gt; </td></tr>
-<tr class="memitem:ae146a7c4a721b085b352f0dcd8e4587e inherit pub_static_methods_classxy_1_1_component"><td class="memTemplItemLeft" align="right" valign="top">static std::unique_ptr&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxy_1_1_component.html#ae146a7c4a721b085b352f0dcd8e4587e">create</a> (Args &amp;&amp;...args)</td></tr>
-<tr class="memdesc:ae146a7c4a721b085b352f0dcd8e4587e inherit pub_static_methods_classxy_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility function for creating components. <br /></td></tr>
-<tr class="separator:ae146a7c4a721b085b352f0dcd8e4587e inherit pub_static_methods_classxy_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_classxy_1_1_component"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classxy_1_1_component')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classxy_1_1_component.html">xy::Component</a></td></tr>
-<tr class="memitem:a6874b91bde4ad69c14a8130ca016058c inherit pro_methods_classxy_1_1_component"><td class="memTemplParams" colspan="2"><a class="anchor" id="a6874b91bde4ad69c14a8130ca016058c"></a>
+<tr class="inherit_header pub_types_classxy_1_1_system"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classxy_1_1_system')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classxy_1_1_system.html">xy::System</a></td></tr>
+<tr class="memitem:a0a961a2047dcc76a9880cc706b0a259c inherit pub_types_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0a961a2047dcc76a9880cc706b0a259c"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>Ptr</b> = std::unique_ptr&lt; <a class="el" href="classxy_1_1_system.html">System</a> &gt;</td></tr>
+<tr class="separator:a0a961a2047dcc76a9880cc706b0a259c inherit pub_types_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classxy_1_1_system"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classxy_1_1_system')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classxy_1_1_system.html">xy::System</a></td></tr>
+<tr class="memitem:a07c94f83c2346844be4e568c9d78823b inherit pro_methods_classxy_1_1_system"><td class="memTemplParams" colspan="2"><a class="anchor" id="a07c94f83c2346844be4e568c9d78823b"></a>
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a6874b91bde4ad69c14a8130ca016058c inherit pro_methods_classxy_1_1_component"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sendMessage</b> (sf::Int32 id)</td></tr>
-<tr class="separator:a6874b91bde4ad69c14a8130ca016058c inherit pro_methods_classxy_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae58e5cac1453fc78eca1d1e09cbddc78 inherit pro_methods_classxy_1_1_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae58e5cac1453fc78eca1d1e09cbddc78"></a>
-<a class="el" href="classxy_1_1_message_bus.html">MessageBus</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getMessageBus</b> () const </td></tr>
-<tr class="separator:ae58e5cac1453fc78eca1d1e09cbddc78 inherit pro_methods_classxy_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07c94f83c2346844be4e568c9d78823b inherit pro_methods_classxy_1_1_system"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#a07c94f83c2346844be4e568c9d78823b">requireComponent</a> ()</td></tr>
+<tr class="memdesc:a07c94f83c2346844be4e568c9d78823b inherit pro_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a component type to the list of components required by the system for it to be interested in a particular entity. <br /></td></tr>
+<tr class="separator:a07c94f83c2346844be4e568c9d78823b inherit pro_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f4d79c866525d4138c8c154d82724a5 inherit pro_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f4d79c866525d4138c8c154d82724a5"></a>
+std::vector&lt; <a class="el" href="classxy_1_1_entity.html">Entity</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getEntities</b> ()</td></tr>
+<tr class="separator:a3f4d79c866525d4138c8c154d82724a5 inherit pro_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36840728ac384a87835a5dedae262c91 inherit pro_methods_classxy_1_1_system"><td class="memTemplParams" colspan="2"><a class="anchor" id="a36840728ac384a87835a5dedae262c91"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a36840728ac384a87835a5dedae262c91 inherit pro_methods_classxy_1_1_system"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#a36840728ac384a87835a5dedae262c91">postMessage</a> (Message::ID id)</td></tr>
+<tr class="memdesc:a36840728ac384a87835a5dedae262c91 inherit pro_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posts a message on the system wide message bus. <br /></td></tr>
+<tr class="separator:a36840728ac384a87835a5dedae262c91 inherit pro_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f23b9c54f28cbd0a5069ebe27bdcfb7 inherit pro_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f23b9c54f28cbd0a5069ebe27bdcfb7"></a>
+<a class="el" href="classxy_1_1_message_bus.html">MessageBus</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#a4f23b9c54f28cbd0a5069ebe27bdcfb7">getMessageBus</a> ()</td></tr>
+<tr class="memdesc:a4f23b9c54f28cbd0a5069ebe27bdcfb7 inherit pro_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the <a class="el" href="classxy_1_1_message_bus.html" title="System wide message bus for custom event messaging. ">MessageBus</a>. <br /></td></tr>
+<tr class="separator:a4f23b9c54f28cbd0a5069ebe27bdcfb7 inherit pro_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab240f01a19232b2c86d3a629c2002a33 inherit pro_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab240f01a19232b2c86d3a629c2002a33"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setScene</b> (<a class="el" href="classxy_1_1_scene.html">Scene</a> &amp;)</td></tr>
+<tr class="separator:ab240f01a19232b2c86d3a629c2002a33 inherit pro_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a353fe5566f012825715cf699151cc4ca inherit pro_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a353fe5566f012825715cf699151cc4ca"></a>
+<a class="el" href="classxy_1_1_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#a353fe5566f012825715cf699151cc4ca">getScene</a> ()</td></tr>
+<tr class="memdesc:a353fe5566f012825715cf699151cc4ca inherit pro_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the scene to which this system belongs. <br /></td></tr>
+<tr class="separator:a353fe5566f012825715cf699151cc4ca inherit pro_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="structxy_1_1_particle.html" title="Struct containing properties for particles used in the particle system component. ...">Particle</a> System <a class="el" href="classxy_1_1_component.html" title="Abstract base class for creating new components. ">Component</a>. </p>
-<p><a class="el" href="structxy_1_1_particle.html" title="Struct containing properties for particles used in the particle system component. ...">Particle</a> systems are flexible vertex array based drawable component useful for creating effects such as smoke, flames and sparks. While particle system parameters are manually adjustable The <a class="el" href="classxy_1_1_particle_system_1_1_definition.html" title="Particle System preset. ">Definition</a> sub-class is useful for creating particle presets and even includes a function for returning particle system components which are automatically configured based on the definition properties. Definitions can also be loaded from json files, created with apps such as the xygine particle editor found in the xygine repository. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ab2fddb01d36ce21c3ee9eafde25ba95d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool ParticleSystem::active </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns true if this is an active particle system. </p>
-<p>Once a particle system is stopped it may stay have existing particles being drawn to screen. Use this to check if it is safe to remove a particle system once it has been stopped. </p>
-
-</div>
-</div>
-<a class="anchor" id="aab22d25010913d3694de6fe17682ea25"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ParticleSystem::addAffector </td>
-          <td>(</td>
-          <td class="paramtype">Affector &amp;&#160;</td>
-          <td class="paramname"><em>a</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Add a ParticleAffector to the particle system. </p>
-<p>Affectors influence the behaviour of emitted particles over time, such as speed, direction or rotation. </p><dl class="section see"><dt>See also</dt><dd>Affector </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a79be6dbbf4ea9847af51250be238ea54"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ParticleSystem::entityUpdate </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classxy_1_1_entity.html">Entity</a> &amp;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Used to update the component's state. </p>
-<p>This is called once per frame by the component's parent entity providing the opportunity to update not only the component but also the entity and potentially other components attached to it</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname"><a class="el" href="classxy_1_1_entity.html" title="Entity class. ">Entity</a></td><td>reference to parent entity of this component </td></tr>
-    <tr><td class="paramname">float</td><td>The current frame time aka delta time </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implements <a class="el" href="classxy_1_1_component.html#a069f9610e68bbc2a9e061f7be10d4832">xy::Component</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="af278ec4e76d4e7a07f040ba5a6be2c13"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ParticleSystem::followParent </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>follow</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets whether the emitted particles should follow the parent entity once emitted. </p>
-<p>By default this is false, so that particles are left by moving entities as a trail, such as smoke or flames. In some cases it is desirable to have emitted particles to continue to follow their parent</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bool</td><td>true to make particles follow their parent, false by default </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="aae795febaa102e8b0cbbb5056f1d9a89"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">sf::FloatRect ParticleSystem::globalBounds </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the AABB of the component in world space. </p>
-<p>When using the <a class="el" href="classxy_1_1_quad_tree.html" title="Quad Tree spatial partitioning class. ">QuadTree</a> with a component the component must override this to provide accurate spatial information which then contributes to the overall bounding box of the parent entity. This is normally only needed when implementing a drawable component, but applies to any entity which may affect the parent entitiy spatially, such as custom collision components. Normally this returns the localBounds transformed by the component's transform if it has one, else it should return localBounds. NOTE Drawables <em>MUST</em> implement this as it is used in culling calculations when rendering. If a custom renderable component is not being drawn this is the first place to check. Global bounds can be visualised by enabling debug output of the <a class="el" href="classxy_1_1_scene.html" title="Scene class. ">Scene</a>. </p>
-
-<p>Reimplemented from <a class="el" href="classxy_1_1_component.html#a846f118a0de321932bffde9a407f044a">xy::Component</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a21c5f4daa296dc9548d98762c8d7a6f9"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">sf::FloatRect ParticleSystem::localBounds </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the AABB of the component in local space. </p>
-<p>Drawables should always override this to return their local bounds, as should any components which contribute spatially to an entity which has a <a class="el" href="classxy_1_1_quad_tree.html" title="Quad Tree spatial partitioning class. ">QuadTree</a> component. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classxy_1_1_particle_system.html#aae795febaa102e8b0cbbb5056f1d9a89" title="Returns the AABB of the component in world space. ">globalBounds</a> </dd></dl>
-
-<p>Reimplemented from <a class="el" href="classxy_1_1_component.html#a12abe320ebb55c15f9544a8069150d69">xy::Component</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a2090503f9641e56505fa20c3de86d22f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ParticleSystem::onParentDestroyed </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classxy_1_1_entity.html">Entity</a> &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Notification of parent entity's impending destruction. </p>
-<p>Use this is you need to tidy up the state of a component before it is destroyed by its parent entity's destruction </p>
-
-<p>Reimplemented from <a class="el" href="classxy_1_1_component.html#ad15fad506767941145677dc926b1698c">xy::Component</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a49c771ef507dd6de271d27c0fb6fcb3c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ParticleSystem::setBlendMode </td>
-          <td>(</td>
-          <td class="paramtype">sf::BlendMode&#160;</td>
-          <td class="paramname"><em>mode</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets the blend mode used when drawing the particle system. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">mode</td><td>SFML Blend Mode. Defaults to BlendaAlpha </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ae214c2a1a0f63a6419b695883ee6574c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ParticleSystem::setColour </td>
-          <td>(</td>
-          <td class="paramtype">const sf::Color &amp;&#160;</td>
-          <td class="paramname"><em>colour</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets the colour with which the particle system is multiplied. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">colour</td><td>SFML colour with with to multiply the particle system. Default colour is white. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a1199d7db0839308d3146b7c25a1a86c4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ParticleSystem::setEmitRate </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>rate</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set the particle emit rate. </p>
-<p>The emit rate defines how many particles are released per second by the particle system </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">rate</td><td>Number of particles to release per second. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a351f2394dc4bc92eeaaa25640b689ba4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ParticleSystem::setInertia </td>
-          <td>(</td>
-          <td class="paramtype">const sf::Vector2f &amp;&#160;</td>
-          <td class="paramname"><em>inertia</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets the inertia of the particle system. </p>
-<p>If a particle system is attached to a moving entity it can offer a more realistic appearance to set the inertia of the system to that of the parent entity's velocity. The intertia is then added to the initial velocity of any particles which are spawned</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">sf::Vector2f</td><td>inertia value to add to the particle's initial velocity </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a2aba3380fd2486484918a8a176f3ac0e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ParticleSystem::setInitialVelocity </td>
-          <td>(</td>
-          <td class="paramtype">const sf::Vector2f &amp;&#160;</td>
-          <td class="paramname"><em>vel</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set the initial velocity of emitted particles. </p>
-<p>The initial velocity of a particle defines the speed and direction of a particle when it is first emitted. This parameter is overriden by any random initial velocities if they are set.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">vel</td><td>sf::Vector2f representing the speed and direction of spawned particles </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ab4cc6aa0b9fc18d5991cd4cab61e8428"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ParticleSystem::setLifetimeVariance </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>amount</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets the amount by with particle lifetime should vary. </p>
-<p>A positive ratio of the current lifetime value which is added or subtracted from a new particle's lifetime. For example a value of 0.5 will make a new particle's lifetime a value of +- 50% of that of the ParticleLifetime value. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">amount</td><td>Ratio to vary the particle's lifetime by </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a020d3247c60e15182e7e0c803ea7e21e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ParticleSystem::setParticleLifetime </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>time</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets the particle lifetime. </p>
-<p>The lifetime of a particle dictates how quickly it fades in to non-existence</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">time</td><td>Number of seconds the particle exists for before fading away </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="abf421916fd148a5b55eb1c991b40b29f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ParticleSystem::setParticleSize </td>
-          <td>(</td>
-          <td class="paramtype">const sf::Vector2f &amp;&#160;</td>
-          <td class="paramname"><em>size</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets the initial size of the particles emitted by the particle system. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">size</td><td>An sf::Vector2f representing the width and height of the particle </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a0801fcbd87ebcf1fda8a985ba5c42595"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ParticleSystem::setPosition </td>
-          <td>(</td>
-          <td class="paramtype">const sf::Vector2f &amp;&#160;</td>
-          <td class="paramname"><em>position</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets the initial position of emitted particles relative the component's parent entity's world position. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">position</td><td>Relative position of the emitted particle </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="aa510ef6b40e8c033a78930c8d38e6cb2"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ParticleSystem::setRandomInitialPosition </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; sf::Vector2f &gt; &amp;&#160;</td>
-          <td class="paramname"><em>positions</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Tells the particle system to emit particles at a pseudo random position relative to the emitter position. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">std::vector&lt;sf::Vector2f&gt;</td><td>A std::vector of sf::Vector2f representing positions relative to the emitter. Positions are picked at random from the vector each time a new particle is emitted. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="af91fdddcbb866e3a052c58e66cf30ad7"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ParticleSystem::setRandomInitialVelocity </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; sf::Vector2f &gt; &amp;&#160;</td>
-          <td class="paramname"><em>randValues</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Enable spawning particles with pseudo random initial velocities. </p>
-<p>Supplying a selection of possible initial velocities allows the particle system to pick one at random when emitting a new particle. These values override any value set with setInitialVelocity.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">randValues</td><td>a std::vector of sf::Vector2f representing possible initial speed and directions for newly emitted particles </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a376c19f18a1c2fe055686fc93df56c52"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ParticleSystem::setShader </td>
-          <td>(</td>
-          <td class="paramtype">sf::Shader &amp;&#160;</td>
-          <td class="paramname"><em>shader</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets an optional shader to be used when drawing the particle system. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">shader</td><td>Reference to a valid SFML shader. Note the particle system only keeps a pointer to the shader, so the shader itself must exist at least as long as the <a class="el" href="classxy_1_1_particle_system.html" title="Particle System Component. ">ParticleSystem</a> </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classxy_1_1_shader_resource.html" title="Specialised resource manager for shaders. ">ShaderResource</a> </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ab0280884d04bd74dad71d80cea806af0"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ParticleSystem::setTexture </td>
-          <td>(</td>
-          <td class="paramtype">const sf::Texture &amp;&#160;</td>
-          <td class="paramname"><em>t</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets the optional texture to be used by the particle system. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">t</td><td>Valid SFML texture to use </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a74eb2a0249521427da2e84494b39f63e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ParticleSystem::start </td>
-          <td>(</td>
-          <td class="paramtype">sf::Uint8&#160;</td>
-          <td class="paramname"><em>releaseCount</em> = <code>1</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>delay</em> = <code>0.f</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>duration</em> = <code>0.f</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Starts the particle system. </p>
-<p>When the particle system is started it will emit particles based on the current parameters.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">releaseCount</td><td>Number of particles to release at once </td></tr>
-    <tr><td class="paramname">delay</td><td>Time in seconds to delay after start has been called before particles are emitted </td></tr>
-    <tr><td class="paramname">duration</td><td>Amount of time in seconds to emit particles for. If this is set to zero particles will emit indefinitely, until <a class="el" href="classxy_1_1_particle_system.html#ab9f66f706dc9ac2dd2822fe64f64c595" title="stops the particle system from emitting particles ">stop()</a> is called. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="aab5fa0076f5f262916d945291bfef287"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classxy_1_1_component.html#a9b98d49ac2d36fc3539f27c67f44fc19">Component::Type</a> ParticleSystem::type </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the general type of component. </p>
-<p>Implement this and return one of the values of the Type enum. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classxy_1_1_component.html#a9b98d49ac2d36fc3539f27c67f44fc19" title="Component type. ">Component::Type</a> </dd></dl>
-
-<p>Implements <a class="el" href="classxy_1_1_component.html#a0a696f7c650cde8f8c0cf564c44567ec">xy::Component</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a72cad1a791e8406014889ce02f9848aa"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ParticleSystem::update </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>dt</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Allows xygine to update the particle system. </p>
-<p>No need to call this manually </p>
-
-</div>
-</div>
-</div><!-- contents -->
+<div class="textblock"><p><a class="el" href="classxy_1_1_particle_system.html" title="ParticleSystem. Responsible for updating all ParticelEmitter components in the scene, and rendering the output. ">ParticleSystem</a>. Responsible for updating all ParticelEmitter components in the scene, and rendering the output. </p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

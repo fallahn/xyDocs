@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xygine: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xygine/include/xygine/components/Camera.hpp Source File</title>
+<title>xyginext: C:/Users/Matt/Documents/Visual Studio 2017/Projects/xygineXT/xyginext/include/xyginext/ecs/components/Camera.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,10 +18,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">xygine
-   &#160;<span id="projectnumber">0.1.0</span>
+   <div id="projectname">xyginext
+   &#160;<span id="projectnumber">0.2.0</span>
    </div>
-   <div id="projectbrief">SFML Based 2D Game Creation Framework</div>
+   <div id="projectbrief">Second generation of xygine game creation framework</div>
   </td>
  </tr>
  </tbody>
@@ -44,7 +44,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_4d209b5b760f516cd5a2179341e2b1c7.html">xygine</a></li><li class="navelem"><a class="el" href="dir_72cf7aff5425aef4b747db5058388021.html">components</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_efb0e9b2b77ba75392bcf64fcf40cd77.html">include</a></li><li class="navelem"><a class="el" href="dir_e1acbbb56b05dac1d2df5cc4492ca74b.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_4aede1d1632dac51d267b8924e46a8b9.html">ecs</a></li><li class="navelem"><a class="el" href="dir_9d41577d93af472cf79e85c3d4cdf4e0.html">components</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -53,10 +53,10 @@
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">© Matt Marchant 2014 - 2017</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">(c) Matt Marchant 2017</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">http://trederia.blogspot.com</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">xygine - Zlib license.</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">xygineXT - Zlib license.</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">This software is provided &#39;as-is&#39;, without any express or</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">implied warranty. In no event will the authors be held</span></div>
@@ -79,67 +79,72 @@
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">source distribution.</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">*********************************************************************/</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">//allows transforming a view of the scene based on the parent entity</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#ifndef XY_CAMERA_HPP_</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define XY_CAMERA_HPP_</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#ifndef XY_CAMERA_HPP_</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define XY_CAMERA_HPP_</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;xyginext/Config.hpp&gt;</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;xygine/components/Component.hpp&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics/View.hpp&gt;</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics/Color.hpp&gt;</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacexy.html">xy</a></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classxy_1_1_camera.html">   50</a></span>&#160;    <span class="keyword">class </span>XY_EXPORT_API <a class="code" href="classxy_1_1_camera.html">Camera</a> final : <span class="keyword">public</span> <a class="code" href="classxy_1_1_component.html">Component</a></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">using</span> Ptr = std::unique_ptr&lt;Camera&gt;;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="classxy_1_1_camera.html">Camera</a>(<a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>&amp;, <span class="keyword">const</span> sf::View&amp; initialView);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        ~<a class="code" href="classxy_1_1_camera.html">Camera</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="classxy_1_1_camera.html">Camera</a>(<span class="keyword">const</span> <a class="code" href="classxy_1_1_camera.html">Camera</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keyword">const</span> <a class="code" href="classxy_1_1_camera.html">Camera</a>&amp; operator = (<span class="keyword">const</span> <a class="code" href="classxy_1_1_camera.html">Camera</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classxy_1_1_camera.html#ada302196c147562b28ee41d28f61e340">   60</a></span>&#160;        <a class="code" href="classxy_1_1_component.html#a9b98d49ac2d36fc3539f27c67f44fc19">Component::Type</a> <a class="code" href="classxy_1_1_camera.html#ada302196c147562b28ee41d28f61e340">type</a>()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> Component::Type::Script; }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">void</span> entityUpdate(<a class="code" href="classxy_1_1_entity.html">Entity</a>&amp;, <span class="keywordtype">float</span>) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keyword">enum class</span> TransformLock</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            AxisX = 0x1,</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            AxisY = 0x2,</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            Rotation = 0x4</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        };</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">void</span> lockTransform(TransformLock, <span class="keywordtype">bool</span> = <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordtype">void</span> lockBounds(<span class="keyword">const</span> sf::FloatRect&amp; bounds, <span class="keywordtype">bool</span> = <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordtype">void</span> setZoom(<span class="keywordtype">float</span>);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordtype">float</span> getZoom() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordtype">void</span> setViewport(<span class="keyword">const</span> sf::FloatRect&amp;);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        sf::View getView() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordtype">void</span> setView(<span class="keyword">const</span> sf::View&amp;);</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordtype">void</span> setClearColour(<span class="keyword">const</span> sf::Color&amp;);</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keyword">const</span> sf::Color&amp; getClearColour() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordtype">float</span> m_zoom;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        sf::Uint8 m_lockMask;    </div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keywordtype">float</span> m_rotation;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        sf::View m_initialView;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        sf::Vector2f m_position;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        sf::FloatRect m_bounds;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordtype">bool</span> m_lockToBounds;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        sf::Color m_clearColour;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    };</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;}</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="preprocessor">#endif //XY_CAMERA_HPP_</span></div>
-<div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xygine namespace. </div><div class="ttdef"><b>Definition:</b> App.hpp:55</div></div>
-<div class="ttc" id="classxy_1_1_component_html"><div class="ttname"><a href="classxy_1_1_component.html">xy::Component</a></div><div class="ttdoc">Abstract base class for creating new components. </div><div class="ttdef"><b>Definition:</b> Component.hpp:59</div></div>
-<div class="ttc" id="classxy_1_1_message_bus_html"><div class="ttname"><a href="classxy_1_1_message_bus.html">xy::MessageBus</a></div><div class="ttdoc">System wide message bus for custom event messaging. </div><div class="ttdef"><b>Definition:</b> MessageBus.hpp:251</div></div>
-<div class="ttc" id="classxy_1_1_camera_html"><div class="ttname"><a href="classxy_1_1_camera.html">xy::Camera</a></div><div class="ttdoc">Camera Component. </div><div class="ttdef"><b>Definition:</b> Camera.hpp:50</div></div>
-<div class="ttc" id="classxy_1_1_camera_html_ada302196c147562b28ee41d28f61e340"><div class="ttname"><a href="classxy_1_1_camera.html#ada302196c147562b28ee41d28f61e340">xy::Camera::type</a></div><div class="ttdeci">Component::Type type() const  override</div><div class="ttdoc">Returns the general type of component. </div><div class="ttdef"><b>Definition:</b> Camera.hpp:60</div></div>
-<div class="ttc" id="classxy_1_1_entity_html"><div class="ttname"><a href="classxy_1_1_entity.html">xy::Entity</a></div><div class="ttdoc">Entity class. </div><div class="ttdef"><b>Definition:</b> Entity.hpp:63</div></div>
-<div class="ttc" id="classxy_1_1_component_html_a9b98d49ac2d36fc3539f27c67f44fc19"><div class="ttname"><a href="classxy_1_1_component.html#a9b98d49ac2d36fc3539f27c67f44fc19">xy::Component::Type</a></div><div class="ttdeci">Type</div><div class="ttdoc">Component type. </div><div class="ttdef"><b>Definition:</b> Component.hpp:94</div></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacexy.html">xy</a></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classxy_1_1_camera.html">   43</a></span>&#160;    <span class="keyword">class </span>XY_EXPORT_API <a class="code" href="classxy_1_1_camera.html">Camera</a> final</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">enum</span> Axis</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            X, Y, None</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        };</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="classxy_1_1_camera.html">Camera</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">void</span> setView(sf::Vector2f);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordtype">void</span> setViewport(sf::FloatRect);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordtype">void</span> lockAxis(Axis, <span class="keywordtype">float</span>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="comment">/*</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">        \brief Locks the rotation of the camera, so that the view does</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">        not rotate, even if the parent entity does.</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">        */</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordtype">void</span> lockRotation(<span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordtype">void</span> setBounds(sf::FloatRect);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordtype">void</span> zoom(<span class="keywordtype">float</span>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        sf::Vector2f getView() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        sf::FloatRect getViewport() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        Axis getLockedAxis() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordtype">bool</span> rotationLocked() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="classxy_1_1_camera.html#a69799f4af9ecbead5653a6ea5362053c">  123</a></span>&#160;        sf::FloatRect <a class="code" href="classxy_1_1_camera.html#a69799f4af9ecbead5653a6ea5362053c">getBounds</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_bounds; }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        sf::View m_view;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        Axis m_lockAxis;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keywordtype">float</span> m_axisValue;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordtype">bool</span> m_lockRotation;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        sf::FloatRect m_bounds;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_scene.html">Scene</a>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_camera_system.html">CameraSystem</a>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    };</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="preprocessor">#endif //XY_CAMERA_HPP_</span></div>
+<div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioSourceImpl.hpp:39</div></div>
+<div class="ttc" id="classxy_1_1_camera_system_html"><div class="ttname"><a href="classxy_1_1_camera_system.html">xy::CameraSystem</a></div><div class="ttdoc">The camera system updates any camera components which are attached to entities that also have a trans...</div><div class="ttdef"><b>Definition:</b> CameraSystem.hpp:43</div></div>
+<div class="ttc" id="classxy_1_1_camera_html"><div class="ttname"><a href="classxy_1_1_camera.html">xy::Camera</a></div><div class="ttdoc">Represents a 2D camera. Camera components can be attached to entities so that they take on the transf...</div><div class="ttdef"><b>Definition:</b> Camera.hpp:43</div></div>
+<div class="ttc" id="classxy_1_1_scene_html"><div class="ttname"><a href="classxy_1_1_scene.html">xy::Scene</a></div><div class="ttdoc">Encapsulates a single scene. The scene class contains everything needed to create a scene graph by en...</div><div class="ttdef"><b>Definition:</b> Scene.hpp:61</div></div>
+<div class="ttc" id="classxy_1_1_camera_html_a69799f4af9ecbead5653a6ea5362053c"><div class="ttname"><a href="classxy_1_1_camera.html#a69799f4af9ecbead5653a6ea5362053c">xy::Camera::getBounds</a></div><div class="ttdeci">sf::FloatRect getBounds() const </div><div class="ttdoc">Returns the current bounds of the camera. </div><div class="ttdef"><b>Definition:</b> Camera.hpp:123</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

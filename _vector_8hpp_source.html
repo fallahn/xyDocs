@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xygine: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xygine/include/xygine/util/Vector.hpp Source File</title>
+<title>xyginext: C:/Users/Matt/Documents/Visual Studio 2017/Projects/xygineXT/xyginext/include/xyginext/util/Vector.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,10 +18,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">xygine
-   &#160;<span id="projectnumber">0.1.0</span>
+   <div id="projectname">xyginext
+   &#160;<span id="projectnumber">0.2.0</span>
    </div>
-   <div id="projectbrief">SFML Based 2D Game Creation Framework</div>
+   <div id="projectbrief">Second generation of xygine game creation framework</div>
   </td>
  </tr>
  </tbody>
@@ -44,7 +44,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_4d209b5b760f516cd5a2179341e2b1c7.html">xygine</a></li><li class="navelem"><a class="el" href="dir_7b9842a3b09377ca9a652568040e6dba.html">util</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_efb0e9b2b77ba75392bcf64fcf40cd77.html">include</a></li><li class="navelem"><a class="el" href="dir_e1acbbb56b05dac1d2df5cc4492ca74b.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_b653864674bd798c728e336c34a77182.html">util</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -53,10 +53,10 @@
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">© Matt Marchant 2014 - 2017</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">(c) Matt Marchant 2017</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">http://trederia.blogspot.com</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">xygine - Zlib license.</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">xygineXT - Zlib license.</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">This software is provided &#39;as-is&#39;, without any express or</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">implied warranty. In no event will the authors be held</span></div>
@@ -82,86 +82,94 @@
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#ifndef XY_UTIL_VECTOR_HPP_</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define XY_UTIL_VECTOR_HPP_</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;xygine/util/Const.hpp&gt;</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;xygine/util/String.hpp&gt;</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;xygine/Assert.hpp&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;xyginext/util/Const.hpp&gt;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;xyginext/util/String.hpp&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;xyginext/core/Assert.hpp&gt;</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;SFML/System/Vector2.hpp&gt;</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacexy.html">xy</a></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">namespace </span>Util</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_vector.html">   44</a></span>&#160;        <span class="keyword">namespace </span>Vector</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        {</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_vector.html#a4b277d04c7b451e0446a269871523253">   49</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code" href="namespacexy_1_1_util_1_1_vector.html#a4b277d04c7b451e0446a269871523253">dot</a>(<span class="keyword">const</span> sf::Vector2f&amp; lv, <span class="keyword">const</span> sf::Vector2f&amp; rv)</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <span class="keywordflow">return</span> lv.x * rv.x + lv.y * rv.y;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            }</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_vector.html#a1c840cfccfcdf7e8a92d00a0d4635e15">   56</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> sf::Vector2f <a class="code" href="namespacexy_1_1_util_1_1_vector.html#a1c840cfccfcdf7e8a92d00a0d4635e15">normalise</a>(sf::Vector2f source)</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                <span class="keywordtype">float</span> length = std::sqrt(<a class="code" href="namespacexy_1_1_util_1_1_vector.html#a4b277d04c7b451e0446a269871523253">dot</a>(source, source));</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                XY_ASSERT(length != 0, <span class="stringliteral">&quot;Division by zero&quot;</span>);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="keywordflow">return</span> source /= <a class="code" href="namespacexy_1_1_util_1_1_vector.html#a1e7da9de9798caf64e46f3aaa7cf52da">length</a>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            }</div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_vector.html#a4f81feab7669b19c30355e0424749e95">   68</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code" href="namespacexy_1_1_util_1_1_vector.html#a4f81feab7669b19c30355e0424749e95">lengthSquared</a>(<span class="keyword">const</span> sf::Vector2f&amp; source)</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="namespacexy_1_1_util_1_1_vector.html#a4b277d04c7b451e0446a269871523253">dot</a>(source, source);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            }</div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_vector.html#a1e7da9de9798caf64e46f3aaa7cf52da">   79</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code" href="namespacexy_1_1_util_1_1_vector.html#a1e7da9de9798caf64e46f3aaa7cf52da">length</a>(<span class="keyword">const</span> sf::Vector2f&amp; source)</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <span class="keywordflow">return</span> std::sqrt(<a class="code" href="namespacexy_1_1_util_1_1_vector.html#a4f81feab7669b19c30355e0424749e95">lengthSquared</a>(source));</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_vector.html#a24f5381d413f28ac2b16154c6eb7be3b">   87</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> sf::Vector2f <a class="code" href="namespacexy_1_1_util_1_1_vector.html#a24f5381d413f28ac2b16154c6eb7be3b">reflect</a>(<span class="keyword">const</span> sf::Vector2f&amp; velocity, <span class="keyword">const</span> sf::Vector2f&amp; normal)</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                <span class="keywordflow">return</span> -2.f * <a class="code" href="namespacexy_1_1_util_1_1_vector.html#a4b277d04c7b451e0446a269871523253">dot</a>(velocity, normal) * normal + velocity;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_vector.html#a7a61cd159641ee780fec98d020d39eb5">   98</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> sf::Vector2f <a class="code" href="namespacexy_1_1_util_1_1_vector.html#a7a61cd159641ee780fec98d020d39eb5">rotate</a>(<span class="keyword">const</span> sf::Vector2f&amp; v, <span class="keywordtype">float</span> degrees)</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            {</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                <span class="keyword">const</span> <span class="keywordtype">float</span> rads = degrees * Const::degToRad;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                <span class="keyword">auto</span> ca = std::cos(rads);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                <span class="keyword">auto</span> sa = std::sin(rads);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                <span class="keywordflow">return</span>{ ca*v.x - sa*v.y, sa*v.x + ca*v.y };</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_vector.html#a238225253ec14f1629ccbe9dc950fb36">  109</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code" href="namespacexy_1_1_util_1_1_vector.html#a238225253ec14f1629ccbe9dc950fb36">rotation</a>(<span class="keyword">const</span> sf::Vector2f v)</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            {</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                <span class="keywordflow">return</span> std::atan2(v.y, v.x) * Const::radToDeg;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            }</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_vector.html#a2ebd4ef135c9aa8c29b790b51e65707a">  118</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> sf::Vector2&lt;T&gt; <a class="code" href="namespacexy_1_1_util_1_1_vector.html#a2ebd4ef135c9aa8c29b790b51e65707a">vec2FromString</a>(<span class="keyword">const</span> std::string&amp; str)</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            {</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                sf::Vector2&lt;T&gt; retVec;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                <span class="keyword">auto</span> values = <a class="code" href="namespacexy_1_1_util_1_1_string.html#a043207bb782ceef5d5022c3bdd216683">String::toFloatArray</a>(str);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                <span class="keywordflow">switch</span> (values.size())</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                {</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                <span class="keywordflow">case</span> 2:</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                    retVec.y = <span class="keyword">static_cast&lt;</span>T<span class="keyword">&gt;</span>(values[1]);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                <span class="keywordflow">case</span> 1:</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                    retVec.x = <span class="keyword">static_cast&lt;</span>T<span class="keyword">&gt;</span>(values[0]);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                <span class="keywordflow">default</span>: <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                }</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                <span class="keywordflow">return</span> retVec;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            }</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        }</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    }</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">#endif //XY_UTIL_VECTOR_HPP_</span></div>
-<div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xygine namespace. </div><div class="ttdef"><b>Definition:</b> App.hpp:55</div></div>
-<div class="ttc" id="namespacexy_1_1_util_1_1_vector_html_a7a61cd159641ee780fec98d020d39eb5"><div class="ttname"><a href="namespacexy_1_1_util_1_1_vector.html#a7a61cd159641ee780fec98d020d39eb5">xy::Util::Vector::rotate</a></div><div class="ttdeci">static sf::Vector2f rotate(const sf::Vector2f &amp;v, float degrees)</div><div class="ttdoc">Rotates a vector (not very accurately) </div><div class="ttdef"><b>Definition:</b> Vector.hpp:98</div></div>
-<div class="ttc" id="namespacexy_1_1_util_1_1_vector_html_a1e7da9de9798caf64e46f3aaa7cf52da"><div class="ttname"><a href="namespacexy_1_1_util_1_1_vector.html#a1e7da9de9798caf64e46f3aaa7cf52da">xy::Util::Vector::length</a></div><div class="ttdeci">static float length(const sf::Vector2f &amp;source)</div><div class="ttdoc">Returns length of a given vector. </div><div class="ttdef"><b>Definition:</b> Vector.hpp:79</div></div>
-<div class="ttc" id="namespacexy_1_1_util_1_1_vector_html_a24f5381d413f28ac2b16154c6eb7be3b"><div class="ttname"><a href="namespacexy_1_1_util_1_1_vector.html#a24f5381d413f28ac2b16154c6eb7be3b">xy::Util::Vector::reflect</a></div><div class="ttdeci">static sf::Vector2f reflect(const sf::Vector2f &amp;velocity, const sf::Vector2f &amp;normal)</div><div class="ttdoc">Reflects a velocity vector about a given normal. </div><div class="ttdef"><b>Definition:</b> Vector.hpp:87</div></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacexy.html">xy</a></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">namespace </span>Util</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    {</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_vector.html">   46</a></span>&#160;        <span class="keyword">namespace </span>Vector</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        {</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_vector.html#a4b277d04c7b451e0446a269871523253">   51</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code" href="namespacexy_1_1_util_1_1_vector.html#a4b277d04c7b451e0446a269871523253">dot</a>(<span class="keyword">const</span> sf::Vector2f&amp; lv, <span class="keyword">const</span> sf::Vector2f&amp; rv)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="keywordflow">return</span> lv.x * rv.x + lv.y * rv.y;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            }</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_vector.html#a1c840cfccfcdf7e8a92d00a0d4635e15">   58</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> sf::Vector2f <a class="code" href="namespacexy_1_1_util_1_1_vector.html#a1c840cfccfcdf7e8a92d00a0d4635e15">normalise</a>(sf::Vector2f source)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="keywordtype">float</span> <a class="code" href="namespacexy_1_1_util_1_1_vector.html#a1e7da9de9798caf64e46f3aaa7cf52da">length</a> = std::sqrt(<a class="code" href="namespacexy_1_1_util_1_1_vector.html#a4b277d04c7b451e0446a269871523253">dot</a>(source, source));</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                XY_ASSERT(length != 0, <span class="stringliteral">&quot;Division by zero&quot;</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="keywordflow">return</span> source /= <a class="code" href="namespacexy_1_1_util_1_1_vector.html#a1e7da9de9798caf64e46f3aaa7cf52da">length</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            }</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_vector.html#a4f81feab7669b19c30355e0424749e95">   70</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code" href="namespacexy_1_1_util_1_1_vector.html#a4f81feab7669b19c30355e0424749e95">lengthSquared</a>(<span class="keyword">const</span> sf::Vector2f&amp; source)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="namespacexy_1_1_util_1_1_vector.html#a4b277d04c7b451e0446a269871523253">dot</a>(source, source);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            }</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_vector.html#a1e7da9de9798caf64e46f3aaa7cf52da">   81</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code" href="namespacexy_1_1_util_1_1_vector.html#a1e7da9de9798caf64e46f3aaa7cf52da">length</a>(<span class="keyword">const</span> sf::Vector2f&amp; source)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                <span class="keywordflow">return</span> std::sqrt(<a class="code" href="namespacexy_1_1_util_1_1_vector.html#a4f81feab7669b19c30355e0424749e95">lengthSquared</a>(source));</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_vector.html#a24f5381d413f28ac2b16154c6eb7be3b">   89</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> sf::Vector2f <a class="code" href="namespacexy_1_1_util_1_1_vector.html#a24f5381d413f28ac2b16154c6eb7be3b">reflect</a>(<span class="keyword">const</span> sf::Vector2f&amp; velocity, <span class="keyword">const</span> sf::Vector2f&amp; normal)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                <span class="keywordflow">return</span> -2.f * <a class="code" href="namespacexy_1_1_util_1_1_vector.html#a4b277d04c7b451e0446a269871523253">dot</a>(velocity, normal) * normal + velocity;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_vector.html#a7a61cd159641ee780fec98d020d39eb5">  100</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> sf::Vector2f <a class="code" href="namespacexy_1_1_util_1_1_vector.html#a7a61cd159641ee780fec98d020d39eb5">rotate</a>(<span class="keyword">const</span> sf::Vector2f&amp; v, <span class="keywordtype">float</span> degrees)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                <span class="keyword">const</span> <span class="keywordtype">float</span> rads = degrees * Const::degToRad;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                <span class="keyword">auto</span> ca = std::cos(rads);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                <span class="keyword">auto</span> sa = std::sin(rads);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                <span class="keywordflow">return</span>{ ca*v.x - sa*v.y, sa*v.x + ca*v.y };</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_vector.html#a238225253ec14f1629ccbe9dc950fb36">  111</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code" href="namespacexy_1_1_util_1_1_vector.html#a238225253ec14f1629ccbe9dc950fb36">rotation</a>(<span class="keyword">const</span> sf::Vector2f v)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                <span class="keywordflow">return</span> std::atan2(v.y, v.x) * Const::radToDeg;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_vector.html#a2ebd4ef135c9aa8c29b790b51e65707a">  120</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> sf::Vector2&lt;T&gt; <a class="code" href="namespacexy_1_1_util_1_1_vector.html#a2ebd4ef135c9aa8c29b790b51e65707a">vec2FromString</a>(<span class="keyword">const</span> std::string&amp; str)</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                sf::Vector2&lt;T&gt; retVec;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                <span class="keyword">auto</span> values = <a class="code" href="namespacexy_1_1_util_1_1_string.html#a043207bb782ceef5d5022c3bdd216683">String::toFloatArray</a>(str);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                <span class="keywordflow">switch</span> (values.size())</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                    retVec.y = <span class="keyword">static_cast&lt;</span>T<span class="keyword">&gt;</span>(values[1]);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                    retVec.x = <span class="keyword">static_cast&lt;</span>T<span class="keyword">&gt;</span>(values[0]);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                <span class="keywordflow">default</span>: <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                <span class="keywordflow">return</span> retVec;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            }</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            sf::Vector2&lt;T&gt; operator * (<span class="keyword">const</span> sf::Vector2&lt;T&gt;&amp; l, <span class="keyword">const</span> sf::Vector2&lt;T&gt;&amp; r)</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                <span class="keywordflow">return</span> sf::Vector2&lt;T&gt;(l.x * r.x, l.y * r.y);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        }</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    }</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;}</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="preprocessor">#endif //XY_UTIL_VECTOR_HPP_</span></div>
+<div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioSourceImpl.hpp:39</div></div>
+<div class="ttc" id="namespacexy_1_1_util_1_1_vector_html_a7a61cd159641ee780fec98d020d39eb5"><div class="ttname"><a href="namespacexy_1_1_util_1_1_vector.html#a7a61cd159641ee780fec98d020d39eb5">xy::Util::Vector::rotate</a></div><div class="ttdeci">static sf::Vector2f rotate(const sf::Vector2f &amp;v, float degrees)</div><div class="ttdoc">Rotates a vector (not very accurately) </div><div class="ttdef"><b>Definition:</b> Vector.hpp:100</div></div>
+<div class="ttc" id="namespacexy_1_1_util_1_1_vector_html_a1e7da9de9798caf64e46f3aaa7cf52da"><div class="ttname"><a href="namespacexy_1_1_util_1_1_vector.html#a1e7da9de9798caf64e46f3aaa7cf52da">xy::Util::Vector::length</a></div><div class="ttdeci">static float length(const sf::Vector2f &amp;source)</div><div class="ttdoc">Returns length of a given vector. </div><div class="ttdef"><b>Definition:</b> Vector.hpp:81</div></div>
+<div class="ttc" id="namespacexy_1_1_util_1_1_vector_html_a24f5381d413f28ac2b16154c6eb7be3b"><div class="ttname"><a href="namespacexy_1_1_util_1_1_vector.html#a24f5381d413f28ac2b16154c6eb7be3b">xy::Util::Vector::reflect</a></div><div class="ttdeci">static sf::Vector2f reflect(const sf::Vector2f &amp;velocity, const sf::Vector2f &amp;normal)</div><div class="ttdoc">Reflects a velocity vector about a given normal. </div><div class="ttdef"><b>Definition:</b> Vector.hpp:89</div></div>
 <div class="ttc" id="namespacexy_1_1_util_1_1_string_html_a043207bb782ceef5d5022c3bdd216683"><div class="ttname"><a href="namespacexy_1_1_util_1_1_string.html#a043207bb782ceef5d5022c3bdd216683">xy::Util::String::toFloatArray</a></div><div class="ttdeci">static std::vector&lt; float &gt; toFloatArray(const std::string &amp;str)</div><div class="ttdoc">Converts a comma delimited string of floats into an array. </div><div class="ttdef"><b>Definition:</b> String.hpp:49</div></div>
-<div class="ttc" id="namespacexy_1_1_util_1_1_vector_html_a4b277d04c7b451e0446a269871523253"><div class="ttname"><a href="namespacexy_1_1_util_1_1_vector.html#a4b277d04c7b451e0446a269871523253">xy::Util::Vector::dot</a></div><div class="ttdeci">static float dot(const sf::Vector2f &amp;lv, const sf::Vector2f &amp;rv)</div><div class="ttdoc">Calculates the dot product of 2 vectors. </div><div class="ttdef"><b>Definition:</b> Vector.hpp:49</div></div>
-<div class="ttc" id="namespacexy_1_1_util_1_1_vector_html_a1c840cfccfcdf7e8a92d00a0d4635e15"><div class="ttname"><a href="namespacexy_1_1_util_1_1_vector.html#a1c840cfccfcdf7e8a92d00a0d4635e15">xy::Util::Vector::normalise</a></div><div class="ttdeci">static sf::Vector2f normalise(sf::Vector2f source)</div><div class="ttdoc">Returns a given vector with its length normalized to 1. </div><div class="ttdef"><b>Definition:</b> Vector.hpp:56</div></div>
-<div class="ttc" id="namespacexy_1_1_util_1_1_vector_html_a2ebd4ef135c9aa8c29b790b51e65707a"><div class="ttname"><a href="namespacexy_1_1_util_1_1_vector.html#a2ebd4ef135c9aa8c29b790b51e65707a">xy::Util::Vector::vec2FromString</a></div><div class="ttdeci">static sf::Vector2&lt; T &gt; vec2FromString(const std::string &amp;str)</div><div class="ttdoc">Converts a comma delimited string to vector 2. </div><div class="ttdef"><b>Definition:</b> Vector.hpp:118</div></div>
-<div class="ttc" id="namespacexy_1_1_util_1_1_vector_html_a238225253ec14f1629ccbe9dc950fb36"><div class="ttname"><a href="namespacexy_1_1_util_1_1_vector.html#a238225253ec14f1629ccbe9dc950fb36">xy::Util::Vector::rotation</a></div><div class="ttdeci">static float rotation(const sf::Vector2f v)</div><div class="ttdoc">Gets the rotation (in degrees) of a vector. </div><div class="ttdef"><b>Definition:</b> Vector.hpp:109</div></div>
-<div class="ttc" id="namespacexy_1_1_util_1_1_vector_html_a4f81feab7669b19c30355e0424749e95"><div class="ttname"><a href="namespacexy_1_1_util_1_1_vector.html#a4f81feab7669b19c30355e0424749e95">xy::Util::Vector::lengthSquared</a></div><div class="ttdeci">static float lengthSquared(const sf::Vector2f &amp;source)</div><div class="ttdoc">Returns length of a vector squared. </div><div class="ttdef"><b>Definition:</b> Vector.hpp:68</div></div>
+<div class="ttc" id="namespacexy_1_1_util_1_1_vector_html_a4b277d04c7b451e0446a269871523253"><div class="ttname"><a href="namespacexy_1_1_util_1_1_vector.html#a4b277d04c7b451e0446a269871523253">xy::Util::Vector::dot</a></div><div class="ttdeci">static float dot(const sf::Vector2f &amp;lv, const sf::Vector2f &amp;rv)</div><div class="ttdoc">Calculates the dot product of 2 vectors. </div><div class="ttdef"><b>Definition:</b> Vector.hpp:51</div></div>
+<div class="ttc" id="namespacexy_1_1_util_1_1_vector_html_a1c840cfccfcdf7e8a92d00a0d4635e15"><div class="ttname"><a href="namespacexy_1_1_util_1_1_vector.html#a1c840cfccfcdf7e8a92d00a0d4635e15">xy::Util::Vector::normalise</a></div><div class="ttdeci">static sf::Vector2f normalise(sf::Vector2f source)</div><div class="ttdoc">Returns a given vector with its length normalized to 1. </div><div class="ttdef"><b>Definition:</b> Vector.hpp:58</div></div>
+<div class="ttc" id="namespacexy_1_1_util_1_1_vector_html_a2ebd4ef135c9aa8c29b790b51e65707a"><div class="ttname"><a href="namespacexy_1_1_util_1_1_vector.html#a2ebd4ef135c9aa8c29b790b51e65707a">xy::Util::Vector::vec2FromString</a></div><div class="ttdeci">static sf::Vector2&lt; T &gt; vec2FromString(const std::string &amp;str)</div><div class="ttdoc">Converts a comma delimited string to vector 2. </div><div class="ttdef"><b>Definition:</b> Vector.hpp:120</div></div>
+<div class="ttc" id="namespacexy_1_1_util_1_1_vector_html_a238225253ec14f1629ccbe9dc950fb36"><div class="ttname"><a href="namespacexy_1_1_util_1_1_vector.html#a238225253ec14f1629ccbe9dc950fb36">xy::Util::Vector::rotation</a></div><div class="ttdeci">static float rotation(const sf::Vector2f v)</div><div class="ttdoc">Gets the rotation (in degrees) of a vector. </div><div class="ttdef"><b>Definition:</b> Vector.hpp:111</div></div>
+<div class="ttc" id="namespacexy_1_1_util_1_1_vector_html_a4f81feab7669b19c30355e0424749e95"><div class="ttname"><a href="namespacexy_1_1_util_1_1_vector.html#a4f81feab7669b19c30355e0424749e95">xy::Util::Vector::lengthSquared</a></div><div class="ttdeci">static float lengthSquared(const sf::Vector2f &amp;source)</div><div class="ttdoc">Returns length of a vector squared. </div><div class="ttdef"><b>Definition:</b> Vector.hpp:70</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

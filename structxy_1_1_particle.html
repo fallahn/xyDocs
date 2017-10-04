@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xygine: xy::Particle Struct Reference</title>
+<title>xyginext: xy::Particle Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,10 +18,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">xygine
-   &#160;<span id="projectnumber">0.1.0</span>
+   <div id="projectname">xyginext
+   &#160;<span id="projectnumber">0.2.0</span>
    </div>
-   <div id="projectbrief">SFML Based 2D Game Creation Framework</div>
+   <div id="projectbrief">Second generation of xygine game creation framework</div>
   </td>
  </tr>
  </tbody>
@@ -59,40 +59,40 @@
 </div><!--header-->
 <div class="contents">
 
-<p>Struct containing properties for particles used in the particle system component.  
+<p>Represents a single particle in a system.  
  <a href="structxy_1_1_particle.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="_particle_8hpp_source.html">Particle.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for xy::Particle:</div>
-<div class="dyncontent">
- <div class="center">
-  <img src="structxy_1_1_particle.png" usemap="#xy::Particle_map" alt=""/>
-  <map id="xy::Particle_map" name="xy::Particle_map">
-</map>
- </div></div>
+<p><code>#include &lt;<a class="el" href="_particle_emitter_8hpp_source.html">ParticleEmitter.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:a089ac88ca4e3f2f7e39391d5ddefb440"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a089ac88ca4e3f2f7e39391d5ddefb440"></a>
+sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><b>position</b></td></tr>
+<tr class="separator:a089ac88ca4e3f2f7e39391d5ddefb440"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc7890b7d69885d84e7cdf545b606c26"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc7890b7d69885d84e7cdf545b606c26"></a>
 sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><b>velocity</b></td></tr>
 <tr class="separator:adc7890b7d69885d84e7cdf545b606c26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14013960b000ad2af816fe241de9ffad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a14013960b000ad2af816fe241de9ffad"></a>
+sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><b>gravity</b></td></tr>
+<tr class="separator:a14013960b000ad2af816fe241de9ffad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c8347f1ea61aaffaa24feb2b6cb903b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9c8347f1ea61aaffaa24feb2b6cb903b"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>lifetime</b> = 0.f</td></tr>
+<tr class="separator:a9c8347f1ea61aaffaa24feb2b6cb903b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd64184092ee1528cfc259a8af5acb44"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd64184092ee1528cfc259a8af5acb44"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>maxLifetime</b> = 1.f</td></tr>
+<tr class="separator:abd64184092ee1528cfc259a8af5acb44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3da71efc315004b8dc6b039a011a8906"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3da71efc315004b8dc6b039a011a8906"></a>
 sf::Color&#160;</td><td class="memItemRight" valign="bottom"><b>colour</b></td></tr>
 <tr class="separator:a3da71efc315004b8dc6b039a011a8906"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9dc0b8da0338bc199923eadc9b368ccd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9dc0b8da0338bc199923eadc9b368ccd"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>rotation</b> = 0.f</td></tr>
 <tr class="separator:a9dc0b8da0338bc199923eadc9b368ccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c8347f1ea61aaffaa24feb2b6cb903b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9c8347f1ea61aaffaa24feb2b6cb903b"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>lifetime</b> = 0.f</td></tr>
-<tr class="separator:a9c8347f1ea61aaffaa24feb2b6cb903b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee59caafeb0f7cbd64e21bee9e1a8741"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee59caafeb0f7cbd64e21bee9e1a8741"></a>
-sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><b>textureRect</b></td></tr>
-<tr class="separator:aee59caafeb0f7cbd64e21bee9e1a8741"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7efa7b19134f13e71ca9e31eec37114"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa7efa7b19134f13e71ca9e31eec37114"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>scale</b> = 1.f</td></tr>
+<tr class="separator:aa7efa7b19134f13e71ca9e31eec37114"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Struct containing properties for particles used in the particle system component. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classxy_1_1_particle_system.html" title="Particle System Component. ">ParticleSystem</a> </dd></dl>
+<div class="textblock"><p>Represents a single particle in a system. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

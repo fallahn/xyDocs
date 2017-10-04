@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xygine: xy::Scene Class Reference</title>
+<title>xyginext: xy::Scene Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,10 +18,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">xygine
-   &#160;<span id="projectnumber">0.1.0</span>
+   <div id="projectname">xyginext
+   &#160;<span id="projectnumber">0.2.0</span>
    </div>
-   <div id="projectbrief">SFML Based 2D Game Creation Framework</div>
+   <div id="projectbrief">Second generation of xygine game creation framework</div>
   </td>
  </tr>
  </tbody>
@@ -52,17 +52,14 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classxy_1_1_scene-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">xy::Scene Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classxy_1_1_scene.html" title="Scene class. ">Scene</a> class.  
+<p>Encapsulates a single scene. The scene class contains everything needed to create a scene graph by encapsulating the ECS and providing factory functions for entities. Multple scenes can exist at one time, for instance one to draw the game world, and another to draw the HUD. Everything is rendered through renderable systems which, in turn, require an ECS - therefore every state which wishes to draw something requires at least a scene, right down to menus. All systems should be added before attempting to create any entities else existing entities will not be processed by new systems.  
  <a href="classxy_1_1_scene.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_scene_8hpp_source.html">Scene.hpp</a>&gt;</code></p>
@@ -75,327 +72,200 @@ Inheritance diagram for xy::Scene:</div>
 </map>
  </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structxy_1_1_scene_1_1_sky_light.html">SkyLight</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A single directional light, used by normal mapped materials and the mesh renderer. Useful for representing sun/moon light or any far off light source. Setting the intensity to zero will disable the light altogether (preventing it from being considered in lighting calculations). By default the sky light is disabled.  <a href="structxy_1_1_scene_1_1_sky_light.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a0bf10e5ead2c4248f2f3e2c4536a5240"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0bf10e5ead2c4248f2f3e2c4536a5240"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#a0bf10e5ead2c4248f2f3e2c4536a5240">Layer</a> { <br />
-&#160;&#160;<b>BackRear</b> = 0, 
-<b>BackMiddle</b>, 
-<b>BackFront</b>, 
-<b>FrontRear</b>, 
-<br />
-&#160;&#160;<b>FrontMiddle</b>, 
-<b>FrontFront</b>, 
-<b>UI</b>, 
-<b>Count</b>
-<br />
- }<tr class="memdesc:a0bf10e5ead2c4248f2f3e2c4536a5240"><td class="mdescLeft">&#160;</td><td class="mdescRight">Layer names to which entities may be added. <br /></td></tr>
-<tr class="separator:a0bf10e5ead2c4248f2f3e2c4536a5240"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af79624fab19a70a2238a2a9c106fea95"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af79624fab19a70a2238a2a9c106fea95"></a>
+<tr class="memitem:a46582fdeae176d4ab49e3e34c148fb57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46582fdeae176d4ab49e3e34c148fb57"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Scene</b> (<a class="el" href="classxy_1_1_message_bus.html">MessageBus</a> &amp;)</td></tr>
-<tr class="separator:af79624fab19a70a2238a2a9c106fea95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a46582fdeae176d4ab49e3e34c148fb57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac4594d0b3c15d4edf869ea284e67b79"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac4594d0b3c15d4edf869ea284e67b79"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Scene</b> (const <a class="el" href="classxy_1_1_scene.html">Scene</a> &amp;)=delete</td></tr>
 <tr class="separator:aac4594d0b3c15d4edf869ea284e67b79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a285a37cf932babe9ed0ffbc0ec6e21c2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a285a37cf932babe9ed0ffbc0ec6e21c2"></a>
-const <a class="el" href="classxy_1_1_scene.html">Scene</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classxy_1_1_scene.html">Scene</a> &amp;)=delete</td></tr>
-<tr class="separator:a285a37cf932babe9ed0ffbc0ec6e21c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55606eb02626fdfdb107031aa00ff0b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#a55606eb02626fdfdb107031aa00ff0b7">update</a> (float)</td></tr>
-<tr class="memdesc:a55606eb02626fdfdb107031aa00ff0b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the entire scene with the current frame time.  <a href="#a55606eb02626fdfdb107031aa00ff0b7">More...</a><br /></td></tr>
-<tr class="separator:a55606eb02626fdfdb107031aa00ff0b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7dd6e0baff17a048abaa2241cd962d66"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#a7dd6e0baff17a048abaa2241cd962d66">handleMessage</a> (const <a class="el" href="classxy_1_1_message.html">Message</a> &amp;)</td></tr>
-<tr class="memdesc:a7dd6e0baff17a048abaa2241cd962d66"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classxy_1_1_scene.html" title="Scene class. ">Scene</a> message handler.  <a href="#a7dd6e0baff17a048abaa2241cd962d66">More...</a><br /></td></tr>
-<tr class="separator:a7dd6e0baff17a048abaa2241cd962d66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f3a1439374fbf6f7da76ff6311ff565"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classxy_1_1_entity.html">Entity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#a4f3a1439374fbf6f7da76ff6311ff565">addEntity</a> (Entity::Ptr &amp;, <a class="el" href="classxy_1_1_scene.html#a0bf10e5ead2c4248f2f3e2c4536a5240">Layer</a>)</td></tr>
-<tr class="memdesc:a4f3a1439374fbf6f7da76ff6311ff565"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves an entity into the scene on to the given layer.  <a href="#a4f3a1439374fbf6f7da76ff6311ff565">More...</a><br /></td></tr>
-<tr class="separator:a4f3a1439374fbf6f7da76ff6311ff565"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28c3f8096f7c99e5691b8355b31ccf4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classxy_1_1_entity.html">Entity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#a28c3f8096f7c99e5691b8355b31ccf4f">findEntity</a> (sf::Uint64)</td></tr>
-<tr class="memdesc:a28c3f8096f7c99e5691b8355b31ccf4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find an entity with the given unique ID.  <a href="#a28c3f8096f7c99e5691b8355b31ccf4f">More...</a><br /></td></tr>
-<tr class="separator:a28c3f8096f7c99e5691b8355b31ccf4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a104ee8b0c5fc393d4d3b7d33f8fe7a85"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a104ee8b0c5fc393d4d3b7d33f8fe7a85"></a>
-<a class="el" href="classxy_1_1_entity.html">Entity</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#a104ee8b0c5fc393d4d3b7d33f8fe7a85">getLayer</a> (<a class="el" href="classxy_1_1_scene.html#a0bf10e5ead2c4248f2f3e2c4536a5240">Layer</a>)</td></tr>
-<tr class="memdesc:a104ee8b0c5fc393d4d3b7d33f8fe7a85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the root entity of a given layer. <br /></td></tr>
-<tr class="separator:a104ee8b0c5fc393d4d3b7d33f8fe7a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5c7230404cecd11b9df862a79508348"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5c7230404cecd11b9df862a79508348"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#ac5c7230404cecd11b9df862a79508348">setView</a> (const sf::View &amp;v)</td></tr>
-<tr class="memdesc:ac5c7230404cecd11b9df862a79508348"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current scene view and activates the default scene camera. <br /></td></tr>
-<tr class="separator:ac5c7230404cecd11b9df862a79508348"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d82a6ba116ad905353c69f8e86e900e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8d82a6ba116ad905353c69f8e86e900e"></a>
-sf::View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#a8d82a6ba116ad905353c69f8e86e900e">getView</a> () const </td></tr>
-<tr class="memdesc:a8d82a6ba116ad905353c69f8e86e900e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the view of the current active camera. <br /></td></tr>
-<tr class="separator:a8d82a6ba116ad905353c69f8e86e900e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ac17f87d8af2348c110bd21e38385ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5ac17f87d8af2348c110bd21e38385ba"></a>
-sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#a5ac17f87d8af2348c110bd21e38385ba">getVisibleArea</a> () const </td></tr>
-<tr class="memdesc:a5ac17f87d8af2348c110bd21e38385ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a FloatRect representing the visible area of the active camera. Useful for quad tree queries. <br /></td></tr>
-<tr class="separator:a5ac17f87d8af2348c110bd21e38385ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e9809ec1f9a67ca7bceda42a7b00adb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e9809ec1f9a67ca7bceda42a7b00adb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#a6e9809ec1f9a67ca7bceda42a7b00adb">setActiveCamera</a> (const <a class="el" href="classxy_1_1_camera.html">Camera</a> *)</td></tr>
-<tr class="memdesc:a6e9809ec1f9a67ca7bceda42a7b00adb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the scene's currently active camera. Passing nullptr tells the scene to use the default camera. <br /></td></tr>
-<tr class="separator:a6e9809ec1f9a67ca7bceda42a7b00adb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbebbd72555b27960e9ec531d7e8eb98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#adbebbd72555b27960e9ec531d7e8eb98">setClearColour</a> (const sf::Color &amp;)</td></tr>
-<tr class="memdesc:adbebbd72555b27960e9ec531d7e8eb98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the clear colour of the scene's default camera.  <a href="#adbebbd72555b27960e9ec531d7e8eb98">More...</a><br /></td></tr>
-<tr class="separator:adbebbd72555b27960e9ec531d7e8eb98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7bec7620c08354fb4f58f51a99d366ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7bec7620c08354fb4f58f51a99d366ca"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#a7bec7620c08354fb4f58f51a99d366ca">setSize</a> (const sf::FloatRect &amp;)</td></tr>
-<tr class="memdesc:a7bec7620c08354fb4f58f51a99d366ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the area which the scene will cover. This is only necessary when using the <a class="el" href="classxy_1_1_quad_tree.html" title="Quad Tree spatial partitioning class. ">QuadTree</a>. By default the queryable quad tree area is the same size as the default view (1920/1080). Passing a FloatRect to this function will resize the total queryable area of the quad tree. <br /></td></tr>
-<tr class="separator:a7bec7620c08354fb4f58f51a99d366ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a102f5cc73730cb319e31401a8a1415ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#a102f5cc73730cb319e31401a8a1415ae">sendCommand</a> (const <a class="el" href="structxy_1_1_command.html">Command</a> &amp;)</td></tr>
-<tr class="memdesc:a102f5cc73730cb319e31401a8a1415ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a command to the scene graph.  <a href="#a102f5cc73730cb319e31401a8a1415ae">More...</a><br /></td></tr>
-<tr class="separator:a102f5cc73730cb319e31401a8a1415ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fe40396b226fd65a06ae57410aea7f0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classxy_1_1_quad_tree_component.html">QuadTreeComponent</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#a2fe40396b226fd65a06ae57410aea7f0">queryQuadTree</a> (const sf::FloatRect &amp;) const </td></tr>
-<tr class="memdesc:a2fe40396b226fd65a06ae57410aea7f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queries the scene's quad tree.  <a href="#a2fe40396b226fd65a06ae57410aea7f0">More...</a><br /></td></tr>
-<tr class="separator:a2fe40396b226fd65a06ae57410aea7f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0fa7e3ad043c4f08a3dfd8effc6bf5e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classxy_1_1_point_light.html">PointLight</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#af0fa7e3ad043c4f08a3dfd8effc6bf5e">getVisibleLights</a> (const sf::FloatRect &amp;) const </td></tr>
-<tr class="memdesc:af0fa7e3ad043c4f08a3dfd8effc6bf5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of point lights found in the queried area.  <a href="#af0fa7e3ad043c4f08a3dfd8effc6bf5e">More...</a><br /></td></tr>
-<tr class="separator:af0fa7e3ad043c4f08a3dfd8effc6bf5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6393370d5cc51ecc620c60597dc3853"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae6393370d5cc51ecc620c60597dc3853"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#ae6393370d5cc51ecc620c60597dc3853">reset</a> ()</td></tr>
-<tr class="memdesc:ae6393370d5cc51ecc620c60597dc3853"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the scene removing all entities and post effects. <br /></td></tr>
-<tr class="separator:ae6393370d5cc51ecc620c60597dc3853"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a5e4db75de38b123d77213f2f1eb1f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#a6a5e4db75de38b123d77213f2f1eb1f7">addPostProcess</a> (PostProcess::Ptr &amp;)</td></tr>
-<tr class="memdesc:a6a5e4db75de38b123d77213f2f1eb1f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a post effect to the end of the render chain.  <a href="#a6a5e4db75de38b123d77213f2f1eb1f7">More...</a><br /></td></tr>
-<tr class="separator:a6a5e4db75de38b123d77213f2f1eb1f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c35d9e9eef826d02fa9ca1c978614b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#a6c35d9e9eef826d02fa9ca1c978614b1">drawDebug</a> (bool)</td></tr>
-<tr class="memdesc:a6c35d9e9eef826d02fa9ca1c978614b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">enables output debug information when <em>DEBUG</em> is defined  <a href="#a6c35d9e9eef826d02fa9ca1c978614b1">More...</a><br /></td></tr>
-<tr class="separator:a6c35d9e9eef826d02fa9ca1c978614b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2693dc43b077e49c66dc3c6653e6b04"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2693dc43b077e49c66dc3c6653e6b04"></a>
-const sf::Color &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#ad2693dc43b077e49c66dc3c6653e6b04">getAmbientColour</a> () const </td></tr>
-<tr class="memdesc:ad2693dc43b077e49c66dc3c6653e6b04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the scene's current ambient colour for shaders which perform lighting. <br /></td></tr>
-<tr class="separator:ad2693dc43b077e49c66dc3c6653e6b04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60790e3fd2d8169e68ceb990e681c1ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60790e3fd2d8169e68ceb990e681c1ac"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#a60790e3fd2d8169e68ceb990e681c1ac">setAmbientColour</a> (const sf::Color &amp;colour)</td></tr>
-<tr class="memdesc:a60790e3fd2d8169e68ceb990e681c1ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the ambient colour for shaders which are used in scene lighting. <br /></td></tr>
-<tr class="separator:a60790e3fd2d8169e68ceb990e681c1ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0943d7d56e5ab466af7d46fcd7c2bda9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0943d7d56e5ab466af7d46fcd7c2bda9"></a>
-<a class="el" href="structxy_1_1_scene_1_1_sky_light.html">SkyLight</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#a0943d7d56e5ab466af7d46fcd7c2bda9">getSkyLight</a> ()</td></tr>
-<tr class="memdesc:a0943d7d56e5ab466af7d46fcd7c2bda9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a modifyable (non-const) reference to the <a class="el" href="classxy_1_1_scene.html" title="Scene class. ">Scene</a>'s sky light. This can be used to set the properties of the sky light, or retrieve them when setting properties of s lighting shader (such as the default normal map) <br /></td></tr>
-<tr class="separator:a0943d7d56e5ab466af7d46fcd7c2bda9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82635a5258216f14577758700b6de38c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82635a5258216f14577758700b6de38c"></a>
-const <a class="el" href="structxy_1_1_scene_1_1_sky_light.html">SkyLight</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#a82635a5258216f14577758700b6de38c">getSkyLight</a> () const </td></tr>
-<tr class="memdesc:a82635a5258216f14577758700b6de38c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns const reference to the <a class="el" href="classxy_1_1_scene.html" title="Scene class. ">Scene</a>'s sky light. <br /></td></tr>
-<tr class="separator:a82635a5258216f14577758700b6de38c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:afa0a361fe4310bd8f444fedacaeea16e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa0a361fe4310bd8f444fedacaeea16e"></a>
-static sf::Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#afa0a361fe4310bd8f444fedacaeea16e">getViewMatrix</a> ()</td></tr>
-<tr class="memdesc:afa0a361fe4310bd8f444fedacaeea16e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the view matrix of the active camera if a scene exists else returns an identity matrix. This is useful when performing 2D lighting. <br /></td></tr>
-<tr class="separator:afa0a361fe4310bd8f444fedacaeea16e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7453a98725471a0fdde0ddd38b03b7f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7453a98725471a0fdde0ddd38b03b7f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Scene</b> (const <a class="el" href="classxy_1_1_scene.html">Scene</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:ae7453a98725471a0fdde0ddd38b03b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a812fb6540f4547e4636275842ea51c51"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a812fb6540f4547e4636275842ea51c51"></a>
+<a class="el" href="classxy_1_1_scene.html">Scene</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classxy_1_1_scene.html">Scene</a> &amp;)=delete</td></tr>
+<tr class="separator:a812fb6540f4547e4636275842ea51c51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18676fa807911e901e7e1ac746680472"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a18676fa807911e901e7e1ac746680472"></a>
+<a class="el" href="classxy_1_1_scene.html">Scene</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classxy_1_1_scene.html">Scene</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a18676fa807911e901e7e1ac746680472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa768d7e5c5cf9898c69dd8c686bb1653"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#aa768d7e5c5cf9898c69dd8c686bb1653">update</a> (float dt)</td></tr>
+<tr class="memdesc:aa768d7e5c5cf9898c69dd8c686bb1653"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes one simulations step.  <a href="#aa768d7e5c5cf9898c69dd8c686bb1653">More...</a><br /></td></tr>
+<tr class="separator:aa768d7e5c5cf9898c69dd8c686bb1653"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcb50801345d4178a03ddbaeb78de2f4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abcb50801345d4178a03ddbaeb78de2f4"></a>
+<a class="el" href="classxy_1_1_entity.html">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#abcb50801345d4178a03ddbaeb78de2f4">createEntity</a> ()</td></tr>
+<tr class="memdesc:abcb50801345d4178a03ddbaeb78de2f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new entity in the <a class="el" href="classxy_1_1_scene.html" title="Encapsulates a single scene. The scene class contains everything needed to create a scene graph by en...">Scene</a>, and returns a copy of it. <br /></td></tr>
+<tr class="separator:abcb50801345d4178a03ddbaeb78de2f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a907b2b554fa806030935724adf0918a0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a907b2b554fa806030935724adf0918a0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#a907b2b554fa806030935724adf0918a0">destroyEntity</a> (<a class="el" href="classxy_1_1_entity.html">Entity</a>)</td></tr>
+<tr class="memdesc:a907b2b554fa806030935724adf0918a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the given entity and removes it from the scene. <br /></td></tr>
+<tr class="separator:a907b2b554fa806030935724adf0918a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fee27e8dfd84ed833a49192f3b87659"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3fee27e8dfd84ed833a49192f3b87659"></a>
+<a class="el" href="classxy_1_1_entity.html">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getEntity</b> (Entity::ID) const </td></tr>
+<tr class="separator:a3fee27e8dfd84ed833a49192f3b87659"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41645ce2be880d2000b62c300b921156"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args&gt; </td></tr>
+<tr class="memitem:a41645ce2be880d2000b62c300b921156"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#a41645ce2be880d2000b62c300b921156">addSystem</a> (Args &amp;&amp;...args)</td></tr>
+<tr class="memdesc:a41645ce2be880d2000b62c300b921156"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new system of the given type. All systems need to be fully created before adding entities, else entities will not be correctly processed by desired systems.  <a href="#a41645ce2be880d2000b62c300b921156">More...</a><br /></td></tr>
+<tr class="separator:a41645ce2be880d2000b62c300b921156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a391a874cf04c7b964992ac1e7676d5"><td class="memTemplParams" colspan="2"><a class="anchor" id="a3a391a874cf04c7b964992ac1e7676d5"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a3a391a874cf04c7b964992ac1e7676d5"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#a3a391a874cf04c7b964992ac1e7676d5">getSystem</a> ()</td></tr>
+<tr class="memdesc:a3a391a874cf04c7b964992ac1e7676d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the <a class="el" href="classxy_1_1_scene.html" title="Encapsulates a single scene. The scene class contains everything needed to create a scene graph by en...">Scene</a>'s system of this type, if it exists. <br /></td></tr>
+<tr class="separator:a3a391a874cf04c7b964992ac1e7676d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab491978db13ed6bd0673a6137309570e"><td class="memTemplParams" colspan="2"><a class="anchor" id="ab491978db13ed6bd0673a6137309570e"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ab491978db13ed6bd0673a6137309570e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#ab491978db13ed6bd0673a6137309570e">setSystemActive</a> (bool active)</td></tr>
+<tr class="memdesc:ab491978db13ed6bd0673a6137309570e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the given system type active or inactive in the scene. Inactive systems are moved from the processing list and are ignored until set active again. If the system type give doesn't exist then this function does nothing. <br /></td></tr>
+<tr class="separator:ab491978db13ed6bd0673a6137309570e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac553ae2178f40cb8fa7f20816e84647e"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args&gt; </td></tr>
+<tr class="memitem:ac553ae2178f40cb8fa7f20816e84647e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#ac553ae2178f40cb8fa7f20816e84647e">addDirector</a> (Args &amp;&amp;...args)</td></tr>
+<tr class="memdesc:ac553ae2178f40cb8fa7f20816e84647e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a <a class="el" href="classxy_1_1_director.html" title="Abstract Base Class for Directors. A director is an &#39;observer&#39; of the scene to which it belongs...">Director</a> to the <a class="el" href="classxy_1_1_scene.html" title="Encapsulates a single scene. The scene class contains everything needed to create a scene graph by en...">Scene</a>. Directors are used to control in game entities and events through observed messages and events.  <a href="#ac553ae2178f40cb8fa7f20816e84647e">More...</a><br /></td></tr>
+<tr class="separator:ac553ae2178f40cb8fa7f20816e84647e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4a50e032148f96eba0ec2ed62a51012"><td class="memTemplParams" colspan="2"><a class="anchor" id="ab4a50e032148f96eba0ec2ed62a51012"></a>
+template&lt;typename T , typename... Args&gt; </td></tr>
+<tr class="memitem:ab4a50e032148f96eba0ec2ed62a51012"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#ab4a50e032148f96eba0ec2ed62a51012">addPostProcess</a> (Args &amp;&amp;...args)</td></tr>
+<tr class="memdesc:ab4a50e032148f96eba0ec2ed62a51012"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a post process effect to the scene. Any post processes added to the scene are performed on the <em>entire</em> output. To add post processes to a portion of the scene then a second scene should be created to draw overlays such as the UI. <br /></td></tr>
+<tr class="separator:ab4a50e032148f96eba0ec2ed62a51012"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9743d38e637233a6f81b9181c2cc8e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa9743d38e637233a6f81b9181c2cc8e0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#aa9743d38e637233a6f81b9181c2cc8e0">setPostEnabled</a> (bool)</td></tr>
+<tr class="memdesc:aa9743d38e637233a6f81b9181c2cc8e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables any added post processes added to the scene. <br /></td></tr>
+<tr class="separator:aa9743d38e637233a6f81b9181c2cc8e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac031b90613f3ed4d59f6434add91065f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac031b90613f3ed4d59f6434add91065f"></a>
+<a class="el" href="classxy_1_1_entity.html">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#ac031b90613f3ed4d59f6434add91065f">getDefaultCamera</a> () const </td></tr>
+<tr class="memdesc:ac031b90613f3ed4d59f6434add91065f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of the entity containing the default camera. <br /></td></tr>
+<tr class="separator:ac031b90613f3ed4d59f6434add91065f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93c19f2ea3d328128683f5bc41ae98f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classxy_1_1_entity.html">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#a93c19f2ea3d328128683f5bc41ae98f5">setActiveCamera</a> (<a class="el" href="classxy_1_1_entity.html">Entity</a>)</td></tr>
+<tr class="memdesc:a93c19f2ea3d328128683f5bc41ae98f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the active camera used when rendering. This camera will be used to render the entire visible scene. A single scene may also be rendered multiple times with different cameras, for example when rendering split screen.  <a href="#a93c19f2ea3d328128683f5bc41ae98f5">More...</a><br /></td></tr>
+<tr class="separator:a93c19f2ea3d328128683f5bc41ae98f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74fb780d7c21b825f517a2e834409d60"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74fb780d7c21b825f517a2e834409d60"></a>
+<a class="el" href="classxy_1_1_entity.html">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#a74fb780d7c21b825f517a2e834409d60">getActiveCamera</a> () const </td></tr>
+<tr class="memdesc:a74fb780d7c21b825f517a2e834409d60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the entity containing the active camera component. <br /></td></tr>
+<tr class="separator:a74fb780d7c21b825f517a2e834409d60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f097bec92e796e52a571faa188593eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classxy_1_1_entity.html">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#a5f097bec92e796e52a571faa188593eb">setActiveListener</a> (<a class="el" href="classxy_1_1_entity.html">Entity</a>)</td></tr>
+<tr class="memdesc:a5f097bec92e796e52a571faa188593eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the active listener when processing audio. Usually this will be on the same entity as the active camera, although effects such as remote monitoring can be used by setting a different listener.  <a href="#a5f097bec92e796e52a571faa188593eb">More...</a><br /></td></tr>
+<tr class="separator:a5f097bec92e796e52a571faa188593eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc5af783cadcb6fbbc4f0dd6200abc56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc5af783cadcb6fbbc4f0dd6200abc56"></a>
+<a class="el" href="classxy_1_1_entity.html">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#afc5af783cadcb6fbbc4f0dd6200abc56">getActiveListener</a> () const </td></tr>
+<tr class="memdesc:afc5af783cadcb6fbbc4f0dd6200abc56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the entity containing the active <a class="el" href="classxy_1_1_audio_listener.html" title="Audio Listener component. The AudioListener component defines the point at which the active AudioSyst...">AudioListener</a> component. <br /></td></tr>
+<tr class="separator:afc5af783cadcb6fbbc4f0dd6200abc56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12ac2fa27c13e5948af88008bad87502"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12ac2fa27c13e5948af88008bad87502"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#a12ac2fa27c13e5948af88008bad87502">forwardEvent</a> (const sf::Event &amp;)</td></tr>
+<tr class="memdesc:a12ac2fa27c13e5948af88008bad87502"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards any events to Directors in the <a class="el" href="classxy_1_1_scene.html" title="Encapsulates a single scene. The scene class contains everything needed to create a scene graph by en...">Scene</a>. <br /></td></tr>
+<tr class="separator:a12ac2fa27c13e5948af88008bad87502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87cf67dd9ce56bcf1f2261b86c99d9b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a87cf67dd9ce56bcf1f2261b86c99d9b9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#a87cf67dd9ce56bcf1f2261b86c99d9b9">forwardMessage</a> (const <a class="el" href="classxy_1_1_message.html">Message</a> &amp;)</td></tr>
+<tr class="memdesc:a87cf67dd9ce56bcf1f2261b86c99d9b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards messages to the systems in the scene. <br /></td></tr>
+<tr class="separator:a87cf67dd9ce56bcf1f2261b86c99d9b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41fe03d1b619ce76af61b2ad40e54c2b"><td class="memTemplParams" colspan="2"><a class="anchor" id="a41fe03d1b619ce76af61b2ad40e54c2b"></a>
+template&lt;typename T , typename... Args&gt; </td></tr>
+<tr class="memitem:a41fe03d1b619ce76af61b2ad40e54c2b"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>addSystem</b> (Args &amp;&amp;...args)</td></tr>
+<tr class="separator:a41fe03d1b619ce76af61b2ad40e54c2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab530e2de88e1a48d7ccef3040f497749"><td class="memTemplParams" colspan="2"><a class="anchor" id="ab530e2de88e1a48d7ccef3040f497749"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ab530e2de88e1a48d7ccef3040f497749"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getSystem</b> ()</td></tr>
+<tr class="separator:ab530e2de88e1a48d7ccef3040f497749"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab491978db13ed6bd0673a6137309570e"><td class="memTemplParams" colspan="2"><a class="anchor" id="ab491978db13ed6bd0673a6137309570e"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ab491978db13ed6bd0673a6137309570e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>setSystemActive</b> (bool active)</td></tr>
+<tr class="separator:ab491978db13ed6bd0673a6137309570e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac553ae2178f40cb8fa7f20816e84647e"><td class="memTemplParams" colspan="2"><a class="anchor" id="ac553ae2178f40cb8fa7f20816e84647e"></a>
+template&lt;typename T , typename... Args&gt; </td></tr>
+<tr class="memitem:ac553ae2178f40cb8fa7f20816e84647e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>addDirector</b> (Args &amp;&amp;...args)</td></tr>
+<tr class="separator:ac553ae2178f40cb8fa7f20816e84647e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb217a380f2f5bef83faf662f61001f7"><td class="memTemplParams" colspan="2"><a class="anchor" id="acb217a380f2f5bef83faf662f61001f7"></a>
+template&lt;typename T , typename... Args&gt; </td></tr>
+<tr class="memitem:acb217a380f2f5bef83faf662f61001f7"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>addPostProcess</b> (Args &amp;&amp;...args)</td></tr>
+<tr class="separator:acb217a380f2f5bef83faf662f61001f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classxy_1_1_scene.html" title="Scene class. ">Scene</a> class. </p>
-<p>The <a class="el" href="classxy_1_1_scene.html" title="Scene class. ">Scene</a> class is reponsible for updating and drawing the scene graph constructed of entities. </p>
+<div class="textblock"><p>Encapsulates a single scene. The scene class contains everything needed to create a scene graph by encapsulating the ECS and providing factory functions for entities. Multple scenes can exist at one time, for instance one to draw the game world, and another to draw the HUD. Everything is rendered through renderable systems which, in turn, require an ECS - therefore every state which wishes to draw something requires at least a scene, right down to menus. All systems should be added before attempting to create any entities else existing entities will not be processed by new systems. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a4f3a1439374fbf6f7da76ff6311ff565"></a>
+<a class="anchor" id="ac553ae2178f40cb8fa7f20816e84647e"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename... Args&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classxy_1_1_entity.html">Entity</a> * Scene::addEntity </td>
+          <td class="memname">void xy::Scene::addDirector </td>
           <td>(</td>
-          <td class="paramtype">Entity::Ptr &amp;&#160;</td>
-          <td class="paramname"><em>entity</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classxy_1_1_scene.html#a0bf10e5ead2c4248f2f3e2c4536a5240">Layer</a>&#160;</td>
-          <td class="paramname"><em>layer</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Moves an entity into the scene on to the given layer. </p>
-<dl class="section return"><dt>Returns</dt><dd>Pointer to the entity once it has been added</dd></dl>
-<p>Once an entity is added to the scene the scene takes ownership, invalidating the original entity pointer. The returned pointer can be used to continue to modify the entity but care should be taken as deleted entities will lead to dangling pointers which are kept alive for too long. </p>
-
-</div>
-</div>
-<a class="anchor" id="a6a5e4db75de38b123d77213f2f1eb1f7"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Scene::addPostProcess </td>
-          <td>(</td>
-          <td class="paramtype">PostProcess::Ptr &amp;&#160;</td>
-          <td class="paramname"><em>pp</em></td><td>)</td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Adds a post effect to the end of the render chain. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classxy_1_1_post_process.html" title="Abstract base class for full screen post processes. ">PostProcess</a> </dd></dl>
+<p>Adds a <a class="el" href="classxy_1_1_director.html" title="Abstract Base Class for Directors. A director is an &#39;observer&#39; of the scene to which it belongs...">Director</a> to the <a class="el" href="classxy_1_1_scene.html" title="Encapsulates a single scene. The scene class contains everything needed to create a scene graph by en...">Scene</a>. Directors are used to control in game entities and events through observed messages and events. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classxy_1_1_director.html" title="Abstract Base Class for Directors. A director is an &#39;observer&#39; of the scene to which it belongs...">Director</a> </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a6c35d9e9eef826d02fa9ca1c978614b1"></a>
+<a class="anchor" id="a41645ce2be880d2000b62c300b921156"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename... Args&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void Scene::drawDebug </td>
+          <td class="memname">T &amp; xy::Scene::addSystem </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>draw</em></td><td>)</td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>enables output debug information when <em>DEBUG</em> is defined </p>
-<p><a class="el" href="classxy_1_1_scene.html" title="Scene class. ">Scene</a> debug info includes drawing the AABB of scene entities as well as partition boundries of the <a class="el" href="classxy_1_1_quad_tree.html" title="Quad Tree spatial partitioning class. ">QuadTree</a> </p>
+<p>Creates a new system of the given type. All systems need to be fully created before adding entities, else entities will not be correctly processed by desired systems. </p>
+<dl class="section return"><dt>Returns</dt><dd>Reference to newly created system (or existing system if it has been previously created) </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a28c3f8096f7c99e5691b8355b31ccf4f"></a>
+<a class="anchor" id="a93c19f2ea3d328128683f5bc41ae98f5"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classxy_1_1_entity.html">Entity</a> * Scene::findEntity </td>
+          <td class="memname"><a class="el" href="classxy_1_1_entity.html">Entity</a> xy::Scene::setActiveCamera </td>
           <td>(</td>
-          <td class="paramtype">sf::Uint64&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classxy_1_1_entity.html">Entity</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Find an entity with the given unique ID. </p>
-<dl class="section return"><dt>Returns</dt><dd>Pointer to the entity if it exists within the scene, else returns nullptr </dd></dl>
+<p>Sets the active camera used when rendering. This camera will be used to render the entire visible scene. A single scene may also be rendered multiple times with different cameras, for example when rendering split screen. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classxy_1_1_entity.html" title="Entity class - Basically just an ID. The ID is generated as a combination of the index in the memory ...">Entity</a> used as the previous camera for the scene </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="af0fa7e3ad043c4f08a3dfd8effc6bf5e"></a>
+<a class="anchor" id="a5f097bec92e796e52a571faa188593eb"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; <a class="el" href="classxy_1_1_point_light.html">PointLight</a> * &gt; Scene::getVisibleLights </td>
+          <td class="memname"><a class="el" href="classxy_1_1_entity.html">Entity</a> xy::Scene::setActiveListener </td>
           <td>(</td>
-          <td class="paramtype">const sf::FloatRect &amp;&#160;</td>
-          <td class="paramname"><em>area</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns a list of point lights found in the queried area. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">FloatRect</td><td>Area in world coordinates in which to retrieve visible lights </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>vector of pointers to lights contained in the queried area </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a7dd6e0baff17a048abaa2241cd962d66"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Scene::handleMessage </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classxy_1_1_message.html">Message</a> &amp;&#160;</td>
-          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classxy_1_1_entity.html">Entity</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classxy_1_1_scene.html" title="Scene class. ">Scene</a> message handler. </p>
-<p>This should be called once a frame with any messages received from the message bus. This forwards all messages to entities and components within the scene </p>
+<p>Sets the active listener when processing audio. Usually this will be on the same entity as the active camera, although effects such as remote monitoring can be used by setting a different listener. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classxy_1_1_entity.html" title="Entity class - Basically just an ID. The ID is generated as a combination of the index in the memory ...">Entity</a> containing the component used as the previous active listener. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a2fe40396b226fd65a06ae57410aea7f0"></a>
+<a class="anchor" id="aa768d7e5c5cf9898c69dd8c686bb1653"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; <a class="el" href="classxy_1_1_quad_tree_component.html">QuadTreeComponent</a> * &gt; Scene::queryQuadTree </td>
-          <td>(</td>
-          <td class="paramtype">const sf::FloatRect &amp;&#160;</td>
-          <td class="paramname"><em>area</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Queries the scene's quad tree. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">FloatRect</td><td>and area in world coordinates to query the quad tree </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>vector of pointers to <a class="el" href="classxy_1_1_quad_tree.html" title="Quad Tree spatial partitioning class. ">QuadTree</a> components found in the queried area</dd></dl>
-<p>The components in the returned vector can be used to determine entities which fall in a given area that can be used in collision testing or render culling for example. For an entity to be considered it must have a <a class="el" href="classxy_1_1_quad_tree_component.html" title="QuadTree Component. ">QuadTreeComponent</a> attached. </p>
-
-</div>
-</div>
-<a class="anchor" id="a102f5cc73730cb319e31401a8a1415ae"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Scene::sendCommand </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structxy_1_1_command.html">Command</a> &amp;&#160;</td>
-          <td class="paramname"><em>cmd</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sends a command to the scene graph. </p>
-<p>Commands can be used to update a specific entity or group of entities. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="structxy_1_1_command.html" title="Command struct. ">Command</a> </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="adbebbd72555b27960e9ec531d7e8eb98"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Scene::setClearColour </td>
-          <td>(</td>
-          <td class="paramtype">const sf::Color &amp;&#160;</td>
-          <td class="paramname"><em>colour</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set the clear colour of the scene's default camera. </p>
-<p>This only affects buffers used in post process effects, else it has no effect </p>
-
-</div>
-</div>
-<a class="anchor" id="a55606eb02626fdfdb107031aa00ff0b7"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Scene::update </td>
+          <td class="memname">void xy::Scene::update </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>dt</em></td><td>)</td>
@@ -404,8 +274,13 @@ static sf::Transform&#160;</td><td class="memItemRight" valign="bottom"><a class
       </table>
 </div><div class="memdoc">
 
-<p>Updates the entire scene with the current frame time. </p>
-<p>This should be called once per frame to make sure all entities and components belonging to the scene are updated </p>
+<p>Executes one simulations step. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dt</td><td>The time elapsed since the last simulation step </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

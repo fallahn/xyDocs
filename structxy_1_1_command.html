@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xygine: xy::Command Struct Reference</title>
+<title>xyginext: xy::Command Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,10 +18,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">xygine
-   &#160;<span id="projectnumber">0.1.0</span>
+   <div id="projectname">xyginext
+   &#160;<span id="projectnumber">0.2.0</span>
    </div>
-   <div id="projectbrief">SFML Based 2D Game Creation Framework</div>
+   <div id="projectbrief">Second generation of xygine game creation framework</div>
   </td>
  </tr>
  </tbody>
@@ -52,7 +52,6 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="structxy_1_1_command-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -60,35 +59,22 @@
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="structxy_1_1_command.html" title="Command struct. ">Command</a> struct.  
+<p><a class="el" href="structxy_1_1_command.html" title="Command struct. Each command encapsulates a mask of target IDs as well as a command in the form of a ...">Command</a> struct. Each command encapsulates a mask of target IDs as well as a command in the form of a std::function.  
  <a href="structxy_1_1_command.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="_command_8hpp_source.html">Command.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_command_system_8hpp_source.html">CommandSystem.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a143ebf385a1b0cb0519b09c0e41fdab6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a143ebf385a1b0cb0519b09c0e41fdab6"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>None</b> = 0, 
-<b>All</b> = (1 &lt;&lt; 31)
- }<tr class="separator:a143ebf385a1b0cb0519b09c0e41fdab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</td></tr>
-<tr class="memitem:a1c749cbacc74a2e3dee9ad152ef082ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c749cbacc74a2e3dee9ad152ef082ae"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Category</b> = sf::Int32</td></tr>
-<tr class="separator:a1c749cbacc74a2e3dee9ad152ef082ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:adcbdcd5923112cbaac076a0646713da4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adcbdcd5923112cbaac076a0646713da4"></a>
-std::function&lt; void(<a class="el" href="classxy_1_1_entity.html">Entity</a> &amp;, float)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>action</b></td></tr>
-<tr class="separator:adcbdcd5923112cbaac076a0646713da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e999a6a2fae0c1b0b507666818c4fda"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e999a6a2fae0c1b0b507666818c4fda"></a>
-sf::Uint64&#160;</td><td class="memItemRight" valign="bottom"><b>entityID</b> = 0u</td></tr>
-<tr class="separator:a1e999a6a2fae0c1b0b507666818c4fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41056acef23e6f55e8978c06f13737b5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41056acef23e6f55e8978c06f13737b5"></a>
-Category&#160;</td><td class="memItemRight" valign="bottom"><b>category</b> = None</td></tr>
-<tr class="separator:a41056acef23e6f55e8978c06f13737b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a59c69cbca2b04c9bd11e73f55710f4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a59c69cbca2b04c9bd11e73f55710f4"></a>
+sf::Uint32&#160;</td><td class="memItemRight" valign="bottom"><b>targetFlags</b> = 0</td></tr>
+<tr class="separator:a7a59c69cbca2b04c9bd11e73f55710f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98fefccc925792b8fb66e29887373a53"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98fefccc925792b8fb66e29887373a53"></a>
+std::function&lt; void(<a class="el" href="classxy_1_1_entity.html">Entity</a>, float)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>action</b></td></tr>
+<tr class="separator:a98fefccc925792b8fb66e29887373a53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="structxy_1_1_command.html" title="Command struct. ">Command</a> struct. </p>
+<div class="textblock"><p><a class="el" href="structxy_1_1_command.html" title="Command struct. Each command encapsulates a mask of target IDs as well as a command in the form of a ...">Command</a> struct. Each command encapsulates a mask of target IDs as well as a command in the form of a std::function. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

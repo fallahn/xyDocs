@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xygine: xy::QuadTree Class Reference</title>
+<title>xyginext: xy::QuadTree Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,10 +18,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">xygine
-   &#160;<span id="projectnumber">0.1.0</span>
+   <div id="projectname">xyginext
+   &#160;<span id="projectnumber">0.2.0</span>
    </div>
-   <div id="projectbrief">SFML Based 2D Game Creation Framework</div>
+   <div id="projectbrief">Second generation of xygine game creation framework</div>
   </td>
  </tr>
  </tbody>
@@ -53,13 +53,14 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classxy_1_1_quad_tree-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">xy::QuadTree Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Quad Tree spatial partitioning class.  
+<p>Partition system for entities with <a class="el" href="classxy_1_1_quad_tree_item.html" title="Entities with a QuadTreeItem and Transform component will be actively partitioned an in QuadTree syst...">QuadTreeItem</a> components. Entities are sorted in a tree hierarchy which can be queried with a given area to return a set of entities which are contained or intersect said area.  
  <a href="classxy_1_1_quad_tree.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_quad_tree_8hpp_source.html">QuadTree.hpp</a>&gt;</code></p>
@@ -69,55 +70,162 @@ Inheritance diagram for xy::QuadTree:</div>
  <div class="center">
   <img src="classxy_1_1_quad_tree.png" usemap="#xy::QuadTree_map" alt=""/>
   <map id="xy::QuadTree_map" name="xy::QuadTree_map">
+<area href="classxy_1_1_system.html" title="Base class for systems. Systems should all derive from this base class, and instanciated before any e..." alt="xy::System" shape="rect" coords="0,0,88,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac2a9dd95c9733236d438767737a33af3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2a9dd95c9733236d438767737a33af3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>QuadTree</b> (const <a class="el" href="classxy_1_1_quad_tree.html">QuadTree</a> &amp;)=delete</td></tr>
-<tr class="separator:ac2a9dd95c9733236d438767737a33af3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4c441c3f930239f33ec4a941e7abae2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae4c441c3f930239f33ec4a941e7abae2"></a>
-<a class="el" href="classxy_1_1_quad_tree.html">QuadTree</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classxy_1_1_quad_tree.html">QuadTree</a> &amp;)=delete</td></tr>
-<tr class="separator:ae4c441c3f930239f33ec4a941e7abae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2fec051cd97c1954c7415e4010b08d1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa2fec051cd97c1954c7415e4010b08d1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>create</b> (const sf::FloatRect &amp;)</td></tr>
-<tr class="separator:aa2fec051cd97c1954c7415e4010b08d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b42ba3ab37fa7460a028e256946ebde"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b42ba3ab37fa7460a028e256946ebde"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>created</b> () const </td></tr>
-<tr class="separator:a2b42ba3ab37fa7460a028e256946ebde"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6a0cc41b51bfbdb524a589ba5f58afe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af6a0cc41b51bfbdb524a589ba5f58afe"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr>
-<tr class="separator:af6a0cc41b51bfbdb524a589ba5f58afe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40028ebaa7b7b4907806220a29816ecf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a40028ebaa7b7b4907806220a29816ecf"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>add</b> (<a class="el" href="classxy_1_1_quad_tree_component.html">QuadTreeComponent</a> *)</td></tr>
-<tr class="separator:a40028ebaa7b7b4907806220a29816ecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a760f9a6550666648921ea802b94c0bda"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a760f9a6550666648921ea802b94c0bda"></a>
-const sf::FloatRect &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getRootArea</b> () const </td></tr>
-<tr class="separator:a760f9a6550666648921ea802b94c0bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade6856f1cbdc53a707380fad4e73ded3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade6856f1cbdc53a707380fad4e73ded3"></a>
-std::vector&lt; <a class="el" href="classxy_1_1_quad_tree_component.html">QuadTreeComponent</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>queryArea</b> (const sf::FloatRect &amp;) const </td></tr>
-<tr class="separator:ade6856f1cbdc53a707380fad4e73ded3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a628ac0f7ad8eaed3b3161fb084e8b48d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a628ac0f7ad8eaed3b3161fb084e8b48d"></a>
-QuadTreeNode::Set &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getOutsideRootSet</b> ()</td></tr>
-<tr class="separator:a628ac0f7ad8eaed3b3161fb084e8b48d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac78dc6c560851d12425aad1470828c65"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac78dc6c560851d12425aad1470828c65"></a>
-sf::Int32&#160;</td><td class="memItemRight" valign="bottom"><b>minNodeComponents</b> () const </td></tr>
-<tr class="separator:ac78dc6c560851d12425aad1470828c65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a976e6d6f87fea52ad65982cc76501bc8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a976e6d6f87fea52ad65982cc76501bc8"></a>
-sf::Uint32&#160;</td><td class="memItemRight" valign="bottom"><b>maxNodeComponents</b> () const </td></tr>
-<tr class="separator:a976e6d6f87fea52ad65982cc76501bc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38ddf95b73274a023228a64612b0189a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a38ddf95b73274a023228a64612b0189a"></a>
-sf::Int32&#160;</td><td class="memItemRight" valign="bottom"><b>maxLevels</b> () const </td></tr>
-<tr class="separator:a38ddf95b73274a023228a64612b0189a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf637351aec9c987d447c9f3f217b002"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf637351aec9c987d447c9f3f217b002"></a>
-std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>getComponentCount</b> () const </td></tr>
-<tr class="separator:aaf637351aec9c987d447c9f3f217b002"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f7144d8cc9187bca32e516e7d079bda"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_quad_tree.html#a6f7144d8cc9187bca32e516e7d079bda">QuadTree</a> (<a class="el" href="classxy_1_1_message_bus.html">xy::MessageBus</a> &amp;, sf::FloatRect rootArea)</td></tr>
+<tr class="memdesc:a6f7144d8cc9187bca32e516e7d079bda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a6f7144d8cc9187bca32e516e7d079bda">More...</a><br /></td></tr>
+<tr class="separator:a6f7144d8cc9187bca32e516e7d079bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bec5830ffab2bad34bd0861d59b4a1d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9bec5830ffab2bad34bd0861d59b4a1d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_quad_tree.html#a9bec5830ffab2bad34bd0861d59b4a1d">process</a> (float) override</td></tr>
+<tr class="memdesc:a9bec5830ffab2bad34bd0861d59b4a1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this for system specific processing to entities. <br /></td></tr>
+<tr class="separator:a9bec5830ffab2bad34bd0861d59b4a1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed3a9d9d7fe7e81faa056d6ff911d39a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aed3a9d9d7fe7e81faa056d6ff911d39a"></a>
+std::vector&lt; <a class="el" href="classxy_1_1_entity.html">xy::Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_quad_tree.html#aed3a9d9d7fe7e81faa056d6ff911d39a">queryArea</a> (sf::FloatRect area) const </td></tr>
+<tr class="memdesc:aed3a9d9d7fe7e81faa056d6ff911d39a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queries the <a class="el" href="classxy_1_1_quad_tree.html" title="Partition system for entities with QuadTreeItem components. Entities are sorted in a tree hierarchy w...">QuadTree</a> with the given area. Returns a vector of entities whose QuadTreeItems are contained in or intersect the given area. <br /></td></tr>
+<tr class="separator:aed3a9d9d7fe7e81faa056d6ff911d39a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73e519083ce2942a21bd96d23144f40b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73e519083ce2942a21bd96d23144f40b"></a>
+sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_quad_tree.html#a73e519083ce2942a21bd96d23144f40b">getRootArea</a> () const </td></tr>
+<tr class="memdesc:a73e519083ce2942a21bd96d23144f40b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the area with which the <a class="el" href="classxy_1_1_quad_tree.html" title="Partition system for entities with QuadTreeItem components. Entities are sorted in a tree hierarchy w...">QuadTree</a> was created. <br /></td></tr>
+<tr class="separator:a73e519083ce2942a21bd96d23144f40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab46e9916da84550c51a34df609e64d7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab46e9916da84550c51a34df609e64d7"></a>
+const std::vector&lt; <a class="el" href="classxy_1_1_entity.html">xy::Entity</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_quad_tree.html#aab46e9916da84550c51a34df609e64d7">getOutsideRootEnts</a> () const </td></tr>
+<tr class="memdesc:aab46e9916da84550c51a34df609e64d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector of any entities which fall outside of the root area. <br /></td></tr>
+<tr class="separator:aab46e9916da84550c51a34df609e64d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeda665bf83442cce257e5b94d9131b3c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeda665bf83442cce257e5b94d9131b3c"></a>
+std::vector&lt; <a class="el" href="classxy_1_1_entity.html">xy::Entity</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getOutsideRootEnts</b> ()</td></tr>
+<tr class="separator:aeda665bf83442cce257e5b94d9131b3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a824db07e96e0971c5bd4e1f3dfa6775c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a824db07e96e0971c5bd4e1f3dfa6775c"></a>
+std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_quad_tree.html#a824db07e96e0971c5bd4e1f3dfa6775c">getEntityCount</a> () const </td></tr>
+<tr class="memdesc:a824db07e96e0971c5bd4e1f3dfa6775c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total number of entities which fall within the root area. <br /></td></tr>
+<tr class="separator:a824db07e96e0971c5bd4e1f3dfa6775c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classxy_1_1_system"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classxy_1_1_system')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classxy_1_1_system.html">xy::System</a></td></tr>
+<tr class="memitem:aa17bed267803af1928e2e8d0a45be700 inherit pub_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa17bed267803af1928e2e8d0a45be700"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#aa17bed267803af1928e2e8d0a45be700">System</a> (<a class="el" href="classxy_1_1_message_bus.html">MessageBus</a> &amp;mb, UniqueType t)</td></tr>
+<tr class="memdesc:aa17bed267803af1928e2e8d0a45be700 inherit pub_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. Pass in a reference to the concrete implementation to generate a unique type ID for this system. <br /></td></tr>
+<tr class="separator:aa17bed267803af1928e2e8d0a45be700 inherit pub_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99504ede1e0567b27d608e4897c688b4 inherit pub_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a99504ede1e0567b27d608e4897c688b4"></a>
+UniqueType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#a99504ede1e0567b27d608e4897c688b4">getType</a> () const </td></tr>
+<tr class="memdesc:a99504ede1e0567b27d608e4897c688b4 inherit pub_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the unique type ID of the system. <br /></td></tr>
+<tr class="separator:a99504ede1e0567b27d608e4897c688b4 inherit pub_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a913283c245019d2e7fb538d4223623c7 inherit pub_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a913283c245019d2e7fb538d4223623c7"></a>
+std::vector&lt; <a class="el" href="classxy_1_1_entity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#a913283c245019d2e7fb538d4223623c7">getEntities</a> () const </td></tr>
+<tr class="memdesc:a913283c245019d2e7fb538d4223623c7 inherit pub_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of entities that this system is currently interested in. <br /></td></tr>
+<tr class="separator:a913283c245019d2e7fb538d4223623c7 inherit pub_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50e854adba9cfc2a4d5ecac8f162d4b0 inherit pub_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50e854adba9cfc2a4d5ecac8f162d4b0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#a50e854adba9cfc2a4d5ecac8f162d4b0">addEntity</a> (<a class="el" href="classxy_1_1_entity.html">Entity</a>)</td></tr>
+<tr class="memdesc:a50e854adba9cfc2a4d5ecac8f162d4b0 inherit pub_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an entity to the list to process. <br /></td></tr>
+<tr class="separator:a50e854adba9cfc2a4d5ecac8f162d4b0 inherit pub_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33781578e384b522dc8bd2125bb0174f inherit pub_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a33781578e384b522dc8bd2125bb0174f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#a33781578e384b522dc8bd2125bb0174f">removeEntity</a> (<a class="el" href="classxy_1_1_entity.html">Entity</a>)</td></tr>
+<tr class="memdesc:a33781578e384b522dc8bd2125bb0174f inherit pub_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes an entity from the list to process. <br /></td></tr>
+<tr class="separator:a33781578e384b522dc8bd2125bb0174f inherit pub_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadfce231fab86ef5f1d96bcb1c50b16f inherit pub_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aadfce231fab86ef5f1d96bcb1c50b16f"></a>
+const ComponentMask &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#aadfce231fab86ef5f1d96bcb1c50b16f">getComponentMask</a> () const </td></tr>
+<tr class="memdesc:aadfce231fab86ef5f1d96bcb1c50b16f inherit pub_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the component mask used to mask entities with corresponding components for this system to process. <br /></td></tr>
+<tr class="separator:aadfce231fab86ef5f1d96bcb1c50b16f inherit pub_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dcd580be2c87a7a77e5699cec24ca46 inherit pub_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1dcd580be2c87a7a77e5699cec24ca46"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#a1dcd580be2c87a7a77e5699cec24ca46">handleMessage</a> (const <a class="el" href="classxy_1_1_message.html">Message</a> &amp;)</td></tr>
+<tr class="memdesc:a1dcd580be2c87a7a77e5699cec24ca46 inherit pub_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to process any incoming system messages. <br /></td></tr>
+<tr class="separator:a1dcd580be2c87a7a77e5699cec24ca46 inherit pub_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69d9358bee5a6bbf68a23176aacbdad9 inherit pub_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a69d9358bee5a6bbf68a23176aacbdad9"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#a69d9358bee5a6bbf68a23176aacbdad9">isActive</a> () const </td></tr>
+<tr class="memdesc:a69d9358bee5a6bbf68a23176aacbdad9 inherit pub_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the system is currently active. Systems can be activeated and deactivated with <a class="el" href="classxy_1_1_scene.html#ab491978db13ed6bd0673a6137309570e" title="Sets the given system type active or inactive in the scene. Inactive systems are moved from the proce...">Scene::setSystemActive()</a> <br /></td></tr>
+<tr class="separator:a69d9358bee5a6bbf68a23176aacbdad9 inherit pub_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07c94f83c2346844be4e568c9d78823b inherit pub_methods_classxy_1_1_system"><td class="memTemplParams" colspan="2"><a class="anchor" id="a07c94f83c2346844be4e568c9d78823b"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a07c94f83c2346844be4e568c9d78823b inherit pub_methods_classxy_1_1_system"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>requireComponent</b> ()</td></tr>
+<tr class="separator:a07c94f83c2346844be4e568c9d78823b inherit pub_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3f31570adfc27c0efa51677b4b7ff59 inherit pub_methods_classxy_1_1_system"><td class="memTemplParams" colspan="2"><a class="anchor" id="ac3f31570adfc27c0efa51677b4b7ff59"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ac3f31570adfc27c0efa51677b4b7ff59 inherit pub_methods_classxy_1_1_system"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>postMessage</b> (Message::ID id)</td></tr>
+<tr class="separator:ac3f31570adfc27c0efa51677b4b7ff59 inherit pub_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a2fa30d8812c405e1e9f1546d6ee58e36"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2fa30d8812c405e1e9f1546d6ee58e36"></a>
+static constexpr sf::Int32&#160;</td><td class="memItemRight" valign="bottom"><b>MinNodeEntities</b> = 3</td></tr>
+<tr class="separator:a2fa30d8812c405e1e9f1546d6ee58e36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63bfa93a5c10d3a11d139ea1822e7ddb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a63bfa93a5c10d3a11d139ea1822e7ddb"></a>
+static constexpr std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>MaxNodeEntities</b> = 6u</td></tr>
+<tr class="separator:a63bfa93a5c10d3a11d139ea1822e7ddb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe9f17f03c3e96154d8272711f0fd1c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe9f17f03c3e96154d8272711f0fd1c8"></a>
+static constexpr sf::Int32&#160;</td><td class="memItemRight" valign="bottom"><b>MaxLevels</b> = 40u</td></tr>
+<tr class="separator:abe9f17f03c3e96154d8272711f0fd1c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_classxy_1_1_system"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classxy_1_1_system')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classxy_1_1_system.html">xy::System</a></td></tr>
+<tr class="memitem:a0a961a2047dcc76a9880cc706b0a259c inherit pub_types_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0a961a2047dcc76a9880cc706b0a259c"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>Ptr</b> = std::unique_ptr&lt; <a class="el" href="classxy_1_1_system.html">System</a> &gt;</td></tr>
+<tr class="separator:a0a961a2047dcc76a9880cc706b0a259c inherit pub_types_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classxy_1_1_system"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classxy_1_1_system')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classxy_1_1_system.html">xy::System</a></td></tr>
+<tr class="memitem:a07c94f83c2346844be4e568c9d78823b inherit pro_methods_classxy_1_1_system"><td class="memTemplParams" colspan="2"><a class="anchor" id="a07c94f83c2346844be4e568c9d78823b"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a07c94f83c2346844be4e568c9d78823b inherit pro_methods_classxy_1_1_system"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#a07c94f83c2346844be4e568c9d78823b">requireComponent</a> ()</td></tr>
+<tr class="memdesc:a07c94f83c2346844be4e568c9d78823b inherit pro_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a component type to the list of components required by the system for it to be interested in a particular entity. <br /></td></tr>
+<tr class="separator:a07c94f83c2346844be4e568c9d78823b inherit pro_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f4d79c866525d4138c8c154d82724a5 inherit pro_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f4d79c866525d4138c8c154d82724a5"></a>
+std::vector&lt; <a class="el" href="classxy_1_1_entity.html">Entity</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getEntities</b> ()</td></tr>
+<tr class="separator:a3f4d79c866525d4138c8c154d82724a5 inherit pro_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36840728ac384a87835a5dedae262c91 inherit pro_methods_classxy_1_1_system"><td class="memTemplParams" colspan="2"><a class="anchor" id="a36840728ac384a87835a5dedae262c91"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a36840728ac384a87835a5dedae262c91 inherit pro_methods_classxy_1_1_system"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#a36840728ac384a87835a5dedae262c91">postMessage</a> (Message::ID id)</td></tr>
+<tr class="memdesc:a36840728ac384a87835a5dedae262c91 inherit pro_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posts a message on the system wide message bus. <br /></td></tr>
+<tr class="separator:a36840728ac384a87835a5dedae262c91 inherit pro_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f23b9c54f28cbd0a5069ebe27bdcfb7 inherit pro_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f23b9c54f28cbd0a5069ebe27bdcfb7"></a>
+<a class="el" href="classxy_1_1_message_bus.html">MessageBus</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#a4f23b9c54f28cbd0a5069ebe27bdcfb7">getMessageBus</a> ()</td></tr>
+<tr class="memdesc:a4f23b9c54f28cbd0a5069ebe27bdcfb7 inherit pro_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the <a class="el" href="classxy_1_1_message_bus.html" title="System wide message bus for custom event messaging. ">MessageBus</a>. <br /></td></tr>
+<tr class="separator:a4f23b9c54f28cbd0a5069ebe27bdcfb7 inherit pro_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab240f01a19232b2c86d3a629c2002a33 inherit pro_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab240f01a19232b2c86d3a629c2002a33"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setScene</b> (<a class="el" href="classxy_1_1_scene.html">Scene</a> &amp;)</td></tr>
+<tr class="separator:ab240f01a19232b2c86d3a629c2002a33 inherit pro_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a353fe5566f012825715cf699151cc4ca inherit pro_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a353fe5566f012825715cf699151cc4ca"></a>
+<a class="el" href="classxy_1_1_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#a353fe5566f012825715cf699151cc4ca">getScene</a> ()</td></tr>
+<tr class="memdesc:a353fe5566f012825715cf699151cc4ca inherit pro_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the scene to which this system belongs. <br /></td></tr>
+<tr class="separator:a353fe5566f012825715cf699151cc4ca inherit pro_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Quad Tree spatial partitioning class. </p>
-<p>The quad tree is used to partition the world for faster collision querying and culling of renderables. xygines <a class="el" href="classxy_1_1_quad_tree.html" title="Quad Tree spatial partitioning class. ">QuadTree</a> instance is a member of the <a class="el" href="classxy_1_1_scene.html" title="Scene class. ">Scene</a> class, and interaction should be done via the scene interface </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classxy_1_1_scene.html" title="Scene class. ">Scene</a> </dd></dl>
-</div></div><!-- contents -->
+<div class="textblock"><p>Partition system for entities with <a class="el" href="classxy_1_1_quad_tree_item.html" title="Entities with a QuadTreeItem and Transform component will be actively partitioned an in QuadTree syst...">QuadTreeItem</a> components. Entities are sorted in a tree hierarchy which can be queried with a given area to return a set of entities which are contained or intersect said area. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a6f7144d8cc9187bca32e516e7d079bda"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">xy::QuadTree::QuadTree </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classxy_1_1_message_bus.html">xy::MessageBus</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sf::FloatRect&#160;</td>
+          <td class="paramname"><em>rootArea</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rootArea</td><td>Area in world coordinates for the root node of the tree. All subsequent nodes are contained within this area </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xygine: xy::FileSystem Class Reference</title>
+<title>xyginext: xy::FileSystem Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,10 +18,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">xygine
-   &#160;<span id="projectnumber">0.1.0</span>
+   <div id="projectname">xyginext
+   &#160;<span id="projectnumber">0.2.0</span>
    </div>
-   <div id="projectbrief">SFML Based 2D Game Creation Framework</div>
+   <div id="projectbrief">Second generation of xygine game creation framework</div>
   </td>
  </tr>
  </tbody>
@@ -59,55 +59,58 @@
 </div><!--header-->
 <div class="contents">
 
-<p>Utilities for reading files from the current file system.  
+<p>Utilities for manipulating the current file system.  
  <a href="classxy_1_1_file_system.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_file_system_8hpp_source.html">FileSystem.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a7944aac8b7b24edaa2ae9d2abf7db7fc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7944aac8b7b24edaa2ae9d2abf7db7fc"></a>
-static std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_file_system.html#a7944aac8b7b24edaa2ae9d2abf7db7fc">listFiles</a> (std::string path)</td></tr>
-<tr class="memdesc:a7944aac8b7b24edaa2ae9d2abf7db7fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lists all the files in the given directory. <br /></td></tr>
-<tr class="separator:a7944aac8b7b24edaa2ae9d2abf7db7fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7970852d92e9504b4c8f09327bad8223"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7970852d92e9504b4c8f09327bad8223"></a>
-static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_file_system.html#a7970852d92e9504b4c8f09327bad8223">getFileExtension</a> (const std::string &amp;path)</td></tr>
-<tr class="memdesc:a7970852d92e9504b4c8f09327bad8223"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to return a string containing the file extension of a given path, including the period (.) <br /></td></tr>
-<tr class="separator:a7970852d92e9504b4c8f09327bad8223"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9734cc476914f348e4d32af76738f5d9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9734cc476914f348e4d32af76738f5d9"></a>
-static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_file_system.html#a9734cc476914f348e4d32af76738f5d9">getFileName</a> (const std::string &amp;path)</td></tr>
-<tr class="memdesc:a9734cc476914f348e4d32af76738f5d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to return the name of a file at the end of a given file path. <br /></td></tr>
-<tr class="separator:a9734cc476914f348e4d32af76738f5d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ec84397c26ba7c45d9680d350b71559"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5ec84397c26ba7c45d9680d350b71559"></a>
-static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_file_system.html#a5ec84397c26ba7c45d9680d350b71559">getFilePath</a> (const std::string &amp;path)</td></tr>
-<tr class="memdesc:a5ec84397c26ba7c45d9680d350b71559"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to return the path of a given filepath without the file name, including trailing separator char. <br /></td></tr>
-<tr class="separator:a5ec84397c26ba7c45d9680d350b71559"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a895c95066abd0eeabc61b7027a46c54a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a895c95066abd0eeabc61b7027a46c54a"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_file_system.html#a895c95066abd0eeabc61b7027a46c54a">fileExists</a> (const std::string &amp;)</td></tr>
-<tr class="memdesc:a895c95066abd0eeabc61b7027a46c54a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if a file exists with the name at the given path. <br /></td></tr>
-<tr class="separator:a895c95066abd0eeabc61b7027a46c54a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fa2a8f7ba792f9a72e1e09d738e27b8"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_file_system.html#a6fa2a8f7ba792f9a72e1e09d738e27b8">createDirectory</a> (const std::string &amp;)</td></tr>
-<tr class="memdesc:a6fa2a8f7ba792f9a72e1e09d738e27b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tries to create a directory relative to the executable or via an absolute path.  <a href="#a6fa2a8f7ba792f9a72e1e09d738e27b8">More...</a><br /></td></tr>
-<tr class="separator:a6fa2a8f7ba792f9a72e1e09d738e27b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba9a3acafc25588d81b783ca6b0e61d9"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_file_system.html#aba9a3acafc25588d81b783ca6b0e61d9">directoryExists</a> (const std::string &amp;)</td></tr>
-<tr class="memdesc:aba9a3acafc25588d81b783ca6b0e61d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to determine if a directory at the given path exists.  <a href="#aba9a3acafc25588d81b783ca6b0e61d9">More...</a><br /></td></tr>
-<tr class="separator:aba9a3acafc25588d81b783ca6b0e61d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adebb725220af0456e6d4b842de67daab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adebb725220af0456e6d4b842de67daab"></a>
-static std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_file_system.html#adebb725220af0456e6d4b842de67daab">listDirectories</a> (const std::string &amp;)</td></tr>
-<tr class="memdesc:adebb725220af0456e6d4b842de67daab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector of strings containing the names of directories found in the given path. <br /></td></tr>
-<tr class="separator:adebb725220af0456e6d4b842de67daab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d36499ae805c15589b96cb316d7e762"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d36499ae805c15589b96cb316d7e762"></a>
-static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_file_system.html#a6d36499ae805c15589b96cb316d7e762">getCurrentDirectory</a> ()</td></tr>
-<tr class="memdesc:a6d36499ae805c15589b96cb316d7e762"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the absolute path of the current working directory. <br /></td></tr>
-<tr class="separator:a6d36499ae805c15589b96cb316d7e762"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc2d5175601558bd0a1e9e4968bfb49c"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_file_system.html#acc2d5175601558bd0a1e9e4968bfb49c">getRelativePath</a> (std::string path, const std::string &amp;root)</td></tr>
-<tr class="memdesc:acc2d5175601558bd0a1e9e4968bfb49c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to convert the given absolute path to a path relative to the given root directory.  <a href="#acc2d5175601558bd0a1e9e4968bfb49c">More...</a><br /></td></tr>
-<tr class="separator:acc2d5175601558bd0a1e9e4968bfb49c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab914655f7621bf4e1cfac80cdbafafc6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab914655f7621bf4e1cfac80cdbafafc6"></a>
+static std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_file_system.html#ab914655f7621bf4e1cfac80cdbafafc6">listFiles</a> (std::string path)</td></tr>
+<tr class="memdesc:ab914655f7621bf4e1cfac80cdbafafc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lists all the files in the given directory. <br /></td></tr>
+<tr class="separator:ab914655f7621bf4e1cfac80cdbafafc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c311f2a7223dbe5e8414a5d1203a9a0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6c311f2a7223dbe5e8414a5d1203a9a0"></a>
+static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_file_system.html#a6c311f2a7223dbe5e8414a5d1203a9a0">getFileExtension</a> (const std::string &amp;path)</td></tr>
+<tr class="memdesc:a6c311f2a7223dbe5e8414a5d1203a9a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to return a string containing the file extension of a given path, including the period (.) <br /></td></tr>
+<tr class="separator:a6c311f2a7223dbe5e8414a5d1203a9a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca0f04e55fddc564f521d49237e7bb83"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca0f04e55fddc564f521d49237e7bb83"></a>
+static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_file_system.html#aca0f04e55fddc564f521d49237e7bb83">getFileName</a> (const std::string &amp;path)</td></tr>
+<tr class="memdesc:aca0f04e55fddc564f521d49237e7bb83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to return the name of a file at the end of a given file path. <br /></td></tr>
+<tr class="separator:aca0f04e55fddc564f521d49237e7bb83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74ce359e53eac6a47c22cd4351a814ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74ce359e53eac6a47c22cd4351a814ca"></a>
+static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_file_system.html#a74ce359e53eac6a47c22cd4351a814ca">getFilePath</a> (const std::string &amp;path)</td></tr>
+<tr class="memdesc:a74ce359e53eac6a47c22cd4351a814ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to return the path of a given filepath without the file name, including trailing separator char. <br /></td></tr>
+<tr class="separator:a74ce359e53eac6a47c22cd4351a814ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b95be24cdb5c9b21a57b4a4094625a7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b95be24cdb5c9b21a57b4a4094625a7"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_file_system.html#a6b95be24cdb5c9b21a57b4a4094625a7">fileExists</a> (const std::string &amp;)</td></tr>
+<tr class="memdesc:a6b95be24cdb5c9b21a57b4a4094625a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if a file exists with the name at the given path. <br /></td></tr>
+<tr class="separator:a6b95be24cdb5c9b21a57b4a4094625a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a975c6fb536ef3a158b59a57eb4bc3079"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_file_system.html#a975c6fb536ef3a158b59a57eb4bc3079">createDirectory</a> (const std::string &amp;)</td></tr>
+<tr class="memdesc:a975c6fb536ef3a158b59a57eb4bc3079"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tries to create a directory relative to the executable or via an absolute path.  <a href="#a975c6fb536ef3a158b59a57eb4bc3079">More...</a><br /></td></tr>
+<tr class="separator:a975c6fb536ef3a158b59a57eb4bc3079"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b8c8231bdb5aa00201f9d36f26249c0"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_file_system.html#a6b8c8231bdb5aa00201f9d36f26249c0">directoryExists</a> (const std::string &amp;)</td></tr>
+<tr class="memdesc:a6b8c8231bdb5aa00201f9d36f26249c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to determine if a directory at the given path exists.  <a href="#a6b8c8231bdb5aa00201f9d36f26249c0">More...</a><br /></td></tr>
+<tr class="separator:a6b8c8231bdb5aa00201f9d36f26249c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adedf28d74ece976e2a0c82687c9669c0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adedf28d74ece976e2a0c82687c9669c0"></a>
+static std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_file_system.html#adedf28d74ece976e2a0c82687c9669c0">listDirectories</a> (const std::string &amp;)</td></tr>
+<tr class="memdesc:adedf28d74ece976e2a0c82687c9669c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector of strings containing the names of directories found in the given path. <br /></td></tr>
+<tr class="separator:adedf28d74ece976e2a0c82687c9669c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0a64148771d50db662ce79112a605e9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa0a64148771d50db662ce79112a605e9"></a>
+static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_file_system.html#aa0a64148771d50db662ce79112a605e9">getCurrentDirectory</a> ()</td></tr>
+<tr class="memdesc:aa0a64148771d50db662ce79112a605e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the absolute path of the current working directory. <br /></td></tr>
+<tr class="separator:aa0a64148771d50db662ce79112a605e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2124f4d34858d1e85008bd5f5e0321b"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_file_system.html#ab2124f4d34858d1e85008bd5f5e0321b">getRelativePath</a> (std::string path, const std::string &amp;root)</td></tr>
+<tr class="memdesc:ab2124f4d34858d1e85008bd5f5e0321b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to convert the given absolute path to a path relative to the given root directory.  <a href="#ab2124f4d34858d1e85008bd5f5e0321b">More...</a><br /></td></tr>
+<tr class="separator:ab2124f4d34858d1e85008bd5f5e0321b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5f56d8277493950a2ee33f9ce68b04f"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_file_system.html#ac5f56d8277493950a2ee33f9ce68b04f">getConfigDirectory</a> (const std::string &amp;appName)</td></tr>
+<tr class="memdesc:ac5f56d8277493950a2ee33f9ce68b04f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a path to the current user's config directory. Config files should generally be written to this directory, rather than the current working directory. Output is usually in the form of the following:  <a href="#ac5f56d8277493950a2ee33f9ce68b04f">More...</a><br /></td></tr>
+<tr class="separator:ac5f56d8277493950a2ee33f9ce68b04f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Utilities for reading files from the current file system. </p>
+<div class="textblock"><p>Utilities for manipulating the current file system. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a6fa2a8f7ba792f9a72e1e09d738e27b8"></a>
+<a class="anchor" id="a975c6fb536ef3a158b59a57eb4bc3079"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -115,10 +118,10 @@ static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool FileSystem::createDirectory </td>
+          <td class="memname">static bool xy::FileSystem::createDirectory </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -140,7 +143,7 @@ static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="
 
 </div>
 </div>
-<a class="anchor" id="aba9a3acafc25588d81b783ca6b0e61d9"></a>
+<a class="anchor" id="a6b8c8231bdb5aa00201f9d36f26249c0"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -148,10 +151,10 @@ static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool FileSystem::directoryExists </td>
+          <td class="memname">static bool xy::FileSystem::directoryExists </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -167,7 +170,7 @@ static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="
 
 </div>
 </div>
-<a class="anchor" id="acc2d5175601558bd0a1e9e4968bfb49c"></a>
+<a class="anchor" id="ac5f56d8277493950a2ee33f9ce68b04f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -175,7 +178,43 @@ static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string FileSystem::getRelativePath </td>
+          <td class="memname">static std::string xy::FileSystem::getConfigDirectory </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>appName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a path to the current user's config directory. Config files should generally be written to this directory, rather than the current working directory. Output is usually in the form of the following: </p>
+<div class="fragment"><div class="line">Windows: C:\Users\squidward\AppData\Roaming\appname\</div>
+<div class="line">Linux: /home/squidward/.config/appname/</div>
+<div class="line">Mac: /Users/squidward/Library/Application Support/appname/</div>
+</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">appName</td><td>Name of the current application used to create the appname directory </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Above formatted string, or an empty string if something went wrong </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab2124f4d34858d1e85008bd5f5e0321b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string xy::FileSystem::getRelativePath </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>path</em>, </td>

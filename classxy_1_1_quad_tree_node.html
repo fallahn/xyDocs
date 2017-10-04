@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xygine: xy::QuadTreeNode Class Reference</title>
+<title>xyginext: xy::QuadTreeNode Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,10 +18,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">xygine
-   &#160;<span id="projectnumber">0.1.0</span>
+   <div id="projectname">xyginext
+   &#160;<span id="projectnumber">0.2.0</span>
    </div>
-   <div id="projectbrief">SFML Based 2D Game Creation Framework</div>
+   <div id="projectbrief">Second generation of xygine game creation framework</div>
   </td>
  </tr>
  </tbody>
@@ -60,71 +60,52 @@
 </div><!--header-->
 <div class="contents">
 
-<p>A node in the <a class="el" href="classxy_1_1_quad_tree.html" title="Quad Tree spatial partitioning class. ">QuadTree</a>.  
+<p>Nodes which make up the branches and leaves of the <a class="el" href="classxy_1_1_quad_tree.html" title="Partition system for entities with QuadTreeItem components. Entities are sorted in a tree hierarchy w...">QuadTree</a>.  
  <a href="classxy_1_1_quad_tree_node.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="_quad_tree_node_8hpp_source.html">QuadTreeNode.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_quad_tree_8hpp_source.html">QuadTree.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:aff097b6e2efebfa12c3fe3cf369595c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff097b6e2efebfa12c3fe3cf369595c6"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>Ptr</b> = std::unique_ptr&lt; <a class="el" href="classxy_1_1_quad_tree_node.html">QuadTreeNode</a> &gt;</td></tr>
 <tr class="separator:aff097b6e2efebfa12c3fe3cf369595c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31694eae4f6f806d2b4aa73a58c00906"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31694eae4f6f806d2b4aa73a58c00906"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Set</b> = std::unordered_set&lt; <a class="el" href="classxy_1_1_quad_tree_component.html">QuadTreeComponent</a> * &gt;</td></tr>
-<tr class="separator:a31694eae4f6f806d2b4aa73a58c00906"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1e33c5c768d973b8bfaad18488becf63"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e33c5c768d973b8bfaad18488becf63"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>QuadTreeNode</b> (const sf::FloatRect &amp;area, sf::Int32 level, <a class="el" href="classxy_1_1_quad_tree_node.html">QuadTreeNode</a> *parent, <a class="el" href="classxy_1_1_quad_tree.html">QuadTree</a> *quadTree)</td></tr>
-<tr class="separator:a1e33c5c768d973b8bfaad18488becf63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a009c7eed2d247630173161ad5cc592d2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a009c7eed2d247630173161ad5cc592d2"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>QuadTreeNode</b> (const <a class="el" href="classxy_1_1_quad_tree_node.html">QuadTreeNode</a> &amp;)=delete</td></tr>
-<tr class="separator:a009c7eed2d247630173161ad5cc592d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a7e1ae331f9b8f2a73db4630e145351"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0a7e1ae331f9b8f2a73db4630e145351"></a>
-<a class="el" href="classxy_1_1_quad_tree_node.html">QuadTreeNode</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classxy_1_1_quad_tree_node.html">QuadTreeNode</a> &amp;)=delete</td></tr>
-<tr class="separator:a0a7e1ae331f9b8f2a73db4630e145351"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d949557f38e5a65a918ecc94acbd45a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d949557f38e5a65a918ecc94acbd45a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>create</b> (const sf::FloatRect &amp;area, sf::Int32 level, <a class="el" href="classxy_1_1_quad_tree_node.html">QuadTreeNode</a> *parent, <a class="el" href="classxy_1_1_quad_tree.html">QuadTree</a> *quadTree)</td></tr>
-<tr class="separator:a4d949557f38e5a65a918ecc94acbd45a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad816c076b52fcd5e384bcd839e230152"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad816c076b52fcd5e384bcd839e230152"></a>
-<a class="el" href="classxy_1_1_quad_tree.html">QuadTree</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getTree</b> () const </td></tr>
-<tr class="separator:ad816c076b52fcd5e384bcd839e230152"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12419174469a9b4657afcb52e8a804b6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12419174469a9b4657afcb52e8a804b6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>add</b> (<a class="el" href="classxy_1_1_quad_tree_component.html">QuadTreeComponent</a> *)</td></tr>
-<tr class="separator:a12419174469a9b4657afcb52e8a804b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a594c47c010a610c918b7f558eb808bfd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a594c47c010a610c918b7f558eb808bfd"></a>
-const sf::FloatRect &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getArea</b> () const </td></tr>
-<tr class="separator:a594c47c010a610c918b7f558eb808bfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43e8dd18ac983e2569480f3244e1f2e9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43e8dd18ac983e2569480f3244e1f2e9"></a>
-sf::Int32&#160;</td><td class="memItemRight" valign="bottom"><b>getNumComponentsBelow</b> () const </td></tr>
-<tr class="separator:a43e8dd18ac983e2569480f3244e1f2e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0facff52a07d8c1172d0f4a5e38aa96"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0facff52a07d8c1172d0f4a5e38aa96"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (<a class="el" href="classxy_1_1_quad_tree_component.html">QuadTreeComponent</a> *)</td></tr>
-<tr class="separator:af0facff52a07d8c1172d0f4a5e38aa96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fe8c325a9bfcb46b533a5fa927d9eb2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6fe8c325a9bfcb46b533a5fa927d9eb2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>remove</b> (<a class="el" href="classxy_1_1_quad_tree_component.html">QuadTreeComponent</a> *)</td></tr>
-<tr class="separator:a6fe8c325a9bfcb46b533a5fa927d9eb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0b78978e68d2b3379f85820bcbbc8dd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0b78978e68d2b3379f85820bcbbc8dd"></a>
-const Set &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getComponents</b> () const </td></tr>
-<tr class="separator:af0b78978e68d2b3379f85820bcbbc8dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec65a6d6a565bdeaff58807d0bfe8ba6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec65a6d6a565bdeaff58807d0bfe8ba6"></a>
+<tr class="memitem:a37d1180a886035f3336f76d90ab5ef77"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37d1180a886035f3336f76d90ab5ef77"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>QuadTreeNode</b> (sf::FloatRect area, sf::Int32 level, <a class="el" href="classxy_1_1_quad_tree_node.html">QuadTreeNode</a> *parent, <a class="el" href="classxy_1_1_quad_tree.html">QuadTree</a> *quadTree)</td></tr>
+<tr class="separator:a37d1180a886035f3336f76d90ab5ef77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1e9941b223bb7ca63f19774e6ab394e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1e9941b223bb7ca63f19774e6ab394e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addEntity</b> (<a class="el" href="classxy_1_1_entity.html">xy::Entity</a>)</td></tr>
+<tr class="separator:aa1e9941b223bb7ca63f19774e6ab394e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc23fdaa36667f326f0da4a8bba5469c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc23fdaa36667f326f0da4a8bba5469c"></a>
+sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><b>getArea</b> () const </td></tr>
+<tr class="separator:abc23fdaa36667f326f0da4a8bba5469c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ccb345e4cc31ed1d441f835e1238efb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ccb345e4cc31ed1d441f835e1238efb"></a>
+sf::Int32&#160;</td><td class="memItemRight" valign="bottom"><b>getNumEntsBelow</b> () const </td></tr>
+<tr class="separator:a8ccb345e4cc31ed1d441f835e1238efb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2944040a21a03d60abda04a2a6d3b968"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2944040a21a03d60abda04a2a6d3b968"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (<a class="el" href="classxy_1_1_entity.html">xy::Entity</a>)</td></tr>
+<tr class="separator:a2944040a21a03d60abda04a2a6d3b968"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b27558abb79331219968701958aa823"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b27558abb79331219968701958aa823"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>removeEntity</b> (<a class="el" href="classxy_1_1_entity.html">xy::Entity</a>)</td></tr>
+<tr class="separator:a4b27558abb79331219968701958aa823"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd3a315abe91814cab0d757647d7f672"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afd3a315abe91814cab0d757647d7f672"></a>
+const std::vector&lt; <a class="el" href="classxy_1_1_entity.html">xy::Entity</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getEntities</b> () const </td></tr>
+<tr class="separator:afd3a315abe91814cab0d757647d7f672"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab84fa0b4f870870e4f6c89de5f603b4c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab84fa0b4f870870e4f6c89de5f603b4c"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasChildren</b> () const </td></tr>
-<tr class="separator:aec65a6d6a565bdeaff58807d0bfe8ba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d35d077b35314ede7e0551f8eaf45ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3d35d077b35314ede7e0551f8eaf45ca"></a>
-const std::array&lt; Ptr, 4u &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getChildren</b> () const </td></tr>
-<tr class="separator:a3d35d077b35314ede7e0551f8eaf45ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab335baf4e4ef9667ffa29eb928cc35e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab335baf4e4ef9667ffa29eb928cc35e5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>getVertices</b> (std::vector&lt; sf::Vertex &gt; &amp;)</td></tr>
-<tr class="separator:ab335baf4e4ef9667ffa29eb928cc35e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af11e6e2107e24c00473ed171dd5f7e2f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af11e6e2107e24c00473ed171dd5f7e2f"></a>
-std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>getComponentCount</b> () const </td></tr>
-<tr class="separator:af11e6e2107e24c00473ed171dd5f7e2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:ab84fa0b4f870870e4f6c89de5f603b4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa63833618f85d2ad1714dbc4e0fac45e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa63833618f85d2ad1714dbc4e0fac45e"></a>
+const std::array&lt; Ptr, 4u &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getChildNodes</b> () const </td></tr>
+<tr class="separator:aa63833618f85d2ad1714dbc4e0fac45e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5f26e7fd929c17a6f482b1f225f13d9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af5f26e7fd929c17a6f482b1f225f13d9"></a>
+std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>getEntityCount</b> () const </td></tr>
+<tr class="separator:af5f26e7fd929c17a6f482b1f225f13d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A node in the <a class="el" href="classxy_1_1_quad_tree.html" title="Quad Tree spatial partitioning class. ">QuadTree</a>. </p>
-<p>Each node represents a single partition, containing up to 4 further partitions, and the positions of entities which have a <a class="el" href="classxy_1_1_quad_tree_component.html" title="QuadTree Component. ">QuadTreeComponent</a> attached to them. Interaction with the <a class="el" href="classxy_1_1_quad_tree.html" title="Quad Tree spatial partitioning class. ">QuadTree</a> in xygine should normally be done via the <a class="el" href="classxy_1_1_scene.html" title="Scene class. ">Scene</a> class </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classxy_1_1_scene.html" title="Scene class. ">Scene</a> </dd></dl>
+<div class="textblock"><p>Nodes which make up the branches and leaves of the <a class="el" href="classxy_1_1_quad_tree.html" title="Partition system for entities with QuadTreeItem components. Entities are sorted in a tree hierarchy w...">QuadTree</a>. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
