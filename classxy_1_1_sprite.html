@@ -62,7 +62,7 @@
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classxy_1_1_sprite.html" title="Sprite component optimised to work with the ECS. ">Sprite</a> component optimised to work with the ECS.  
+<p><a class="el" href="classxy_1_1_sprite.html" title="Sprite component optimised to work with the ECS. Sprite components require their entity to also have ...">Sprite</a> component optimised to work with the ECS. <a class="el" href="classxy_1_1_sprite.html" title="Sprite component optimised to work with the ECS. Sprite components require their entity to also have ...">Sprite</a> components require their entity to also have a <a class="el" href="classxy_1_1_drawable.html" title="Drawable component. The drawable component encapsulates an sf::VertexArray which can be used to draw ...">Drawable</a> component.  
  <a href="classxy_1_1_sprite.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_sprite_8hpp_source.html">Sprite.hpp</a>&gt;</code></p>
@@ -95,14 +95,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_sprite.html#a0ed4dfe9a86fc7d804f4418f1039e176">setColour</a> (sf::Color)</td></tr>
 <tr class="memdesc:a0ed4dfe9a86fc7d804f4418f1039e176"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the colour to be multiplied with this sprite when drawing. <br /></td></tr>
 <tr class="separator:a0ed4dfe9a86fc7d804f4418f1039e176"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a096d6cef8722d51977b6dddd6cabd1f3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a096d6cef8722d51977b6dddd6cabd1f3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_sprite.html#a096d6cef8722d51977b6dddd6cabd1f3">setShader</a> (sf::Shader *)</td></tr>
-<tr class="memdesc:a096d6cef8722d51977b6dddd6cabd1f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the shader used when drawing this sprite. Passing nullptr removes any active shader. <br /></td></tr>
-<tr class="separator:a096d6cef8722d51977b6dddd6cabd1f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8dab23ad6808021c450454d94b4b59c2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8dab23ad6808021c450454d94b4b59c2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_sprite.html#a8dab23ad6808021c450454d94b4b59c2">setBlendMode</a> (sf::BlendMode)</td></tr>
-<tr class="memdesc:a8dab23ad6808021c450454d94b4b59c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the blend mode used when rendering this sprite. <br /></td></tr>
-<tr class="separator:a8dab23ad6808021c450454d94b4b59c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d5222d927198fe428585361ec36bc90"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8d5222d927198fe428585361ec36bc90"></a>
 const sf::Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_sprite.html#a8d5222d927198fe428585361ec36bc90">getTexture</a> () const </td></tr>
 <tr class="memdesc:a8d5222d927198fe428585361ec36bc90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the sprite's active texture. <br /></td></tr>
@@ -115,29 +107,18 @@ sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 sf::Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_sprite.html#a77ac2e969631f3f77b05a8ce71a96a31">getColour</a> () const </td></tr>
 <tr class="memdesc:a77ac2e969631f3f77b05a8ce71a96a31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current sprite colour. <br /></td></tr>
 <tr class="separator:a77ac2e969631f3f77b05a8ce71a96a31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd8f244a6c54e8a7b9d55dd76b6c4f46"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afd8f244a6c54e8a7b9d55dd76b6c4f46"></a>
-const sf::Shader *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_sprite.html#afd8f244a6c54e8a7b9d55dd76b6c4f46">getShader</a> () const </td></tr>
-<tr class="memdesc:afd8f244a6c54e8a7b9d55dd76b6c4f46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the active shader, if any. <br /></td></tr>
-<tr class="separator:afd8f244a6c54e8a7b9d55dd76b6c4f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70bbe42f454320af2bb291a8886e2df9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70bbe42f454320af2bb291a8886e2df9"></a>
-sf::BlendMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_sprite.html#a70bbe42f454320af2bb291a8886e2df9">getBlendMode</a> () const </td></tr>
-<tr class="memdesc:a70bbe42f454320af2bb291a8886e2df9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the sprite's current blend mode. <br /></td></tr>
-<tr class="separator:a70bbe42f454320af2bb291a8886e2df9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abdd246b6a983232193d9d743d6c085d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abdd246b6a983232193d9d743d6c085d0"></a>
-sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_sprite.html#abdd246b6a983232193d9d743d6c085d0">getLocalBounds</a> () const </td></tr>
-<tr class="memdesc:abdd246b6a983232193d9d743d6c085d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the local (pre transform) bounds. <br /></td></tr>
-<tr class="separator:abdd246b6a983232193d9d743d6c085d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae478ad3196ea851b87b029018f2a88a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae478ad3196ea851b87b029018f2a88a6"></a>
+sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_sprite.html#ae478ad3196ea851b87b029018f2a88a6">getTextureBounds</a> () const </td></tr>
+<tr class="memdesc:ae478ad3196ea851b87b029018f2a88a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bounds created by the current texture rect. <br /></td></tr>
+<tr class="separator:ae478ad3196ea851b87b029018f2a88a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa266c94291ab5db4baabddf5898a801a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa266c94291ab5db4baabddf5898a801a"></a>
 sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_sprite.html#aa266c94291ab5db4baabddf5898a801a">getSize</a> () const </td></tr>
-<tr class="memdesc:aa266c94291ab5db4baabddf5898a801a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the sprite. <br /></td></tr>
+<tr class="memdesc:aa266c94291ab5db4baabddf5898a801a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the sprite based on the current texture rect. <br /></td></tr>
 <tr class="separator:aa266c94291ab5db4baabddf5898a801a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a289f7b2d9e8773b206b7148ce71b1f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a289f7b2d9e8773b206b7148ce71b1f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_sprite.html#a9a289f7b2d9e8773b206b7148ce71b1f">setDepth</a> (sf::Int32 depth)</td></tr>
-<tr class="memdesc:a9a289f7b2d9e8773b206b7148ce71b1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the z-depth of a sprite. The lower the value the further back the sprite is drawn, inversely the greater the value thr further forward it is drawn. Default value is 0. <br /></td></tr>
-<tr class="separator:a9a289f7b2d9e8773b206b7148ce71b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac34764ba4d7ea29fc5afbccb93a08c87"><td class="memItemLeft" align="right" valign="top">sf::Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_sprite.html#ac34764ba4d7ea29fc5afbccb93a08c87">getDepth</a> () const </td></tr>
-<tr class="memdesc:ac34764ba4d7ea29fc5afbccb93a08c87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the sprite's Z depth value.  <a href="#ac34764ba4d7ea29fc5afbccb93a08c87">More...</a><br /></td></tr>
-<tr class="separator:ac34764ba4d7ea29fc5afbccb93a08c87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8450b3aa578e1cf11c24baa4b0038e3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab8450b3aa578e1cf11c24baa4b0038e3"></a>
+std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_sprite.html#ab8450b3aa578e1cf11c24baa4b0038e3">getAnimationCount</a> () const </td></tr>
+<tr class="memdesc:ab8450b3aa578e1cf11c24baa4b0038e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of animations for this sprite when loaded from a sprite sheet definition file. <br /></td></tr>
+<tr class="separator:ab8450b3aa578e1cf11c24baa4b0038e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -152,9 +133,9 @@ static constexpr std::size_t&#160;</td><td class="memItemRight" valign="bottom">
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:a9131e80805b446f695a03ca740437d30"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9131e80805b446f695a03ca740437d30"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>SpriteRenderer</b></td></tr>
-<tr class="separator:a9131e80805b446f695a03ca740437d30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa557b9583fe4ce0be29c06a27f967d80"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa557b9583fe4ce0be29c06a27f967d80"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>SpriteSystem</b></td></tr>
+<tr class="separator:aa557b9583fe4ce0be29c06a27f967d80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab43118917ba092ba6289c7ee4cd3e5fd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab43118917ba092ba6289c7ee4cd3e5fd"></a>
 class&#160;</td><td class="memItemRight" valign="bottom"><b>SpriteSheet</b></td></tr>
 <tr class="separator:ab43118917ba092ba6289c7ee4cd3e5fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,35 +144,8 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>SpriteAnimator</b></
 <tr class="separator:ac96ac3a1e14bd2e3e5d66f528351b8d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classxy_1_1_sprite.html" title="Sprite component optimised to work with the ECS. ">Sprite</a> component optimised to work with the ECS. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ac34764ba4d7ea29fc5afbccb93a08c87"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">sf::Int32 xy::Sprite::getDepth </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the sprite's Z depth value. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classxy_1_1_sprite.html#a9a289f7b2d9e8773b206b7148ce71b1f" title="Sets the z-depth of a sprite. The lower the value the further back the sprite is drawn, inversely the greater the value thr further forward it is drawn. Default value is 0. ">setDepth()</a>; </dd></dl>
-
-</div>
-</div>
-</div><!-- contents -->
+<div class="textblock"><p><a class="el" href="classxy_1_1_sprite.html" title="Sprite component optimised to work with the ECS. Sprite components require their entity to also have ...">Sprite</a> component optimised to work with the ECS. <a class="el" href="classxy_1_1_sprite.html" title="Sprite component optimised to work with the ECS. Sprite components require their entity to also have ...">Sprite</a> components require their entity to also have a <a class="el" href="classxy_1_1_drawable.html" title="Drawable component. The drawable component encapsulates an sf::VertexArray which can be used to draw ...">Drawable</a> component. </p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

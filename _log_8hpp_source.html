@@ -146,9 +146,9 @@
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                    std::cerr &lt;&lt; outstring &lt;&lt; std::endl</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                    :</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                    std::cout &lt;&lt; outstring &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#ifndef NO_UI_LOG</span></div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                <a class="code" href="classxy_1_1_console.html#a4ea210bebca681a9ec2ab2eadcd8dc74">Console::print</a>(outstring);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#endif //NO_UI_LOG</span></div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                <span class="keyword">const</span> std::size_t maxBuffer = 30;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                buffer().push_back(outstring);</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                <span class="keywordflow">if</span> (buffer().size() &gt; maxBuffer)buffer().pop_front(); <span class="comment">//no majick here pl0x</span></div>
