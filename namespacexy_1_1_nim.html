@@ -80,6 +80,10 @@ Functions</h2></td></tr>
 <tr class="separator:af6e2f2d9881b935a312e564ee18ae843"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a370c3543417e43198e59a5536f2731"><td class="memItemLeft" align="right" valign="top">XY_EXPORT_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacexy_1_1_nim.html#a4a370c3543417e43198e59a5536f2731">end</a> ()</td></tr>
 <tr class="separator:a4a370c3543417e43198e59a5536f2731"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b9fd1faa31bd3ee8a07fa46b2f3d942"><td class="memItemLeft" align="right" valign="top">XY_EXPORT_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacexy_1_1_nim.html#a6b9fd1faa31bd3ee8a07fa46b2f3d942">wantsMouse</a> ()</td></tr>
+<tr class="separator:a6b9fd1faa31bd3ee8a07fa46b2f3d942"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f93351a67b8bbe21a24a9b01c01d88d"><td class="memItemLeft" align="right" valign="top">XY_EXPORT_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacexy_1_1_nim.html#a2f93351a67b8bbe21a24a9b01c01d88d">wantsKeyboard</a> ()</td></tr>
+<tr class="separator:a2f93351a67b8bbe21a24a9b01c01d88d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Exposes a selection of ImGui functions to the public API. These can be used to create stand-alone windows or to add useful information to the status window via App::registerStatusOutput(). </p>
@@ -336,6 +340,38 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <dl class="section see"><dt>See also</dt><dd>ImGui::Text() </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2f93351a67b8bbe21a24a9b01c01d88d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">XY_EXPORT_API bool xy::Nim::wantsKeyboard </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section see"><dt>See also</dt><dd>ImGui::GetIo().WantCaptureKeyboard </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6b9fd1faa31bd3ee8a07fa46b2f3d942"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">XY_EXPORT_API bool xy::Nim::wantsMouse </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section see"><dt>See also</dt><dd>ImGui::GetIo().WantCaptureMouse </dd></dl>
 
 </div>
 </div>

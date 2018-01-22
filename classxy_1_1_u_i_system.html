@@ -83,12 +83,21 @@ Public Types</h2></td></tr>
  }<tr class="memdesc:a4e59d99948076437030c0b0a64fae5f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input flags. Use these with the callback bitmask to find which input triggered it. <br /></td></tr>
 <tr class="separator:a4e59d99948076437030c0b0a64fae5f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </td></tr>
-<tr class="memitem:a34fec36b5f60291d5d6c39868969df94"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34fec36b5f60291d5d6c39868969df94"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>ButtonCallback</b> = std::function&lt; void(<a class="el" href="classxy_1_1_entity.html">Entity</a>, sf::Uint64 flags)&gt;</td></tr>
-<tr class="separator:a34fec36b5f60291d5d6c39868969df94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1c3f70a1ab4e85ca180e69bcf0162c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1c3f70a1ab4e85ca180e69bcf0162c3"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>MouseButtonCallback</b> = std::function&lt; void(<a class="el" href="classxy_1_1_entity.html">Entity</a>, sf::Uint64 flags)&gt;</td></tr>
+<tr class="separator:ab1c3f70a1ab4e85ca180e69bcf0162c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cd3299f54e2cb3b7dff57129d02f740"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7cd3299f54e2cb3b7dff57129d02f740"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>MovementCallback</b> = std::function&lt; void(<a class="el" href="classxy_1_1_entity.html">Entity</a>, sf::Vector2f)&gt;</td></tr>
 <tr class="separator:a7cd3299f54e2cb3b7dff57129d02f740"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32d15f24ffd7416e53457899aabead40"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a32d15f24ffd7416e53457899aabead40"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>KeyboardCallback</b> = std::function&lt; void(<a class="el" href="classxy_1_1_entity.html">Entity</a>, sf::Keyboard::Key)&gt;</td></tr>
+<tr class="separator:a32d15f24ffd7416e53457899aabead40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a749a730566bcc2500982bbd7f0619d60"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a749a730566bcc2500982bbd7f0619d60"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>SelectionChangedCallback</b> = std::function&lt; void(<a class="el" href="classxy_1_1_entity.html">Entity</a>)&gt;</td></tr>
+<tr class="separator:a749a730566bcc2500982bbd7f0619d60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c3006c03cf9a6a734c3cf63302f60dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c3006c03cf9a6a734c3cf63302f60dc"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>ControllerCallback</b> = std::function&lt; void(<a class="el" href="classxy_1_1_entity.html">Entity</a>, sf::Uint32, sf::Uint32)&gt;</td></tr>
+<tr class="separator:a5c3006c03cf9a6a734c3cf63302f60dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classxy_1_1_system"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classxy_1_1_system')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classxy_1_1_system.html">xy::System</a></td></tr>
 <tr class="memitem:a0a961a2047dcc76a9880cc706b0a259c inherit pub_types_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0a961a2047dcc76a9880cc706b0a259c"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>Ptr</b> = std::unique_ptr&lt; <a class="el" href="classxy_1_1_system.html">System</a> &gt;</td></tr>
@@ -111,13 +120,28 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_u_i_system.html#a699431f6d5cd10f3d5a5e530e1db294f">handleMessage</a> (const <a class="el" href="classxy_1_1_message.html">Message</a> &amp;) override</td></tr>
 <tr class="memdesc:a699431f6d5cd10f3d5a5e530e1db294f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classxy_1_1_message.html" title="Message class. ">Message</a> handler. <br /></td></tr>
 <tr class="separator:a699431f6d5cd10f3d5a5e530e1db294f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7be7b472083611bb40929554d058909"><td class="memItemLeft" align="right" valign="top">sf::Uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_u_i_system.html#ad7be7b472083611bb40929554d058909">addCallback</a> (const ButtonCallback &amp;)</td></tr>
-<tr class="memdesc:ad7be7b472083611bb40929554d058909"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a button event callback.  <a href="#ad7be7b472083611bb40929554d058909">More...</a><br /></td></tr>
-<tr class="separator:ad7be7b472083611bb40929554d058909"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa52599f3d99b93636197569747c23273"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa52599f3d99b93636197569747c23273"></a>
-sf::Uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_u_i_system.html#aa52599f3d99b93636197569747c23273">addCallback</a> (const MovementCallback &amp;)</td></tr>
-<tr class="memdesc:aa52599f3d99b93636197569747c23273"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a mouse or touch input movement callback. This is similar to button even callbacks, only the movement delta is passed in as a parameter instead of a button ID. These are also used for mouse enter/exit events. <br /></td></tr>
-<tr class="separator:aa52599f3d99b93636197569747c23273"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e58fdbacfc3f2ccd416c46a27ad1430"><td class="memItemLeft" align="right" valign="top">sf::Uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_u_i_system.html#a2e58fdbacfc3f2ccd416c46a27ad1430">addMouseButtonCallback</a> (const MouseButtonCallback &amp;)</td></tr>
+<tr class="memdesc:a2e58fdbacfc3f2ccd416c46a27ad1430"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a mouse button event callback.  <a href="#a2e58fdbacfc3f2ccd416c46a27ad1430">More...</a><br /></td></tr>
+<tr class="separator:a2e58fdbacfc3f2ccd416c46a27ad1430"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a636ff1823fb8fec9c1dc133a4261f733"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a636ff1823fb8fec9c1dc133a4261f733"></a>
+sf::Uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_u_i_system.html#a636ff1823fb8fec9c1dc133a4261f733">addMouseMoveCallback</a> (const MovementCallback &amp;)</td></tr>
+<tr class="memdesc:a636ff1823fb8fec9c1dc133a4261f733"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a mouse or touch input movement callback. This is similar to button even callbacks, only the movement delta is passed in as a parameter instead of a button ID. These are also used for mouse enter/exit events Note that a single callback ID may be assigned to multiple UIHitbox components. <br /></td></tr>
+<tr class="separator:a636ff1823fb8fec9c1dc133a4261f733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebab9fe3995b821fb6ed6378a94c2eef"><td class="memItemLeft" align="right" valign="top">sf::Uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_u_i_system.html#aebab9fe3995b821fb6ed6378a94c2eef">addKeyCallback</a> (const KeyboardCallback &amp;)</td></tr>
+<tr class="memdesc:aebab9fe3995b821fb6ed6378a94c2eef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a KeyEvent callback.  <a href="#aebab9fe3995b821fb6ed6378a94c2eef">More...</a><br /></td></tr>
+<tr class="separator:aebab9fe3995b821fb6ed6378a94c2eef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec4c1ca3e2819e9b47f4483e6710cd08"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec4c1ca3e2819e9b47f4483e6710cd08"></a>
+sf::Uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_u_i_system.html#aec4c1ca3e2819e9b47f4483e6710cd08">addSelectionCallback</a> (const SelectionChangedCallback &amp;)</td></tr>
+<tr class="memdesc:aec4c1ca3e2819e9b47f4483e6710cd08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a selection changed callback. This is raised for each UIHitbox component as it either either selected or unselected. The callback function passes in the entity which is affected by the callback. Note that a single callback ID may be assigned to multiple UIHitbox components. <br /></td></tr>
+<tr class="separator:aec4c1ca3e2819e9b47f4483e6710cd08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98d56542b0d3932406b112a8f4b8db71"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98d56542b0d3932406b112a8f4b8db71"></a>
+sf::Uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_u_i_system.html#a98d56542b0d3932406b112a8f4b8db71">addControllerCallback</a> (const ControllerCallback &amp;)</td></tr>
+<tr class="memdesc:a98d56542b0d3932406b112a8f4b8db71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a Controller Button callback. The callback passes in the entity which is affects, as well as the controller ID and Button ID which triggered the event. <br /></td></tr>
+<tr class="separator:a98d56542b0d3932406b112a8f4b8db71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57a549aa864eaaa418fcbde9b170f094"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a57a549aa864eaaa418fcbde9b170f094"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_u_i_system.html#a57a549aa864eaaa418fcbde9b170f094">selectInput</a> (std::size_t)</td></tr>
+<tr class="memdesc:a57a549aa864eaaa418fcbde9b170f094"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects the input at the given index if it exists. <br /></td></tr>
+<tr class="separator:a57a549aa864eaaa418fcbde9b170f094"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classxy_1_1_system"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classxy_1_1_system')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classxy_1_1_system.html">xy::System</a></td></tr>
 <tr class="memitem:aa17bed267803af1928e2e8d0a45be700 inherit pub_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa17bed267803af1928e2e8d0a45be700"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#aa17bed267803af1928e2e8d0a45be700">System</a> (<a class="el" href="classxy_1_1_message_bus.html">MessageBus</a> &amp;mb, UniqueType t)</td></tr>
@@ -167,14 +191,6 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a3f4d79c866525d4138c8c154d82724a5 inherit pro_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f4d79c866525d4138c8c154d82724a5"></a>
 std::vector&lt; <a class="el" href="classxy_1_1_entity.html">Entity</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getEntities</b> ()</td></tr>
 <tr class="separator:a3f4d79c866525d4138c8c154d82724a5 inherit pro_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e1f4666546fb9d173b1029af92da4b4 inherit pro_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e1f4666546fb9d173b1029af92da4b4"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#a8e1f4666546fb9d173b1029af92da4b4">onEntityAdded</a> (<a class="el" href="classxy_1_1_entity.html">Entity</a>)</td></tr>
-<tr class="memdesc:a8e1f4666546fb9d173b1029af92da4b4 inherit pro_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional callback performed when an entity is added. <br /></td></tr>
-<tr class="separator:a8e1f4666546fb9d173b1029af92da4b4 inherit pro_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeaf4d34948ec0a5c47f80bb5a79d4c98 inherit pro_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeaf4d34948ec0a5c47f80bb5a79d4c98"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#aeaf4d34948ec0a5c47f80bb5a79d4c98">onEntityRemoved</a> (<a class="el" href="classxy_1_1_entity.html">Entity</a>)</td></tr>
-<tr class="memdesc:aeaf4d34948ec0a5c47f80bb5a79d4c98 inherit pro_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional callback performed when an entity is removed. <br /></td></tr>
-<tr class="separator:aeaf4d34948ec0a5c47f80bb5a79d4c98 inherit pro_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36840728ac384a87835a5dedae262c91 inherit pro_methods_classxy_1_1_system"><td class="memTemplParams" colspan="2"><a class="anchor" id="a36840728ac384a87835a5dedae262c91"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a36840728ac384a87835a5dedae262c91 inherit pro_methods_classxy_1_1_system"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#a36840728ac384a87835a5dedae262c91">postMessage</a> (Message::ID id)</td></tr>
@@ -196,22 +212,47 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setScene</b> (<a clas
 <div class="textblock"><p>Updates entities with <a class="el" href="classxy_1_1_u_i_hit_box.html" title="Used to trigger callbacks when hit events occur in the component&#39;s area. ">UIHitBox</a> components. Any entity with a <a class="el" href="classxy_1_1_u_i_hit_box.html" title="Used to trigger callbacks when hit events occur in the component&#39;s area. ">UIHitBox</a> component will be processed by this system, which detects user input and activates the appropriate callback as necessary. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classxy_1_1_u_i_hit_box.html" title="Used to trigger callbacks when hit events occur in the component&#39;s area. ">UIHitBox</a> </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ad7be7b472083611bb40929554d058909"></a>
+<a class="anchor" id="aebab9fe3995b821fb6ed6378a94c2eef"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">sf::Uint32 xy::UISystem::addCallback </td>
+          <td class="memname">sf::Uint32 xy::UISystem::addKeyCallback </td>
           <td>(</td>
-          <td class="paramtype">const ButtonCallback &amp;&#160;</td>
+          <td class="paramtype">const KeyboardCallback &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Adds a button event callback. </p>
-<dl class="section return"><dt>Returns</dt><dd>ID of the callback. This should be used to assigned the callback to the relative callback slot of a UIInput component. eg: auto id = system.addCallback(cb); component.callbacks[UIInput::MouseDown] = id; </dd></dl>
+<p>Adds a KeyEvent callback. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>KeyboardCallback which provides the current entity and the SFML key which triggered the event </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>ID of the callback. This should be used to assigned the callback to the relative callback slot of a UIInput component. eg: auto id = system.addCallback(cb); component.callbacks[UIInput::KeyDown] = id; Note that a single callback ID may be assigned to multiple UIHitbox components </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2e58fdbacfc3f2ccd416c46a27ad1430"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Uint32 xy::UISystem::addMouseButtonCallback </td>
+          <td>(</td>
+          <td class="paramtype">const MouseButtonCallback &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a mouse button event callback. </p>
+<dl class="section return"><dt>Returns</dt><dd>ID of the callback. This should be used to assigned the callback to the relative callback slot of a UIInput component. eg: auto id = system.addCallback(cb); component.callbacks[UIInput::MouseDown] = id; Note that a single callback ID may be assigned to multiple UIHitbox components </dd></dl>
 
 </div>
 </div>

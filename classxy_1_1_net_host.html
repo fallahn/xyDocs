@@ -78,9 +78,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adb8237a94f0b47c39208fda30c875280"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb8237a94f0b47c39208fda30c875280"></a>
 <a class="el" href="classxy_1_1_net_host.html">NetHost</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classxy_1_1_net_host.html">NetHost</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:adb8237a94f0b47c39208fda30c875280"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf4a10d482e63ec7beb668118a73ba71"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_net_host.html#aaf4a10d482e63ec7beb668118a73ba71">start</a> (const std::string &amp;address, sf::Uint16 port, std::size_t maxClient, std::size_t maxChannels, sf::Uint32 incoming=0, sf::Uint32 outgoing=0)</td></tr>
-<tr class="memdesc:aaf4a10d482e63ec7beb668118a73ba71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a host listening on the given address and port.  <a href="#aaf4a10d482e63ec7beb668118a73ba71">More...</a><br /></td></tr>
-<tr class="separator:aaf4a10d482e63ec7beb668118a73ba71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18b202a811bcaed92b05380a02adb509"><td class="memTemplParams" colspan="2">template&lt;typename T  = EnetHostImpl&gt; </td></tr>
+<tr class="memitem:a18b202a811bcaed92b05380a02adb509"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxy_1_1_net_host.html#a18b202a811bcaed92b05380a02adb509">start</a> (const std::string &amp;address, sf::Uint16 port, std::size_t maxClient, std::size_t maxChannels, sf::Uint32 incoming=0, sf::Uint32 outgoing=0)</td></tr>
+<tr class="memdesc:a18b202a811bcaed92b05380a02adb509"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a host listening on the given address and port.  <a href="#a18b202a811bcaed92b05380a02adb509">More...</a><br /></td></tr>
+<tr class="separator:a18b202a811bcaed92b05380a02adb509"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89dd1384f4646a387805544625911a8c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a89dd1384f4646a387805544625911a8c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_net_host.html#a89dd1384f4646a387805544625911a8c">stop</a> ()</td></tr>
 <tr class="memdesc:a89dd1384f4646a387805544625911a8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the host, if it is running. <br /></td></tr>
@@ -106,6 +107,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_net_host.html#af6450b1f7d3c6e3be5c40e0d702a4eba">getConnectedPeerCount</a> () const </td></tr>
 <tr class="memdesc:af6450b1f7d3c6e3be5c40e0d702a4eba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of currently connected peers. <br /></td></tr>
 <tr class="separator:af6450b1f7d3c6e3be5c40e0d702a4eba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ae86364c85e74a18826340ddd889593"><td class="memTemplParams" colspan="2"><a class="anchor" id="a8ae86364c85e74a18826340ddd889593"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a8ae86364c85e74a18826340ddd889593"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>start</b> (const std::string &amp;address, sf::Uint16 port, std::size_t maxClients, std::size_t maxChannels, sf::Uint32 incoming, sf::Uint32 outgoing)</td></tr>
+<tr class="separator:a8ae86364c85e74a18826340ddd889593"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b15481a8aec136d66917202c82419d9"><td class="memTemplParams" colspan="2"><a class="anchor" id="a4b15481a8aec136d66917202c82419d9"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a4b15481a8aec136d66917202c82419d9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>broadcastPacket</b> (sf::Uint32 id, const T &amp;data, <a class="el" href="namespacexy.html#a05dcce851ad31fdc5bf3179c20b19437">NetFlag</a> flags, sf::Uint8 channel)</td></tr>
@@ -392,9 +397,11 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="aaf4a10d482e63ec7beb668118a73ba71"></a>
+<a class="anchor" id="a18b202a811bcaed92b05380a02adb509"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">bool xy::NetHost::start </td>
@@ -452,7 +459,7 @@ template&lt;typename T &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if created successfully, else false. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if created successfully, else false. NOTE Although this function is a template it is generally not required to pass a type here, unless specifying a custom network implementation. This needs to be called at least once before attempting to use any of the other functions in this class </dd></dl>
 
 </div>
 </div>

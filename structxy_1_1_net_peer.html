@@ -54,7 +54,6 @@
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#friends">Friends</a> &#124;
 <a href="structxy_1_1_net_peer-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">xy::NetPeer Struct Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
@@ -88,37 +87,94 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad27f4b00dec494040d3bffdbf312fffb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad27f4b00dec494040d3bffdbf312fffb"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getAddress</b> () const </td></tr>
-<tr class="separator:ad27f4b00dec494040d3bffdbf312fffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3019151d63f9981db74c5d1b29385f37"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3019151d63f9981db74c5d1b29385f37"></a>
-sf::Uint16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structxy_1_1_net_peer.html#a3019151d63f9981db74c5d1b29385f37">getPort</a> () const </td></tr>
-<tr class="memdesc:a3019151d63f9981db74c5d1b29385f37"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt;String containing the IPv4 address <br /></td></tr>
-<tr class="separator:a3019151d63f9981db74c5d1b29385f37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85c2da51a596a366576313d93660b9f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a85c2da51a596a366576313d93660b9f7"></a>
-sf::Uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structxy_1_1_net_peer.html#a85c2da51a596a366576313d93660b9f7">getID</a> () const </td></tr>
-<tr class="memdesc:a85c2da51a596a366576313d93660b9f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt;Port number <br /></td></tr>
-<tr class="separator:a85c2da51a596a366576313d93660b9f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a449456780a30640c160763cdb0977e3c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a449456780a30640c160763cdb0977e3c"></a>
-sf::Uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structxy_1_1_net_peer.html#a449456780a30640c160763cdb0977e3c">getRoundTripTime</a> () const </td></tr>
-<tr class="memdesc:a449456780a30640c160763cdb0977e3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt;Unique ID <br /></td></tr>
-<tr class="separator:a449456780a30640c160763cdb0977e3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a485be41260f4114ec15339ac3ec4d2a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a485be41260f4114ec15339ac3ec4d2a5"></a>
-<a class="el" href="structxy_1_1_net_peer.html#abac507f0fcc74dbf8b61be1c1c35e7e8">State</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getState</b> () const </td></tr>
-<tr class="separator:a485be41260f4114ec15339ac3ec4d2a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b96ff45865efe255ea2c7cf31aa96bb"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7b96ff45865efe255ea2c7cf31aa96bb"></a>
+template&lt;typename T  = _ENetPeer&gt; </td></tr>
+<tr class="memitem:a7b96ff45865efe255ea2c7cf31aa96bb"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getAddress</b> () const </td></tr>
+<tr class="separator:a7b96ff45865efe255ea2c7cf31aa96bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb3885f777223ff8dfc781d47e7a3325"><td class="memTemplParams" colspan="2"><a class="anchor" id="adb3885f777223ff8dfc781d47e7a3325"></a>
+template&lt;typename T  = _ENetPeer&gt; </td></tr>
+<tr class="memitem:adb3885f777223ff8dfc781d47e7a3325"><td class="memTemplItemLeft" align="right" valign="top">sf::Uint16&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structxy_1_1_net_peer.html#adb3885f777223ff8dfc781d47e7a3325">getPort</a> () const </td></tr>
+<tr class="memdesc:adb3885f777223ff8dfc781d47e7a3325"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt;String containing the IPv4 address <br /></td></tr>
+<tr class="separator:adb3885f777223ff8dfc781d47e7a3325"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4aabbb7b3a3e8639fe0c8d04396e7e9"><td class="memTemplParams" colspan="2"><a class="anchor" id="ad4aabbb7b3a3e8639fe0c8d04396e7e9"></a>
+template&lt;typename T  = _ENetPeer&gt; </td></tr>
+<tr class="memitem:ad4aabbb7b3a3e8639fe0c8d04396e7e9"><td class="memTemplItemLeft" align="right" valign="top">sf::Uint64&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structxy_1_1_net_peer.html#ad4aabbb7b3a3e8639fe0c8d04396e7e9">getID</a> () const </td></tr>
+<tr class="memdesc:ad4aabbb7b3a3e8639fe0c8d04396e7e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt;Port number <br /></td></tr>
+<tr class="separator:ad4aabbb7b3a3e8639fe0c8d04396e7e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f787f99a5a75efe59937ad16ddd8513"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7f787f99a5a75efe59937ad16ddd8513"></a>
+template&lt;typename T  = _ENetPeer&gt; </td></tr>
+<tr class="memitem:a7f787f99a5a75efe59937ad16ddd8513"><td class="memTemplItemLeft" align="right" valign="top">sf::Uint32&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structxy_1_1_net_peer.html#a7f787f99a5a75efe59937ad16ddd8513">getRoundTripTime</a> () const </td></tr>
+<tr class="memdesc:a7f787f99a5a75efe59937ad16ddd8513"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt;Unique ID <br /></td></tr>
+<tr class="separator:a7f787f99a5a75efe59937ad16ddd8513"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84847427bd64ae547c09aa76722240e2"><td class="memTemplParams" colspan="2"><a class="anchor" id="a84847427bd64ae547c09aa76722240e2"></a>
+template&lt;typename T  = _ENetPeer&gt; </td></tr>
+<tr class="memitem:a84847427bd64ae547c09aa76722240e2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structxy_1_1_net_peer.html#abac507f0fcc74dbf8b61be1c1c35e7e8">State</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getState</b> () const </td></tr>
+<tr class="separator:a84847427bd64ae547c09aa76722240e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af64eb077472beae4a24c7195b498f3c5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af64eb077472beae4a24c7195b498f3c5"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structxy_1_1_net_peer.html#af64eb077472beae4a24c7195b498f3c5">operator==</a> (const <a class="el" href="structxy_1_1_net_peer.html">NetPeer</a> &amp;other) const </td></tr>
 <tr class="memdesc:af64eb077472beae4a24c7195b498f3c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt;Current state of the peer <br /></td></tr>
 <tr class="separator:af64eb077472beae4a24c7195b498f3c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:a8fed271cef0a92261ea2b0fb1f61dfc9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8fed271cef0a92261ea2b0fb1f61dfc9"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>NetClient</b></td></tr>
-<tr class="separator:a8fed271cef0a92261ea2b0fb1f61dfc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a923152b199aba32c447295a9de9b239f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a923152b199aba32c447295a9de9b239f"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>NetHost</b></td></tr>
-<tr class="separator:a923152b199aba32c447295a9de9b239f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb3142be67007595ea219b3c170886db"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb3142be67007595ea219b3c170886db"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> () const </td></tr>
+<tr class="separator:acb3142be67007595ea219b3c170886db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad97a8d02404b6ea721ee9c70895edfd7"><td class="memTemplParams" colspan="2"><a class="anchor" id="ad97a8d02404b6ea721ee9c70895edfd7"></a>
+template&lt;typename T  = _ENetPeer&gt; </td></tr>
+<tr class="memitem:ad97a8d02404b6ea721ee9c70895edfd7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>setPeer</b> (T *peer)</td></tr>
+<tr class="separator:ad97a8d02404b6ea721ee9c70895edfd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66eccb0ebc38a113498f643a5d247b28"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66eccb0ebc38a113498f643a5d247b28"></a>
+const void *&#160;</td><td class="memItemRight" valign="bottom"><b>getPeer</b> () const </td></tr>
+<tr class="separator:a66eccb0ebc38a113498f643a5d247b28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65c76abd775f8e1a7f75051801ed3337"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a65c76abd775f8e1a7f75051801ed3337"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr>
+<tr class="separator:a65c76abd775f8e1a7f75051801ed3337"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fcda3fabc442597f0d13d34a70932b4"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7fcda3fabc442597f0d13d34a70932b4"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a7fcda3fabc442597f0d13d34a70932b4"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getAddress</b> () const </td></tr>
+<tr class="separator:a7fcda3fabc442597f0d13d34a70932b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8851b32d2e65197ed6b28eea4b5500b"><td class="memTemplParams" colspan="2"><a class="anchor" id="ab8851b32d2e65197ed6b28eea4b5500b"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:ab8851b32d2e65197ed6b28eea4b5500b"><td class="memTemplItemLeft" align="right" valign="top">sf::Uint16&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getPort</b> () const </td></tr>
+<tr class="separator:ab8851b32d2e65197ed6b28eea4b5500b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2eb39cf049dcb7b78010ae697800be2e"><td class="memTemplParams" colspan="2"><a class="anchor" id="a2eb39cf049dcb7b78010ae697800be2e"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a2eb39cf049dcb7b78010ae697800be2e"><td class="memTemplItemLeft" align="right" valign="top">sf::Uint64&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getID</b> () const </td></tr>
+<tr class="separator:a2eb39cf049dcb7b78010ae697800be2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eaa9ee7ac86b9168a3e7e85a6378a5c"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7eaa9ee7ac86b9168a3e7e85a6378a5c"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a7eaa9ee7ac86b9168a3e7e85a6378a5c"><td class="memTemplItemLeft" align="right" valign="top">sf::Uint32&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getRoundTripTime</b> () const </td></tr>
+<tr class="separator:a7eaa9ee7ac86b9168a3e7e85a6378a5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abae56bc3b0f53edf34094135d920142d"><td class="memTemplParams" colspan="2"><a class="anchor" id="abae56bc3b0f53edf34094135d920142d"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:abae56bc3b0f53edf34094135d920142d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structxy_1_1_net_peer.html#abac507f0fcc74dbf8b61be1c1c35e7e8">NetPeer::State</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getState</b> () const </td></tr>
+<tr class="separator:abae56bc3b0f53edf34094135d920142d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9e1a05ca91ad4ba5bf0ea5ba6c13a85"><td class="memTemplParams" colspan="2"><a class="anchor" id="ab9e1a05ca91ad4ba5bf0ea5ba6c13a85"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:ab9e1a05ca91ad4ba5bf0ea5ba6c13a85"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>setPeer</b> (_ENetPeer *peer)</td></tr>
+<tr class="separator:ab9e1a05ca91ad4ba5bf0ea5ba6c13a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fcda3fabc442597f0d13d34a70932b4"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7fcda3fabc442597f0d13d34a70932b4"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a7fcda3fabc442597f0d13d34a70932b4"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getAddress</b> () const </td></tr>
+<tr class="separator:a7fcda3fabc442597f0d13d34a70932b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8851b32d2e65197ed6b28eea4b5500b"><td class="memTemplParams" colspan="2"><a class="anchor" id="ab8851b32d2e65197ed6b28eea4b5500b"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:ab8851b32d2e65197ed6b28eea4b5500b"><td class="memTemplItemLeft" align="right" valign="top">sf::Uint16&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getPort</b> () const </td></tr>
+<tr class="separator:ab8851b32d2e65197ed6b28eea4b5500b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2eb39cf049dcb7b78010ae697800be2e"><td class="memTemplParams" colspan="2"><a class="anchor" id="a2eb39cf049dcb7b78010ae697800be2e"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a2eb39cf049dcb7b78010ae697800be2e"><td class="memTemplItemLeft" align="right" valign="top">sf::Uint64&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getID</b> () const </td></tr>
+<tr class="separator:a2eb39cf049dcb7b78010ae697800be2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eaa9ee7ac86b9168a3e7e85a6378a5c"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7eaa9ee7ac86b9168a3e7e85a6378a5c"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a7eaa9ee7ac86b9168a3e7e85a6378a5c"><td class="memTemplItemLeft" align="right" valign="top">sf::Uint32&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getRoundTripTime</b> () const </td></tr>
+<tr class="separator:a7eaa9ee7ac86b9168a3e7e85a6378a5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abae56bc3b0f53edf34094135d920142d"><td class="memTemplParams" colspan="2"><a class="anchor" id="abae56bc3b0f53edf34094135d920142d"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:abae56bc3b0f53edf34094135d920142d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structxy_1_1_net_peer.html#abac507f0fcc74dbf8b61be1c1c35e7e8">NetPeer::State</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getState</b> () const </td></tr>
+<tr class="separator:abae56bc3b0f53edf34094135d920142d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9e1a05ca91ad4ba5bf0ea5ba6c13a85"><td class="memTemplParams" colspan="2"><a class="anchor" id="ab9e1a05ca91ad4ba5bf0ea5ba6c13a85"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:ab9e1a05ca91ad4ba5bf0ea5ba6c13a85"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>setPeer</b> (_ENetPeer *peer)</td></tr>
+<tr class="separator:ab9e1a05ca91ad4ba5bf0ea5ba6c13a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A peer represents a single, multichannel connection between a client and a host. </p>

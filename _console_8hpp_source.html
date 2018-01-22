@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xyginext: C:/Users/Matt/Documents/Visual Studio 2017/Projects/xygineXT/xyginext/include/xyginext/core/Console.hpp Source File</title>
+<title>xyginext: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/core/Console.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -44,7 +44,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_efb0e9b2b77ba75392bcf64fcf40cd77.html">include</a></li><li class="navelem"><a class="el" href="dir_e1acbbb56b05dac1d2df5cc4492ca74b.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_09d685544d508c940ca45ef66000889f.html">core</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_de72eac28fae940626bc77a43000e4ad.html">include</a></li><li class="navelem"><a class="el" href="dir_7aeba9697aa2643cb98e804e91ef0468.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_99732df8828540ae815d91337e32b14c.html">core</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -53,7 +53,7 @@
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">(c) Matt Marchant 2017</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">(c) Matt Marchant 2017 - 2018</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">http://trederia.blogspot.com</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">xygineXT - Zlib license.</span></div>
@@ -92,46 +92,53 @@
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacexy.html">xy</a></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">class </span>ConsoleClient;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    </div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classxy_1_1_console.html">   48</a></span>&#160;    <span class="keyword">class </span>XY_EXPORT_API <a class="code" href="classxy_1_1_console.html">Console</a> final</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classxy_1_1_console.html#a84f492258d94d097ed81aeb2a87d7ba5">   59</a></span>&#160;        <span class="keyword">using</span> <a class="code" href="classxy_1_1_console.html#a84f492258d94d097ed81aeb2a87d7ba5">Command</a> = std::function&lt;void(const std::string&amp;)&gt;;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> print(<span class="keyword">const</span> std::string&amp;);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> show();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> doCommand(<span class="keyword">const</span> std::string&amp;);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> addConvar(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> std::string&amp; value, <span class="keyword">const</span> std::string&amp; helpText = std::string());</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keyword">static</span> T getConvarValue(<span class="keyword">const</span> std::string&amp; convar);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_app.html">App</a>;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_console_client.html">ConsoleClient</a>;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> init();</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> finalise();</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> addCommand(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> <a class="code" href="classxy_1_1_console.html#a84f492258d94d097ed81aeb2a87d7ba5">Command</a>&amp; cmd, <span class="keyword">const</span> <a class="code" href="classxy_1_1_console_client.html">ConsoleClient</a>* owner);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> removeCommands(<span class="keyword">const</span> <a class="code" href="classxy_1_1_console_client.html">ConsoleClient</a>*); <span class="comment">//removes all commands belonging to the given client</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">class </span>GuiClient;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classxy_1_1_console.html">   49</a></span>&#160;    <span class="keyword">class </span>XY_EXPORT_API <a class="code" href="classxy_1_1_console.html">Console</a> final</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classxy_1_1_console.html#a84f492258d94d097ed81aeb2a87d7ba5">   60</a></span>&#160;        <span class="keyword">using</span> <a class="code" href="classxy_1_1_console.html#a84f492258d94d097ed81aeb2a87d7ba5">Command</a> = std::function&lt;void(const std::string&amp;)&gt;;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> print(<span class="keyword">const</span> std::string&amp;);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> show();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> doCommand(<span class="keyword">const</span> std::string&amp;);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> addConvar(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> std::string&amp; value, <span class="keyword">const</span> std::string&amp; helpText = std::string());</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keyword">static</span> T getConvarValue(<span class="keyword">const</span> std::string&amp; convar);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> printStat(<span class="keyword">const</span> std::string&amp;, <span class="keyword">const</span> std::string&amp;);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_app.html">App</a>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_console_client.html">ConsoleClient</a>;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> draw();</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    };</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">//#include &quot;Console.inl&quot;</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#endif //XY_CONSOLE_HPP_</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> init();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> finalise();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> addStatusControl(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>()&gt;&amp;, <span class="keyword">const</span> <a class="code" href="classxy_1_1_gui_client.html">GuiClient</a>*);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> removeStatusControls(<span class="keyword">const</span> <a class="code" href="classxy_1_1_gui_client.html">GuiClient</a>*);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> addCommand(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> <a class="code" href="classxy_1_1_console.html#a84f492258d94d097ed81aeb2a87d7ba5">Command</a>&amp; cmd, <span class="keyword">const</span> <a class="code" href="classxy_1_1_console_client.html">ConsoleClient</a>* owner);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> removeCommands(<span class="keyword">const</span> <a class="code" href="classxy_1_1_console_client.html">ConsoleClient</a>*); <span class="comment">//removes all commands belonging to the given client</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> draw();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    };</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">//#include &quot;Console.inl&quot;</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">#endif //XY_CONSOLE_HPP_</span></div>
 <div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioSourceImpl.hpp:39</div></div>
-<div class="ttc" id="classxy_1_1_console_html_a84f492258d94d097ed81aeb2a87d7ba5"><div class="ttname"><a href="classxy_1_1_console.html#a84f492258d94d097ed81aeb2a87d7ba5">xy::Console::Command</a></div><div class="ttdeci">std::function&lt; void(const std::string &amp;)&gt; Command</div><div class="ttdef"><b>Definition:</b> Console.hpp:59</div></div>
+<div class="ttc" id="classxy_1_1_console_html_a84f492258d94d097ed81aeb2a87d7ba5"><div class="ttname"><a href="classxy_1_1_console.html#a84f492258d94d097ed81aeb2a87d7ba5">xy::Console::Command</a></div><div class="ttdeci">std::function&lt; void(const std::string &amp;)&gt; Command</div><div class="ttdef"><b>Definition:</b> Console.hpp:60</div></div>
+<div class="ttc" id="classxy_1_1_gui_client_html"><div class="ttname"><a href="classxy_1_1_gui_client.html">xy::GuiClient</a></div><div class="ttdoc">Allows registering GUI controls with the default output window, or registering custom windows using t...</div><div class="ttdef"><b>Definition:</b> GuiClient.hpp:44</div></div>
 <div class="ttc" id="classxy_1_1_app_html"><div class="ttname"><a href="classxy_1_1_app.html">xy::App</a></div><div class="ttdoc">Abstract base class for new games or applications. </div><div class="ttdef"><b>Definition:</b> App.hpp:78</div></div>
 <div class="ttc" id="classxy_1_1_console_client_html"><div class="ttname"><a href="classxy_1_1_console_client.html">xy::ConsoleClient</a></div><div class="ttdoc">Interface for registering console commands. To register a command with the console a class needs to i...</div><div class="ttdef"><b>Definition:</b> ConsoleClient.hpp:45</div></div>
-<div class="ttc" id="classxy_1_1_console_html"><div class="ttname"><a href="classxy_1_1_console.html">xy::Console</a></div><div class="ttdoc">Console class. The console class provides a feedback window and interface with xygine. Any class can register a command with the console as long as it inherits the ConsoleClient interface. </div><div class="ttdef"><b>Definition:</b> Console.hpp:48</div></div>
+<div class="ttc" id="classxy_1_1_console_html"><div class="ttname"><a href="classxy_1_1_console.html">xy::Console</a></div><div class="ttdoc">Console class. The console class provides a feedback window and interface with xygine. Any class can register a command with the console as long as it inherits the ConsoleClient interface. </div><div class="ttdef"><b>Definition:</b> Console.hpp:49</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

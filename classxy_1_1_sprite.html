@@ -119,6 +119,10 @@ sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_sprite.html#ab8450b3aa578e1cf11c24baa4b0038e3">getAnimationCount</a> () const </td></tr>
 <tr class="memdesc:ab8450b3aa578e1cf11c24baa4b0038e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of animations for this sprite when loaded from a sprite sheet definition file. <br /></td></tr>
 <tr class="separator:ab8450b3aa578e1cf11c24baa4b0038e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fa0f3c573e2789d7f29308e83eab56e"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="structxy_1_1_sprite_1_1_animation.html">Animation</a>, <a class="el" href="classxy_1_1_sprite.html#ae0e80c17c1bd381f118d4acd4342f1c9">MaxAnimations</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_sprite.html#a2fa0f3c573e2789d7f29308e83eab56e">getAnimations</a> ()</td></tr>
+<tr class="separator:a2fa0f3c573e2789d7f29308e83eab56e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a940bb2137058724c3ba6d4716ed7f2ac"><td class="memItemLeft" align="right" valign="top">const std::array&lt; <a class="el" href="structxy_1_1_sprite_1_1_animation.html">Animation</a>, <a class="el" href="classxy_1_1_sprite.html#ae0e80c17c1bd381f118d4acd4342f1c9">MaxAnimations</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_sprite.html#a940bb2137058724c3ba6d4716ed7f2ac">getAnimations</a> () const </td></tr>
+<tr class="separator:a940bb2137058724c3ba6d4716ed7f2ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -145,7 +149,56 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>SpriteAnimator</b></
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classxy_1_1_sprite.html" title="Sprite component optimised to work with the ECS. Sprite components require their entity to also have ...">Sprite</a> component optimised to work with the ECS. <a class="el" href="classxy_1_1_sprite.html" title="Sprite component optimised to work with the ECS. Sprite components require their entity to also have ...">Sprite</a> components require their entity to also have a <a class="el" href="classxy_1_1_drawable.html" title="Drawable component. The drawable component encapsulates an sf::VertexArray which can be used to draw ...">Drawable</a> component. </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a2fa0f3c573e2789d7f29308e83eab56e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;<a class="el" href="structxy_1_1_sprite_1_1_animation.html">Animation</a>, <a class="el" href="classxy_1_1_sprite.html#ae0e80c17c1bd381f118d4acd4342f1c9">MaxAnimations</a>&gt;&amp; xy::Sprite::getAnimations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>/brief Returns a reference to the sprites animation array. Use <a class="el" href="classxy_1_1_sprite.html#ab8450b3aa578e1cf11c24baa4b0038e3" title="Returns the number of animations for this sprite when loaded from a sprite sheet definition file...">getAnimationCount()</a> to check how many of the animations are valid </p>
+
+</div>
+</div>
+<a class="anchor" id="a940bb2137058724c3ba6d4716ed7f2ac"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::array&lt;<a class="el" href="structxy_1_1_sprite_1_1_animation.html">Animation</a>, <a class="el" href="classxy_1_1_sprite.html#ae0e80c17c1bd381f118d4acd4342f1c9">MaxAnimations</a>&gt;&amp; xy::Sprite::getAnimations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>/brief Returns a const reference to the sprites animation array. Use <a class="el" href="classxy_1_1_sprite.html#ab8450b3aa578e1cf11c24baa4b0038e3" title="Returns the number of animations for this sprite when loaded from a sprite sheet definition file...">getAnimationCount()</a> to check how many of the animations are valid </p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

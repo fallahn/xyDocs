@@ -77,6 +77,19 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_drawable.html#aaf130f293a20b95c0bfc74037eb4f9bb">setShader</a> (sf::Shader *)</td></tr>
 <tr class="memdesc:aaf130f293a20b95c0bfc74037eb4f9bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the shader used when drawing. Passing nullptr removes any active shader. <br /></td></tr>
 <tr class="separator:aaf130f293a20b95c0bfc74037eb4f9bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a741aee6b237edacd26598c52ce167310"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a741aee6b237edacd26598c52ce167310"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_drawable.html#a741aee6b237edacd26598c52ce167310">bindUniform</a> (const std::string &amp;name, const sf::Texture &amp;texture)</td></tr>
+<tr class="memdesc:a741aee6b237edacd26598c52ce167310"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a uniform binding to be applied to any shader this drawable may have. When sharing a shader between multiple drawables is maybe be, for instance, desirable to the apply a different texture for each drawble. This function allows mapping a uniform name (assuming it is available in the current shader) to a texture or other value. Bindings are limited to 6 per type. <br /></td></tr>
+<tr class="separator:a741aee6b237edacd26598c52ce167310"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaedef3c1697d6bdacfa0943d8e493e12"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaedef3c1697d6bdacfa0943d8e493e12"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>bindUniform</b> (const std::string &amp;name, float value)</td></tr>
+<tr class="separator:aaedef3c1697d6bdacfa0943d8e493e12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a350e1b371f01bdb824cecd8d6629f99f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a350e1b371f01bdb824cecd8d6629f99f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>bindUniform</b> (const std::string &amp;name, sf::Vector2f value)</td></tr>
+<tr class="separator:a350e1b371f01bdb824cecd8d6629f99f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17763328a31a697af4663f55ad2d885a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a17763328a31a697af4663f55ad2d885a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>bindUniform</b> (const std::string &amp;name, sf::Vector3f value)</td></tr>
+<tr class="separator:a17763328a31a697af4663f55ad2d885a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3de615ad63840a15453929727e21982"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac3de615ad63840a15453929727e21982"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_drawable.html#ac3de615ad63840a15453929727e21982">setBlendMode</a> (sf::BlendMode)</td></tr>
 <tr class="memdesc:ac3de615ad63840a15453929727e21982"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the blend mode used when drawing. <br /></td></tr>

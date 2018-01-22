@@ -53,7 +53,6 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#friends">Friends</a> &#124;
 <a href="structxy_1_1_net_event_1_1_packet-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">xy::NetEvent::Packet Struct Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
@@ -96,19 +95,14 @@ const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structxy_1_1_net_event_1_1_packet.html#aaa61d5da136fe5807c0e355f804acd94">getSize</a> () const </td></tr>
 <tr class="memdesc:aaa61d5da136fe5807c0e355f804acd94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the data, in bytes. <br /></td></tr>
 <tr class="separator:aaa61d5da136fe5807c0e355f804acd94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a791f838223205589bab8b16421cfee21"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a791f838223205589bab8b16421cfee21"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structxy_1_1_net_event_1_1_packet.html#a791f838223205589bab8b16421cfee21">setPacketData</a> (const std::uint8_t *, std::size_t)</td></tr>
+<tr class="memdesc:a791f838223205589bab8b16421cfee21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used by active implementation to set packet data. DO NOT USE DIRECTLY. <br /></td></tr>
+<tr class="separator:a791f838223205589bab8b16421cfee21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3bf0e711f4e6ffdfc9fe633d87f427e"><td class="memTemplParams" colspan="2"><a class="anchor" id="ac3bf0e711f4e6ffdfc9fe633d87f427e"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ac3bf0e711f4e6ffdfc9fe633d87f427e"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>as</b> () const </td></tr>
 <tr class="separator:ac3bf0e711f4e6ffdfc9fe633d87f427e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:a8fed271cef0a92261ea2b0fb1f61dfc9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8fed271cef0a92261ea2b0fb1f61dfc9"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>NetClient</b></td></tr>
-<tr class="separator:a8fed271cef0a92261ea2b0fb1f61dfc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a923152b199aba32c447295a9de9b239f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a923152b199aba32c447295a9de9b239f"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>NetHost</b></td></tr>
-<tr class="separator:a923152b199aba32c447295a9de9b239f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Event packet. Contains packet data recieved by PacketRecieved event. Not valid for other event types. </p>
