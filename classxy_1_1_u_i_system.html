@@ -142,6 +142,9 @@ sf::Uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_u_i_system.html#a57a549aa864eaaa418fcbde9b170f094">selectInput</a> (std::size_t)</td></tr>
 <tr class="memdesc:a57a549aa864eaaa418fcbde9b170f094"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects the input at the given index if it exists. <br /></td></tr>
 <tr class="separator:a57a549aa864eaaa418fcbde9b170f094"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00452c33fab163b9d8da2916530d17cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_u_i_system.html#a00452c33fab163b9d8da2916530d17cb">setJoypadCursorActive</a> (bool active)</td></tr>
+<tr class="memdesc:a00452c33fab163b9d8da2916530d17cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables controlling the mouse cursor with the controller connected to port 0. When this is enabled all mouse movement callbacks are executed as they would with a normal mouse move, controller button and mouse button callbacks remain unchanged.  <a href="#a00452c33fab163b9d8da2916530d17cb">More...</a><br /></td></tr>
+<tr class="separator:a00452c33fab163b9d8da2916530d17cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classxy_1_1_system"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classxy_1_1_system')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classxy_1_1_system.html">xy::System</a></td></tr>
 <tr class="memitem:aa17bed267803af1928e2e8d0a45be700 inherit pub_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa17bed267803af1928e2e8d0a45be700"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#aa17bed267803af1928e2e8d0a45be700">System</a> (<a class="el" href="classxy_1_1_message_bus.html">MessageBus</a> &amp;mb, UniqueType t)</td></tr>
@@ -253,6 +256,30 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setScene</b> (<a clas
 
 <p>Adds a mouse button event callback. </p>
 <dl class="section return"><dt>Returns</dt><dd>ID of the callback. This should be used to assigned the callback to the relative callback slot of a UIInput component. eg: auto id = system.addCallback(cb); component.callbacks[UIInput::MouseDown] = id; Note that a single callback ID may be assigned to multiple UIHitbox components </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a00452c33fab163b9d8da2916530d17cb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void xy::UISystem::setJoypadCursorActive </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>active</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enables controlling the mouse cursor with the controller connected to port 0. When this is enabled all mouse movement callbacks are executed as they would with a normal mouse move, controller button and mouse button callbacks remain unchanged. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">active</td><td>If true enables controlling the mouse cursor with the controller </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

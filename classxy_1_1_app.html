@@ -76,9 +76,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0c249ad6577a04c84c5f0ca084c73a4f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#a0c249ad6577a04c84c5f0ca084c73a4f">App</a> ()</td></tr>
-<tr class="memdesc:a0c249ad6577a04c84c5f0ca084c73a4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a0c249ad6577a04c84c5f0ca084c73a4f">More...</a><br /></td></tr>
-<tr class="separator:a0c249ad6577a04c84c5f0ca084c73a4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1f3e782113038277b356875859e8ff0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#af1f3e782113038277b356875859e8ff0">App</a> (sf::ContextSettings contextSettings=sf::ContextSettings())</td></tr>
+<tr class="memdesc:af1f3e782113038277b356875859e8ff0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#af1f3e782113038277b356875859e8ff0">More...</a><br /></td></tr>
+<tr class="separator:af1f3e782113038277b356875859e8ff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a667b85075f300ebb94a95864059adbff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a667b85075f300ebb94a95864059adbff"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>App</b> (const <a class="el" href="classxy_1_1_app.html">App</a> &amp;)=delete</td></tr>
 <tr class="separator:a667b85075f300ebb94a95864059adbff"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -112,7 +112,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:ae52dd3e4d9f3da4ef2570c65898abfa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc9c3fec2ee87cba22a946e9840113dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc9c3fec2ee87cba22a946e9840113dc"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#afc9c3fec2ee87cba22a946e9840113dc">setWindowIcon</a> (const std::string &amp;)</td></tr>
-<tr class="memdesc:afc9c3fec2ee87cba22a946e9840113dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the window icon. This should be a path to a 16x16px image. Prefer this to setting the icon directly on the window object, as it will make sure to maintain the icon when video modes are modified. <br /></td></tr>
+<tr class="memdesc:afc9c3fec2ee87cba22a946e9840113dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the window icon. This should be a path to a 16x16px image on most platforms, although on macOS this icon should be larger as it appears in the dock. Prefer this to setting the icon directly on the window object, as it will make sure to maintain the icon when video modes are modified. <br /></td></tr>
 <tr class="separator:afc9c3fec2ee87cba22a946e9840113dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15cbf3d5a8d568831df72b7cde1d19dd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a15cbf3d5a8d568831df72b7cde1d19dd"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#a15cbf3d5a8d568831df72b7cde1d19dd">setApplicationName</a> (const std::string &amp;name)</td></tr>
@@ -149,6 +149,14 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 static <a class="el" href="classxy_1_1_app.html">App</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#a4aa4d01897b55d710ae9ccb98ae2a573">getActiveInstance</a> ()</td></tr>
 <tr class="memdesc:a4aa4d01897b55d710ae9ccb98ae2a573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the active <a class="el" href="classxy_1_1_app.html" title="Abstract base class for new games or applications. ">App</a> instance. <br /></td></tr>
 <tr class="separator:a4aa4d01897b55d710ae9ccb98ae2a573"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbab85320506abb70611550426af9097"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acbab85320506abb70611550426af9097"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#acbab85320506abb70611550426af9097">setMouseCursorVisible</a> (bool)</td></tr>
+<tr class="memdesc:acbab85320506abb70611550426af9097"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether or not the mouse cursor should be visible. Prefer this rather than setting on the render window directly to prevent ImGUI settings overriding the window setting. <br /></td></tr>
+<tr class="separator:acbab85320506abb70611550426af9097"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ab22aef4c2f7097c6faa4249d002f40"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ab22aef4c2f7097c6faa4249d002f40"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#a7ab22aef4c2f7097c6faa4249d002f40">isMouseCursorVisible</a> ()</td></tr>
+<tr class="memdesc:a7ab22aef4c2f7097c6faa4249d002f40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether or not the mouse cursor is set to be visible. <br /></td></tr>
+<tr class="separator:a7ab22aef4c2f7097c6faa4249d002f40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -185,14 +193,15 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>GuiClient</b></td></
 <div class="textblock"><p>Abstract base class for new games or applications. </p>
 <p>When creating a new game or application this class provides management for basic proeprties such as video settings and event handling. All events and system messages are despatched from here so that they are available across the entire application. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a0c249ad6577a04c84c5f0ca084c73a4f"></a>
+<a class="anchor" id="af1f3e782113038277b356875859e8ff0"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">xy::App::App </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">sf::ContextSettings&#160;</td>
+          <td class="paramname"><em>contextSettings</em> = <code>sf::ContextSettings()</code></td><td>)</td>
           <td></td>
         </tr>
       </table>

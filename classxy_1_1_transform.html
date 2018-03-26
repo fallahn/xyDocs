@@ -102,6 +102,10 @@ sf::Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_transform.html#a67b20587bd206ab6cd184af394d28ce4">getWorldPosition</a> () const </td></tr>
 <tr class="memdesc:a67b20587bd206ab6cd184af394d28ce4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the world position of the transform. This is effectively a shortcut for <a class="el" href="classxy_1_1_transform.html#a3361bf723e1cad7d7bf0510335974df3" title="Returns the world position of this transform by multiplying it with any parent transforms it may have...">getWorldTransform()</a>.transformPoint({}). If this transform does not have a parent transform then getPosition() is probably preferable. <br /></td></tr>
 <tr class="separator:a67b20587bd206ab6cd184af394d28ce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac55952feef20b2e07cba18f8776cfa08"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac55952feef20b2e07cba18f8776cfa08"></a>
+std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_transform.html#ac55952feef20b2e07cba18f8776cfa08">getDepth</a> () const </td></tr>
+<tr class="memdesc:ac55952feef20b2e07cba18f8776cfa08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the depth of this transform in the scene hierachy. A value of 0 means it has no parent, 1 means one parent and so on. <br /></td></tr>
+<tr class="separator:ac55952feef20b2e07cba18f8776cfa08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Wraps the SFML transformable class in a component friendly format, parentable to other transforms in a scene graph hierachy. Transforms are non-copyable, but are moveable. </p>

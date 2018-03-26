@@ -101,6 +101,10 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_console.html#a8bea8b276406881b7d35836d546846f2">show</a> ()</td></tr>
 <tr class="memdesc:a8bea8b276406881b7d35836d546846f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggles the console window visibility. <br /></td></tr>
 <tr class="separator:a8bea8b276406881b7d35836d546846f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e5a8f4b10f5b4c5742ebf6ae506ace2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e5a8f4b10f5b4c5742ebf6ae506ace2"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_console.html#a5e5a8f4b10f5b4c5742ebf6ae506ace2">isVisible</a> ()</td></tr>
+<tr class="memdesc:a5e5a8f4b10f5b4c5742ebf6ae506ace2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the console is currently shown. <br /></td></tr>
+<tr class="separator:a5e5a8f4b10f5b4c5742ebf6ae506ace2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac44f4fc37fe6ddf25a580c57e8c6d4d6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac44f4fc37fe6ddf25a580c57e8c6d4d6"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_console.html#ac44f4fc37fe6ddf25a580c57e8c6d4d6">doCommand</a> (const std::string &amp;)</td></tr>
 <tr class="memdesc:ac44f4fc37fe6ddf25a580c57e8c6d4d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the given command line. Allows for programatically executing arbitrary commands. <br /></td></tr>
@@ -139,7 +143,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>ConsoleClient</b></t
         </tr>
       </table>
 </div><div class="memdoc">
-<p><a class="el" href="structxy_1_1_command.html" title="Command struct. Each command encapsulates a mask of target IDs as well as a command in the form of a ...">Command</a> functions are registered with their associated string, and executed when that string is entered into the consle window. Any further characters entered after the command are passed into the command function as a paramter. If this is a list of paramters it is up to the command function implementation to properly parse the given string. </p>
+<p><a class="el" href="structxy_1_1_command.html" title="Command struct. Each command encapsulates a mask of target IDs as well as a command in the form of a ...">Command</a> functions are registered with an associated string, and executed when that string is entered into the consle window. Any further characters entered after the command are passed into the command function as a parameter. If this is a list of parameters it is up to the command function implementation to properly parse the given string. Registering a command with the console may be done by any class which inherits <a class="el" href="classxy_1_1_console_client.html" title="Interface for registering console commands. To register a command with the console a class needs to i...">ConsoleClient</a>. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classxy_1_1_console_client.html" title="Interface for registering console commands. To register a command with the console a class needs to i...">ConsoleClient</a> </dd></dl>
 
 </div>
 </div>

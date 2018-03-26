@@ -82,7 +82,7 @@
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#ifndef XY_SPRITE_ANIMATION_HPP_</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define XY_SPRITE_ANIMATION_HPP_</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;xyginext/Config.hpp&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;xyginext/Config.hpp&quot;</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;SFML/Config.hpp&gt;</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacexy.html">xy</a></div>
@@ -96,20 +96,26 @@
 <div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="structxy_1_1_sprite_animation.html#a8e68b99b9085f5aec856d398e3b3165a">   56</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="structxy_1_1_sprite_animation.html#a8e68b99b9085f5aec856d398e3b3165a">stop</a>() { m_playing = <span class="keyword">false</span>; m_frameID = 0; }</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
 <div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="structxy_1_1_sprite_animation.html#a14af25038c398d7ac870f540e5427c22">   61</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="structxy_1_1_sprite_animation.html#a14af25038c398d7ac870f540e5427c22">stopped</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> !m_playing; }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        sf::Int32 m_id = -1;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordtype">bool</span> m_playing = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordtype">float</span> m_currentFrameTime = 0.f;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        sf::Uint32 m_frameID = 0;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_sprite_animator.html">SpriteAnimator</a>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    };</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="structxy_1_1_sprite_animation.html#a4fc6f31c53b7d21c8a27595fbe7c0673">   66</a></span>&#160;        sf::Uint32 <a class="code" href="structxy_1_1_sprite_animation.html#a4fc6f31c53b7d21c8a27595fbe7c0673">getFrameID</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_frameID; }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="structxy_1_1_sprite_animation.html#a2a536a5b8bf3d6b14809f1cedda605ff">   71</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="structxy_1_1_sprite_animation.html#a2a536a5b8bf3d6b14809f1cedda605ff">setFrameID</a>(sf::Uint32 frameID) { m_frameID = frameID; }</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif //XY_SPRITE_ANIMATION_HPP_</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        sf::Int32 m_id = -1;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordtype">bool</span> m_playing = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordtype">float</span> m_currentFrameTime = 0.f;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        sf::Uint32 m_frameID = 0;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_sprite_animator.html">SpriteAnimator</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    };</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif //XY_SPRITE_ANIMATION_HPP_</span></div>
 <div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioSourceImpl.hpp:39</div></div>
+<div class="ttc" id="structxy_1_1_sprite_animation_html_a2a536a5b8bf3d6b14809f1cedda605ff"><div class="ttname"><a href="structxy_1_1_sprite_animation.html#a2a536a5b8bf3d6b14809f1cedda605ff">xy::SpriteAnimation::setFrameID</a></div><div class="ttdeci">void setFrameID(sf::Uint32 frameID)</div><div class="ttdoc">Set the current frame ID. </div><div class="ttdef"><b>Definition:</b> SpriteAnimation.hpp:71</div></div>
 <div class="ttc" id="classxy_1_1_sprite_animator_html"><div class="ttname"><a href="classxy_1_1_sprite_animator.html">xy::SpriteAnimator</a></div><div class="ttdoc">Sprite Animation system. Updates all active animations on entities which have Sprite and SpriteAnimat...</div><div class="ttdef"><b>Definition:</b> SpriteAnimator.hpp:40</div></div>
+<div class="ttc" id="structxy_1_1_sprite_animation_html_a4fc6f31c53b7d21c8a27595fbe7c0673"><div class="ttname"><a href="structxy_1_1_sprite_animation.html#a4fc6f31c53b7d21c8a27595fbe7c0673">xy::SpriteAnimation::getFrameID</a></div><div class="ttdeci">sf::Uint32 getFrameID() const </div><div class="ttdoc">Returns the current frame ID. </div><div class="ttdef"><b>Definition:</b> SpriteAnimation.hpp:66</div></div>
 <div class="ttc" id="structxy_1_1_sprite_animation_html_a084d95a9f2c6fea8afc3f924f4e3dd46"><div class="ttname"><a href="structxy_1_1_sprite_animation.html#a084d95a9f2c6fea8afc3f924f4e3dd46">xy::SpriteAnimation::play</a></div><div class="ttdeci">void play(sf::Int32 index)</div><div class="ttdoc">Play the animation at the given index if it exists. </div><div class="ttdef"><b>Definition:</b> SpriteAnimation.hpp:45</div></div>
 <div class="ttc" id="structxy_1_1_sprite_animation_html_a14af25038c398d7ac870f540e5427c22"><div class="ttname"><a href="structxy_1_1_sprite_animation.html#a14af25038c398d7ac870f540e5427c22">xy::SpriteAnimation::stopped</a></div><div class="ttdeci">bool stopped() const </div><div class="ttdoc">Returns true if the current animation has stopped playing. </div><div class="ttdef"><b>Definition:</b> SpriteAnimation.hpp:61</div></div>
 <div class="ttc" id="structxy_1_1_sprite_animation_html_a8e68b99b9085f5aec856d398e3b3165a"><div class="ttname"><a href="structxy_1_1_sprite_animation.html#a8e68b99b9085f5aec856d398e3b3165a">xy::SpriteAnimation::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">Stops the current animation if it is playing and rewinds it to the first frame if it is playing or pa...</div><div class="ttdef"><b>Definition:</b> SpriteAnimation.hpp:56</div></div>

@@ -79,7 +79,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:aaf130f293a20b95c0bfc74037eb4f9bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a741aee6b237edacd26598c52ce167310"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a741aee6b237edacd26598c52ce167310"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_drawable.html#a741aee6b237edacd26598c52ce167310">bindUniform</a> (const std::string &amp;name, const sf::Texture &amp;texture)</td></tr>
-<tr class="memdesc:a741aee6b237edacd26598c52ce167310"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a uniform binding to be applied to any shader this drawable may have. When sharing a shader between multiple drawables is maybe be, for instance, desirable to the apply a different texture for each drawble. This function allows mapping a uniform name (assuming it is available in the current shader) to a texture or other value. Bindings are limited to 6 per type. <br /></td></tr>
+<tr class="memdesc:a741aee6b237edacd26598c52ce167310"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a uniform binding to be applied to any shader this drawable may have. When sharing a shader between multiple drawables it may be, for instance, desirable to the apply a different texture for each drawble. This function allows mapping a uniform name (assuming it is available in the current shader) to a texture or other value. Bindings are limited to 6 per type. <br /></td></tr>
 <tr class="separator:a741aee6b237edacd26598c52ce167310"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaedef3c1697d6bdacfa0943d8e493e12"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaedef3c1697d6bdacfa0943d8e493e12"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>bindUniform</b> (const std::string &amp;name, float value)</td></tr>
@@ -90,18 +90,25 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>bindUniform</b> (cons
 <tr class="memitem:a17763328a31a697af4663f55ad2d885a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a17763328a31a697af4663f55ad2d885a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>bindUniform</b> (const std::string &amp;name, sf::Vector3f value)</td></tr>
 <tr class="separator:a17763328a31a697af4663f55ad2d885a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83c560cbd39f6da8c7054bb15745f701"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a83c560cbd39f6da8c7054bb15745f701"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>bindUniform</b> (const std::string &amp;name, bool value)</td></tr>
+<tr class="separator:a83c560cbd39f6da8c7054bb15745f701"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfa798d708dfe8b37ece463c8f490150"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abfa798d708dfe8b37ece463c8f490150"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_drawable.html#abfa798d708dfe8b37ece463c8f490150">bindUniform</a> (const std::string &amp;name, const float *value)</td></tr>
+<tr class="memdesc:abfa798d708dfe8b37ece463c8f490150"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds a pointer to a float array containing a 4x4 matrix. <br /></td></tr>
+<tr class="separator:abfa798d708dfe8b37ece463c8f490150"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3de615ad63840a15453929727e21982"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac3de615ad63840a15453929727e21982"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_drawable.html#ac3de615ad63840a15453929727e21982">setBlendMode</a> (sf::BlendMode)</td></tr>
 <tr class="memdesc:ac3de615ad63840a15453929727e21982"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the blend mode used when drawing. <br /></td></tr>
 <tr class="separator:ac3de615ad63840a15453929727e21982"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a0bf164194af148aecd3e384eea7db1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a0bf164194af148aecd3e384eea7db1"></a>
-const sf::Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_drawable.html#a3a0bf164194af148aecd3e384eea7db1">getTexture</a> () const </td></tr>
-<tr class="memdesc:a3a0bf164194af148aecd3e384eea7db1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the active texture. <br /></td></tr>
-<tr class="separator:a3a0bf164194af148aecd3e384eea7db1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a526cca0b7cff4006a0a30eb0d7a71a62"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a526cca0b7cff4006a0a30eb0d7a71a62"></a>
-const sf::Shader *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_drawable.html#a526cca0b7cff4006a0a30eb0d7a71a62">getShader</a> () const </td></tr>
-<tr class="memdesc:a526cca0b7cff4006a0a30eb0d7a71a62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the active shader, if any. <br /></td></tr>
-<tr class="separator:a526cca0b7cff4006a0a30eb0d7a71a62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1cb6b841ccfc8970d89f636c363c37f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1cb6b841ccfc8970d89f636c363c37f"></a>
+sf::Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_drawable.html#aa1cb6b841ccfc8970d89f636c363c37f">getTexture</a> ()</td></tr>
+<tr class="memdesc:aa1cb6b841ccfc8970d89f636c363c37f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the active texture. <br /></td></tr>
+<tr class="separator:aa1cb6b841ccfc8970d89f636c363c37f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48e335864b115becfd6f174dc7d46735"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a48e335864b115becfd6f174dc7d46735"></a>
+sf::Shader *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_drawable.html#a48e335864b115becfd6f174dc7d46735">getShader</a> ()</td></tr>
+<tr class="memdesc:a48e335864b115becfd6f174dc7d46735"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the active shader, if any. <br /></td></tr>
+<tr class="separator:a48e335864b115becfd6f174dc7d46735"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb58f1c76cbcc1ba11f377bc64ebc3ef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb58f1c76cbcc1ba11f377bc64ebc3ef"></a>
 sf::BlendMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_drawable.html#adb58f1c76cbcc1ba11f377bc64ebc3ef">getBlendMode</a> () const </td></tr>
 <tr class="memdesc:adb58f1c76cbcc1ba11f377bc64ebc3ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current blend mode. <br /></td></tr>
@@ -134,8 +141,11 @@ sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <tr class="separator:a37cfa1db27537161c1313523dfd4dcfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1816bf3922c232b59576aa7034ce5a4b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1816bf3922c232b59576aa7034ce5a4b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_drawable.html#a1816bf3922c232b59576aa7034ce5a4b">updateLocalBounds</a> ()</td></tr>
-<tr class="memdesc:a1816bf3922c232b59576aa7034ce5a4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the local bounds. This should be called once by a system when it updates the vertex array. <br /></td></tr>
+<tr class="memdesc:a1816bf3922c232b59576aa7034ce5a4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the local bounds. This should be called once by a system when it updates the vertex array. As this is used by the render system for culling, <a class="el" href="classxy_1_1_drawable.html" title="Drawable component. The drawable component encapsulates an sf::VertexArray which can be used to draw ...">Drawable</a> components will not be drawn if the bounds have not been updated. <br /></td></tr>
 <tr class="separator:a1816bf3922c232b59576aa7034ce5a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66239fb5c5cdac1da4c89b1bee6c0315"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_drawable.html#a66239fb5c5cdac1da4c89b1bee6c0315">setCulled</a> (bool cull)</td></tr>
+<tr class="memdesc:a66239fb5c5cdac1da4c89b1bee6c0315"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables viewport culling. By default Drawables are culled from rendering when not in the viewable area of the active camer. Setting this to true will cause the drawable to always be rendered, even if it falls outside the active camera's view.  <a href="#a66239fb5c5cdac1da4c89b1bee6c0315">More...</a><br /></td></tr>
+<tr class="separator:a66239fb5c5cdac1da4c89b1bee6c0315"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -169,6 +179,38 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>RenderSystem</b></td
 
 <p>Returns the Z depth value. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classxy_1_1_drawable.html#a0651ab05ecaa58bef158364523ce201d" title="Sets the z-depth of a drawable. The lower the value the further back the entity is drawn...">setDepth()</a>; </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a66239fb5c5cdac1da4c89b1bee6c0315"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void xy::Drawable::setCulled </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>cull</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enables or disables viewport culling. By default Drawables are culled from rendering when not in the viewable area of the active camer. Setting this to true will cause the drawable to always be rendered, even if it falls outside the active camera's view. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cull</td><td>Set to true to have the drawble culled from rendering when not intersecting the current viewable area. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

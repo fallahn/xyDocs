@@ -82,7 +82,7 @@
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#ifndef XY_DRAWABLE_HPP_</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define XY_DRAWABLE_HPP_</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;xyginext/Config.hpp&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;xyginext/Config.hpp&quot;</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics/RenderStates.hpp&gt;</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics/Vertex.hpp&gt;</span></div>
@@ -113,63 +113,75 @@
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordtype">void</span> bindUniform(<span class="keyword">const</span> std::string&amp; name, sf::Vector3f value);</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordtype">void</span> setBlendMode(sf::BlendMode);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keyword">const</span> sf::Texture* getTexture() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keyword">const</span> sf::Shader* getShader() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="classxy_1_1_drawable.html#adb58f1c76cbcc1ba11f377bc64ebc3ef">  108</a></span>&#160;        sf::BlendMode <a class="code" href="classxy_1_1_drawable.html#adb58f1c76cbcc1ba11f377bc64ebc3ef">getBlendMode</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_states.blendMode; }</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="classxy_1_1_drawable.html#a0651ab05ecaa58bef158364523ce201d">  116</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classxy_1_1_drawable.html#a0651ab05ecaa58bef158364523ce201d">setDepth</a>(sf::Int32 depth) { m_zDepth = depth; m_wantsSorting = <span class="keyword">true</span>; }</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="classxy_1_1_drawable.html#a283f8907ee84c6572397774d9db50406">  122</a></span>&#160;        sf::Int32 <a class="code" href="classxy_1_1_drawable.html#a283f8907ee84c6572397774d9db50406">getDepth</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_zDepth; }</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="classxy_1_1_drawable.html#a6373f8a2087c47cdc9ac28a01cb14f7f">  127</a></span>&#160;        std::vector&lt;sf::Vertex&gt;&amp; <a class="code" href="classxy_1_1_drawable.html#a6373f8a2087c47cdc9ac28a01cb14f7f">getVertices</a>() { <span class="keywordflow">return</span> m_vertices; }</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keyword">const</span> std::vector&lt;sf::Vertex&gt;&amp; getVertices()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_vertices; }</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classxy_1_1_drawable.html#a89b591ba8129979d9cec9af952cdc58b">  134</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classxy_1_1_drawable.html#a89b591ba8129979d9cec9af952cdc58b">setPrimitiveType</a>(sf::PrimitiveType type) { m_primitiveType = type; }</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
-<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="classxy_1_1_drawable.html#a033a54b7450ca2411aac9d56d99dca25">  139</a></span>&#160;        sf::PrimitiveType <a class="code" href="classxy_1_1_drawable.html#a033a54b7450ca2411aac9d56d99dca25">getPrimitiveType</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_primitiveType; }</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        sf::FloatRect getLocalBounds() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordtype">void</span> bindUniform(<span class="keyword">const</span> std::string&amp; name, <span class="keywordtype">bool</span> value);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordtype">void</span> bindUniform(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> <span class="keywordtype">float</span>* value);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordtype">void</span> setBlendMode(sf::BlendMode);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        sf::Texture* getTexture();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        sf::Shader* getShader();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="classxy_1_1_drawable.html#adb58f1c76cbcc1ba11f377bc64ebc3ef">  115</a></span>&#160;        sf::BlendMode <a class="code" href="classxy_1_1_drawable.html#adb58f1c76cbcc1ba11f377bc64ebc3ef">getBlendMode</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_states.blendMode; }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordtype">void</span> setDepth(sf::Int32 depth);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="classxy_1_1_drawable.html#a283f8907ee84c6572397774d9db50406">  129</a></span>&#160;        sf::Int32 <a class="code" href="classxy_1_1_drawable.html#a283f8907ee84c6572397774d9db50406">getDepth</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_zDepth; }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classxy_1_1_drawable.html#a6373f8a2087c47cdc9ac28a01cb14f7f">  134</a></span>&#160;        std::vector&lt;sf::Vertex&gt;&amp; <a class="code" href="classxy_1_1_drawable.html#a6373f8a2087c47cdc9ac28a01cb14f7f">getVertices</a>() { <span class="keywordflow">return</span> m_vertices; }</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keyword">const</span> std::vector&lt;sf::Vertex&gt;&amp; getVertices()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_vertices; }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="classxy_1_1_drawable.html#a89b591ba8129979d9cec9af952cdc58b">  141</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classxy_1_1_drawable.html#a89b591ba8129979d9cec9af952cdc58b">setPrimitiveType</a>(sf::PrimitiveType type) { m_primitiveType = type; }</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="classxy_1_1_drawable.html#a033a54b7450ca2411aac9d56d99dca25">  146</a></span>&#160;        sf::PrimitiveType <a class="code" href="classxy_1_1_drawable.html#a033a54b7450ca2411aac9d56d99dca25">getPrimitiveType</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_primitiveType; }</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordtype">void</span> updateLocalBounds();</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        sf::PrimitiveType m_primitiveType = sf::Quads;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        sf::RenderStates m_states;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        std::vector&lt;sf::Vertex&gt; m_vertices;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        sf::Int32 m_zDepth = 0;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordtype">bool</span> m_wantsSorting = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        sf::FloatRect m_localBounds;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keyword">static</span> constexpr std::size_t MaxBindings = 6;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        std::array&lt;std::pair&lt;std::string, const sf::Texture*&gt;, MaxBindings&gt; m_textureBindings;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        std::array&lt;std::pair&lt;std::string, float&gt;, MaxBindings&gt; m_floatBindings;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        std::array&lt;std::pair&lt;std::string, sf::Vector2f&gt;, MaxBindings&gt; m_vec2Bindings;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        std::array&lt;std::pair&lt;std::string, sf::Vector3f&gt;, MaxBindings&gt; m_vec3Bindings;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        std::size_t m_textureCount;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        std::size_t m_floatCount;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        std::size_t m_vec2Count;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        std::size_t m_vec3Count;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        sf::FloatRect getLocalBounds() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keywordtype">void</span> updateLocalBounds();</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="classxy_1_1_drawable.html#a66239fb5c5cdac1da4c89b1bee6c0315">  172</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classxy_1_1_drawable.html#a66239fb5c5cdac1da4c89b1bee6c0315">setCulled</a>(<span class="keywordtype">bool</span> cull) { m_cull = cull; }</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_render_system.html">RenderSystem</a>;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    };</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;}</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="preprocessor">#endif //XY_DRAWABLE_HPP_</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        sf::PrimitiveType m_primitiveType = sf::Quads;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        sf::RenderStates m_states;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        std::vector&lt;sf::Vertex&gt; m_vertices;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        sf::Int32 m_zDepth = 0;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordtype">bool</span> m_wantsSorting = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        sf::FloatRect m_localBounds;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keyword">static</span> constexpr std::size_t MaxBindings = 6;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        std::array&lt;std::pair&lt;std::string, const sf::Texture*&gt;, MaxBindings&gt; m_textureBindings;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        std::array&lt;std::pair&lt;std::string, float&gt;, MaxBindings&gt; m_floatBindings;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        std::array&lt;std::pair&lt;std::string, sf::Vector2f&gt;, MaxBindings&gt; m_vec2Bindings;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        std::array&lt;std::pair&lt;std::string, sf::Vector3f&gt;, MaxBindings&gt; m_vec3Bindings;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        std::array&lt;std::pair&lt;std::string, bool&gt;, MaxBindings&gt; m_boolBindings;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        std::array&lt;std::pair&lt;std::string, const float*&gt;, MaxBindings&gt; m_matBindings;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        std::size_t m_textureCount;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        std::size_t m_floatCount;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        std::size_t m_vec2Count;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        std::size_t m_vec3Count;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        std::size_t m_boolCount;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        std::size_t m_matCount;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="keywordtype">bool</span> m_cull;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_render_system.html">RenderSystem</a>;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    };</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;}</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="preprocessor">#endif //XY_DRAWABLE_HPP_</span></div>
 <div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioSourceImpl.hpp:39</div></div>
-<div class="ttc" id="classxy_1_1_drawable_html_a033a54b7450ca2411aac9d56d99dca25"><div class="ttname"><a href="classxy_1_1_drawable.html#a033a54b7450ca2411aac9d56d99dca25">xy::Drawable::getPrimitiveType</a></div><div class="ttdeci">sf::PrimitiveType getPrimitiveType() const </div><div class="ttdoc">Returns the current PrimitiveType used to draw the vertices. </div><div class="ttdef"><b>Definition:</b> Drawable.hpp:139</div></div>
+<div class="ttc" id="classxy_1_1_drawable_html_a033a54b7450ca2411aac9d56d99dca25"><div class="ttname"><a href="classxy_1_1_drawable.html#a033a54b7450ca2411aac9d56d99dca25">xy::Drawable::getPrimitiveType</a></div><div class="ttdeci">sf::PrimitiveType getPrimitiveType() const </div><div class="ttdoc">Returns the current PrimitiveType used to draw the vertices. </div><div class="ttdef"><b>Definition:</b> Drawable.hpp:146</div></div>
 <div class="ttc" id="classxy_1_1_drawable_html"><div class="ttname"><a href="classxy_1_1_drawable.html">xy::Drawable</a></div><div class="ttdoc">Drawable component. The drawable component encapsulates an sf::VertexArray which can be used to draw ...</div><div class="ttdef"><b>Definition:</b> Drawable.hpp:52</div></div>
-<div class="ttc" id="classxy_1_1_drawable_html_a89b591ba8129979d9cec9af952cdc58b"><div class="ttname"><a href="classxy_1_1_drawable.html#a89b591ba8129979d9cec9af952cdc58b">xy::Drawable::setPrimitiveType</a></div><div class="ttdeci">void setPrimitiveType(sf::PrimitiveType type)</div><div class="ttdoc">Sets the PrimitiveType used by the drawable. Uses sf::Quads by default. </div><div class="ttdef"><b>Definition:</b> Drawable.hpp:134</div></div>
+<div class="ttc" id="classxy_1_1_drawable_html_a89b591ba8129979d9cec9af952cdc58b"><div class="ttname"><a href="classxy_1_1_drawable.html#a89b591ba8129979d9cec9af952cdc58b">xy::Drawable::setPrimitiveType</a></div><div class="ttdeci">void setPrimitiveType(sf::PrimitiveType type)</div><div class="ttdoc">Sets the PrimitiveType used by the drawable. Uses sf::Quads by default. </div><div class="ttdef"><b>Definition:</b> Drawable.hpp:141</div></div>
 <div class="ttc" id="classxy_1_1_render_system_html"><div class="ttname"><a href="classxy_1_1_render_system.html">xy::RenderSystem</a></div><div class="ttdoc">Used to draw all entities which have a Drawable and Transform component. The RenderSystem is used to ...</div><div class="ttdef"><b>Definition:</b> RenderSystem.hpp:44</div></div>
-<div class="ttc" id="classxy_1_1_drawable_html_a283f8907ee84c6572397774d9db50406"><div class="ttname"><a href="classxy_1_1_drawable.html#a283f8907ee84c6572397774d9db50406">xy::Drawable::getDepth</a></div><div class="ttdeci">sf::Int32 getDepth() const </div><div class="ttdoc">Returns the Z depth value. </div><div class="ttdef"><b>Definition:</b> Drawable.hpp:122</div></div>
-<div class="ttc" id="classxy_1_1_drawable_html_adb58f1c76cbcc1ba11f377bc64ebc3ef"><div class="ttname"><a href="classxy_1_1_drawable.html#adb58f1c76cbcc1ba11f377bc64ebc3ef">xy::Drawable::getBlendMode</a></div><div class="ttdeci">sf::BlendMode getBlendMode() const </div><div class="ttdoc">Returns the current blend mode. </div><div class="ttdef"><b>Definition:</b> Drawable.hpp:108</div></div>
-<div class="ttc" id="classxy_1_1_drawable_html_a6373f8a2087c47cdc9ac28a01cb14f7f"><div class="ttname"><a href="classxy_1_1_drawable.html#a6373f8a2087c47cdc9ac28a01cb14f7f">xy::Drawable::getVertices</a></div><div class="ttdeci">std::vector&lt; sf::Vertex &gt; &amp; getVertices()</div><div class="ttdoc">Returns a reference to the vertex array used when drawing. </div><div class="ttdef"><b>Definition:</b> Drawable.hpp:127</div></div>
-<div class="ttc" id="classxy_1_1_drawable_html_a0651ab05ecaa58bef158364523ce201d"><div class="ttname"><a href="classxy_1_1_drawable.html#a0651ab05ecaa58bef158364523ce201d">xy::Drawable::setDepth</a></div><div class="ttdeci">void setDepth(sf::Int32 depth)</div><div class="ttdoc">Sets the z-depth of a drawable. The lower the value the further back the entity is drawn...</div><div class="ttdef"><b>Definition:</b> Drawable.hpp:116</div></div>
+<div class="ttc" id="classxy_1_1_drawable_html_a283f8907ee84c6572397774d9db50406"><div class="ttname"><a href="classxy_1_1_drawable.html#a283f8907ee84c6572397774d9db50406">xy::Drawable::getDepth</a></div><div class="ttdeci">sf::Int32 getDepth() const </div><div class="ttdoc">Returns the Z depth value. </div><div class="ttdef"><b>Definition:</b> Drawable.hpp:129</div></div>
+<div class="ttc" id="classxy_1_1_drawable_html_adb58f1c76cbcc1ba11f377bc64ebc3ef"><div class="ttname"><a href="classxy_1_1_drawable.html#adb58f1c76cbcc1ba11f377bc64ebc3ef">xy::Drawable::getBlendMode</a></div><div class="ttdeci">sf::BlendMode getBlendMode() const </div><div class="ttdoc">Returns the current blend mode. </div><div class="ttdef"><b>Definition:</b> Drawable.hpp:115</div></div>
+<div class="ttc" id="classxy_1_1_drawable_html_a6373f8a2087c47cdc9ac28a01cb14f7f"><div class="ttname"><a href="classxy_1_1_drawable.html#a6373f8a2087c47cdc9ac28a01cb14f7f">xy::Drawable::getVertices</a></div><div class="ttdeci">std::vector&lt; sf::Vertex &gt; &amp; getVertices()</div><div class="ttdoc">Returns a reference to the vertex array used when drawing. </div><div class="ttdef"><b>Definition:</b> Drawable.hpp:134</div></div>
+<div class="ttc" id="classxy_1_1_drawable_html_a66239fb5c5cdac1da4c89b1bee6c0315"><div class="ttname"><a href="classxy_1_1_drawable.html#a66239fb5c5cdac1da4c89b1bee6c0315">xy::Drawable::setCulled</a></div><div class="ttdeci">void setCulled(bool cull)</div><div class="ttdoc">Enables or disables viewport culling. By default Drawables are culled from rendering when not in the ...</div><div class="ttdef"><b>Definition:</b> Drawable.hpp:172</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

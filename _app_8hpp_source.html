@@ -82,10 +82,10 @@
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#ifndef XY_APP_HPP_</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#define XY_APP_HPP_</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;xyginext/core/StateStack.hpp&gt;</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;xyginext/core/MessageBus.hpp&gt;</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &lt;xyginext/Config.hpp&gt;</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &lt;xyginext/audio/Mixer.hpp&gt;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &quot;xyginext/core/StateStack.hpp&quot;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &quot;xyginext/core/MessageBus.hpp&quot;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &quot;xyginext/Config.hpp&quot;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &quot;xyginext/audio/Mixer.hpp&quot;</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics/RenderWindow.hpp&gt;</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
@@ -115,106 +115,122 @@
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            sf::VideoMode VideoMode;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            sf::ContextSettings ContextSettings;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordtype">bool</span> VSync;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            std::vector&lt;sf::VideoMode&gt; AvailableVideoModes;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            std::string Title;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <a class="code" href="structxy_1_1_app_1_1_video_settings.html">VideoSettings</a>()</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                : WindowStyle(sf::Style::Close <span class="comment">/*sf::Style::Fullscreen*/</span>),</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                VideoMode(800, 600),</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                ContextSettings(),</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                VSync(<span class="keyword">true</span>){}</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="namespacexy.html#a750c594c24472d7e0e80acd60bc5377d">operator == </a>(<span class="keyword">const</span> <a class="code" href="structxy_1_1_app_1_1_video_settings.html">VideoSettings</a>&amp; vs)</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            {</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                <span class="keywordflow">if</span> (&amp;vs == <span class="keyword">this</span>) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                <span class="keywordflow">return</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                    (vs.VideoMode == this-&gt;VideoMode</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                    &amp;&amp; vs.ContextSettings.antialiasingLevel == this-&gt;ContextSettings.antialiasingLevel</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                    &amp;&amp; vs.VSync == this-&gt;VSync</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                    &amp;&amp; vs.WindowStyle == this-&gt;WindowStyle);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            }</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        };</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <a class="code" href="classxy_1_1_app.html">App</a>();</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classxy_1_1_app.html">App</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <a class="code" href="classxy_1_1_app.html">App</a>(<span class="keyword">const</span> <a class="code" href="classxy_1_1_app.html">App</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keyword">const</span> <a class="code" href="classxy_1_1_app.html">App</a>&amp; operator = (<span class="keyword">const</span> <a class="code" href="classxy_1_1_app.html">App</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordtype">void</span> run();</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordtype">void</span> pause();</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keywordtype">void</span> resume();</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keyword">const</span> <a class="code" href="structxy_1_1_app_1_1_video_settings.html">VideoSettings</a>&amp; getVideoSettings() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordtype">void</span> applyVideoSettings(<span class="keyword">const</span> <a class="code" href="structxy_1_1_app_1_1_video_settings.html">VideoSettings</a>&amp;);</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>&amp; getMessageBus();</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> quit();</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> setClearColour(sf::Color);</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keyword">static</span> sf::Color getClearColour();</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="keywordtype">void</span> setWindowTitle(<span class="keyword">const</span> std::string&amp;);</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="keywordtype">void</span> setWindowIcon(<span class="keyword">const</span> std::string&amp;);</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="keyword">static</span> sf::RenderWindow* getRenderWindow();</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> printStat(<span class="keyword">const</span> std::string&amp;, <span class="keyword">const</span> std::string&amp;);</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <span class="keyword">static</span> <a class="code" href="classxy_1_1_app.html">App</a>* getActiveInstance();</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <span class="keywordtype">void</span> setApplicationName(<span class="keyword">const</span> std::string&amp; name);</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keyword">const</span> std::string&amp; getApplicationName() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> handleEvent(<span class="keyword">const</span> sf::Event&amp;) = 0;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> handleMessage(<span class="keyword">const</span> <a class="code" href="classxy_1_1_message.html">Message</a>&amp;) = 0;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> registerStates() = 0;</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> updateApp(<span class="keywordtype">float</span> dt) = 0;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> draw() = 0;</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> initialise();</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> finalise();</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <a class="code" href="structxy_1_1_app_1_1_video_settings.html">VideoSettings</a> m_videoSettings;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        sf::RenderWindow m_renderWindow;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        sf::Image m_windowIcon;</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        std::string m_applicationName;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <a class="code" href="classxy_1_1_message_bus.html">MessageBus</a> m_messageBus;</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        std::function&lt;void(float)&gt; update;</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        std::function&lt;void(const sf::Event&amp;)&gt; eventHandler;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="keywordtype">void</span> saveScreenshot();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            sf::Uint32 FrameLimit;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            std::vector&lt;sf::VideoMode&gt; AvailableVideoModes;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            std::string Title;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <a class="code" href="structxy_1_1_app_1_1_video_settings.html">VideoSettings</a>(sf::ContextSettings contextSettings = sf::ContextSettings())</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                : WindowStyle(sf::Style::Close <span class="comment">/*sf::Style::Fullscreen*/</span>),</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                VideoMode       (800, 600),</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                ContextSettings (contextSettings),</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                VSync           (<span class="keyword">true</span>),</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                FrameLimit      (0){}</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="namespacexy.html#a750c594c24472d7e0e80acd60bc5377d">operator == </a>(<span class="keyword">const</span> <a class="code" href="structxy_1_1_app_1_1_video_settings.html">VideoSettings</a>&amp; vs)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                <span class="keywordflow">if</span> (&amp;vs == <span class="keyword">this</span>) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                <span class="keywordflow">return</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                    (vs.VideoMode == this-&gt;VideoMode</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                    &amp;&amp; vs.ContextSettings.antialiasingLevel == this-&gt;ContextSettings.antialiasingLevel</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                    &amp;&amp; vs.ContextSettings.depthBits == this-&gt;ContextSettings.depthBits</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                    &amp;&amp; vs.VSync == this-&gt;VSync</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                    &amp;&amp; vs.WindowStyle == this-&gt;WindowStyle</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                    &amp;&amp; vs.FrameLimit == this-&gt;FrameLimit);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="namespacexy.html#a6b891403bdce197655b9d50eb939c8d0">operator != </a>(<span class="keyword">const</span> <a class="code" href="structxy_1_1_app_1_1_video_settings.html">VideoSettings</a>&amp; vs)</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                <span class="keywordflow">return</span> !(*<span class="keyword">this</span> == vs);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        };</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <a class="code" href="classxy_1_1_app.html">App</a>(sf::ContextSettings contextSettings = sf::ContextSettings());</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classxy_1_1_app.html">App</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <a class="code" href="classxy_1_1_app.html">App</a>(<span class="keyword">const</span> <a class="code" href="classxy_1_1_app.html">App</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keyword">const</span> <a class="code" href="classxy_1_1_app.html">App</a>&amp; operator = (<span class="keyword">const</span> <a class="code" href="classxy_1_1_app.html">App</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordtype">void</span> run();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordtype">void</span> pause();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordtype">void</span> resume();</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keyword">const</span> <a class="code" href="structxy_1_1_app_1_1_video_settings.html">VideoSettings</a>&amp; getVideoSettings() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="keywordtype">void</span> applyVideoSettings(<span class="keyword">const</span> <a class="code" href="structxy_1_1_app_1_1_video_settings.html">VideoSettings</a>&amp;);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>&amp; getMessageBus();</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> quit();</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> setClearColour(sf::Color);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keyword">static</span> sf::Color getClearColour();</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <span class="keywordtype">void</span> setWindowTitle(<span class="keyword">const</span> std::string&amp;);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keywordtype">void</span> setWindowIcon(<span class="keyword">const</span> std::string&amp;);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="keyword">static</span> sf::RenderWindow* getRenderWindow();</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> printStat(<span class="keyword">const</span> std::string&amp;, <span class="keyword">const</span> std::string&amp;);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keyword">static</span> <a class="code" href="classxy_1_1_app.html">App</a>* getActiveInstance();</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keywordtype">void</span> setApplicationName(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <span class="keyword">const</span> std::string&amp; getApplicationName() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> setMouseCursorVisible(<span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> isMouseCursorVisible();</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> handleEvent(<span class="keyword">const</span> sf::Event&amp;) = 0;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> handleMessage(<span class="keyword">const</span> <a class="code" href="classxy_1_1_message.html">Message</a>&amp;) = 0;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> registerStates() = 0;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> updateApp(<span class="keywordtype">float</span> dt) = 0;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> draw() = 0;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> initialise();</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keywordtype">void</span> handleEvents();</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        <span class="keywordtype">void</span> handleMessages();</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        std::vector&lt;std::pair&lt;std::function&lt;void()&gt;, <span class="keyword">const</span> <a class="code" href="classxy_1_1_gui_client.html">GuiClient</a>*&gt;&gt; m_guiWindows;</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> addStatusControl(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>()&gt;&amp;, <span class="keyword">const</span> <a class="code" href="classxy_1_1_gui_client.html">GuiClient</a>*);</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> removeStatusControls(<span class="keyword">const</span> <a class="code" href="classxy_1_1_gui_client.html">GuiClient</a>*);</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> addWindow(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>()&gt;&amp;, <span class="keyword">const</span> <a class="code" href="classxy_1_1_gui_client.html">GuiClient</a>*);</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> removeWindows(<span class="keyword">const</span> <a class="code" href="classxy_1_1_gui_client.html">GuiClient</a>*);</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> finalise();</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_gui_client.html">GuiClient</a>;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <span class="keywordtype">void</span> loadSettings();</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <span class="keywordtype">void</span> saveSettings();</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    };</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;}</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;<span class="preprocessor">#endif //XY_APP_HPP_</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <a class="code" href="structxy_1_1_app_1_1_video_settings.html">VideoSettings</a> m_videoSettings;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        sf::RenderWindow m_renderWindow;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        sf::Image m_windowIcon;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        std::string m_applicationName;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <a class="code" href="classxy_1_1_message_bus.html">MessageBus</a> m_messageBus;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        std::function&lt;void(float)&gt; update;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        std::function&lt;void(const sf::Event&amp;)&gt; eventHandler;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> m_mouseCursorVisible;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        <span class="keywordtype">void</span> saveScreenshot();</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        <span class="keywordtype">void</span> handleEvents();</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        <span class="keywordtype">void</span> handleMessages();</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        std::vector&lt;std::pair&lt;std::function&lt;void()&gt;, <span class="keyword">const</span> <a class="code" href="classxy_1_1_gui_client.html">GuiClient</a>*&gt;&gt; m_guiWindows;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> addStatusControl(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>()&gt;&amp;, <span class="keyword">const</span> <a class="code" href="classxy_1_1_gui_client.html">GuiClient</a>*);</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> removeStatusControls(<span class="keyword">const</span> <a class="code" href="classxy_1_1_gui_client.html">GuiClient</a>*);</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> addWindow(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>()&gt;&amp;, <span class="keyword">const</span> <a class="code" href="classxy_1_1_gui_client.html">GuiClient</a>*);</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> removeWindows(<span class="keyword">const</span> <a class="code" href="classxy_1_1_gui_client.html">GuiClient</a>*);</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_gui_client.html">GuiClient</a>;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        <span class="keywordtype">void</span> loadSettings();</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <span class="keywordtype">void</span> saveSettings();</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    };</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;}</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;<span class="preprocessor">#endif //XY_APP_HPP_</span></div>
 <div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioSourceImpl.hpp:39</div></div>
 <div class="ttc" id="classxy_1_1_message_bus_html"><div class="ttname"><a href="classxy_1_1_message_bus.html">xy::MessageBus</a></div><div class="ttdoc">System wide message bus for custom event messaging. </div><div class="ttdef"><b>Definition:</b> MessageBus.hpp:58</div></div>
 <div class="ttc" id="namespacexy_html_a750c594c24472d7e0e80acd60bc5377d"><div class="ttname"><a href="namespacexy.html#a750c594c24472d7e0e80acd60bc5377d">xy::operator==</a></div><div class="ttdeci">bool operator==(const Vector4&lt; T &gt; &amp;left, const Vector4&lt; T &gt; &amp;right)</div><div class="ttdoc">Overload of binary operator ==. </div><div class="ttdef"><b>Definition:</b> Vector4.hpp:110</div></div>
+<div class="ttc" id="namespacexy_html_a6b891403bdce197655b9d50eb939c8d0"><div class="ttname"><a href="namespacexy.html#a6b891403bdce197655b9d50eb939c8d0">xy::operator!=</a></div><div class="ttdeci">bool operator!=(const Vector4&lt; T &gt; &amp;left, const Vector4&lt; T &gt; &amp;right)</div><div class="ttdoc">Overload of binary operator !=. </div><div class="ttdef"><b>Definition:</b> Vector4.hpp:116</div></div>
 <div class="ttc" id="structxy_1_1_app_1_1_video_settings_html"><div class="ttname"><a href="structxy_1_1_app_1_1_video_settings.html">xy::App::VideoSettings</a></div><div class="ttdoc">VideoSettings struct. </div><div class="ttdef"><b>Definition:</b> App.hpp:88</div></div>
 <div class="ttc" id="classxy_1_1_message_html"><div class="ttname"><a href="classxy_1_1_message.html">xy::Message</a></div><div class="ttdoc">Message class. </div><div class="ttdef"><b>Definition:</b> Message.hpp:47</div></div>
 <div class="ttc" id="classxy_1_1_gui_client_html"><div class="ttname"><a href="classxy_1_1_gui_client.html">xy::GuiClient</a></div><div class="ttdoc">Allows registering GUI controls with the default output window, or registering custom windows using t...</div><div class="ttdef"><b>Definition:</b> GuiClient.hpp:44</div></div>

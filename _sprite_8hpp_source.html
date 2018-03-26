@@ -82,7 +82,7 @@
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#ifndef XY_SPRITE_HPP_</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define XY_SPRITE_HPP_</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;xyginext/Config.hpp&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;xyginext/Config.hpp&quot;</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics/RenderStates.hpp&gt;</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics/Vertex.hpp&gt;</span></div>
@@ -125,50 +125,53 @@
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
 <div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="structxy_1_1_sprite_1_1_animation.html">  120</a></span>&#160;        <span class="keyword">struct </span><a class="code" href="structxy_1_1_sprite_1_1_animation.html">Animation</a> final</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        {</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            std::array&lt;sf::FloatRect, MaxFrames&gt; frames;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            std::size_t frameCount = 0;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="keywordtype">bool</span> looped = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            <span class="keywordtype">float</span> framerate = 12.f;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        };</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classxy_1_1_sprite.html#ab8450b3aa578e1cf11c24baa4b0038e3">  134</a></span>&#160;        std::size_t <a class="code" href="classxy_1_1_sprite.html#ab8450b3aa578e1cf11c24baa4b0038e3">getAnimationCount</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_animationCount; }</div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="structxy_1_1_sprite_1_1_animation.html#a61ac53b40026dbfe3c8dfef46fc895a7">  125</a></span>&#160;            <span class="keyword">static</span> constexpr std::size_t MaxAnimationIdLength = 16;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            std::array&lt;char,MaxAnimationIdLength&gt; <span class="keywordtype">id</span> = {{0}};</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            std::array&lt;sf::FloatRect, MaxFrames&gt; frames;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            std::size_t frameCount = 0;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            <span class="keywordtype">bool</span> looped = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <span class="keywordtype">float</span> framerate = 12.f;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        };</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
-<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="classxy_1_1_sprite.html#a2fa0f3c573e2789d7f29308e83eab56e">  140</a></span>&#160;        std::array&lt;Animation, MaxAnimations&gt;&amp; <a class="code" href="classxy_1_1_sprite.html#a2fa0f3c573e2789d7f29308e83eab56e">getAnimations</a>() { <span class="keywordflow">return</span> m_animations; }</div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="classxy_1_1_sprite.html#ab8450b3aa578e1cf11c24baa4b0038e3">  140</a></span>&#160;        std::size_t <a class="code" href="classxy_1_1_sprite.html#ab8450b3aa578e1cf11c24baa4b0038e3">getAnimationCount</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_animationCount; }</div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
-<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="classxy_1_1_sprite.html#a940bb2137058724c3ba6d4716ed7f2ac">  146</a></span>&#160;        <span class="keyword">const</span> std::array&lt;Animation, MaxAnimations&gt;&amp; <a class="code" href="classxy_1_1_sprite.html#a940bb2137058724c3ba6d4716ed7f2ac">getAnimations</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_animations; }</div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="classxy_1_1_sprite.html#a2fa0f3c573e2789d7f29308e83eab56e">  146</a></span>&#160;        std::array&lt;Animation, MaxAnimations&gt;&amp; <a class="code" href="classxy_1_1_sprite.html#a2fa0f3c573e2789d7f29308e83eab56e">getAnimations</a>() { <span class="keywordflow">return</span> m_animations; }</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        sf::FloatRect m_textureRect;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keyword">const</span> sf::Texture* m_texture;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        sf::Color m_colour;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordtype">bool</span> m_dirty;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        std::size_t m_animationCount;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        std::array&lt;Animation, MaxAnimations&gt; m_animations;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_sprite_system.html">SpriteSystem</a>;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_sprite_sheet.html">SpriteSheet</a>;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_sprite_animator.html">SpriteAnimator</a>;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    };</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;}</div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="classxy_1_1_sprite.html#a940bb2137058724c3ba6d4716ed7f2ac">  152</a></span>&#160;        <span class="keyword">const</span> std::array&lt;Animation, MaxAnimations&gt;&amp; <a class="code" href="classxy_1_1_sprite.html#a940bb2137058724c3ba6d4716ed7f2ac">getAnimations</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_animations; }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        sf::FloatRect m_textureRect;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keyword">const</span> sf::Texture* m_texture;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        sf::Color m_colour;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordtype">bool</span> m_dirty;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        std::size_t m_animationCount;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        std::array&lt;Animation, MaxAnimations&gt; m_animations;</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="preprocessor">#endif //XY_SPRITE_HPP_</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_sprite_system.html">SpriteSystem</a>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_sprite_sheet.html">SpriteSheet</a>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_sprite_animator.html">SpriteAnimator</a>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    };</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;}</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="preprocessor">#endif //XY_SPRITE_HPP_</span></div>
 <div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioSourceImpl.hpp:39</div></div>
 <div class="ttc" id="classxy_1_1_sprite_animator_html"><div class="ttname"><a href="classxy_1_1_sprite_animator.html">xy::SpriteAnimator</a></div><div class="ttdoc">Sprite Animation system. Updates all active animations on entities which have Sprite and SpriteAnimat...</div><div class="ttdef"><b>Definition:</b> SpriteAnimator.hpp:40</div></div>
 <div class="ttc" id="classxy_1_1_sprite_html_ab5864f82a8f8c4a3ef6a5eb95ceec410"><div class="ttname"><a href="classxy_1_1_sprite.html#ab5864f82a8f8c4a3ef6a5eb95ceec410">xy::Sprite::getTextureRect</a></div><div class="ttdeci">sf::FloatRect getTextureRect() const </div><div class="ttdoc">Returns the current sub-rectangle used to crop the sprite. </div><div class="ttdef"><b>Definition:</b> Sprite.hpp:90</div></div>
 <div class="ttc" id="classxy_1_1_sprite_system_html"><div class="ttname"><a href="classxy_1_1_sprite_system.html">xy::SpriteSystem</a></div><div class="ttdoc">System for updating sprites. Entities with Sprite components also require a Drawable component...</div><div class="ttdef"><b>Definition:</b> SpriteSystem.hpp:40</div></div>
-<div class="ttc" id="classxy_1_1_sprite_html_ab8450b3aa578e1cf11c24baa4b0038e3"><div class="ttname"><a href="classxy_1_1_sprite.html#ab8450b3aa578e1cf11c24baa4b0038e3">xy::Sprite::getAnimationCount</a></div><div class="ttdeci">std::size_t getAnimationCount() const </div><div class="ttdoc">Returns the number of animations for this sprite when loaded from a sprite sheet definition file...</div><div class="ttdef"><b>Definition:</b> Sprite.hpp:134</div></div>
+<div class="ttc" id="classxy_1_1_sprite_html_ab8450b3aa578e1cf11c24baa4b0038e3"><div class="ttname"><a href="classxy_1_1_sprite.html#ab8450b3aa578e1cf11c24baa4b0038e3">xy::Sprite::getAnimationCount</a></div><div class="ttdeci">std::size_t getAnimationCount() const </div><div class="ttdoc">Returns the number of animations for this sprite when loaded from a sprite sheet definition file...</div><div class="ttdef"><b>Definition:</b> Sprite.hpp:140</div></div>
 <div class="ttc" id="classxy_1_1_sprite_html_aa266c94291ab5db4baabddf5898a801a"><div class="ttname"><a href="classxy_1_1_sprite.html#aa266c94291ab5db4baabddf5898a801a">xy::Sprite::getSize</a></div><div class="ttdeci">sf::Vector2f getSize() const </div><div class="ttdoc">Returns the size of the sprite based on the current texture rect. </div><div class="ttdef"><b>Definition:</b> Sprite.hpp:105</div></div>
 <div class="ttc" id="classxy_1_1_sprite_html"><div class="ttname"><a href="classxy_1_1_sprite.html">xy::Sprite</a></div><div class="ttdoc">Sprite component optimised to work with the ECS. Sprite components require their entity to also have ...</div><div class="ttdef"><b>Definition:</b> Sprite.hpp:49</div></div>
 <div class="ttc" id="structxy_1_1_sprite_1_1_animation_html"><div class="ttname"><a href="structxy_1_1_sprite_1_1_animation.html">xy::Sprite::Animation</a></div><div class="ttdoc">Represents a single animation. </div><div class="ttdef"><b>Definition:</b> Sprite.hpp:120</div></div>
-<div class="ttc" id="classxy_1_1_sprite_html_a940bb2137058724c3ba6d4716ed7f2ac"><div class="ttname"><a href="classxy_1_1_sprite.html#a940bb2137058724c3ba6d4716ed7f2ac">xy::Sprite::getAnimations</a></div><div class="ttdeci">const std::array&lt; Animation, MaxAnimations &gt; &amp; getAnimations() const </div><div class="ttdef"><b>Definition:</b> Sprite.hpp:146</div></div>
+<div class="ttc" id="classxy_1_1_sprite_html_a940bb2137058724c3ba6d4716ed7f2ac"><div class="ttname"><a href="classxy_1_1_sprite.html#a940bb2137058724c3ba6d4716ed7f2ac">xy::Sprite::getAnimations</a></div><div class="ttdeci">const std::array&lt; Animation, MaxAnimations &gt; &amp; getAnimations() const </div><div class="ttdef"><b>Definition:</b> Sprite.hpp:152</div></div>
 <div class="ttc" id="classxy_1_1_sprite_html_ae478ad3196ea851b87b029018f2a88a6"><div class="ttname"><a href="classxy_1_1_sprite.html#ae478ad3196ea851b87b029018f2a88a6">xy::Sprite::getTextureBounds</a></div><div class="ttdeci">sf::FloatRect getTextureBounds() const </div><div class="ttdoc">Returns the bounds created by the current texture rect. </div><div class="ttdef"><b>Definition:</b> Sprite.hpp:100</div></div>
 <div class="ttc" id="namespacesf_html"><div class="ttname"><a href="namespacesf.html">sf</a></div><div class="ttdef"><b>Definition:</b> State.hpp:43</div></div>
 <div class="ttc" id="classxy_1_1_sprite_sheet_html"><div class="ttname"><a href="classxy_1_1_sprite_sheet.html">xy::SpriteSheet</a></div><div class="ttdoc">Supports loading multiple sprites from a single texture atlas via the ConfigFile format. </div><div class="ttdef"><b>Definition:</b> SpriteSheet.hpp:45</div></div>
-<div class="ttc" id="classxy_1_1_sprite_html_a2fa0f3c573e2789d7f29308e83eab56e"><div class="ttname"><a href="classxy_1_1_sprite.html#a2fa0f3c573e2789d7f29308e83eab56e">xy::Sprite::getAnimations</a></div><div class="ttdeci">std::array&lt; Animation, MaxAnimations &gt; &amp; getAnimations()</div><div class="ttdef"><b>Definition:</b> Sprite.hpp:140</div></div>
+<div class="ttc" id="classxy_1_1_sprite_html_a2fa0f3c573e2789d7f29308e83eab56e"><div class="ttname"><a href="classxy_1_1_sprite.html#a2fa0f3c573e2789d7f29308e83eab56e">xy::Sprite::getAnimations</a></div><div class="ttdeci">std::array&lt; Animation, MaxAnimations &gt; &amp; getAnimations()</div><div class="ttdef"><b>Definition:</b> Sprite.hpp:146</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
