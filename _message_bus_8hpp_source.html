@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xyginext: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/core/MessageBus.hpp Source File</title>
+<title>xyginext: C:/Users/Matthew Marchant/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/core/MessageBus.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -44,7 +44,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_de72eac28fae940626bc77a43000e4ad.html">include</a></li><li class="navelem"><a class="el" href="dir_7aeba9697aa2643cb98e804e91ef0468.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_99732df8828540ae815d91337e32b14c.html">core</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_162daa221dc0b0dabb7c2d65b288c90b.html">include</a></li><li class="navelem"><a class="el" href="dir_bd255dc1b65874336b892dc3a783bd66.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_788cd137090c3e780d7d6a86fefcc3fd.html">core</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -99,54 +99,56 @@
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>();</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        ~<a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>(<span class="keyword">const</span> <a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keyword">const</span> <a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>&amp; operator = (<span class="keyword">const</span> <a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">const</span> <a class="code" href="classxy_1_1_message.html">Message</a>&amp; poll();</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classxy_1_1_message_bus.html#adf60b770636c2f040074275ada3cd278">   86</a></span>&#160;        T* <a class="code" href="classxy_1_1_message_bus.html#adf60b770636c2f040074275ada3cd278">post</a>(Message::ID <span class="keywordtype">id</span>)</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">if</span> (!m_enabled) <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>T*<span class="keyword">&gt;</span>((<span class="keywordtype">void</span>*)m_pendingBuffer.data());</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keyword">auto</span> dataSize = <span class="keyword">sizeof</span>(T);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keyword">static</span> <span class="keyword">auto</span> msgSize = <span class="keyword">sizeof</span>(<a class="code" href="classxy_1_1_message.html">Message</a>);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            XY_ASSERT(dataSize &lt; 128, <span class="stringliteral">&quot;message size exceeds 128 bytes&quot;</span>); <span class="comment">//limit custom data to 128 bytes</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            XY_ASSERT(m_pendingBuffer.size() - (m_inPointer - m_pendingBuffer.data()) &gt; (dataSize + msgSize), <span class="stringliteral">&quot;buffer overflow &quot;</span> + std::to_string(m_pendingCount)); <span class="comment">//make sure we have enough room in the buffer</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            XY_WARNING(m_pendingBuffer.size() - (m_inPointer - m_pendingBuffer.data()) &lt; 128, <span class="stringliteral">&quot;Messagebus buffer is heavily contended!&quot;</span>);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <a class="code" href="classxy_1_1_message.html">Message</a>* msg = <span class="keyword">new</span> (m_inPointer)<a class="code" href="classxy_1_1_message.html">Message</a>();</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            m_inPointer += msgSize;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            msg-&gt;id = id;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            msg-&gt;m_dataSize = dataSize;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            msg-&gt;m_data = <span class="keyword">new</span> (m_inPointer)T();</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            m_inPointer += dataSize;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            m_pendingCount++;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>T*<span class="keyword">&gt;</span>(msg-&gt;m_data);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        }</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordtype">bool</span> empty();</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        std::size_t pendingMessageCount() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="classxy_1_1_message_bus.html#a0687ef2fb49fb5e59573d866719b3d1d">  122</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classxy_1_1_message_bus.html#a0687ef2fb49fb5e59573d866719b3d1d">disable</a>() { m_enabled = <span class="keyword">false</span>; }</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>(<a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>&amp; operator = (<span class="keyword">const</span> <a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>&amp; operator = (<a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keyword">const</span> <a class="code" href="classxy_1_1_message.html">Message</a>&amp; poll();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classxy_1_1_message_bus.html#adf60b770636c2f040074275ada3cd278">   88</a></span>&#160;        T* <a class="code" href="classxy_1_1_message_bus.html#adf60b770636c2f040074275ada3cd278">post</a>(Message::ID <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keywordflow">if</span> (!m_enabled) <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>T*<span class="keyword">&gt;</span>((<span class="keywordtype">void</span>*)m_pendingBuffer.data());</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keyword">auto</span> dataSize = <span class="keyword">sizeof</span>(T);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keyword">static</span> <span class="keyword">auto</span> msgSize = <span class="keyword">sizeof</span>(<a class="code" href="classxy_1_1_message.html">Message</a>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            XY_ASSERT(dataSize &lt; 128, <span class="stringliteral">&quot;message size exceeds 128 bytes&quot;</span>); <span class="comment">//limit custom data to 128 bytes</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            XY_ASSERT(m_pendingBuffer.size() - (m_inPointer - m_pendingBuffer.data()) &gt; (dataSize + msgSize), <span class="stringliteral">&quot;buffer overflow &quot;</span> + std::to_string(m_pendingCount)); <span class="comment">//make sure we have enough room in the buffer</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            XY_WARNING(m_pendingBuffer.size() - (m_inPointer - m_pendingBuffer.data()) &lt; 128, <span class="stringliteral">&quot;Messagebus buffer is heavily contended!&quot;</span>);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <a class="code" href="classxy_1_1_message.html">Message</a>* msg = <span class="keyword">new</span> (m_inPointer)<a class="code" href="classxy_1_1_message.html">Message</a>();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            m_inPointer += msgSize;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            msg-&gt;id = id;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            msg-&gt;m_dataSize = dataSize;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            msg-&gt;m_data = <span class="keyword">new</span> (m_inPointer)T();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            m_inPointer += dataSize;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            m_pendingCount++;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>T*<span class="keyword">&gt;</span>(msg-&gt;m_data);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordtype">bool</span> empty();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        std::size_t pendingMessageCount() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="classxy_1_1_message_bus.html#a0687ef2fb49fb5e59573d866719b3d1d">  124</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classxy_1_1_message_bus.html#a0687ef2fb49fb5e59573d866719b3d1d">disable</a>() { m_enabled = <span class="keyword">false</span>; }</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        std::vector&lt;char&gt; m_currentBuffer;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        std::vector&lt;char&gt; m_pendingBuffer;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordtype">char</span>* m_inPointer;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keywordtype">char</span>* m_outPointer;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        std::size_t m_currentCount;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        std::size_t m_pendingCount;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordtype">bool</span> m_enabled;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    };</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="preprocessor">#endif //XY_MESSAGE_BUS_HPP_</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        std::vector&lt;char&gt; m_currentBuffer;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        std::vector&lt;char&gt; m_pendingBuffer;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordtype">char</span>* m_inPointer;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordtype">char</span>* m_outPointer;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        std::size_t m_currentCount;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        std::size_t m_pendingCount;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keywordtype">bool</span> m_enabled;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    };</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor">#endif //XY_MESSAGE_BUS_HPP_</span></div>
 <div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioSourceImpl.hpp:39</div></div>
 <div class="ttc" id="classxy_1_1_message_bus_html"><div class="ttname"><a href="classxy_1_1_message_bus.html">xy::MessageBus</a></div><div class="ttdoc">System wide message bus for custom event messaging. </div><div class="ttdef"><b>Definition:</b> MessageBus.hpp:58</div></div>
 <div class="ttc" id="classxy_1_1_message_html"><div class="ttname"><a href="classxy_1_1_message.html">xy::Message</a></div><div class="ttdoc">Message class. </div><div class="ttdef"><b>Definition:</b> Message.hpp:47</div></div>
-<div class="ttc" id="classxy_1_1_message_bus_html_a0687ef2fb49fb5e59573d866719b3d1d"><div class="ttname"><a href="classxy_1_1_message_bus.html#a0687ef2fb49fb5e59573d866719b3d1d">xy::MessageBus::disable</a></div><div class="ttdeci">void disable()</div><div class="ttdoc">Disables the message bus. Used internally by xygine. </div><div class="ttdef"><b>Definition:</b> MessageBus.hpp:122</div></div>
-<div class="ttc" id="classxy_1_1_message_bus_html_adf60b770636c2f040074275ada3cd278"><div class="ttname"><a href="classxy_1_1_message_bus.html#adf60b770636c2f040074275ada3cd278">xy::MessageBus::post</a></div><div class="ttdeci">T * post(Message::ID id)</div><div class="ttdoc">Places a message on the message stack, and returns a pointer to the data. </div><div class="ttdef"><b>Definition:</b> MessageBus.hpp:86</div></div>
+<div class="ttc" id="classxy_1_1_message_bus_html_a0687ef2fb49fb5e59573d866719b3d1d"><div class="ttname"><a href="classxy_1_1_message_bus.html#a0687ef2fb49fb5e59573d866719b3d1d">xy::MessageBus::disable</a></div><div class="ttdeci">void disable()</div><div class="ttdoc">Disables the message bus. Used internally by xygine. </div><div class="ttdef"><b>Definition:</b> MessageBus.hpp:124</div></div>
+<div class="ttc" id="classxy_1_1_message_bus_html_adf60b770636c2f040074275ada3cd278"><div class="ttname"><a href="classxy_1_1_message_bus.html#adf60b770636c2f040074275ada3cd278">xy::MessageBus::post</a></div><div class="ttdeci">T * post(Message::ID id)</div><div class="ttdoc">Places a message on the message stack, and returns a pointer to the data. </div><div class="ttdef"><b>Definition:</b> MessageBus.hpp:88</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

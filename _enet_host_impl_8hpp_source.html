@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xyginext: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/network/EnetHostImpl.hpp Source File</title>
+<title>xyginext: C:/Users/Matthew Marchant/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/network/EnetHostImpl.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -44,7 +44,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_de72eac28fae940626bc77a43000e4ad.html">include</a></li><li class="navelem"><a class="el" href="dir_7aeba9697aa2643cb98e804e91ef0468.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_7a5a498184ccfc389774106017506814.html">network</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_162daa221dc0b0dabb7c2d65b288c90b.html">include</a></li><li class="navelem"><a class="el" href="dir_bd255dc1b65874336b892dc3a783bd66.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_66031c355ad845ea20495be29760db7c.html">network</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -94,23 +94,27 @@
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="classxy_1_1_enet_host_impl.html">EnetHostImpl</a>();</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        ~<a class="code" href="classxy_1_1_enet_host_impl.html">EnetHostImpl</a>();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">bool</span> start(<span class="keyword">const</span> std::string&amp; address, sf::Uint16 port, std::size_t maxClient, std::size_t maxChannels, sf::Uint32 incoming, sf::Uint32 outgoing) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">void</span> stop() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">bool</span> pollEvent(<a class="code" href="structxy_1_1_net_event.html">NetEvent</a>&amp;) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">void</span> broadcastPacket(sf::Uint32 <span class="keywordtype">id</span>, <span class="keywordtype">void</span>* data, std::size_t size, <a class="code" href="namespacexy.html#a05dcce851ad31fdc5bf3179c20b19437">NetFlag</a> flags, sf::Uint8 channel) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">void</span> sendPacket(<span class="keyword">const</span> <a class="code" href="structxy_1_1_net_peer.html">NetPeer</a>&amp; peer, sf::Uint32 <span class="keywordtype">id</span>, <span class="keywordtype">void</span>* data, std::size_t size, <a class="code" href="namespacexy.html#a05dcce851ad31fdc5bf3179c20b19437">NetFlag</a> flags, sf::Uint8 channel) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        std::size_t getConnectedPeerCount() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        std::uint32_t getAddress() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        std::uint16_t getPort() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="classxy_1_1_enet_host_impl.html">EnetHostImpl</a>(<span class="keyword">const</span> <a class="code" href="classxy_1_1_enet_host_impl.html">EnetHostImpl</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="classxy_1_1_enet_host_impl.html">EnetHostImpl</a>(<a class="code" href="classxy_1_1_enet_host_impl.html">EnetHostImpl</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="classxy_1_1_enet_host_impl.html">EnetHostImpl</a>&amp; operator = (<span class="keyword">const</span> <a class="code" href="classxy_1_1_enet_host_impl.html">EnetHostImpl</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="classxy_1_1_enet_host_impl.html">EnetHostImpl</a>&amp; operator = (<a class="code" href="classxy_1_1_enet_host_impl.html">EnetHostImpl</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">bool</span> start(<span class="keyword">const</span> std::string&amp; address, sf::Uint16 port, std::size_t maxClient, std::size_t maxChannels, sf::Uint32 incoming, sf::Uint32 outgoing) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">void</span> stop() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">bool</span> pollEvent(<a class="code" href="structxy_1_1_net_event.html">NetEvent</a>&amp;) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">void</span> broadcastPacket(sf::Uint32 <span class="keywordtype">id</span>, <span class="keywordtype">void</span>* data, std::size_t size, <a class="code" href="namespacexy.html#a05dcce851ad31fdc5bf3179c20b19437">NetFlag</a> flags, sf::Uint8 channel) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">void</span> sendPacket(<span class="keyword">const</span> <a class="code" href="structxy_1_1_net_peer.html">NetPeer</a>&amp; peer, sf::Uint32 <span class="keywordtype">id</span>, <span class="keywordtype">void</span>* data, std::size_t size, <a class="code" href="namespacexy.html#a05dcce851ad31fdc5bf3179c20b19437">NetFlag</a> flags, sf::Uint8 channel) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        _ENetHost * m_host;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    };</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif //XY_ENET_HOST_IMPL_HPP_</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        std::size_t getConnectedPeerCount() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        std::uint32_t getAddress() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        std::uint16_t getPort() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        _ENetHost * m_host;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    };</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif //XY_ENET_HOST_IMPL_HPP_</span></div>
 <div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioSourceImpl.hpp:39</div></div>
 <div class="ttc" id="structxy_1_1_net_peer_html"><div class="ttname"><a href="structxy_1_1_net_peer.html">xy::NetPeer</a></div><div class="ttdoc">A peer represents a single, multichannel connection between a client and a host. </div><div class="ttdef"><b>Definition:</b> NetData.hpp:57</div></div>
 <div class="ttc" id="classxy_1_1_net_host_impl_html"><div class="ttname"><a href="classxy_1_1_net_host_impl.html">xy::NetHostImpl</a></div><div class="ttdef"><b>Definition:</b> NetImpl.hpp:84</div></div>
