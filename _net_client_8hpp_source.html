@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xyginext: C:/Users/Matthew Marchant/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/network/NetClient.hpp Source File</title>
+<title>xyginext: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/network/NetClient.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -44,7 +44,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_162daa221dc0b0dabb7c2d65b288c90b.html">include</a></li><li class="navelem"><a class="el" href="dir_bd255dc1b65874336b892dc3a783bd66.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_66031c355ad845ea20495be29760db7c.html">network</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_de72eac28fae940626bc77a43000e4ad.html">include</a></li><li class="navelem"><a class="el" href="dir_7aeba9697aa2643cb98e804e91ef0468.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_7a5a498184ccfc389774106017506814.html">network</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -79,66 +79,63 @@
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">source distribution.</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">*********************************************************************/</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#ifndef XY_NET_CLIENT_HPP_</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define XY_NET_CLIENT_HPP_</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classxy_1_1_net_client.html#a4d640be1f2c864fae2ae4432280180bb">   30</a></span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;xyginext/Config.hpp&quot;</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;SFML/Config.hpp&gt;</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;xyginext/network/NetData.hpp&quot;</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;xyginext/network/EnetClientImpl.hpp&quot;</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classxy_1_1_net_client.html#a020e8fc78512d3f8039f363ad77b458f">   38</a></span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacexy.html">xy</a></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">class </span><a class="code" href="classxy_1_1_enet_client_impl.html">EnetClientImpl</a>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classxy_1_1_net_client.html">   48</a></span>&#160;    <span class="keyword">class </span>XY_EXPORT_API <a class="code" href="classxy_1_1_net_client.html">NetClient</a> final</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="classxy_1_1_net_client.html">NetClient</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        ~<a class="code" href="classxy_1_1_net_client.html">NetClient</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="classxy_1_1_net_client.html">NetClient</a>(<span class="keyword">const</span> <a class="code" href="classxy_1_1_net_client.html">NetClient</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="classxy_1_1_net_client.html">NetClient</a>(<a class="code" href="classxy_1_1_net_client.html">NetClient</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="classxy_1_1_net_client.html">NetClient</a>&amp; operator = (<span class="keyword">const</span> <a class="code" href="classxy_1_1_net_client.html">NetClient</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="classxy_1_1_net_client.html">NetClient</a>&amp; operator = (<a class="code" href="classxy_1_1_net_client.html">NetClient</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T = EnetClientImpl&gt;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordtype">bool</span> create(std::size_t maxChannels, std::size_t maxClients = 1, sf::Uint32 incoming = 0, sf::Uint32 outgoing = 0);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordtype">bool</span> connect(<span class="keyword">const</span> std::string&amp; address, sf::Uint16 port, sf::Uint32 timeout = 5000);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordtype">bool</span> connected() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordtype">void</span> disconnect();</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordtype">bool</span> pollEvent(<a class="code" href="structxy_1_1_net_event.html">NetEvent</a>&amp;);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordtype">void</span> sendPacket(sf::Uint32 <span class="keywordtype">id</span>, <span class="keyword">const</span> T&amp; data, <a class="code" href="namespacexy.html#a05dcce851ad31fdc5bf3179c20b19437">NetFlag</a> flags, sf::Uint8 channel = 0);</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordtype">void</span> sendPacket(sf::Uint32 <span class="keywordtype">id</span>, <span class="keywordtype">void</span>* data, std::size_t size, <a class="code" href="namespacexy.html#a05dcce851ad31fdc5bf3179c20b19437">NetFlag</a> flags, sf::Uint8 channel = 0);</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keyword">const</span> <a class="code" href="structxy_1_1_net_peer.html">NetPeer</a>&amp; getPeer() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        std::unique_ptr&lt;NetClientImpl&gt; m_impl;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    };</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="preprocessor">#include &quot;NetClient.inl&quot;</span></div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;}</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="preprocessor">#endif //XY_NET_CLIENT_HPP_</span></div>
-<div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioSourceImpl.hpp:39</div></div>
-<div class="ttc" id="classxy_1_1_net_client_html"><div class="ttname"><a href="classxy_1_1_net_client.html">xy::NetClient</a></div><div class="ttdoc">Creates a clientside host which can be used to create a peer connected to a NetHost server...</div><div class="ttdef"><b>Definition:</b> NetClient.hpp:48</div></div>
-<div class="ttc" id="structxy_1_1_net_peer_html"><div class="ttname"><a href="structxy_1_1_net_peer.html">xy::NetPeer</a></div><div class="ttdoc">A peer represents a single, multichannel connection between a client and a host. </div><div class="ttdef"><b>Definition:</b> NetData.hpp:57</div></div>
-<div class="ttc" id="structxy_1_1_net_event_html"><div class="ttname"><a href="structxy_1_1_net_event.html">xy::NetEvent</a></div><div class="ttdoc">Network event. These are used to poll NetHost and NetClient objects for network activity. </div><div class="ttdef"><b>Definition:</b> NetData.hpp:126</div></div>
-<div class="ttc" id="classxy_1_1_enet_client_impl_html"><div class="ttname"><a href="classxy_1_1_enet_client_impl.html">xy::EnetClientImpl</a></div><div class="ttdoc">Default networking library implmentation. This should never be used directly. </div><div class="ttdef"><b>Definition:</b> EnetClientImpl.hpp:45</div></div>
-<div class="ttc" id="namespacexy_html_a05dcce851ad31fdc5bf3179c20b19437"><div class="ttname"><a href="namespacexy.html#a05dcce851ad31fdc5bf3179c20b19437">xy::NetFlag</a></div><div class="ttdeci">NetFlag</div><div class="ttdoc">Reliability enum. These are used to flag sent packets with a requested reliability. </div><div class="ttdef"><b>Definition:</b> NetImpl.hpp:55</div></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classxy_1_1_net_client.html#a4d640be1f2c864fae2ae4432280180bb">   30</a></span>&#160;<span class="preprocessor">#include &quot;xyginext/Config.hpp&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;SFML/Config.hpp&gt;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;xyginext/network/NetData.hpp&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;xyginext/network/EnetClientImpl.hpp&quot;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classxy_1_1_net_client.html#a020e8fc78512d3f8039f363ad77b458f">   38</a></span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacexy.html">xy</a></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">class </span><a class="code" href="classxy_1_1_enet_client_impl.html">EnetClientImpl</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classxy_1_1_net_client.html">   47</a></span>&#160;    <span class="keyword">class </span>XY_EXPORT_API <a class="code" href="classxy_1_1_net_client.html">NetClient</a> final</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="classxy_1_1_net_client.html">NetClient</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        ~<a class="code" href="classxy_1_1_net_client.html">NetClient</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="classxy_1_1_net_client.html">NetClient</a>(<span class="keyword">const</span> <a class="code" href="classxy_1_1_net_client.html">NetClient</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="classxy_1_1_net_client.html">NetClient</a>(<a class="code" href="classxy_1_1_net_client.html">NetClient</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="classxy_1_1_net_client.html">NetClient</a>&amp; operator = (<span class="keyword">const</span> <a class="code" href="classxy_1_1_net_client.html">NetClient</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="classxy_1_1_net_client.html">NetClient</a>&amp; operator = (<a class="code" href="classxy_1_1_net_client.html">NetClient</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T = EnetClientImpl&gt;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordtype">bool</span> create(std::size_t maxChannels, std::size_t maxClients = 1, sf::Uint32 incoming = 0, sf::Uint32 outgoing = 0);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordtype">bool</span> connect(<span class="keyword">const</span> std::string&amp; address, sf::Uint16 port, sf::Uint32 timeout = 5000);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordtype">bool</span> connected() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordtype">void</span> disconnect();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordtype">bool</span> pollEvent(<a class="code" href="structxy_1_1_net_event.html">NetEvent</a>&amp;);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordtype">void</span> sendPacket(sf::Uint32 <span class="keywordtype">id</span>, <span class="keyword">const</span> T&amp; data, <a class="code" href="namespacexy.html#a05dcce851ad31fdc5bf3179c20b19437">NetFlag</a> flags, sf::Uint8 channel = 0);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keywordtype">void</span> sendPacket(sf::Uint32 <span class="keywordtype">id</span>, <span class="keywordtype">void</span>* data, std::size_t size, <a class="code" href="namespacexy.html#a05dcce851ad31fdc5bf3179c20b19437">NetFlag</a> flags, sf::Uint8 channel = 0);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keyword">const</span> <a class="code" href="structxy_1_1_net_peer.html">NetPeer</a>&amp; getPeer() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        std::unique_ptr&lt;NetClientImpl&gt; m_impl;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    };</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="preprocessor">#include &quot;NetClient.inl&quot;</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;}</div>
+<div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioSourceImpl.hpp:38</div></div>
+<div class="ttc" id="classxy_1_1_net_client_html"><div class="ttname"><a href="classxy_1_1_net_client.html">xy::NetClient</a></div><div class="ttdoc">Creates a clientside host which can be used to create a peer connected to a NetHost server...</div><div class="ttdef"><b>Definition:</b> NetClient.hpp:47</div></div>
+<div class="ttc" id="structxy_1_1_net_peer_html"><div class="ttname"><a href="structxy_1_1_net_peer.html">xy::NetPeer</a></div><div class="ttdoc">A peer represents a single, multichannel connection between a client and a host. </div><div class="ttdef"><b>Definition:</b> NetData.hpp:56</div></div>
+<div class="ttc" id="structxy_1_1_net_event_html"><div class="ttname"><a href="structxy_1_1_net_event.html">xy::NetEvent</a></div><div class="ttdoc">Network event. These are used to poll NetHost and NetClient objects for network activity. </div><div class="ttdef"><b>Definition:</b> NetData.hpp:125</div></div>
+<div class="ttc" id="classxy_1_1_enet_client_impl_html"><div class="ttname"><a href="classxy_1_1_enet_client_impl.html">xy::EnetClientImpl</a></div><div class="ttdoc">Default networking library implmentation. This should never be used directly. </div><div class="ttdef"><b>Definition:</b> EnetClientImpl.hpp:44</div></div>
+<div class="ttc" id="namespacexy_html_a05dcce851ad31fdc5bf3179c20b19437"><div class="ttname"><a href="namespacexy.html#a05dcce851ad31fdc5bf3179c20b19437">xy::NetFlag</a></div><div class="ttdeci">NetFlag</div><div class="ttdoc">Reliability enum. These are used to flag sent packets with a requested reliability. </div><div class="ttdef"><b>Definition:</b> NetImpl.hpp:54</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

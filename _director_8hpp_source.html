@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xyginext: C:/Users/Matthew Marchant/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/ecs/Director.hpp Source File</title>
+<title>xyginext: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/ecs/Director.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -44,7 +44,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_162daa221dc0b0dabb7c2d65b288c90b.html">include</a></li><li class="navelem"><a class="el" href="dir_bd255dc1b65874336b892dc3a783bd66.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_e20eeb6b5ca7d7f9b1c3a23258ddef6d.html">ecs</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_de72eac28fae940626bc77a43000e4ad.html">include</a></li><li class="navelem"><a class="el" href="dir_7aeba9697aa2643cb98e804e91ef0468.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_141b73324cfa9e0730bc4f78dfddc86f.html">ecs</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -79,69 +79,66 @@
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">source distribution.</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">*********************************************************************/</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#ifndef XY_DIRECTOR_HPP_</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define XY_DIRECTOR_HPP_</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;xyginext/Config.hpp&quot;</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;xyginext/core/MessageBus.hpp&quot;</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacexy.html">xy</a></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">class </span>Message;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">class </span>MessageBus;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">struct </span>Command;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">class </span>CommandSystem;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">class </span>Scene;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classxy_1_1_director.html">   57</a></span>&#160;    <span class="keyword">class </span>XY_EXPORT_API <a class="code" href="classxy_1_1_director.html">Director</a></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="classxy_1_1_director.html">Director</a>();</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classxy_1_1_director.html">Director</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> handleMessage(<span class="keyword">const</span> <a class="code" href="classxy_1_1_message.html">Message</a>&amp;) = 0;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> handleEvent(<span class="keyword">const</span> sf::Event&amp;) = 0;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> process(<span class="keywordtype">float</span>) = 0;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="comment">/*</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">        \brief Places a message on the system wide MessageBus</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">        */</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        T* postMessage(Message::ID <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordtype">void</span> sendCommand(<span class="keyword">const</span> <a class="code" href="structxy_1_1_command.html">Command</a>&amp;);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <a class="code" href="classxy_1_1_scene.html">Scene</a>&amp; getScene();</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>* m_messageBus;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <a class="code" href="classxy_1_1_command_system.html">CommandSystem</a>* m_commandSystem;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <a class="code" href="classxy_1_1_scene.html">Scene</a>* m_scene;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_scene.html">Scene</a>;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    };</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    T* Director::postMessage(Message::ID <span class="keywordtype">id</span>)</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    {</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        XY_ASSERT(m_messageBus, <span class="stringliteral">&quot;Not yet initialised - are you using this properly?&quot;</span>);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">return</span> m_messageBus-&gt;<a class="code" href="classxy_1_1_message_bus.html#adf60b770636c2f040074275ada3cd278">post</a>&lt;T&gt;(id);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    }</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#endif //XY_DIRECTOR_HPP_</span></div>
-<div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioSourceImpl.hpp:39</div></div>
-<div class="ttc" id="classxy_1_1_message_bus_html"><div class="ttname"><a href="classxy_1_1_message_bus.html">xy::MessageBus</a></div><div class="ttdoc">System wide message bus for custom event messaging. </div><div class="ttdef"><b>Definition:</b> MessageBus.hpp:58</div></div>
-<div class="ttc" id="classxy_1_1_message_html"><div class="ttname"><a href="classxy_1_1_message.html">xy::Message</a></div><div class="ttdoc">Message class. </div><div class="ttdef"><b>Definition:</b> Message.hpp:47</div></div>
-<div class="ttc" id="structxy_1_1_command_html"><div class="ttname"><a href="structxy_1_1_command.html">xy::Command</a></div><div class="ttdoc">Command struct. Each command encapsulates a mask of target IDs as well as a command in the form of a ...</div><div class="ttdef"><b>Definition:</b> CommandSystem.hpp:42</div></div>
-<div class="ttc" id="classxy_1_1_command_system_html"><div class="ttname"><a href="classxy_1_1_command_system.html">xy::CommandSystem</a></div><div class="ttdef"><b>Definition:</b> CommandSystem.hpp:52</div></div>
-<div class="ttc" id="classxy_1_1_scene_html"><div class="ttname"><a href="classxy_1_1_scene.html">xy::Scene</a></div><div class="ttdoc">Encapsulates a single scene. The scene class contains everything needed to create a scene graph by en...</div><div class="ttdef"><b>Definition:</b> Scene.hpp:61</div></div>
-<div class="ttc" id="classxy_1_1_message_bus_html_adf60b770636c2f040074275ada3cd278"><div class="ttname"><a href="classxy_1_1_message_bus.html#adf60b770636c2f040074275ada3cd278">xy::MessageBus::post</a></div><div class="ttdeci">T * post(Message::ID id)</div><div class="ttdoc">Places a message on the message stack, and returns a pointer to the data. </div><div class="ttdef"><b>Definition:</b> MessageBus.hpp:88</div></div>
-<div class="ttc" id="classxy_1_1_director_html"><div class="ttname"><a href="classxy_1_1_director.html">xy::Director</a></div><div class="ttdoc">Abstract Base Class for Directors. A director is an &#39;observer&#39; of the scene to which it belongs...</div><div class="ttdef"><b>Definition:</b> Director.hpp:57</div></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;xyginext/Config.hpp&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;xyginext/core/MessageBus.hpp&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacexy.html">xy</a></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">class </span>Message;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">class </span>MessageBus;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">struct </span>Command;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">class </span>CommandSystem;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">class </span>Scene;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classxy_1_1_director.html">   56</a></span>&#160;    <span class="keyword">class </span>XY_EXPORT_API <a class="code" href="classxy_1_1_director.html">Director</a></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="classxy_1_1_director.html">Director</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classxy_1_1_director.html">Director</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> handleMessage(<span class="keyword">const</span> <a class="code" href="classxy_1_1_message.html">Message</a>&amp;) = 0;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> handleEvent(<span class="keyword">const</span> sf::Event&amp;) = 0;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> process(<span class="keywordtype">float</span>) = 0;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="comment">/*</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">        \brief Places a message on the system wide MessageBus</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">        */</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        T* postMessage(Message::ID <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordtype">void</span> sendCommand(<span class="keyword">const</span> <a class="code" href="structxy_1_1_command.html">Command</a>&amp;);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <a class="code" href="classxy_1_1_scene.html">Scene</a>&amp; getScene();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>* m_messageBus;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <a class="code" href="classxy_1_1_command_system.html">CommandSystem</a>* m_commandSystem;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <a class="code" href="classxy_1_1_scene.html">Scene</a>* m_scene;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_scene.html">Scene</a>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    };</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    T* Director::postMessage(Message::ID <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        XY_ASSERT(m_messageBus, <span class="stringliteral">&quot;Not yet initialised - are you using this properly?&quot;</span>);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">return</span> m_messageBus-&gt;<a class="code" href="classxy_1_1_message_bus.html#adf60b770636c2f040074275ada3cd278">post</a>&lt;T&gt;(id);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
+<div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioSourceImpl.hpp:38</div></div>
+<div class="ttc" id="classxy_1_1_message_bus_html"><div class="ttname"><a href="classxy_1_1_message_bus.html">xy::MessageBus</a></div><div class="ttdoc">System wide message bus for custom event messaging. </div><div class="ttdef"><b>Definition:</b> MessageBus.hpp:59</div></div>
+<div class="ttc" id="classxy_1_1_message_html"><div class="ttname"><a href="classxy_1_1_message.html">xy::Message</a></div><div class="ttdoc">Message class. </div><div class="ttdef"><b>Definition:</b> Message.hpp:46</div></div>
+<div class="ttc" id="structxy_1_1_command_html"><div class="ttname"><a href="structxy_1_1_command.html">xy::Command</a></div><div class="ttdoc">Command struct. Each command encapsulates a mask of target IDs as well as a command in the form of a ...</div><div class="ttdef"><b>Definition:</b> CommandSystem.hpp:41</div></div>
+<div class="ttc" id="classxy_1_1_command_system_html"><div class="ttname"><a href="classxy_1_1_command_system.html">xy::CommandSystem</a></div><div class="ttdef"><b>Definition:</b> CommandSystem.hpp:51</div></div>
+<div class="ttc" id="classxy_1_1_scene_html"><div class="ttname"><a href="classxy_1_1_scene.html">xy::Scene</a></div><div class="ttdoc">Encapsulates a single scene. The scene class contains everything needed to create a scene graph by en...</div><div class="ttdef"><b>Definition:</b> Scene.hpp:60</div></div>
+<div class="ttc" id="classxy_1_1_message_bus_html_adf60b770636c2f040074275ada3cd278"><div class="ttname"><a href="classxy_1_1_message_bus.html#adf60b770636c2f040074275ada3cd278">xy::MessageBus::post</a></div><div class="ttdeci">T * post(Message::ID id)</div><div class="ttdoc">Places a message on the message stack, and returns a pointer to the data. </div><div class="ttdef"><b>Definition:</b> MessageBus.hpp:89</div></div>
+<div class="ttc" id="classxy_1_1_director_html"><div class="ttname"><a href="classxy_1_1_director.html">xy::Director</a></div><div class="ttdoc">Abstract Base Class for Directors. A director is an &#39;observer&#39; of the scene to which it belongs...</div><div class="ttdef"><b>Definition:</b> Director.hpp:56</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xyginext: C:/Users/Matthew Marchant/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/ecs/Scene.hpp Source File</title>
+<title>xyginext: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/ecs/Scene.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -44,7 +44,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_162daa221dc0b0dabb7c2d65b288c90b.html">include</a></li><li class="navelem"><a class="el" href="dir_bd255dc1b65874336b892dc3a783bd66.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_e20eeb6b5ca7d7f9b1c3a23258ddef6d.html">ecs</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_de72eac28fae940626bc77a43000e4ad.html">include</a></li><li class="navelem"><a class="el" href="dir_7aeba9697aa2643cb98e804e91ef0468.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_141b73324cfa9e0730bc4f78dfddc86f.html">ecs</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -79,121 +79,117 @@
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">source distribution.</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">*********************************************************************/</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#ifndef XY_SCENE_HPP_</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define XY_SCENE_HPP_</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classxy_1_1_scene.html#a41645ce2be880d2000b62c300b921156">   31</a></span>&#160;<span class="preprocessor">#include &quot;xyginext/Config.hpp&quot;</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;xyginext/core/App.hpp&quot;</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;xyginext/ecs/Entity.hpp&quot;</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;xyginext/ecs/Component.hpp&quot;</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;xyginext/ecs/System.hpp&quot;</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &quot;xyginext/ecs/systems/CommandSystem.hpp&quot;</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &quot;xyginext/ecs/Director.hpp&quot;</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &quot;xyginext/graphics/postprocess/PostProcess.hpp&quot;</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics/RenderTexture.hpp&gt;</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics/Drawable.hpp&gt;</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classxy_1_1_scene.html#a3a391a874cf04c7b964992ac1e7676d5">   42</a></span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;array&gt;</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacexy.html">xy</a></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classxy_1_1_scene.html#ab491978db13ed6bd0673a6137309570e">   48</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classxy_1_1_scene.html">   61</a></span>&#160;    <span class="keyword">class </span>XY_EXPORT_API <a class="code" href="classxy_1_1_scene.html">Scene</a> final : <span class="keyword">public</span> sf::Drawable</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classxy_1_1_scene.html">Scene</a>(<a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>&amp;);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        ~<a class="code" href="classxy_1_1_scene.html">Scene</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="classxy_1_1_scene.html">Scene</a>(<span class="keyword">const</span> <a class="code" href="classxy_1_1_scene.html">Scene</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="classxy_1_1_scene.html">Scene</a>(<a class="code" href="classxy_1_1_scene.html">Scene</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="classxy_1_1_scene.html">Scene</a>&amp; operator = (<span class="keyword">const</span> <a class="code" href="classxy_1_1_scene.html">Scene</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="classxy_1_1_scene.html">Scene</a>&amp; operator = (<a class="code" href="classxy_1_1_scene.html">Scene</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classxy_1_1_scene.html#ab4a50e032148f96eba0ec2ed62a51012">   71</a></span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordtype">void</span> update(<span class="keywordtype">float</span> dt);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="classxy_1_1_entity.html">Entity</a> createEntity();</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">void</span> destroyEntity(<a class="code" href="classxy_1_1_entity.html">Entity</a>);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="comment">/*|</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">        \brief Returns the entity with the given ID if it exists</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">        */</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <a class="code" href="classxy_1_1_entity.html">Entity</a> getEntity(Entity::ID) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Args&gt;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        T&amp; addSystem(Args&amp;&amp;... args);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        T&amp; getSystem();</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordtype">void</span> setSystemActive(<span class="keywordtype">bool</span> active);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Args&gt;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordtype">void</span> addDirector(Args&amp;&amp;... args);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Args&gt;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        T&amp; <a class="code" href="classxy_1_1_scene.html#ab4a50e032148f96eba0ec2ed62a51012">addPostProcess</a>(Args&amp;&amp;... args);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordtype">void</span> setPostEnabled(<span class="keywordtype">bool</span>);</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <a class="code" href="classxy_1_1_entity.html">Entity</a> getDefaultCamera() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <a class="code" href="classxy_1_1_entity.html">Entity</a> setActiveCamera(<a class="code" href="classxy_1_1_entity.html">Entity</a>);</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <a class="code" href="classxy_1_1_entity.html">Entity</a> getActiveCamera() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <a class="code" href="classxy_1_1_entity.html">Entity</a> setActiveListener(<a class="code" href="classxy_1_1_entity.html">Entity</a>);</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <a class="code" href="classxy_1_1_entity.html">Entity</a> getActiveListener() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordtype">void</span> forwardEvent(<span class="keyword">const</span> sf::Event&amp;);</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keywordtype">void</span> forwardMessage(<span class="keyword">const</span> <a class="code" href="classxy_1_1_message.html">Message</a>&amp;);</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>&amp; m_messageBus;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        Entity::ID m_defaultCamera;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        Entity::ID m_activeCamera;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        Entity::ID m_activeListener;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        std::vector&lt;Entity&gt; m_pendingEntities;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        std::vector&lt;Entity&gt; m_destroyedEntities;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <a class="code" href="classxy_1_1_component_manager.html">ComponentManager</a> m_componentManager;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <a class="code" href="classxy_1_1_entity_manager.html">EntityManager</a> m_entityManager;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <a class="code" href="classxy_1_1_system_manager.html">SystemManager</a> m_systemManager;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        std::vector&lt;std::unique_ptr&lt;Director&gt;&gt; m_directors;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        std::vector&lt;sf::Drawable*&gt; m_drawables;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        sf::RenderTexture m_sceneBuffer;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        std::array&lt;sf::RenderTexture, 2u&gt; m_postBuffers;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        std::vector&lt;std::unique_ptr&lt;PostProcess&gt;&gt; m_postEffects;</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keywordtype">void</span> postRenderPath(sf::RenderTarget&amp;, sf::RenderStates);</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        std::function&lt;void(sf::RenderTarget&amp;, sf::RenderStates)&gt; currentRenderPath;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="keywordtype">void</span> draw(sf::RenderTarget&amp;, sf::RenderStates) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    };</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="preprocessor">#include &quot;Scene.inl&quot;</span></div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;}</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="preprocessor">#endif //XY_SCENE_HPP_</span></div>
-<div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioSourceImpl.hpp:39</div></div>
-<div class="ttc" id="classxy_1_1_component_manager_html"><div class="ttname"><a href="classxy_1_1_component_manager.html">xy::ComponentManager</a></div><div class="ttdef"><b>Definition:</b> Component.hpp:42</div></div>
-<div class="ttc" id="classxy_1_1_message_bus_html"><div class="ttname"><a href="classxy_1_1_message_bus.html">xy::MessageBus</a></div><div class="ttdoc">System wide message bus for custom event messaging. </div><div class="ttdef"><b>Definition:</b> MessageBus.hpp:58</div></div>
-<div class="ttc" id="classxy_1_1_message_html"><div class="ttname"><a href="classxy_1_1_message.html">xy::Message</a></div><div class="ttdoc">Message class. </div><div class="ttdef"><b>Definition:</b> Message.hpp:47</div></div>
-<div class="ttc" id="classxy_1_1_entity_html"><div class="ttname"><a href="classxy_1_1_entity.html">xy::Entity</a></div><div class="ttdoc">Entity class - Basically just an ID. The ID is generated as a combination of the index in the memory ...</div><div class="ttdef"><b>Definition:</b> Entity.hpp:67</div></div>
-<div class="ttc" id="classxy_1_1_scene_html"><div class="ttname"><a href="classxy_1_1_scene.html">xy::Scene</a></div><div class="ttdoc">Encapsulates a single scene. The scene class contains everything needed to create a scene graph by en...</div><div class="ttdef"><b>Definition:</b> Scene.hpp:61</div></div>
-<div class="ttc" id="classxy_1_1_system_manager_html"><div class="ttname"><a href="classxy_1_1_system_manager.html">xy::SystemManager</a></div><div class="ttdef"><b>Definition:</b> System.hpp:173</div></div>
-<div class="ttc" id="classxy_1_1_entity_manager_html"><div class="ttname"><a href="classxy_1_1_entity_manager.html">xy::EntityManager</a></div><div class="ttdoc">Manages the relationship between an Entity and its components. </div><div class="ttdef"><b>Definition:</b> Entity.hpp:187</div></div>
-<div class="ttc" id="classxy_1_1_scene_html_ab4a50e032148f96eba0ec2ed62a51012"><div class="ttname"><a href="classxy_1_1_scene.html#ab4a50e032148f96eba0ec2ed62a51012">xy::Scene::addPostProcess</a></div><div class="ttdeci">T &amp; addPostProcess(Args &amp;&amp;...args)</div><div class="ttdoc">Adds a post process effect to the scene. Any post processes added to the scene are performed on the e...</div><div class="ttdef"><b>Definition:</b> Scene.hpp:71</div></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;xyginext/Config.hpp&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classxy_1_1_scene.html#a41645ce2be880d2000b62c300b921156">   31</a></span>&#160;<span class="preprocessor">#include &quot;xyginext/core/App.hpp&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;xyginext/ecs/Entity.hpp&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;xyginext/ecs/Component.hpp&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;xyginext/ecs/System.hpp&quot;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;xyginext/ecs/systems/CommandSystem.hpp&quot;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &quot;xyginext/ecs/Director.hpp&quot;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &quot;xyginext/graphics/postprocess/PostProcess.hpp&quot;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics/RenderTexture.hpp&gt;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics/Drawable.hpp&gt;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classxy_1_1_scene.html#a3a391a874cf04c7b964992ac1e7676d5">   42</a></span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacexy.html">xy</a></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">class </span><a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classxy_1_1_scene.html#ab491978db13ed6bd0673a6137309570e">   48</a></span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classxy_1_1_scene.html">   60</a></span>&#160;    <span class="keyword">class </span>XY_EXPORT_API <a class="code" href="classxy_1_1_scene.html">Scene</a> final : <span class="keyword">public</span> sf::Drawable</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classxy_1_1_scene.html">Scene</a>(<a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>&amp;);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        ~<a class="code" href="classxy_1_1_scene.html">Scene</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <a class="code" href="classxy_1_1_scene.html">Scene</a>(<span class="keyword">const</span> <a class="code" href="classxy_1_1_scene.html">Scene</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="classxy_1_1_scene.html">Scene</a>(<a class="code" href="classxy_1_1_scene.html">Scene</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="classxy_1_1_scene.html">Scene</a>&amp; operator = (<span class="keyword">const</span> <a class="code" href="classxy_1_1_scene.html">Scene</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="classxy_1_1_scene.html">Scene</a>&amp; operator = (<a class="code" href="classxy_1_1_scene.html">Scene</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordtype">void</span> update(<span class="keywordtype">float</span> dt);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="classxy_1_1_entity.html">Entity</a> createEntity();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">void</span> destroyEntity(<a class="code" href="classxy_1_1_entity.html">Entity</a>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="comment">/*|</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">        \brief Returns the entity with the given ID if it exists</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">        */</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <a class="code" href="classxy_1_1_entity.html">Entity</a> getEntity(Entity::ID) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        T&amp; addSystem(Args&amp;&amp;... args);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        T&amp; getSystem();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordtype">void</span> setSystemActive(<span class="keywordtype">bool</span> active);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordtype">void</span> addDirector(Args&amp;&amp;... args);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        T&amp; addPostProcess(Args&amp;&amp;... args);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordtype">void</span> setPostEnabled(<span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <a class="code" href="classxy_1_1_entity.html">Entity</a> getDefaultCamera() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <a class="code" href="classxy_1_1_entity.html">Entity</a> setActiveCamera(<a class="code" href="classxy_1_1_entity.html">Entity</a>);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <a class="code" href="classxy_1_1_entity.html">Entity</a> getActiveCamera() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <a class="code" href="classxy_1_1_entity.html">Entity</a> setActiveListener(<a class="code" href="classxy_1_1_entity.html">Entity</a>);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <a class="code" href="classxy_1_1_entity.html">Entity</a> getActiveListener() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keywordtype">void</span> forwardEvent(<span class="keyword">const</span> sf::Event&amp;);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keywordtype">void</span> forwardMessage(<span class="keyword">const</span> <a class="code" href="classxy_1_1_message.html">Message</a>&amp;);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <a class="code" href="classxy_1_1_message_bus.html">MessageBus</a>&amp; m_messageBus;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        Entity::ID m_defaultCamera;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        Entity::ID m_activeCamera;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        Entity::ID m_activeListener;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        std::vector&lt;Entity&gt; m_pendingEntities;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        std::vector&lt;Entity&gt; m_destroyedEntities;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <a class="code" href="classxy_1_1_component_manager.html">ComponentManager</a> m_componentManager;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <a class="code" href="classxy_1_1_entity_manager.html">EntityManager</a> m_entityManager;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <a class="code" href="classxy_1_1_system_manager.html">SystemManager</a> m_systemManager;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        std::vector&lt;std::unique_ptr&lt;Director&gt;&gt; m_directors;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        std::vector&lt;sf::Drawable*&gt; m_drawables;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        sf::RenderTexture m_sceneBuffer;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        std::array&lt;sf::RenderTexture, 2u&gt; m_postBuffers;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        std::vector&lt;std::unique_ptr&lt;PostProcess&gt;&gt; m_postEffects;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="keywordtype">void</span> postRenderPath(sf::RenderTarget&amp;, sf::RenderStates);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        std::function&lt;void(sf::RenderTarget&amp;, sf::RenderStates)&gt; currentRenderPath;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keywordtype">void</span> draw(sf::RenderTarget&amp;, sf::RenderStates) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    };</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="preprocessor">#include &quot;Scene.inl&quot;</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;}</div>
+<div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioSourceImpl.hpp:38</div></div>
+<div class="ttc" id="classxy_1_1_component_manager_html"><div class="ttname"><a href="classxy_1_1_component_manager.html">xy::ComponentManager</a></div><div class="ttdef"><b>Definition:</b> Component.hpp:41</div></div>
+<div class="ttc" id="classxy_1_1_message_bus_html"><div class="ttname"><a href="classxy_1_1_message_bus.html">xy::MessageBus</a></div><div class="ttdoc">System wide message bus for custom event messaging. </div><div class="ttdef"><b>Definition:</b> MessageBus.hpp:59</div></div>
+<div class="ttc" id="classxy_1_1_message_html"><div class="ttname"><a href="classxy_1_1_message.html">xy::Message</a></div><div class="ttdoc">Message class. </div><div class="ttdef"><b>Definition:</b> Message.hpp:46</div></div>
+<div class="ttc" id="classxy_1_1_entity_html"><div class="ttname"><a href="classxy_1_1_entity.html">xy::Entity</a></div><div class="ttdoc">Entity class - Basically just an ID. The ID is generated as a combination of the index in the memory ...</div><div class="ttdef"><b>Definition:</b> Entity.hpp:66</div></div>
+<div class="ttc" id="classxy_1_1_scene_html"><div class="ttname"><a href="classxy_1_1_scene.html">xy::Scene</a></div><div class="ttdoc">Encapsulates a single scene. The scene class contains everything needed to create a scene graph by en...</div><div class="ttdef"><b>Definition:</b> Scene.hpp:60</div></div>
+<div class="ttc" id="classxy_1_1_system_manager_html"><div class="ttname"><a href="classxy_1_1_system_manager.html">xy::SystemManager</a></div><div class="ttdef"><b>Definition:</b> System.hpp:172</div></div>
+<div class="ttc" id="classxy_1_1_entity_manager_html"><div class="ttname"><a href="classxy_1_1_entity_manager.html">xy::EntityManager</a></div><div class="ttdoc">Manages the relationship between an Entity and its components. </div><div class="ttdef"><b>Definition:</b> Entity.hpp:186</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

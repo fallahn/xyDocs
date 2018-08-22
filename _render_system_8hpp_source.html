@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xyginext: C:/Users/Matthew Marchant/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/ecs/systems/RenderSystem.hpp Source File</title>
+<title>xyginext: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/ecs/systems/RenderSystem.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -44,7 +44,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_162daa221dc0b0dabb7c2d65b288c90b.html">include</a></li><li class="navelem"><a class="el" href="dir_bd255dc1b65874336b892dc3a783bd66.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_e20eeb6b5ca7d7f9b1c3a23258ddef6d.html">ecs</a></li><li class="navelem"><a class="el" href="dir_bc4d824cab427f93224a9b5a159a7962.html">systems</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_de72eac28fae940626bc77a43000e4ad.html">include</a></li><li class="navelem"><a class="el" href="dir_7aeba9697aa2643cb98e804e91ef0468.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_141b73324cfa9e0730bc4f78dfddc86f.html">ecs</a></li><li class="navelem"><a class="el" href="dir_22ecfc989349249d3b82af60013bdf82.html">systems</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -79,39 +79,36 @@
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">source distribution.</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">*********************************************************************/</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#ifndef XY_RENDER_SYSTEM_HPP_</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define XY_RENDER_SYSTEM_HPP_</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;xyginext/ecs/System.hpp&quot;</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics/Drawable.hpp&gt;</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacexy.html">xy</a></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classxy_1_1_render_system.html">   44</a></span>&#160;    <span class="keyword">class </span>XY_EXPORT_API <a class="code" href="classxy_1_1_render_system.html">RenderSystem</a> final : <span class="keyword">public</span> <a class="code" href="classxy_1_1_system.html">xy::System</a>, <span class="keyword">public</span> sf::Drawable </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classxy_1_1_render_system.html">RenderSystem</a>(<a class="code" href="classxy_1_1_message_bus.html">xy::MessageBus</a>&amp;);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">void</span> process(<span class="keywordtype">float</span>) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">void</span> setCullingBorder(<span class="keywordtype">float</span> size);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordtype">bool</span> m_wantsSorting;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        sf::Vector2f m_cullingBorder;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordtype">void</span> onEntityAdded(<a class="code" href="classxy_1_1_entity.html">xy::Entity</a>) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordtype">void</span> draw(sf::RenderTarget&amp;, sf::RenderStates) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    };</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif //XY_RENDER_SYSTEM_HPP_</span></div>
-<div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioSourceImpl.hpp:39</div></div>
-<div class="ttc" id="classxy_1_1_message_bus_html"><div class="ttname"><a href="classxy_1_1_message_bus.html">xy::MessageBus</a></div><div class="ttdoc">System wide message bus for custom event messaging. </div><div class="ttdef"><b>Definition:</b> MessageBus.hpp:58</div></div>
-<div class="ttc" id="classxy_1_1_render_system_html"><div class="ttname"><a href="classxy_1_1_render_system.html">xy::RenderSystem</a></div><div class="ttdoc">Used to draw all entities which have a Drawable and Transform component. The RenderSystem is used to ...</div><div class="ttdef"><b>Definition:</b> RenderSystem.hpp:44</div></div>
-<div class="ttc" id="classxy_1_1_entity_html"><div class="ttname"><a href="classxy_1_1_entity.html">xy::Entity</a></div><div class="ttdoc">Entity class - Basically just an ID. The ID is generated as a combination of the index in the memory ...</div><div class="ttdef"><b>Definition:</b> Entity.hpp:67</div></div>
-<div class="ttc" id="classxy_1_1_system_html"><div class="ttname"><a href="classxy_1_1_system.html">xy::System</a></div><div class="ttdoc">Base class for systems. Systems should all derive from this base class, and instanciated before any e...</div><div class="ttdef"><b>Definition:</b> System.hpp:52</div></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;xyginext/ecs/System.hpp&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics/Drawable.hpp&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacexy.html">xy</a></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classxy_1_1_render_system.html">   43</a></span>&#160;    <span class="keyword">class </span>XY_EXPORT_API <a class="code" href="classxy_1_1_render_system.html">RenderSystem</a> final : <span class="keyword">public</span> <a class="code" href="classxy_1_1_system.html">xy::System</a>, <span class="keyword">public</span> sf::Drawable </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classxy_1_1_render_system.html">RenderSystem</a>(<a class="code" href="classxy_1_1_message_bus.html">xy::MessageBus</a>&amp;);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">void</span> process(<span class="keywordtype">float</span>) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">void</span> setCullingBorder(<span class="keywordtype">float</span> size);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordtype">bool</span> m_wantsSorting;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        sf::Vector2f m_cullingBorder;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordtype">void</span> onEntityAdded(<a class="code" href="classxy_1_1_entity.html">xy::Entity</a>) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordtype">void</span> draw(sf::RenderTarget&amp;, sf::RenderStates) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    };</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioSourceImpl.hpp:38</div></div>
+<div class="ttc" id="classxy_1_1_message_bus_html"><div class="ttname"><a href="classxy_1_1_message_bus.html">xy::MessageBus</a></div><div class="ttdoc">System wide message bus for custom event messaging. </div><div class="ttdef"><b>Definition:</b> MessageBus.hpp:59</div></div>
+<div class="ttc" id="classxy_1_1_render_system_html"><div class="ttname"><a href="classxy_1_1_render_system.html">xy::RenderSystem</a></div><div class="ttdoc">Used to draw all entities which have a Drawable and Transform component. The RenderSystem is used to ...</div><div class="ttdef"><b>Definition:</b> RenderSystem.hpp:43</div></div>
+<div class="ttc" id="classxy_1_1_entity_html"><div class="ttname"><a href="classxy_1_1_entity.html">xy::Entity</a></div><div class="ttdoc">Entity class - Basically just an ID. The ID is generated as a combination of the index in the memory ...</div><div class="ttdef"><b>Definition:</b> Entity.hpp:66</div></div>
+<div class="ttc" id="classxy_1_1_system_html"><div class="ttname"><a href="classxy_1_1_system.html">xy::System</a></div><div class="ttdoc">Base class for systems. Systems should all derive from this base class, and instanciated before any e...</div><div class="ttdef"><b>Definition:</b> System.hpp:51</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

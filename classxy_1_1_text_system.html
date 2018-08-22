@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xyginext: xy::TextRenderer Class Reference</title>
+<title>xyginext: xy::TextSystem Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -47,41 +47,41 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespacexy.html">xy</a></li><li class="navelem"><a class="el" href="classxy_1_1_text_renderer.html">TextRenderer</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacexy.html">xy</a></li><li class="navelem"><a class="el" href="classxy_1_1_text_system.html">TextSystem</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="classxy_1_1_text_renderer-members.html">List of all members</a>  </div>
+<a href="classxy_1_1_text_system-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">xy::TextRenderer Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
+<div class="title">xy::TextSystem Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classxy_1_1_system.html" title="Base class for systems. Systems should all derive from this base class, and instanciated before any e...">System</a> for rendering text objects. Usually this would be added last to the <a class="el" href="classxy_1_1_scene.html" title="Encapsulates a single scene. The scene class contains everything needed to create a scene graph by en...">Scene</a> after existing drawable systems, as the text ought to be rendered on top of everything else DEPRECATED: use the <a class="el" href="classxy_1_1_text_system.html" title="Updates the vertices of the drawable components associated with Text components. NOTE As text is rend...">TextSystem</a> and <a class="el" href="classxy_1_1_render_system.html" title="Used to draw all entities which have a Drawable and Transform component. The RenderSystem is used to ...">RenderSystem</a> with <a class="el" href="classxy_1_1_text.html" title="ECS friendly implementation of Text. Text components should appear on entities which also have a tran...">Text</a> components and <a class="el" href="classxy_1_1_drawable.html" title="Drawable component. The drawable component encapsulates an sf::VertexArray which can be used to draw ...">Drawable</a> components.  
- <a href="classxy_1_1_text_renderer.html#details">More...</a></p>
+<p>Updates the vertices of the drawable components associated with <a class="el" href="classxy_1_1_text.html" title="ECS friendly implementation of Text. Text components should appear on entities which also have a tran...">Text</a> components. NOTE As text is rendered via a drawable component in the same way as sprites and other drawables, the drawable component should use setDepth() to increase the depth value of a text renderable so that it appears above other drawables. This should be the first thing to check if text appears 'invisible'.  
+ <a href="classxy_1_1_text_system.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="_text_renderer_8hpp_source.html">TextRenderer.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_text_system_8hpp_source.html">TextSystem.hpp</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for xy::TextRenderer:</div>
+Inheritance diagram for xy::TextSystem:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classxy_1_1_text_renderer.png" usemap="#xy::TextRenderer_map" alt=""/>
-  <map id="xy::TextRenderer_map" name="xy::TextRenderer_map">
-<area href="classxy_1_1_system.html" title="Base class for systems. Systems should all derive from this base class, and instanciated before any e..." alt="xy::System" shape="rect" coords="0,0,107,24"/>
+  <img src="classxy_1_1_text_system.png" usemap="#xy::TextSystem_map" alt=""/>
+  <map id="xy::TextSystem_map" name="xy::TextSystem_map">
+<area href="classxy_1_1_system.html" title="Base class for systems. Systems should all derive from this base class, and instanciated before any e..." alt="xy::System" shape="rect" coords="0,0,94,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4bda5cabe07e3edc47ea2281a1fbc4e8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4bda5cabe07e3edc47ea2281a1fbc4e8"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>TextRenderer</b> (<a class="el" href="classxy_1_1_message_bus.html">MessageBus</a> &amp;)</td></tr>
-<tr class="separator:a4bda5cabe07e3edc47ea2281a1fbc4e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94c64502a653ff5dcdda7f44e3c208a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a94c64502a653ff5dcdda7f44e3c208a6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_text_renderer.html#a94c64502a653ff5dcdda7f44e3c208a6">process</a> (float) override</td></tr>
-<tr class="memdesc:a94c64502a653ff5dcdda7f44e3c208a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this for system specific processing to entities. <br /></td></tr>
-<tr class="separator:a94c64502a653ff5dcdda7f44e3c208a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae0cb13f2f97ca0c7477b9564144edf5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae0cb13f2f97ca0c7477b9564144edf5"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TextSystem</b> (<a class="el" href="classxy_1_1_message_bus.html">xy::MessageBus</a> &amp;)</td></tr>
+<tr class="separator:aae0cb13f2f97ca0c7477b9564144edf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aded1a9ede8cdb7f66c4ea46e99a5bfb3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aded1a9ede8cdb7f66c4ea46e99a5bfb3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_text_system.html#aded1a9ede8cdb7f66c4ea46e99a5bfb3">process</a> (float) override</td></tr>
+<tr class="memdesc:aded1a9ede8cdb7f66c4ea46e99a5bfb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this for system specific processing to entities. <br /></td></tr>
+<tr class="separator:aded1a9ede8cdb7f66c4ea46e99a5bfb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classxy_1_1_system"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classxy_1_1_system')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classxy_1_1_system.html">xy::System</a></td></tr>
 <tr class="memitem:aa17bed267803af1928e2e8d0a45be700 inherit pub_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa17bed267803af1928e2e8d0a45be700"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#aa17bed267803af1928e2e8d0a45be700">System</a> (<a class="el" href="classxy_1_1_message_bus.html">MessageBus</a> &amp;mb, UniqueType t)</td></tr>
@@ -165,7 +165,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setScene</b> (<a clas
 <tr class="separator:a353fe5566f012825715cf699151cc4ca inherit pro_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classxy_1_1_system.html" title="Base class for systems. Systems should all derive from this base class, and instanciated before any e...">System</a> for rendering text objects. Usually this would be added last to the <a class="el" href="classxy_1_1_scene.html" title="Encapsulates a single scene. The scene class contains everything needed to create a scene graph by en...">Scene</a> after existing drawable systems, as the text ought to be rendered on top of everything else DEPRECATED: use the <a class="el" href="classxy_1_1_text_system.html" title="Updates the vertices of the drawable components associated with Text components. NOTE As text is rend...">TextSystem</a> and <a class="el" href="classxy_1_1_render_system.html" title="Used to draw all entities which have a Drawable and Transform component. The RenderSystem is used to ...">RenderSystem</a> with <a class="el" href="classxy_1_1_text.html" title="ECS friendly implementation of Text. Text components should appear on entities which also have a tran...">Text</a> components and <a class="el" href="classxy_1_1_drawable.html" title="Drawable component. The drawable component encapsulates an sf::VertexArray which can be used to draw ...">Drawable</a> components. </p>
+<div class="textblock"><p>Updates the vertices of the drawable components associated with <a class="el" href="classxy_1_1_text.html" title="ECS friendly implementation of Text. Text components should appear on entities which also have a tran...">Text</a> components. NOTE As text is rendered via a drawable component in the same way as sprites and other drawables, the drawable component should use setDepth() to increase the depth value of a text renderable so that it appears above other drawables. This should be the first thing to check if text appears 'invisible'. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

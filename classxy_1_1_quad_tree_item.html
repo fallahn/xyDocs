@@ -68,8 +68,17 @@
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8bdda6db4ef2a1f85db93811f33d9238"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8bdda6db4ef2a1f85db93811f33d9238"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setArea</b> (sf::FloatRect)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_quad_tree_item.html#a8bdda6db4ef2a1f85db93811f33d9238">setArea</a> (sf::FloatRect)</td></tr>
+<tr class="memdesc:a8bdda6db4ef2a1f85db93811f33d9238"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the area of the quad tree item in relative coordinates. <br /></td></tr>
 <tr class="separator:a8bdda6db4ef2a1f85db93811f33d9238"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cef2904ab4355f43fd8afe231159439"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1cef2904ab4355f43fd8afe231159439"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_quad_tree_item.html#a1cef2904ab4355f43fd8afe231159439">setFilterFlags</a> (std::uint64_t flags)</td></tr>
+<tr class="memdesc:a1cef2904ab4355f43fd8afe231159439"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows filtering QuadTreeItems during <a class="el" href="classxy_1_1_quad_tree.html" title="Partition system for entities with QuadTreeItem components. Entities are sorted in a tree hierarchy w...">QuadTree</a> queries. The filter consists of up to 64 flags allowing quad tree items to be categorised. When the quad tree is queried only the items matching the query flags are returned. For example setting the flag to 4 will set the 3rd bit, and items matching a quad tree query which includes the 3rd bit will be included in the results. All flags are set by default, so all items are returned in a query. <br /></td></tr>
+<tr class="separator:a1cef2904ab4355f43fd8afe231159439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37231806180017b5dc66e7ac1885000d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37231806180017b5dc66e7ac1885000d"></a>
+std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_quad_tree_item.html#a37231806180017b5dc66e7ac1885000d">getFilterFlags</a> () const </td></tr>
+<tr class="memdesc:a37231806180017b5dc66e7ac1885000d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current flags for this item. Defaults to the max size of uint64 (all flags set) <br /></td></tr>
+<tr class="separator:a37231806180017b5dc66e7ac1885000d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>

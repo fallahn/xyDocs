@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xyginext: C:/Users/Matthew Marchant/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/gui/Gui.hpp Source File</title>
+<title>xyginext: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/gui/Gui.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -44,7 +44,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_162daa221dc0b0dabb7c2d65b288c90b.html">include</a></li><li class="navelem"><a class="el" href="dir_bd255dc1b65874336b892dc3a783bd66.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_0b3db6214b5f0d2eb07fcf64c1b67485.html">gui</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_de72eac28fae940626bc77a43000e4ad.html">include</a></li><li class="navelem"><a class="el" href="dir_7aeba9697aa2643cb98e804e91ef0468.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_a8472b134c7c7354b1e7be6a0976d8ba.html">gui</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -79,46 +79,137 @@
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">source distribution.</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">*********************************************************************/</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#ifndef XY_GUI_HPP_</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define XY_GUI_HPP_</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;xyginext/Config.hpp&quot;</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacexy.html">xy</a></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="namespacexy_1_1_nim.html">   43</a></span>&#160;    <span class="keyword">namespace </span>Nim</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        XY_EXPORT_API <span class="keywordtype">void</span> <a class="code" href="namespacexy_1_1_nim.html#aea0ca31116b038446397540b0c64f33d">begin</a>(<span class="keyword">const</span> std::string&amp; title, <span class="keywordtype">bool</span>* open = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        XY_EXPORT_API <span class="keywordtype">void</span> <a class="code" href="namespacexy_1_1_nim.html#adcc3f9e2b8d29d450b6d0de44ea07f55">setNextWindowSize</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        XY_EXPORT_API <span class="keywordtype">void</span> <a class="code" href="namespacexy_1_1_nim.html#a1f0810037acbb5e6b1e4ccf31b3f6973">setNextWindowConstraints</a>(<span class="keywordtype">float</span> minW, <span class="keywordtype">float</span> minY, <span class="keywordtype">float</span> maxW, <span class="keywordtype">float</span> maxY);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        XY_EXPORT_API <span class="keywordtype">void</span> <a class="code" href="namespacexy_1_1_nim.html#a1705a820a516750a2b3d7d6c94245ce4">setNextWindowPosition</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        XY_EXPORT_API <span class="keywordtype">void</span> <a class="code" href="namespacexy_1_1_nim.html#afe01675210d2dfc25461c79b1e5030d8">text</a>(<span class="keyword">const</span> std::string&amp; str);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        XY_EXPORT_API <span class="keywordtype">bool</span> <a class="code" href="namespacexy_1_1_nim.html#a83e07e0b6a7a2631d8c2e243101df6de">button</a>(<span class="keyword">const</span> std::string&amp; label, <span class="keywordtype">float</span> w = 0.f, <span class="keywordtype">float</span> h = 0.f);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        XY_EXPORT_API <span class="keywordtype">void</span> <a class="code" href="namespacexy_1_1_nim.html#aa386ac26217b61ee0678de8914d0cad3">checkbox</a>(<span class="keyword">const</span> std::string&amp; title, <span class="keywordtype">bool</span>* value);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        XY_EXPORT_API <span class="keywordtype">void</span> <a class="code" href="namespacexy_1_1_nim.html#af6e2f2d9881b935a312e564ee18ae843">slider</a>(<span class="keyword">const</span> std::string&amp; title, <span class="keywordtype">float</span>&amp; value, <span class="keywordtype">float</span> min, <span class="keywordtype">float</span> max);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        XY_EXPORT_API <span class="keywordtype">void</span> <a class="code" href="namespacexy_1_1_nim.html#a4a370c3543417e43198e59a5536f2731">end</a>();</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        XY_EXPORT_API <span class="keywordtype">bool</span> <a class="code" href="namespacexy_1_1_nim.html#a6b9fd1faa31bd3ee8a07fa46b2f3d942">wantsMouse</a>();</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        XY_EXPORT_API <span class="keywordtype">bool</span> <a class="code" href="namespacexy_1_1_nim.html#a2f93351a67b8bbe21a24a9b01c01d88d">wantsKeyboard</a>();</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif //XY_GUI_HPP_</span></div>
-<div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioSourceImpl.hpp:39</div></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;xyginext/Config.hpp&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics/Color.hpp&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacexy.html">xy</a></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="namespacexy_1_1_nim.html">   45</a></span>&#160;    <span class="keyword">namespace </span>Nim</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="structxy_1_1_nim_1_1_style.html">   50</a></span>&#160;        <span class="keyword">struct </span><a class="code" href="structxy_1_1_nim_1_1_style.html">Style</a></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="comment">// Enumeration for colours</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keyword">enum class</span> Colour</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <a class="code" href="classxy_1_1_text.html">Text</a>,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                TextDisabled,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                WindowBg,              <span class="comment">// Background of normal windows</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                ChildBg,               <span class="comment">// Background of child windows</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                PopupBg,               <span class="comment">// Background of popups, menus, tooltips windows</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                Border,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                BorderShadow,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                FrameBg,               <span class="comment">// Background of checkbox, radio button, plot, slider, text input</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                FrameBgHovered,</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                FrameBgActive,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                TitleBg,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                TitleBgActive,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                TitleBgCollapsed,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                MenuBarBg,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                ScrollbarBg,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                ScrollbarGrab,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                ScrollbarGrabHovered,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                ScrollbarGrabActive,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                CheckMark,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                SliderGrab,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                SliderGrabActive,</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                Button,</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                ButtonHovered,</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                ButtonActive,</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                Header,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                HeaderHovered,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                HeaderActive,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                Separator,</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                SeparatorHovered,</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                SeparatorActive,</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                ResizeGrip,</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                ResizeGripHovered,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                ResizeGripActive,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                PlotLines,</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                PlotLinesHovered,</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                PlotHistogram,</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                PlotHistogramHovered,</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                TextSelectedBg,</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                ModalWindowDarkening,  <span class="comment">// darken entire screen when a modal window is active</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                DragDropTarget,</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                Count</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            };</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keywordtype">float</span>           Alpha = 1.f;                      <span class="comment">// Global alpha applies to everything in Nim</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            sf::Vector2i    WindowPadding = {8,8};              <span class="comment">// Padding within a window</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keywordtype">float</span>           WindowRounding = 7.f;             <span class="comment">// Radius of window corners rounding. Set to 0.0f to have rectangular windows</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="keywordtype">float</span>           WindowBorderSize = 0.f;           <span class="comment">// Thickness of border around windows. Generally set to 0.0f or 1.0f. (Other values are not well tested and more CPU/GPU costly)</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            sf::Vector2u    WindowMinSize = {32,32};              <span class="comment">// Minimum window size</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            sf::Vector2f    WindowTitleAlign = {0.f,0.5f};           <span class="comment">// Alignment for title bar text. Defaults to (0.0f,0.5f) for left-aligned,vertically centered.</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordtype">float</span>           ChildRounding = 0.f;              <span class="comment">// Radius of child window corners rounding. Set to 0.0f to have rectangular windows.</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordtype">float</span>           ChildBorderSize = 1.f;            <span class="comment">// Thickness of border around child windows. Generally set to 0.0f or 1.0f. (Other values are not well tested and more CPU/GPU costly)</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordtype">float</span>           PopupRounding = 0.f;              <span class="comment">// Radius of popup window corners rounding.</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="keywordtype">float</span>           PopupBorderSize = 1.f;            <span class="comment">// Thickness of border around popup windows. Generally set to 0.0f or 1.0f. (Other values are not well tested and more CPU/GPU costly)</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            sf::Vector2i    FramePadding = {4,3};               <span class="comment">// Padding within a framed rectangle (used by most widgets)</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="keywordtype">float</span>           FrameRounding = 0.f;              <span class="comment">// Radius of frame corners rounding. Set to 0.0f to have rectangular frame (used by most widgets).</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <span class="keywordtype">float</span>           FrameBorderSize = 1.f;            <span class="comment">// Thickness of border around frames. Generally set to 0.0f or 1.0f. (Other values are not well tested and more CPU/GPU costly)</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            sf::Vector2i    ItemSpacing = {8,4} ;                <span class="comment">// Horizontal and vertical spacing between widgets/lines</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            sf::Vector2i    ItemInnerSpacing = {4,4};           <span class="comment">// Horizontal and vertical spacing between within elements of a composed widget (e.g. a slider and its label)</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            sf::Vector2i    TouchExtraPadding {0,0};          <span class="comment">// Expand reactive bounding box for touch-based system where touch position is not accurate enough. Unfortunately we don&#39;t sort widgets so priority on overlap will always be given to the first widget. So don&#39;t grow this too much!</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordtype">float</span>           IndentSpacing = 21.f;              <span class="comment">// Horizontal indentation when e.g. entering a tree node. Generally == (FontSize + FramePadding.x*2).</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordtype">float</span>           ColumnsMinSpacing = 6.f;          <span class="comment">// Minimum horizontal spacing between two columns</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keywordtype">float</span>           ScrollbarSize = 16.f;              <span class="comment">// Width of the vertical scrollbar, Height of the horizontal scrollbar</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keywordtype">float</span>           ScrollbarRounding = 9.f;          <span class="comment">// Radius of grab corners for scrollbar</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="keywordtype">float</span>           GrabMinSize = 10.f;                <span class="comment">// Minimum width/height of a grab box for slider/scrollbar.</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="keywordtype">float</span>           GrabRounding = 0.f;               <span class="comment">// Radius of grabs corners rounding. Set to 0.0f to have rectangular slider grabs.</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            sf::Vector2f    ButtonTextAlign = {0.5f,0.5f};            <span class="comment">// Alignment of button text when button is larger than text. Defaults to (0.5f,0.5f) for horizontally+vertically centered.</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            sf::Vector2i    DisplayWindowPadding = {22,22};       <span class="comment">// Window positions are clamped to be visible within the display area by at least this amount. Only covers regular windows.</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            sf::Vector2i    DisplaySafeAreaPadding = {4,4};     <span class="comment">// If you cannot see the edge of your screen (e.g. on a TV) increase the safe area padding. Covers popups/tooltips as well regular windows.</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="keywordtype">bool</span>            AntiAliasedLines = <span class="keyword">true</span>;           <span class="comment">// Enable anti-aliasing on lines/borders. Disable if you are really tight on CPU/GPU.</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <span class="keywordtype">bool</span>            AntiAliasedFill = <span class="keyword">true</span>;            <span class="comment">// Enable anti-aliasing on filled shapes (rounded rectangles, circles, etc.)</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="keywordtype">float</span>           CurveTessellationTol = 1.25f;       <span class="comment">// Tessellation tolerance when using PathBezierCurveTo() without a specific number of segments. Decrease for highly tessellated curves (higher quality, more polygons), increase to reduce quality.</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            std::array&lt;sf::Color, static_cast&lt;size_t&gt;(Colour::Count)&gt;         colours;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            XY_EXPORT_API   <span class="keywordtype">bool</span> loadFromFile(<span class="keyword">const</span> std::string&amp; path);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            XY_EXPORT_API   <span class="keywordtype">bool</span> saveToFile(<span class="keyword">const</span> std::string&amp; path);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        };</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        XY_EXPORT_API <span class="keywordtype">void</span> <a class="code" href="namespacexy_1_1_nim.html#aea0ca31116b038446397540b0c64f33d">begin</a>(<span class="keyword">const</span> std::string&amp; title, <span class="keywordtype">bool</span>* open = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        XY_EXPORT_API <span class="keywordtype">void</span> <a class="code" href="namespacexy_1_1_nim.html#adcc3f9e2b8d29d450b6d0de44ea07f55">setNextWindowSize</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        XY_EXPORT_API <span class="keywordtype">void</span> <a class="code" href="namespacexy_1_1_nim.html#a1f0810037acbb5e6b1e4ccf31b3f6973">setNextWindowConstraints</a>(<span class="keywordtype">float</span> minW, <span class="keywordtype">float</span> minY, <span class="keywordtype">float</span> maxW, <span class="keywordtype">float</span> maxY);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        XY_EXPORT_API <span class="keywordtype">void</span> <a class="code" href="namespacexy_1_1_nim.html#a1705a820a516750a2b3d7d6c94245ce4">setNextWindowPosition</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        XY_EXPORT_API <span class="keywordtype">void</span> <a class="code" href="namespacexy_1_1_nim.html#afe01675210d2dfc25461c79b1e5030d8">text</a>(<span class="keyword">const</span> std::string&amp; str);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        XY_EXPORT_API <span class="keywordtype">bool</span> <a class="code" href="namespacexy_1_1_nim.html#a83e07e0b6a7a2631d8c2e243101df6de">button</a>(<span class="keyword">const</span> std::string&amp; label, <span class="keywordtype">float</span> w = 0.f, <span class="keywordtype">float</span> h = 0.f);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        XY_EXPORT_API <span class="keywordtype">void</span> <a class="code" href="namespacexy_1_1_nim.html#aa386ac26217b61ee0678de8914d0cad3">checkbox</a>(<span class="keyword">const</span> std::string&amp; title, <span class="keywordtype">bool</span>* value);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        XY_EXPORT_API <span class="keywordtype">void</span> <a class="code" href="namespacexy_1_1_nim.html#af6e2f2d9881b935a312e564ee18ae843">slider</a>(<span class="keyword">const</span> std::string&amp; title, <span class="keywordtype">float</span>&amp; value, <span class="keywordtype">float</span> min, <span class="keywordtype">float</span> max);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        XY_EXPORT_API <span class="keywordtype">void</span> <a class="code" href="namespacexy_1_1_nim.html#a4a370c3543417e43198e59a5536f2731">end</a>();</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        XY_EXPORT_API <span class="keywordtype">bool</span> <a class="code" href="namespacexy_1_1_nim.html#a6b9fd1faa31bd3ee8a07fa46b2f3d942">wantsMouse</a>();</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        XY_EXPORT_API <span class="keywordtype">bool</span> <a class="code" href="namespacexy_1_1_nim.html#a2f93351a67b8bbe21a24a9b01c01d88d">wantsKeyboard</a>();</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        XY_EXPORT_API <span class="keyword">const</span> <a class="code" href="structxy_1_1_nim_1_1_style.html">Style</a>&amp; <a class="code" href="namespacexy_1_1_nim.html#a70357ee250a6c52f5e94c86eabe824d5">getStyle</a>();</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        XY_EXPORT_API <span class="keywordtype">void</span> <a class="code" href="namespacexy_1_1_nim.html#a3eed778e2b4aa227fdba70236f456caf">setStyle</a>(<span class="keyword">const</span> <a class="code" href="structxy_1_1_nim_1_1_style.html">Style</a>&amp; style);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    }</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;}</div>
+<div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioSourceImpl.hpp:38</div></div>
 <div class="ttc" id="namespacexy_1_1_nim_html_a83e07e0b6a7a2631d8c2e243101df6de"><div class="ttname"><a href="namespacexy_1_1_nim.html#a83e07e0b6a7a2631d8c2e243101df6de">xy::Nim::button</a></div><div class="ttdeci">XY_EXPORT_API bool button(const std::string &amp;label, float w=0.f, float h=0.f)</div></div>
+<div class="ttc" id="namespacexy_1_1_nim_html_a70357ee250a6c52f5e94c86eabe824d5"><div class="ttname"><a href="namespacexy_1_1_nim.html#a70357ee250a6c52f5e94c86eabe824d5">xy::Nim::getStyle</a></div><div class="ttdeci">XY_EXPORT_API const Style &amp; getStyle()</div><div class="ttdoc">Get the current style. </div></div>
+<div class="ttc" id="classxy_1_1_text_html"><div class="ttname"><a href="classxy_1_1_text.html">xy::Text</a></div><div class="ttdoc">ECS friendly implementation of Text. Text components should appear on entities which also have a tran...</div><div class="ttdef"><b>Definition:</b> Text.hpp:62</div></div>
 <div class="ttc" id="namespacexy_1_1_nim_html_a1f0810037acbb5e6b1e4ccf31b3f6973"><div class="ttname"><a href="namespacexy_1_1_nim.html#a1f0810037acbb5e6b1e4ccf31b3f6973">xy::Nim::setNextWindowConstraints</a></div><div class="ttdeci">XY_EXPORT_API void setNextWindowConstraints(float minW, float minY, float maxW, float maxY)</div></div>
 <div class="ttc" id="namespacexy_1_1_nim_html_a1705a820a516750a2b3d7d6c94245ce4"><div class="ttname"><a href="namespacexy_1_1_nim.html#a1705a820a516750a2b3d7d6c94245ce4">xy::Nim::setNextWindowPosition</a></div><div class="ttdeci">XY_EXPORT_API void setNextWindowPosition(float x, float y)</div><div class="ttdoc">Set the next window position in window coordinates. </div></div>
+<div class="ttc" id="namespacexy_1_1_nim_html_a3eed778e2b4aa227fdba70236f456caf"><div class="ttname"><a href="namespacexy_1_1_nim.html#a3eed778e2b4aa227fdba70236f456caf">xy::Nim::setStyle</a></div><div class="ttdeci">XY_EXPORT_API void setStyle(const Style &amp;style)</div><div class="ttdoc">Set the current style. </div></div>
 <div class="ttc" id="namespacexy_1_1_nim_html_afe01675210d2dfc25461c79b1e5030d8"><div class="ttname"><a href="namespacexy_1_1_nim.html#afe01675210d2dfc25461c79b1e5030d8">xy::Nim::text</a></div><div class="ttdeci">XY_EXPORT_API void text(const std::string &amp;str)</div></div>
 <div class="ttc" id="namespacexy_1_1_nim_html_aea0ca31116b038446397540b0c64f33d"><div class="ttname"><a href="namespacexy_1_1_nim.html#aea0ca31116b038446397540b0c64f33d">xy::Nim::begin</a></div><div class="ttdeci">XY_EXPORT_API void begin(const std::string &amp;title, bool *open=nullptr)</div></div>
 <div class="ttc" id="namespacexy_1_1_nim_html_adcc3f9e2b8d29d450b6d0de44ea07f55"><div class="ttname"><a href="namespacexy_1_1_nim.html#adcc3f9e2b8d29d450b6d0de44ea07f55">xy::Nim::setNextWindowSize</a></div><div class="ttdeci">XY_EXPORT_API void setNextWindowSize(float x, float y)</div></div>
@@ -127,6 +218,7 @@
 <div class="ttc" id="namespacexy_1_1_nim_html_a6b9fd1faa31bd3ee8a07fa46b2f3d942"><div class="ttname"><a href="namespacexy_1_1_nim.html#a6b9fd1faa31bd3ee8a07fa46b2f3d942">xy::Nim::wantsMouse</a></div><div class="ttdeci">XY_EXPORT_API bool wantsMouse()</div></div>
 <div class="ttc" id="namespacexy_1_1_nim_html_aa386ac26217b61ee0678de8914d0cad3"><div class="ttname"><a href="namespacexy_1_1_nim.html#aa386ac26217b61ee0678de8914d0cad3">xy::Nim::checkbox</a></div><div class="ttdeci">XY_EXPORT_API void checkbox(const std::string &amp;title, bool *value)</div></div>
 <div class="ttc" id="namespacexy_1_1_nim_html_af6e2f2d9881b935a312e564ee18ae843"><div class="ttname"><a href="namespacexy_1_1_nim.html#af6e2f2d9881b935a312e564ee18ae843">xy::Nim::slider</a></div><div class="ttdeci">XY_EXPORT_API void slider(const std::string &amp;title, float &amp;value, float min, float max)</div></div>
+<div class="ttc" id="structxy_1_1_nim_1_1_style_html"><div class="ttname"><a href="structxy_1_1_nim_1_1_style.html">xy::Nim::Style</a></div><div class="ttdef"><b>Definition:</b> Gui.hpp:50</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
