@@ -94,9 +94,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setPitch</b> 
 <tr class="memitem:abd32ebc9de083ef319a00ab1f5d3f7a0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd32ebc9de083ef319a00ab1f5d3f7a0"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setVolume</b> (float)=0</td></tr>
 <tr class="separator:abd32ebc9de083ef319a00ab1f5d3f7a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dab7e07d27a6303b5ff2a64fced847a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2dab7e07d27a6303b5ff2a64fced847a"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setPosition</b> (sf::Vector2f)=0</td></tr>
-<tr class="separator:a2dab7e07d27a6303b5ff2a64fced847a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60788638a4b11e6d581f1b8c824dcbdf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60788638a4b11e6d581f1b8c824dcbdf"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setPosition</b> (sf::Vector3f)=0</td></tr>
+<tr class="separator:a60788638a4b11e6d581f1b8c824dcbdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c2623e5b17b6404f47f3fe7a3c6302e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c2623e5b17b6404f47f3fe7a3c6302e"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setRelativeTolistener</b> (bool)=0</td></tr>
 <tr class="separator:a7c2623e5b17b6404f47f3fe7a3c6302e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -115,9 +115,9 @@ virtual float&#160;</td><td class="memItemRight" valign="bottom"><b>getPitch</b>
 <tr class="memitem:a80d116a732ca24be905d30b4d7e086c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a80d116a732ca24be905d30b4d7e086c1"></a>
 virtual float&#160;</td><td class="memItemRight" valign="bottom"><b>getVolume</b> () const  =0</td></tr>
 <tr class="separator:a80d116a732ca24be905d30b4d7e086c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3ba9beb399ed78d2e9f0536fa5fc6e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad3ba9beb399ed78d2e9f0536fa5fc6e1"></a>
-virtual sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><b>getPosition</b> () const  =0</td></tr>
-<tr class="separator:ad3ba9beb399ed78d2e9f0536fa5fc6e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c13dc161027d57b8cc51ab0262e9d02"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c13dc161027d57b8cc51ab0262e9d02"></a>
+virtual sf::Vector3f&#160;</td><td class="memItemRight" valign="bottom"><b>getPosition</b> () const  =0</td></tr>
+<tr class="separator:a1c13dc161027d57b8cc51ab0262e9d02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01cfa9af9ec798c29bf33d0dc7ae4641"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a01cfa9af9ec798c29bf33d0dc7ae4641"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isRelativeToListener</b> () const  =0</td></tr>
 <tr class="separator:a01cfa9af9ec798c29bf33d0dc7ae4641"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,6 +133,15 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isLooped</b> 
 <tr class="memitem:a9cb2831c99affbca36dca3fcb1c46c48"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9cb2831c99affbca36dca3fcb1c46c48"></a>
 virtual sf::Int32&#160;</td><td class="memItemRight" valign="bottom"><b>getStatus</b> () const  =0</td></tr>
 <tr class="separator:a9cb2831c99affbca36dca3fcb1c46c48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a985feebb4a3cee768e3931d2cae82eb0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a985feebb4a3cee768e3931d2cae82eb0"></a>
+virtual sf::Time&#160;</td><td class="memItemRight" valign="bottom"><b>getDuration</b> () const  =0</td></tr>
+<tr class="separator:a985feebb4a3cee768e3931d2cae82eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6c7ae1c3c751c4b9a209b0e5d723584"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae6c7ae1c3c751c4b9a209b0e5d723584"></a>
+virtual sf::Time&#160;</td><td class="memItemRight" valign="bottom"><b>getPlayingOffset</b> () const  =0</td></tr>
+<tr class="separator:ae6c7ae1c3c751c4b9a209b0e5d723584"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29b1cc9d335c7a6488f33c38c986f27d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29b1cc9d335c7a6488f33c38c986f27d"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setPlayingOffset</b> (sf::Time)=0</td></tr>
+<tr class="separator:a29b1cc9d335c7a6488f33c38c986f27d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fe5f87e174eda39b03b44087de8e64f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3fe5f87e174eda39b03b44087de8e64f"></a>
 virtual Type&#160;</td><td class="memItemRight" valign="bottom"><b>getType</b> () const  =0</td></tr>
 <tr class="separator:a3fe5f87e174eda39b03b44087de8e64f"><td class="memSeparator" colspan="2">&#160;</td></tr>

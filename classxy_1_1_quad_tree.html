@@ -60,7 +60,7 @@
 </div><!--header-->
 <div class="contents">
 
-<p>Partition system for entities with <a class="el" href="classxy_1_1_quad_tree_item.html" title="Entities with a QuadTreeItem and Transform component will be actively partitioned an in QuadTree syst...">QuadTreeItem</a> components. Entities are sorted in a tree hierarchy which can be queried with a given area to return a set of entities which are contained or intersect said area.  
+<p>Partition system for entities with <a class="el" href="classxy_1_1_quad_tree_item.html" title="Entities with a QuadTreeItem and Transform component will be actively partitioned an in QuadTree syst...">QuadTreeItem</a> components. Entities are sorted in a tree hierarchy which can be queried with a given area to return a set of entities which are contained or intersect said area. Generally more useful for scenes with a lot of static entities such as a platform game with fixed scenery. If using a scene with a lot of dynamic objects consider using <a class="el" href="classxy_1_1_dynamic_tree_system.html" title="Dynamic AABB tree for broadphase queries. Based on Erin Catto&#39;s dynamic tree in Box2D (http://www...">xy::DynamicTreeSystem</a> instead.  
  <a href="classxy_1_1_quad_tree.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_quad_tree_8hpp_source.html">QuadTree.hpp</a>&gt;</code></p>
@@ -89,7 +89,7 @@ std::vector&lt; <a class="el" href="classxy_1_1_entity.html">xy::Entity</a> &gt;
 <tr class="separator:a1139faaeab0fceff53978f99a7365080"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30cf01aafe1f8322c0ca51e76ce0d8d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a30cf01aafe1f8322c0ca51e76ce0d8d0"></a>
 std::vector&lt; <a class="el" href="classxy_1_1_entity.html">xy::Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_quad_tree.html#a30cf01aafe1f8322c0ca51e76ce0d8d0">queryPoint</a> (sf::Vector2f, std::uint64_t=std::numeric_limits&lt; std::uint64_t &gt;::max()) const </td></tr>
-<tr class="memdesc:a30cf01aafe1f8322c0ca51e76ce0d8d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queris the quad tree with the given position. Returns a vector of entities whose QuadTreeItems are contained in tree nodes which also contain the given point /param area The area to query /param filterFlags Only entities with QuadTreeItems matching the given bit flags are returns. Defaults to all flags set. <br /></td></tr>
+<tr class="memdesc:a30cf01aafe1f8322c0ca51e76ce0d8d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queries the quad tree with the given position. Returns a vector of entities whose QuadTreeItems are contained in tree nodes which also contain the given point /param area The area to query /param filterFlags Only entities with QuadTreeItems matching the given bit flags are returns. Defaults to all flags set. <br /></td></tr>
 <tr class="separator:a30cf01aafe1f8322c0ca51e76ce0d8d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73e519083ce2942a21bd96d23144f40b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73e519083ce2942a21bd96d23144f40b"></a>
 sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_quad_tree.html#a73e519083ce2942a21bd96d23144f40b">getRootArea</a> () const </td></tr>
@@ -193,7 +193,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setScene</b> (<a clas
 <tr class="separator:a353fe5566f012825715cf699151cc4ca inherit pro_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Partition system for entities with <a class="el" href="classxy_1_1_quad_tree_item.html" title="Entities with a QuadTreeItem and Transform component will be actively partitioned an in QuadTree syst...">QuadTreeItem</a> components. Entities are sorted in a tree hierarchy which can be queried with a given area to return a set of entities which are contained or intersect said area. </p>
+<div class="textblock"><p>Partition system for entities with <a class="el" href="classxy_1_1_quad_tree_item.html" title="Entities with a QuadTreeItem and Transform component will be actively partitioned an in QuadTree syst...">QuadTreeItem</a> components. Entities are sorted in a tree hierarchy which can be queried with a given area to return a set of entities which are contained or intersect said area. Generally more useful for scenes with a lot of static entities such as a platform game with fixed scenery. If using a scene with a lot of dynamic objects consider using <a class="el" href="classxy_1_1_dynamic_tree_system.html" title="Dynamic AABB tree for broadphase queries. Based on Erin Catto&#39;s dynamic tree in Box2D (http://www...">xy::DynamicTreeSystem</a> instead. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classxy_1_1_dynamic_tree_system.html" title="Dynamic AABB tree for broadphase queries. Based on Erin Catto&#39;s dynamic tree in Box2D (http://www...">DynamicTreeSystem</a> </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a6f7144d8cc9187bca32e516e7d079bda"></a>
 <div class="memitem">

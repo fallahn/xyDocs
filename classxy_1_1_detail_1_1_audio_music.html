@@ -88,9 +88,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setPitch</b> (float) 
 <tr class="memitem:a33b4fc28595799f4408627d560d96948"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a33b4fc28595799f4408627d560d96948"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setVolume</b> (float) override</td></tr>
 <tr class="separator:a33b4fc28595799f4408627d560d96948"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c8bc8debc13b3eae9d7485cf2dc862e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c8bc8debc13b3eae9d7485cf2dc862e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setPosition</b> (sf::Vector2f) override</td></tr>
-<tr class="separator:a7c8bc8debc13b3eae9d7485cf2dc862e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a446a0f58b14014a72f6b89d94d4c3392"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a446a0f58b14014a72f6b89d94d4c3392"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setPosition</b> (sf::Vector3f) override</td></tr>
+<tr class="separator:a446a0f58b14014a72f6b89d94d4c3392"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e3519e79da5c0bef709ef0461de3cad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e3519e79da5c0bef709ef0461de3cad"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setRelativeTolistener</b> (bool) override</td></tr>
 <tr class="separator:a0e3519e79da5c0bef709ef0461de3cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -109,9 +109,9 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>getPitch</b> () cons
 <tr class="memitem:acdda261c95af83dfb4d62b702fc6ac87"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acdda261c95af83dfb4d62b702fc6ac87"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>getVolume</b> () const  override</td></tr>
 <tr class="separator:acdda261c95af83dfb4d62b702fc6ac87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad862d6ca5740a4c0bbe01ffdc6d21080"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad862d6ca5740a4c0bbe01ffdc6d21080"></a>
-sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><b>getPosition</b> () const  override</td></tr>
-<tr class="separator:ad862d6ca5740a4c0bbe01ffdc6d21080"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a073d910f118e32999f182a012a2075cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a073d910f118e32999f182a012a2075cb"></a>
+sf::Vector3f&#160;</td><td class="memItemRight" valign="bottom"><b>getPosition</b> () const  override</td></tr>
+<tr class="separator:a073d910f118e32999f182a012a2075cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16bce69df5033846c80f5d6a5a688ab0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a16bce69df5033846c80f5d6a5a688ab0"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isRelativeToListener</b> () const  override</td></tr>
 <tr class="separator:a16bce69df5033846c80f5d6a5a688ab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -127,6 +127,15 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isLooped</b> () const
 <tr class="memitem:aa0bf0d2cfa04899f6a59fab52330afd7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa0bf0d2cfa04899f6a59fab52330afd7"></a>
 sf::Int32&#160;</td><td class="memItemRight" valign="bottom"><b>getStatus</b> () const  override</td></tr>
 <tr class="separator:aa0bf0d2cfa04899f6a59fab52330afd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac59d7272c1c50a34403bb131c8ac612f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac59d7272c1c50a34403bb131c8ac612f"></a>
+sf::Time&#160;</td><td class="memItemRight" valign="bottom"><b>getDuration</b> () const  override</td></tr>
+<tr class="separator:ac59d7272c1c50a34403bb131c8ac612f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a98a9df0247b4323fb31a59e89bd2c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a98a9df0247b4323fb31a59e89bd2c9"></a>
+sf::Time&#160;</td><td class="memItemRight" valign="bottom"><b>getPlayingOffset</b> () const  override</td></tr>
+<tr class="separator:a6a98a9df0247b4323fb31a59e89bd2c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e3fcfede07d8339597207d2bf8f6930"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e3fcfede07d8339597207d2bf8f6930"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setPlayingOffset</b> (sf::Time) override</td></tr>
+<tr class="separator:a3e3fcfede07d8339597207d2bf8f6930"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c03d156f462761e044b8cdd96f1a1c2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c03d156f462761e044b8cdd96f1a1c2"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isValid</b> () const </td></tr>
 <tr class="separator:a1c03d156f462761e044b8cdd96f1a1c2"><td class="memSeparator" colspan="2">&#160;</td></tr>

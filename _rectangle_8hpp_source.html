@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xyginext: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/util/Rectangle.hpp Source File</title>
+<title>xyginext: C:/Users/Matthew Marchant/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/util/Rectangle.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -44,7 +44,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_de72eac28fae940626bc77a43000e4ad.html">include</a></li><li class="navelem"><a class="el" href="dir_7aeba9697aa2643cb98e804e91ef0468.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_99d223d5dc8e1ceb2a20b61f811abf55.html">util</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_162daa221dc0b0dabb7c2d65b288c90b.html">include</a></li><li class="navelem"><a class="el" href="dir_bd255dc1b65874336b892dc3a783bd66.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_ab5179e6445b47a1a215285ec5c23dec.html">util</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -53,7 +53,7 @@
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">(c) Matt Marchant 2017 - 2018</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">(c) Matt Marchant 2017 - 2019</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">http://trederia.blogspot.com</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">xygineXT - Zlib license.</span></div>
@@ -90,30 +90,56 @@
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
 <div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_rectangle.html">   40</a></span>&#160;        <span class="keyword">namespace </span>Rectangle</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        {</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_rectangle.html#a5d7fa3d2499f0106cff948299086430c">   45</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="namespacexy_1_1_util_1_1_rectangle.html#a5d7fa3d2499f0106cff948299086430c">contains</a>(<span class="keyword">const</span> sf::FloatRect&amp; first, <span class="keyword">const</span> sf::FloatRect&amp; second)</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                <span class="keywordflow">if</span> (second.left &lt; first.left) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="keywordflow">if</span> (second.top &lt; first.top) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <span class="keywordflow">if</span> (second.left + second.width &gt; first.left + first.width) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="keywordflow">if</span> (second.top + second.height &gt; first.top + first.height) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            }</div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_rectangle.html#a317758f4191f075a38a1fee0b2c48ec7">   57</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> sf::Vector2f <a class="code" href="namespacexy_1_1_util_1_1_rectangle.html#a317758f4191f075a38a1fee0b2c48ec7">centre</a>(<span class="keyword">const</span> sf::FloatRect&amp; rect)</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="keywordflow">return</span> sf::Vector2f(rect.left + (rect.width / 2.f), rect.top + (rect.height / 2.f));</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            }</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_rectangle.html#afcc7604d8332e0869ee16cc8944fd038">   64</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> sf::FloatRect <a class="code" href="namespacexy_1_1_util_1_1_rectangle.html#afcc7604d8332e0869ee16cc8944fd038">fromBounds</a>(<span class="keyword">const</span> sf::Vector2f&amp; lower, <span class="keyword">const</span> sf::Vector2f&amp; upper)</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                <span class="keywordflow">return</span> sf::FloatRect(lower.x, lower.y, upper.x - lower.x, upper.y - lower.y);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
-<div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioSourceImpl.hpp:38</div></div>
-<div class="ttc" id="namespacexy_1_1_util_1_1_rectangle_html_a317758f4191f075a38a1fee0b2c48ec7"><div class="ttname"><a href="namespacexy_1_1_util_1_1_rectangle.html#a317758f4191f075a38a1fee0b2c48ec7">xy::Util::Rectangle::centre</a></div><div class="ttdeci">static sf::Vector2f centre(const sf::FloatRect &amp;rect)</div><div class="ttdoc">Returns the centre point of a given FloatRect. </div><div class="ttdef"><b>Definition:</b> Rectangle.hpp:57</div></div>
-<div class="ttc" id="namespacexy_1_1_util_1_1_rectangle_html_afcc7604d8332e0869ee16cc8944fd038"><div class="ttname"><a href="namespacexy_1_1_util_1_1_rectangle.html#afcc7604d8332e0869ee16cc8944fd038">xy::Util::Rectangle::fromBounds</a></div><div class="ttdeci">static sf::FloatRect fromBounds(const sf::Vector2f &amp;lower, const sf::Vector2f &amp;upper)</div><div class="ttdoc">Returns a new FloatRect from the given upper and lower bounds. </div><div class="ttdef"><b>Definition:</b> Rectangle.hpp:64</div></div>
-<div class="ttc" id="namespacexy_1_1_util_1_1_rectangle_html_a5d7fa3d2499f0106cff948299086430c"><div class="ttname"><a href="namespacexy_1_1_util_1_1_rectangle.html#a5d7fa3d2499f0106cff948299086430c">xy::Util::Rectangle::contains</a></div><div class="ttdeci">static bool contains(const sf::FloatRect &amp;first, const sf::FloatRect &amp;second)</div><div class="ttdoc">Returns true if the second given FloatRect is fully contained within the first. </div><div class="ttdef"><b>Definition:</b> Rectangle.hpp:45</div></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_rectangle.html#a1f61b696ecf35943bbc201be2f0be137">   46</a></span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="namespacexy_1_1_util_1_1_rectangle.html#a1f61b696ecf35943bbc201be2f0be137">contains</a>(<span class="keyword">const</span> sf::Rect&lt;T&gt;&amp; first, <span class="keyword">const</span> sf::Rect&lt;T&gt;&amp; second)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="keywordflow">if</span> (second.left &lt; first.left) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <span class="keywordflow">if</span> (second.top &lt; first.top) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="keywordflow">if</span> (second.left + second.width &gt; first.left + first.width) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <span class="keywordflow">if</span> (second.top + second.height &gt; first.top + first.height) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_rectangle.html#a2296a906ea88fe2279efa21ca539d78a">   60</a></span>&#160;            sf::Vector2&lt;T&gt; <a class="code" href="namespacexy_1_1_util_1_1_rectangle.html#a2296a906ea88fe2279efa21ca539d78a">centre</a>(<span class="keyword">const</span> sf::Rect&lt;T&gt;&amp; rect)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="keywordflow">return</span> sf::Vector2&lt;T&gt;(rect.left + (rect.width / 2.f), rect.top + (rect.height / 2.f));</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_rectangle.html#a44d8803ed0171970c5deb1eaf6428a1b">   69</a></span>&#160;            sf::Rect&lt;T&gt; <a class="code" href="namespacexy_1_1_util_1_1_rectangle.html#a44d8803ed0171970c5deb1eaf6428a1b">fromBounds</a>(<span class="keyword">const</span> sf::Vector2&lt;T&gt;&amp; lower, <span class="keyword">const</span> sf::Vector2&lt;T&gt;&amp; upper)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="keywordflow">return</span> sf::Rect&lt;T&gt;(lower.x, lower.y, upper.x - lower.x, upper.y - lower.y);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_rectangle.html#a10ccb5257bf12619bbd4aac5f47b569f">   78</a></span>&#160;            T <a class="code" href="namespacexy_1_1_util_1_1_rectangle.html#a10ccb5257bf12619bbd4aac5f47b569f">getPerimeter</a>(sf::Rect&lt;T&gt; rect)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                <span class="keywordflow">return</span> 2 * (rect.width + rect.height);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="namespacexy_1_1_util_1_1_rectangle.html#a118a7e324cb913e7b2cb5fceb019f7c9">   87</a></span>&#160;            sf::Rect&lt;T&gt; <a class="code" href="namespacexy_1_1_util_1_1_rectangle.html#a118a7e324cb913e7b2cb5fceb019f7c9">combine</a>(sf::Rect&lt;T&gt; a, sf::Rect&lt;T&gt; b)</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                sf::Rect&lt;T&gt; ret(std::min(a.left, b.left),</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                    std::min(a.top, b.top),</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                    std::max(a.left + a.width, b.left + b.width),</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                    std::max(a.top + a.height, b.top + b.height));</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                ret.width -= ret.left;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                ret.height -= ret.top;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
+<div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioScape.hpp:37</div></div>
+<div class="ttc" id="namespacexy_1_1_util_1_1_rectangle_html_a1f61b696ecf35943bbc201be2f0be137"><div class="ttname"><a href="namespacexy_1_1_util_1_1_rectangle.html#a1f61b696ecf35943bbc201be2f0be137">xy::Util::Rectangle::contains</a></div><div class="ttdeci">bool contains(const sf::Rect&lt; T &gt; &amp;first, const sf::Rect&lt; T &gt; &amp;second)</div><div class="ttdoc">Returns true if the second given Rect is fully contained within the first. </div><div class="ttdef"><b>Definition:</b> Rectangle.hpp:46</div></div>
+<div class="ttc" id="namespacexy_1_1_util_1_1_rectangle_html_a118a7e324cb913e7b2cb5fceb019f7c9"><div class="ttname"><a href="namespacexy_1_1_util_1_1_rectangle.html#a118a7e324cb913e7b2cb5fceb019f7c9">xy::Util::Rectangle::combine</a></div><div class="ttdeci">sf::Rect&lt; T &gt; combine(sf::Rect&lt; T &gt; a, sf::Rect&lt; T &gt; b)</div><div class="ttdoc">Merges 2 given rectangles and returns the result. </div><div class="ttdef"><b>Definition:</b> Rectangle.hpp:87</div></div>
+<div class="ttc" id="namespacexy_1_1_util_1_1_rectangle_html_a2296a906ea88fe2279efa21ca539d78a"><div class="ttname"><a href="namespacexy_1_1_util_1_1_rectangle.html#a2296a906ea88fe2279efa21ca539d78a">xy::Util::Rectangle::centre</a></div><div class="ttdeci">sf::Vector2&lt; T &gt; centre(const sf::Rect&lt; T &gt; &amp;rect)</div><div class="ttdoc">Returns the centre point of a given Rect. </div><div class="ttdef"><b>Definition:</b> Rectangle.hpp:60</div></div>
+<div class="ttc" id="namespacexy_1_1_util_1_1_rectangle_html_a10ccb5257bf12619bbd4aac5f47b569f"><div class="ttname"><a href="namespacexy_1_1_util_1_1_rectangle.html#a10ccb5257bf12619bbd4aac5f47b569f">xy::Util::Rectangle::getPerimeter</a></div><div class="ttdeci">T getPerimeter(sf::Rect&lt; T &gt; rect)</div><div class="ttdoc">Returns the total perimeter of the given rectangle. </div><div class="ttdef"><b>Definition:</b> Rectangle.hpp:78</div></div>
+<div class="ttc" id="namespacexy_1_1_util_1_1_rectangle_html_a44d8803ed0171970c5deb1eaf6428a1b"><div class="ttname"><a href="namespacexy_1_1_util_1_1_rectangle.html#a44d8803ed0171970c5deb1eaf6428a1b">xy::Util::Rectangle::fromBounds</a></div><div class="ttdeci">sf::Rect&lt; T &gt; fromBounds(const sf::Vector2&lt; T &gt; &amp;lower, const sf::Vector2&lt; T &gt; &amp;upper)</div><div class="ttdoc">Returns a new Rect from the given upper and lower bounds. </div><div class="ttdef"><b>Definition:</b> Rectangle.hpp:69</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xyginext: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/ecs/components/QuadTreeItem.hpp Source File</title>
+<title>xyginext: C:/Users/Matthew Marchant/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/ecs/components/QuadTreeItem.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -44,7 +44,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_de72eac28fae940626bc77a43000e4ad.html">include</a></li><li class="navelem"><a class="el" href="dir_7aeba9697aa2643cb98e804e91ef0468.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_141b73324cfa9e0730bc4f78dfddc86f.html">ecs</a></li><li class="navelem"><a class="el" href="dir_df3dffa4792d66a9776d92e59e0f9cb9.html">components</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_162daa221dc0b0dabb7c2d65b288c90b.html">include</a></li><li class="navelem"><a class="el" href="dir_bd255dc1b65874336b892dc3a783bd66.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_e20eeb6b5ca7d7f9b1c3a23258ddef6d.html">ecs</a></li><li class="navelem"><a class="el" href="dir_7c8ae933a16a7e2244b0b3e56a3216e5.html">components</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -53,7 +53,7 @@
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">(c) Matt Marchant 2017 - 2018</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">(c) Matt Marchant 2017 - 2019</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">http://trederia.blogspot.com</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">xygineXT - Zlib license.</span></div>
@@ -86,40 +86,43 @@
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics/Rect.hpp&gt;</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacexy.html">xy</a></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">class </span>QuadTree;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">class </span>QuadTreeNode;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classxy_1_1_quad_tree_item.html">   46</a></span>&#160;    <span class="keyword">class </span>XY_EXPORT_API <a class="code" href="classxy_1_1_quad_tree_item.html">QuadTreeItem</a> final</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="classxy_1_1_quad_tree_item.html">QuadTreeItem</a>();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">void</span> setArea(sf::FloatRect);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classxy_1_1_quad_tree_item.html#a1cef2904ab4355f43fd8afe231159439">   65</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classxy_1_1_quad_tree_item.html#a1cef2904ab4355f43fd8afe231159439">setFilterFlags</a>(std::uint64_t flags) { m_filterFlags = flags; }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classxy_1_1_quad_tree_item.html#a37231806180017b5dc66e7ac1885000d">   71</a></span>&#160;        std::uint64_t <a class="code" href="classxy_1_1_quad_tree_item.html#a37231806180017b5dc66e7ac1885000d">getFilterFlags</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_filterFlags; }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        sf::FloatRect m_area;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;limits&gt;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacexy.html">xy</a></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">class </span>QuadTree;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">class </span>QuadTreeNode;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classxy_1_1_quad_tree_item.html">   47</a></span>&#160;    <span class="keyword">class </span>XY_EXPORT_API <a class="code" href="classxy_1_1_quad_tree_item.html">QuadTreeItem</a> final</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="classxy_1_1_quad_tree_item.html">QuadTreeItem</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="classxy_1_1_quad_tree_item.html">QuadTreeItem</a>(sf::FloatRect area, std::uint64_t flags = std::numeric_limits&lt;std::uint64_t&gt;::max());</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordtype">void</span> setArea(sf::FloatRect);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classxy_1_1_quad_tree_item.html#a1cef2904ab4355f43fd8afe231159439">   74</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classxy_1_1_quad_tree_item.html#a1cef2904ab4355f43fd8afe231159439">setFilterFlags</a>(std::uint64_t flags) { m_filterFlags = flags; }</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="classxy_1_1_quad_tree.html">QuadTree</a>* m_quadTree;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="classxy_1_1_quad_tree_node.html">QuadTreeNode</a>* m_node;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        std::uint64_t m_filterFlags;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_quad_tree.html">QuadTree</a>;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_quad_tree_node.html">QuadTreeNode</a>;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    };</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
-<div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioSourceImpl.hpp:38</div></div>
-<div class="ttc" id="classxy_1_1_quad_tree_item_html_a37231806180017b5dc66e7ac1885000d"><div class="ttname"><a href="classxy_1_1_quad_tree_item.html#a37231806180017b5dc66e7ac1885000d">xy::QuadTreeItem::getFilterFlags</a></div><div class="ttdeci">std::uint64_t getFilterFlags() const </div><div class="ttdoc">Returns the current flags for this item. Defaults to the max size of uint64 (all flags set) ...</div><div class="ttdef"><b>Definition:</b> QuadTreeItem.hpp:71</div></div>
-<div class="ttc" id="classxy_1_1_quad_tree_item_html_a1cef2904ab4355f43fd8afe231159439"><div class="ttname"><a href="classxy_1_1_quad_tree_item.html#a1cef2904ab4355f43fd8afe231159439">xy::QuadTreeItem::setFilterFlags</a></div><div class="ttdeci">void setFilterFlags(std::uint64_t flags)</div><div class="ttdoc">Allows filtering QuadTreeItems during QuadTree queries. The filter consists of up to 64 flags allowin...</div><div class="ttdef"><b>Definition:</b> QuadTreeItem.hpp:65</div></div>
-<div class="ttc" id="classxy_1_1_quad_tree_html"><div class="ttname"><a href="classxy_1_1_quad_tree.html">xy::QuadTree</a></div><div class="ttdoc">Partition system for entities with QuadTreeItem components. Entities are sorted in a tree hierarchy w...</div><div class="ttdef"><b>Definition:</b> QuadTree.hpp:105</div></div>
-<div class="ttc" id="classxy_1_1_quad_tree_item_html"><div class="ttname"><a href="classxy_1_1_quad_tree_item.html">xy::QuadTreeItem</a></div><div class="ttdoc">Entities with a QuadTreeItem and Transform component will be actively partitioned an in QuadTree syst...</div><div class="ttdef"><b>Definition:</b> QuadTreeItem.hpp:46</div></div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classxy_1_1_quad_tree_item.html#a37231806180017b5dc66e7ac1885000d">   80</a></span>&#160;        std::uint64_t <a class="code" href="classxy_1_1_quad_tree_item.html#a37231806180017b5dc66e7ac1885000d">getFilterFlags</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_filterFlags; }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        sf::FloatRect m_area;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="classxy_1_1_quad_tree.html">QuadTree</a>* m_quadTree;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="classxy_1_1_quad_tree_node.html">QuadTreeNode</a>* m_node;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        std::uint64_t m_filterFlags;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_quad_tree.html">QuadTree</a>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_quad_tree_node.html">QuadTreeNode</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    };</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+<div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioScape.hpp:37</div></div>
+<div class="ttc" id="classxy_1_1_quad_tree_item_html_a37231806180017b5dc66e7ac1885000d"><div class="ttname"><a href="classxy_1_1_quad_tree_item.html#a37231806180017b5dc66e7ac1885000d">xy::QuadTreeItem::getFilterFlags</a></div><div class="ttdeci">std::uint64_t getFilterFlags() const </div><div class="ttdoc">Returns the current flags for this item. Defaults to the max size of uint64 (all flags set) ...</div><div class="ttdef"><b>Definition:</b> QuadTreeItem.hpp:80</div></div>
+<div class="ttc" id="classxy_1_1_quad_tree_item_html_a1cef2904ab4355f43fd8afe231159439"><div class="ttname"><a href="classxy_1_1_quad_tree_item.html#a1cef2904ab4355f43fd8afe231159439">xy::QuadTreeItem::setFilterFlags</a></div><div class="ttdeci">void setFilterFlags(std::uint64_t flags)</div><div class="ttdoc">Allows filtering QuadTreeItems during QuadTree queries. The filter consists of up to 64 flags allowin...</div><div class="ttdef"><b>Definition:</b> QuadTreeItem.hpp:74</div></div>
+<div class="ttc" id="classxy_1_1_quad_tree_html"><div class="ttname"><a href="classxy_1_1_quad_tree.html">xy::QuadTree</a></div><div class="ttdoc">Partition system for entities with QuadTreeItem components. Entities are sorted in a tree hierarchy w...</div><div class="ttdef"><b>Definition:</b> QuadTree.hpp:108</div></div>
+<div class="ttc" id="classxy_1_1_quad_tree_item_html"><div class="ttname"><a href="classxy_1_1_quad_tree_item.html">xy::QuadTreeItem</a></div><div class="ttdoc">Entities with a QuadTreeItem and Transform component will be actively partitioned an in QuadTree syst...</div><div class="ttdef"><b>Definition:</b> QuadTreeItem.hpp:47</div></div>
 <div class="ttc" id="classxy_1_1_quad_tree_node_html"><div class="ttname"><a href="classxy_1_1_quad_tree_node.html">xy::QuadTreeNode</a></div><div class="ttdoc">Nodes which make up the branches and leaves of the QuadTree. </div><div class="ttdef"><b>Definition:</b> QuadTree.hpp:51</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

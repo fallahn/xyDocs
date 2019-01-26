@@ -61,7 +61,7 @@
 </div><!--header-->
 <div class="contents">
 
-<p>Audio emitter component. Audio emitter provide points within the scene to play audio, either one shot effects or streaming music. If the buffer used to supply the audio is mono, and the scene contains an <a class="el" href="classxy_1_1_audio_system.html" title="Audio System. While AudioEmitter components will still be audible without and active AudioSystem...">AudioSystem</a>, then the <a class="el" href="classxy_1_1_audio_emitter.html" title="Audio emitter component. Audio emitter provide points within the scene to play audio, either one shot effects or streaming music. If the buffer used to supply the audio is mono, and the scene contains an AudioSystem, then the AudioEmitter will be panned spatially relative to the current listener (usually the active scene camera), unless it has been set to absolute positioning. ">AudioEmitter</a> will be panned spatially relative to the current listener (usually the active scene camera), unless it has been set to absolute positioning.  
+<p>Audio emitter component. Audio emitter provide points within the scene to play audio, either one shot effects or streaming music. If the buffer used to supply the audio is monothen the <a class="el" href="classxy_1_1_audio_emitter.html" title="Audio emitter component. Audio emitter provide points within the scene to play audio, either one shot effects or streaming music. If the buffer used to supply the audio is monothen the AudioEmitter will be panned spatially relative to the current listener (usually the active scene camera), unless it has been set to absolute positioning. Requires a scene to have an AudioSystem. ">AudioEmitter</a> will be panned spatially relative to the current listener (usually the active scene camera), unless it has been set to absolute positioning. Requires a scene to have an <a class="el" href="classxy_1_1_audio_system.html" title="Audio System. While AudioEmitter components will still be audible without and active AudioSystem...">AudioSystem</a>.  
  <a href="classxy_1_1_audio_emitter.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_audio_emitter_8hpp_source.html">AudioEmitter.hpp</a>&gt;</code></p>
@@ -80,6 +80,19 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_audio_emitter.html#aa1ac8c6fe9dc1b581af6930f8c93fd3c">AudioEmitter</a> ()</td></tr>
 <tr class="memdesc:aa1ac8c6fe9dc1b581af6930f8c93fd3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. When AudioEmitters are first created they are in an invalid state, and will not play any sound until <a class="el" href="classxy_1_1_audio_emitter.html#acf434233afa2bfaddf339046a1da53f7" title="Sets the source of the emitter to a buffer shared between one or more emitters to play sounds fully l...">setSource()</a> has been called to assign a valid sound source. <br /></td></tr>
 <tr class="separator:aa1ac8c6fe9dc1b581af6930f8c93fd3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8c5a46d7b586204683fb9bac2bdd4b0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad8c5a46d7b586204683fb9bac2bdd4b0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_audio_emitter.html#ad8c5a46d7b586204683fb9bac2bdd4b0">AudioEmitter</a> (<a class="el" href="classxy_1_1_audio_emitter.html">AudioEmitter</a> &amp;&amp;)=default</td></tr>
+<tr class="memdesc:ad8c5a46d7b586204683fb9bac2bdd4b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor. AudioEmitters are moveable but non-copyable. <br /></td></tr>
+<tr class="separator:ad8c5a46d7b586204683fb9bac2bdd4b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74a065ae9219a42ef1ce8ae9162f2957"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74a065ae9219a42ef1ce8ae9162f2957"></a>
+<a class="el" href="classxy_1_1_audio_emitter.html">AudioEmitter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classxy_1_1_audio_emitter.html">AudioEmitter</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a74a065ae9219a42ef1ce8ae9162f2957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4b3553294d875236615d67250393e4f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4b3553294d875236615d67250393e4f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AudioEmitter</b> (const <a class="el" href="classxy_1_1_audio_emitter.html">AudioEmitter</a> &amp;)=delete</td></tr>
+<tr class="separator:ab4b3553294d875236615d67250393e4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbd614397ba6a6f4fcaffe14da8315d3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afbd614397ba6a6f4fcaffe14da8315d3"></a>
+<a class="el" href="classxy_1_1_audio_emitter.html">AudioEmitter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classxy_1_1_audio_emitter.html">AudioEmitter</a> &amp;)=delete</td></tr>
+<tr class="separator:afbd614397ba6a6f4fcaffe14da8315d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf434233afa2bfaddf339046a1da53f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acf434233afa2bfaddf339046a1da53f7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_audio_emitter.html#acf434233afa2bfaddf339046a1da53f7">setSource</a> (const sf::SoundBuffer &amp;)</td></tr>
 <tr class="memdesc:acf434233afa2bfaddf339046a1da53f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the source of the emitter to a buffer shared between one or more emitters to play sounds fully loaded in memory. This is usually applied to short sounds used as sfx. This will remove any existing audio source, including any which are loaded as streaming sources. <br /></td></tr>
@@ -109,10 +122,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setPitch</b> (float)<
 <tr class="memitem:a2acb9af6722c99ce66ae9349ab3889ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2acb9af6722c99ce66ae9349ab3889ac"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setVolume</b> (float)</td></tr>
 <tr class="separator:a2acb9af6722c99ce66ae9349ab3889ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b87744dc41c4c80abc91a24849fabb3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b87744dc41c4c80abc91a24849fabb3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_audio_emitter.html#a9b87744dc41c4c80abc91a24849fabb3">setPosition</a> (sf::Vector2f)</td></tr>
-<tr class="memdesc:a9b87744dc41c4c80abc91a24849fabb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the 2D position of the emitter in world coordinates. This is automatically overriden is the entity to which this emitter is attached also has a <a class="el" href="classxy_1_1_transform.html" title="Wraps the SFML transformable class in a component friendly format, parentable to other transforms in ...">Transform</a> component and exists in a scene that contains an <a class="el" href="classxy_1_1_audio_system.html" title="Audio System. While AudioEmitter components will still be audible without and active AudioSystem...">AudioSystem</a>. This also has no effect if the source for this component is stereo. <br /></td></tr>
-<tr class="separator:a9b87744dc41c4c80abc91a24849fabb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d6de79acced2d34bb2598b3d480e9d5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d6de79acced2d34bb2598b3d480e9d5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_audio_emitter.html#a9d6de79acced2d34bb2598b3d480e9d5">setPosition</a> (sf::Vector3f)</td></tr>
+<tr class="memdesc:a9d6de79acced2d34bb2598b3d480e9d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the 3D position of the emitter in world coordinates. This is automatically overriden if the entity to which this emitter is attached also has a <a class="el" href="classxy_1_1_transform.html" title="Wraps the SFML transformable class in a component friendly format, parentable to other transforms in ...">Transform</a> component and exists in a scene that contains an <a class="el" href="classxy_1_1_audio_system.html" title="Audio System. While AudioEmitter components will still be audible without and active AudioSystem...">AudioSystem</a>. This also has no effect if the source for this component is stereo. <br /></td></tr>
+<tr class="separator:a9d6de79acced2d34bb2598b3d480e9d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d27181a533c49238b530def714afcb8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d27181a533c49238b530def714afcb8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_audio_emitter.html#a1d27181a533c49238b530def714afcb8">setRelativeTolistener</a> (bool)</td></tr>
 <tr class="memdesc:a1d27181a533c49238b530def714afcb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether or not this sound is panned relatively to the active listener. Does not affect stereo sound sources. <br /></td></tr>
@@ -130,8 +143,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:ac6d8bdbb44fa2af7f1ee422566200df4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether or not this sound should be played looped. <br /></td></tr>
 <tr class="separator:ac6d8bdbb44fa2af7f1ee422566200df4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a8bc21c473e3955f7d57caaabdea283"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_audio_emitter.html#a6a8bc21c473e3955f7d57caaabdea283">setChannel</a> (sf::Uint8)</td></tr>
-<tr class="memdesc:a6a8bc21c473e3955f7d57caaabdea283"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the channel in the Audio mixer. Emitters can be assigned mixer channels which in turn affect the volume of all sounds assigned to the channel. For example you may wish to assign all sound effects to channel 2, and UI sounds to channel 3. This way sound effects can have their volume adjusted independently oif UI effects. By default all emitters are assigned to channel 0.  <a href="#a6a8bc21c473e3955f7d57caaabdea283">More...</a><br /></td></tr>
+<tr class="memdesc:a6a8bc21c473e3955f7d57caaabdea283"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the channel in the Audio mixer. Emitters can be assigned mixer channels which in turn affect the volume of all sounds assigned to the channel. For example you may wish to assign all sound effects to channel 2, and UI sounds to channel 3. This way sound effects can have their volume adjusted independently of UI effects. By default all emitters are assigned to channel 0.  <a href="#a6a8bc21c473e3955f7d57caaabdea283">More...</a><br /></td></tr>
 <tr class="separator:a6a8bc21c473e3955f7d57caaabdea283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaddc3fe19abe362821ad0447ff4c2a39"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaddc3fe19abe362821ad0447ff4c2a39"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_audio_emitter.html#aaddc3fe19abe362821ad0447ff4c2a39">setPlayingOffset</a> (sf::Time)</td></tr>
+<tr class="memdesc:aaddc3fe19abe362821ad0447ff4c2a39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the playing offset in Time since the beginning. <br /></td></tr>
+<tr class="separator:aaddc3fe19abe362821ad0447ff4c2a39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfd0a9f7a871b62a7461c1b06fa2dc67"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abfd0a9f7a871b62a7461c1b06fa2dc67"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_audio_emitter.html#abfd0a9f7a871b62a7461c1b06fa2dc67">getPitch</a> () const </td></tr>
 <tr class="memdesc:abfd0a9f7a871b62a7461c1b06fa2dc67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current playback pitch of the emitter. <br /></td></tr>
@@ -140,10 +157,10 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_audio_emitter.html#a7bf7557d53bf934476df0a2dc0a039f2">getVolume</a> () const </td></tr>
 <tr class="memdesc:a7bf7557d53bf934476df0a2dc0a039f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current playback volume of the emitter. <br /></td></tr>
 <tr class="separator:a7bf7557d53bf934476df0a2dc0a039f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f3e0b20a5873ed3dd85c68a84b2a257"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f3e0b20a5873ed3dd85c68a84b2a257"></a>
-sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_audio_emitter.html#a6f3e0b20a5873ed3dd85c68a84b2a257">getPosition</a> () const </td></tr>
-<tr class="memdesc:a6f3e0b20a5873ed3dd85c68a84b2a257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current 2D position of the emitter in world coordinates' This only applies to mono sounds which are not automatically panned by their entitiy's transform component. <br /></td></tr>
-<tr class="separator:a6f3e0b20a5873ed3dd85c68a84b2a257"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1c453ec13ad50787d927f4444ec212a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1c453ec13ad50787d927f4444ec212a"></a>
+sf::Vector3f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_audio_emitter.html#aa1c453ec13ad50787d927f4444ec212a">getPosition</a> () const </td></tr>
+<tr class="memdesc:aa1c453ec13ad50787d927f4444ec212a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current 3D position of the emitter in world coordinates This only applies to mono sounds which are not automatically panned by their entitiy's transform component. <br /></td></tr>
+<tr class="separator:aa1c453ec13ad50787d927f4444ec212a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e4496ac1043a79750b57b88abfc7df7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e4496ac1043a79750b57b88abfc7df7"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_audio_emitter.html#a5e4496ac1043a79750b57b88abfc7df7">isRelativeToListener</a> () const </td></tr>
 <tr class="memdesc:a5e4496ac1043a79750b57b88abfc7df7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether or not this emitter is set tot be panned relatively to the active listener. <br /></td></tr>
@@ -168,6 +185,26 @@ sf::Uint8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 Status&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_audio_emitter.html#a1b003bfa83f1853255d6d07488cea6c0">getStatus</a> () const </td></tr>
 <tr class="memdesc:a1b003bfa83f1853255d6d07488cea6c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current status of the sound. Can be Playing, Paused or Stopped. <br /></td></tr>
 <tr class="separator:a1b003bfa83f1853255d6d07488cea6c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6abb0f364cf6faca7fa8b75b6288da72"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6abb0f364cf6faca7fa8b75b6288da72"></a>
+sf::Time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_audio_emitter.html#a6abb0f364cf6faca7fa8b75b6288da72">getDuration</a> () const </td></tr>
+<tr class="memdesc:a6abb0f364cf6faca7fa8b75b6288da72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total duration of the audio associated with this emitter. <br /></td></tr>
+<tr class="separator:a6abb0f364cf6faca7fa8b75b6288da72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bb6ca1e20c59573ce00b86e17765434"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2bb6ca1e20c59573ce00b86e17765434"></a>
+sf::Time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_audio_emitter.html#a2bb6ca1e20c59573ce00b86e17765434">getPlayingOffset</a> () const </td></tr>
+<tr class="memdesc:a2bb6ca1e20c59573ce00b86e17765434"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current playing offset from the beginning of the audio associated with this emitter. <br /></td></tr>
+<tr class="separator:a2bb6ca1e20c59573ce00b86e17765434"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfde0004691ef1eed2b0e4bdb64bb4cf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abfde0004691ef1eed2b0e4bdb64bb4cf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_audio_emitter.html#abfde0004691ef1eed2b0e4bdb64bb4cf">applyMixerSettings</a> ()</td></tr>
+<tr class="memdesc:abfde0004691ef1eed2b0e4bdb64bb4cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the current mixer channel settings. Generally only used by audio systems which need to update an emitter with any changes in the mixer panel. <br /></td></tr>
+<tr class="separator:abfde0004691ef1eed2b0e4bdb64bb4cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30e8fce4e186ca790721c8eaecb2f337"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a30e8fce4e186ca790721c8eaecb2f337"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_audio_emitter.html#a30e8fce4e186ca790721c8eaecb2f337">isStreaming</a> () const </td></tr>
+<tr class="memdesc:a30e8fce4e186ca790721c8eaecb2f337"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the audio is from a streaming source, else returns false. <br /></td></tr>
+<tr class="separator:a30e8fce4e186ca790721c8eaecb2f337"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7b64e283aa167a1bc8edb2bc0f07c6c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa7b64e283aa167a1bc8edb2bc0f07c6c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_audio_emitter.html#aa7b64e283aa167a1bc8edb2bc0f07c6c">update</a> ()</td></tr>
+<tr class="memdesc:aa7b64e283aa167a1bc8edb2bc0f07c6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used by <a class="el" href="classxy_1_1_audio_system.html" title="Audio System. While AudioEmitter components will still be audible without and active AudioSystem...">AudioSystem</a> to update the internal state. Calling this else where will probably have no effect, however should be called once per frame by any custom audio systems. <br /></td></tr>
+<tr class="separator:aa7b64e283aa167a1bc8edb2bc0f07c6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -176,7 +213,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>AudioSystem</b></td>
 <tr class="separator:af3ccdd3ec77058bf8f885b94d33402c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Audio emitter component. Audio emitter provide points within the scene to play audio, either one shot effects or streaming music. If the buffer used to supply the audio is mono, and the scene contains an <a class="el" href="classxy_1_1_audio_system.html" title="Audio System. While AudioEmitter components will still be audible without and active AudioSystem...">AudioSystem</a>, then the <a class="el" href="classxy_1_1_audio_emitter.html" title="Audio emitter component. Audio emitter provide points within the scene to play audio, either one shot effects or streaming music. If the buffer used to supply the audio is mono, and the scene contains an AudioSystem, then the AudioEmitter will be panned spatially relative to the current listener (usually the active scene camera), unless it has been set to absolute positioning. ">AudioEmitter</a> will be panned spatially relative to the current listener (usually the active scene camera), unless it has been set to absolute positioning. </p>
+<div class="textblock"><p>Audio emitter component. Audio emitter provide points within the scene to play audio, either one shot effects or streaming music. If the buffer used to supply the audio is monothen the <a class="el" href="classxy_1_1_audio_emitter.html" title="Audio emitter component. Audio emitter provide points within the scene to play audio, either one shot effects or streaming music. If the buffer used to supply the audio is monothen the AudioEmitter will be panned spatially relative to the current listener (usually the active scene camera), unless it has been set to absolute positioning. Requires a scene to have an AudioSystem. ">AudioEmitter</a> will be panned spatially relative to the current listener (usually the active scene camera), unless it has been set to absolute positioning. Requires a scene to have an <a class="el" href="classxy_1_1_audio_system.html" title="Audio System. While AudioEmitter components will still be audible without and active AudioSystem...">AudioSystem</a>. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a6a8bc21c473e3955f7d57caaabdea283"></a>
 <div class="memitem">
@@ -192,7 +229,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>AudioSystem</b></td>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the channel in the Audio mixer. Emitters can be assigned mixer channels which in turn affect the volume of all sounds assigned to the channel. For example you may wish to assign all sound effects to channel 2, and UI sounds to channel 3. This way sound effects can have their volume adjusted independently oif UI effects. By default all emitters are assigned to channel 0. </p>
+<p>Sets the channel in the Audio mixer. Emitters can be assigned mixer channels which in turn affect the volume of all sounds assigned to the channel. For example you may wish to assign all sound effects to channel 2, and UI sounds to channel 3. This way sound effects can have their volume adjusted independently of UI effects. By default all emitters are assigned to channel 0. </p>
 <dl class="section see"><dt>See also</dt><dd>Mixer </dd></dl>
 
 </div>

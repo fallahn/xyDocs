@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xyginext: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/graphics/SpriteSheet.hpp Source File</title>
+<title>xyginext: C:/Users/Matthew Marchant/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/graphics/SpriteSheet.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -44,7 +44,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_de72eac28fae940626bc77a43000e4ad.html">include</a></li><li class="navelem"><a class="el" href="dir_7aeba9697aa2643cb98e804e91ef0468.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_fb7cd06a5bfbf9c5d2609172574f51c1.html">graphics</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_162daa221dc0b0dabb7c2d65b288c90b.html">include</a></li><li class="navelem"><a class="el" href="dir_bd255dc1b65874336b892dc3a783bd66.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_1d78c7616be517329cc436f2891bc3ff.html">graphics</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -53,7 +53,7 @@
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">(c) Matt Marchant 2017 - 2018</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">(c) Matt Marchant 2017 - 2019</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">http://trederia.blogspot.com</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">xygineXT - Zlib license.</span></div>
@@ -90,42 +90,45 @@
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacexy.html">xy</a></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">class </span>TextureResource;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classxy_1_1_sprite_sheet.html">   44</a></span>&#160;    <span class="keyword">class </span>XY_EXPORT_API <a class="code" href="classxy_1_1_sprite_sheet.html">SpriteSheet</a> final</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="classxy_1_1_sprite_sheet.html">SpriteSheet</a>();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">bool</span> loadFromFile(<span class="keyword">const</span> std::string&amp; path, <a class="code" href="classxy_1_1_texture_resource.html">TextureResource</a>&amp; rx);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">bool</span> saveToFile(<span class="keyword">const</span> std::string&amp; path);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="classxy_1_1_sprite.html">Sprite</a> getSprite(<span class="keyword">const</span> std::string&amp; name) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">void</span> setSprite(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> <a class="code" href="classxy_1_1_sprite.html">Sprite</a>&amp; data);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordtype">void</span> removeSprite(<span class="keyword">const</span> std::string&amp; name);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keyword">const</span> std::unordered_map&lt;std::string, Sprite&gt;&amp; getSprites() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        std::size_t getAnimationIndex(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> std::string&amp; sprite) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keyword">const</span> std::string&amp; getTexturePath() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordtype">void</span> setTexturePath(<span class="keyword">const</span> std::string&amp; path);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keyword">mutable</span> std::unordered_map&lt;std::string, Sprite&gt; m_sprites;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keyword">mutable</span> std::unordered_map&lt;std::string, std::vector&lt;std::string&gt;&gt; m_animations;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        std::string m_texturePath;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordtype">bool</span> m_smooth;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    };</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
-<div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioSourceImpl.hpp:38</div></div>
-<div class="ttc" id="classxy_1_1_sprite_html"><div class="ttname"><a href="classxy_1_1_sprite.html">xy::Sprite</a></div><div class="ttdoc">Sprite component optimised to work with the ECS. Sprite components require their entity to also have ...</div><div class="ttdef"><b>Definition:</b> Sprite.hpp:48</div></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">class </span>ResourceHandler;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classxy_1_1_sprite_sheet.html">   45</a></span>&#160;    <span class="keyword">class </span>XY_EXPORT_API <a class="code" href="classxy_1_1_sprite_sheet.html">SpriteSheet</a> final</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="classxy_1_1_sprite_sheet.html">SpriteSheet</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">bool</span> loadFromFile(<span class="keyword">const</span> std::string&amp; path, <a class="code" href="classxy_1_1_texture_resource.html">TextureResource</a>&amp; rx);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">bool</span> loadFromFile(<span class="keyword">const</span> std::string&amp; path, <a class="code" href="classxy_1_1_resource_handler.html">ResourceHandler</a>&amp; rx);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordtype">bool</span> saveToFile(<span class="keyword">const</span> std::string&amp; path);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="classxy_1_1_sprite.html">Sprite</a> getSprite(<span class="keyword">const</span> std::string&amp; name) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordtype">void</span> setSprite(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> <a class="code" href="classxy_1_1_sprite.html">Sprite</a>&amp; data);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">void</span> removeSprite(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keyword">const</span> std::unordered_map&lt;std::string, Sprite&gt;&amp; getSprites() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        std::size_t getAnimationIndex(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> std::string&amp; sprite) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keyword">const</span> std::string&amp; getTexturePath() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordtype">void</span> setTexturePath(<span class="keyword">const</span> std::string&amp; path);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keyword">mutable</span> std::unordered_map&lt;std::string, Sprite&gt; m_sprites;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keyword">mutable</span> std::unordered_map&lt;std::string, std::vector&lt;std::string&gt;&gt; m_animations;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        std::string m_texturePath;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordtype">bool</span> m_smooth;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    };</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
+<div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioScape.hpp:37</div></div>
+<div class="ttc" id="classxy_1_1_resource_handler_html"><div class="ttname"><a href="classxy_1_1_resource_handler.html">xy::ResourceHandler</a></div><div class="ttdoc">Class for generic resource management using handles. </div><div class="ttdef"><b>Definition:</b> ResourceHandler.hpp:62</div></div>
+<div class="ttc" id="classxy_1_1_sprite_html"><div class="ttname"><a href="classxy_1_1_sprite.html">xy::Sprite</a></div><div class="ttdoc">Sprite component optimised to work with the ECS. Sprite components require their entity to also have ...</div><div class="ttdef"><b>Definition:</b> Sprite.hpp:50</div></div>
 <div class="ttc" id="classxy_1_1_texture_resource_html"><div class="ttname"><a href="classxy_1_1_texture_resource.html">xy::TextureResource</a></div><div class="ttdoc">Resource manager for textures. </div><div class="ttdef"><b>Definition:</b> Resource.hpp:116</div></div>
-<div class="ttc" id="classxy_1_1_sprite_sheet_html"><div class="ttname"><a href="classxy_1_1_sprite_sheet.html">xy::SpriteSheet</a></div><div class="ttdoc">Supports loading multiple sprites from a single texture atlas via the ConfigFile format. </div><div class="ttdef"><b>Definition:</b> SpriteSheet.hpp:44</div></div>
+<div class="ttc" id="classxy_1_1_sprite_sheet_html"><div class="ttname"><a href="classxy_1_1_sprite_sheet.html">xy::SpriteSheet</a></div><div class="ttdoc">Supports loading multiple sprites from a single texture atlas via the ConfigFile format. </div><div class="ttdef"><b>Definition:</b> SpriteSheet.hpp:45</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

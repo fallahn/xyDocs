@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xyginext: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/gui/Gui.hpp Source File</title>
+<title>xyginext: C:/Users/Matthew Marchant/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/gui/Gui.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -44,7 +44,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_de72eac28fae940626bc77a43000e4ad.html">include</a></li><li class="navelem"><a class="el" href="dir_7aeba9697aa2643cb98e804e91ef0468.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_a8472b134c7c7354b1e7be6a0976d8ba.html">gui</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_162daa221dc0b0dabb7c2d65b288c90b.html">include</a></li><li class="navelem"><a class="el" href="dir_bd255dc1b65874336b892dc3a783bd66.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_0b3db6214b5f0d2eb07fcf64c1b67485.html">gui</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -53,7 +53,7 @@
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">(c) Matt Marchant 2017 - 2018</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">(c) Matt Marchant 2017 - 2019</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">http://trederia.blogspot.com</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">xygineXT - Zlib license.</span></div>
@@ -190,34 +190,52 @@
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        XY_EXPORT_API <span class="keywordtype">void</span> <a class="code" href="namespacexy_1_1_nim.html#aa386ac26217b61ee0678de8914d0cad3">checkbox</a>(<span class="keyword">const</span> std::string&amp; title, <span class="keywordtype">bool</span>* value);</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        XY_EXPORT_API <span class="keywordtype">void</span> <a class="code" href="namespacexy_1_1_nim.html#af6e2f2d9881b935a312e564ee18ae843">slider</a>(<span class="keyword">const</span> std::string&amp; title, <span class="keywordtype">float</span>&amp; value, <span class="keywordtype">float</span> min, <span class="keywordtype">float</span> max);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        XY_EXPORT_API <span class="keywordtype">void</span> <a class="code" href="namespacexy_1_1_nim.html#a41c9e7602b21e52a243fc7614cd9ca2f">slider</a>(<span class="keyword">const</span> std::string&amp; title, <span class="keywordtype">float</span>&amp; value, <span class="keywordtype">float</span> min, <span class="keywordtype">float</span> max, <span class="keywordtype">float</span> itemWidth = 200.f);</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        XY_EXPORT_API <span class="keywordtype">void</span> <a class="code" href="namespacexy_1_1_nim.html#a4a370c3543417e43198e59a5536f2731">end</a>();</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        </div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        XY_EXPORT_API <span class="keywordtype">bool</span> <a class="code" href="namespacexy_1_1_nim.html#a6b9fd1faa31bd3ee8a07fa46b2f3d942">wantsMouse</a>();</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        </div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        XY_EXPORT_API <span class="keywordtype">bool</span> <a class="code" href="namespacexy_1_1_nim.html#a2f93351a67b8bbe21a24a9b01c01d88d">wantsKeyboard</a>();</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        </div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        XY_EXPORT_API <span class="keyword">const</span> <a class="code" href="structxy_1_1_nim_1_1_style.html">Style</a>&amp; <a class="code" href="namespacexy_1_1_nim.html#a70357ee250a6c52f5e94c86eabe824d5">getStyle</a>();</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        </div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        XY_EXPORT_API <span class="keywordtype">void</span> <a class="code" href="namespacexy_1_1_nim.html#a3eed778e2b4aa227fdba70236f456caf">setStyle</a>(<span class="keyword">const</span> <a class="code" href="structxy_1_1_nim_1_1_style.html">Style</a>&amp; style);</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    }</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;}</div>
-<div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioSourceImpl.hpp:38</div></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        XY_EXPORT_API <span class="keywordtype">void</span> <a class="code" href="namespacexy_1_1_nim.html#a2875274e505bd7c395ebe845dd9544e1">separator</a>();</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        XY_EXPORT_API <span class="keywordtype">void</span> <a class="code" href="namespacexy_1_1_nim.html#afeaaf0f344856ce3af4112479b4a8bbf">sameLine</a>(<span class="keywordtype">float</span> posX = 0.f, <span class="keywordtype">float</span> spacing = -1.f);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        XY_EXPORT_API <span class="keywordtype">bool</span> <a class="code" href="namespacexy_1_1_nim.html#a05b266f264442444c058ff1752e785b1">simpleCombo</a>(<span class="keyword">const</span> std::string&amp; title, std::int32_t&amp; index, <span class="keyword">const</span> <span class="keywordtype">char</span>* items, <span class="keywordtype">float</span> itemWidth = 200.f);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        XY_EXPORT_API <span class="keywordtype">bool</span> <a class="code" href="namespacexy_1_1_nim.html#ae1e16735ad3669a49b519830e6a58478">input</a>(<span class="keyword">const</span> std::string&amp; label, std::int32_t&amp; value, <span class="keywordtype">float</span> itemWidth = 200.f);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        XY_EXPORT_API <span class="keywordtype">void</span> <a class="code" href="namespacexy_1_1_nim.html#aae5823fbb485492320c74ed4820db64e">showToolTip</a>(<span class="keyword">const</span> std::string&amp; message);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        XY_EXPORT_API <span class="keywordtype">bool</span> <a class="code" href="namespacexy_1_1_nim.html#a633d284d35965f9111e7b1e5da9621cc">colourPicker</a>(<span class="keyword">const</span> std::string&amp; label, sf::Color&amp; output);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        XY_EXPORT_API <span class="keywordtype">void</span> <a class="code" href="namespacexy_1_1_nim.html#a4a370c3543417e43198e59a5536f2731">end</a>();</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        XY_EXPORT_API <span class="keywordtype">bool</span> <a class="code" href="namespacexy_1_1_nim.html#a6b9fd1faa31bd3ee8a07fa46b2f3d942">wantsMouse</a>();</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        XY_EXPORT_API <span class="keywordtype">bool</span> <a class="code" href="namespacexy_1_1_nim.html#a2f93351a67b8bbe21a24a9b01c01d88d">wantsKeyboard</a>();</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        </div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        XY_EXPORT_API <span class="keyword">const</span> <a class="code" href="structxy_1_1_nim_1_1_style.html">Style</a>&amp; <a class="code" href="namespacexy_1_1_nim.html#a70357ee250a6c52f5e94c86eabe824d5">getStyle</a>();</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        </div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        XY_EXPORT_API <span class="keywordtype">void</span> <a class="code" href="namespacexy_1_1_nim.html#a3eed778e2b4aa227fdba70236f456caf">setStyle</a>(<span class="keyword">const</span> <a class="code" href="structxy_1_1_nim_1_1_style.html">Style</a>&amp; style);</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;}</div>
+<div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioScape.hpp:37</div></div>
 <div class="ttc" id="namespacexy_1_1_nim_html_a83e07e0b6a7a2631d8c2e243101df6de"><div class="ttname"><a href="namespacexy_1_1_nim.html#a83e07e0b6a7a2631d8c2e243101df6de">xy::Nim::button</a></div><div class="ttdeci">XY_EXPORT_API bool button(const std::string &amp;label, float w=0.f, float h=0.f)</div></div>
 <div class="ttc" id="namespacexy_1_1_nim_html_a70357ee250a6c52f5e94c86eabe824d5"><div class="ttname"><a href="namespacexy_1_1_nim.html#a70357ee250a6c52f5e94c86eabe824d5">xy::Nim::getStyle</a></div><div class="ttdeci">XY_EXPORT_API const Style &amp; getStyle()</div><div class="ttdoc">Get the current style. </div></div>
 <div class="ttc" id="classxy_1_1_text_html"><div class="ttname"><a href="classxy_1_1_text.html">xy::Text</a></div><div class="ttdoc">ECS friendly implementation of Text. Text components should appear on entities which also have a tran...</div><div class="ttdef"><b>Definition:</b> Text.hpp:62</div></div>
 <div class="ttc" id="namespacexy_1_1_nim_html_a1f0810037acbb5e6b1e4ccf31b3f6973"><div class="ttname"><a href="namespacexy_1_1_nim.html#a1f0810037acbb5e6b1e4ccf31b3f6973">xy::Nim::setNextWindowConstraints</a></div><div class="ttdeci">XY_EXPORT_API void setNextWindowConstraints(float minW, float minY, float maxW, float maxY)</div></div>
 <div class="ttc" id="namespacexy_1_1_nim_html_a1705a820a516750a2b3d7d6c94245ce4"><div class="ttname"><a href="namespacexy_1_1_nim.html#a1705a820a516750a2b3d7d6c94245ce4">xy::Nim::setNextWindowPosition</a></div><div class="ttdeci">XY_EXPORT_API void setNextWindowPosition(float x, float y)</div><div class="ttdoc">Set the next window position in window coordinates. </div></div>
 <div class="ttc" id="namespacexy_1_1_nim_html_a3eed778e2b4aa227fdba70236f456caf"><div class="ttname"><a href="namespacexy_1_1_nim.html#a3eed778e2b4aa227fdba70236f456caf">xy::Nim::setStyle</a></div><div class="ttdeci">XY_EXPORT_API void setStyle(const Style &amp;style)</div><div class="ttdoc">Set the current style. </div></div>
+<div class="ttc" id="namespacexy_1_1_nim_html_a2875274e505bd7c395ebe845dd9544e1"><div class="ttname"><a href="namespacexy_1_1_nim.html#a2875274e505bd7c395ebe845dd9544e1">xy::Nim::separator</a></div><div class="ttdeci">XY_EXPORT_API void separator()</div></div>
 <div class="ttc" id="namespacexy_1_1_nim_html_afe01675210d2dfc25461c79b1e5030d8"><div class="ttname"><a href="namespacexy_1_1_nim.html#afe01675210d2dfc25461c79b1e5030d8">xy::Nim::text</a></div><div class="ttdeci">XY_EXPORT_API void text(const std::string &amp;str)</div></div>
+<div class="ttc" id="namespacexy_1_1_nim_html_a05b266f264442444c058ff1752e785b1"><div class="ttname"><a href="namespacexy_1_1_nim.html#a05b266f264442444c058ff1752e785b1">xy::Nim::simpleCombo</a></div><div class="ttdeci">XY_EXPORT_API bool simpleCombo(const std::string &amp;title, std::int32_t &amp;index, const char *items, float itemWidth=200.f)</div><div class="ttdoc">Simple combo box. </div></div>
 <div class="ttc" id="namespacexy_1_1_nim_html_aea0ca31116b038446397540b0c64f33d"><div class="ttname"><a href="namespacexy_1_1_nim.html#aea0ca31116b038446397540b0c64f33d">xy::Nim::begin</a></div><div class="ttdeci">XY_EXPORT_API void begin(const std::string &amp;title, bool *open=nullptr)</div></div>
 <div class="ttc" id="namespacexy_1_1_nim_html_adcc3f9e2b8d29d450b6d0de44ea07f55"><div class="ttname"><a href="namespacexy_1_1_nim.html#adcc3f9e2b8d29d450b6d0de44ea07f55">xy::Nim::setNextWindowSize</a></div><div class="ttdeci">XY_EXPORT_API void setNextWindowSize(float x, float y)</div></div>
 <div class="ttc" id="namespacexy_1_1_nim_html_a4a370c3543417e43198e59a5536f2731"><div class="ttname"><a href="namespacexy_1_1_nim.html#a4a370c3543417e43198e59a5536f2731">xy::Nim::end</a></div><div class="ttdeci">XY_EXPORT_API void end()</div></div>
 <div class="ttc" id="namespacexy_1_1_nim_html_a2f93351a67b8bbe21a24a9b01c01d88d"><div class="ttname"><a href="namespacexy_1_1_nim.html#a2f93351a67b8bbe21a24a9b01c01d88d">xy::Nim::wantsKeyboard</a></div><div class="ttdeci">XY_EXPORT_API bool wantsKeyboard()</div></div>
+<div class="ttc" id="namespacexy_1_1_nim_html_ae1e16735ad3669a49b519830e6a58478"><div class="ttname"><a href="namespacexy_1_1_nim.html#ae1e16735ad3669a49b519830e6a58478">xy::Nim::input</a></div><div class="ttdeci">XY_EXPORT_API bool input(const std::string &amp;label, std::int32_t &amp;value, float itemWidth=200.f)</div></div>
+<div class="ttc" id="namespacexy_1_1_nim_html_afeaaf0f344856ce3af4112479b4a8bbf"><div class="ttname"><a href="namespacexy_1_1_nim.html#afeaaf0f344856ce3af4112479b4a8bbf">xy::Nim::sameLine</a></div><div class="ttdeci">XY_EXPORT_API void sameLine(float posX=0.f, float spacing=-1.f)</div></div>
+<div class="ttc" id="namespacexy_1_1_nim_html_a41c9e7602b21e52a243fc7614cd9ca2f"><div class="ttname"><a href="namespacexy_1_1_nim.html#a41c9e7602b21e52a243fc7614cd9ca2f">xy::Nim::slider</a></div><div class="ttdeci">XY_EXPORT_API void slider(const std::string &amp;title, float &amp;value, float min, float max, float itemWidth=200.f)</div></div>
 <div class="ttc" id="namespacexy_1_1_nim_html_a6b9fd1faa31bd3ee8a07fa46b2f3d942"><div class="ttname"><a href="namespacexy_1_1_nim.html#a6b9fd1faa31bd3ee8a07fa46b2f3d942">xy::Nim::wantsMouse</a></div><div class="ttdeci">XY_EXPORT_API bool wantsMouse()</div></div>
+<div class="ttc" id="namespacexy_1_1_nim_html_aae5823fbb485492320c74ed4820db64e"><div class="ttname"><a href="namespacexy_1_1_nim.html#aae5823fbb485492320c74ed4820db64e">xy::Nim::showToolTip</a></div><div class="ttdeci">XY_EXPORT_API void showToolTip(const std::string &amp;message)</div><div class="ttdoc">Displays a tool tip when the previously drawn item is hovered. </div></div>
 <div class="ttc" id="namespacexy_1_1_nim_html_aa386ac26217b61ee0678de8914d0cad3"><div class="ttname"><a href="namespacexy_1_1_nim.html#aa386ac26217b61ee0678de8914d0cad3">xy::Nim::checkbox</a></div><div class="ttdeci">XY_EXPORT_API void checkbox(const std::string &amp;title, bool *value)</div></div>
-<div class="ttc" id="namespacexy_1_1_nim_html_af6e2f2d9881b935a312e564ee18ae843"><div class="ttname"><a href="namespacexy_1_1_nim.html#af6e2f2d9881b935a312e564ee18ae843">xy::Nim::slider</a></div><div class="ttdeci">XY_EXPORT_API void slider(const std::string &amp;title, float &amp;value, float min, float max)</div></div>
+<div class="ttc" id="namespacexy_1_1_nim_html_a633d284d35965f9111e7b1e5da9621cc"><div class="ttname"><a href="namespacexy_1_1_nim.html#a633d284d35965f9111e7b1e5da9621cc">xy::Nim::colourPicker</a></div><div class="ttdeci">XY_EXPORT_API bool colourPicker(const std::string &amp;label, sf::Color &amp;output)</div><div class="ttdoc">Displays an RGBA colour picker and places the result in output. </div></div>
 <div class="ttc" id="structxy_1_1_nim_1_1_style_html"><div class="ttname"><a href="structxy_1_1_nim_1_1_style.html">xy::Nim::Style</a></div><div class="ttdef"><b>Definition:</b> Gui.hpp:50</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xyginext: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/gui/GuiClient.hpp Source File</title>
+<title>xyginext: C:/Users/Matthew Marchant/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/gui/GuiClient.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -44,7 +44,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_de72eac28fae940626bc77a43000e4ad.html">include</a></li><li class="navelem"><a class="el" href="dir_7aeba9697aa2643cb98e804e91ef0468.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_a8472b134c7c7354b1e7be6a0976d8ba.html">gui</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_162daa221dc0b0dabb7c2d65b288c90b.html">include</a></li><li class="navelem"><a class="el" href="dir_bd255dc1b65874336b892dc3a783bd66.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_0b3db6214b5f0d2eb07fcf64c1b67485.html">gui</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -53,7 +53,7 @@
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">(c) Matt Marchant 2017 - 2018</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">(c) Matt Marchant 2017 - 2019</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">http://trederia.blogspot.com</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">xygineXT - Zlib license.</span></div>
@@ -97,12 +97,15 @@
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="classxy_1_1_gui_client.html">GuiClient</a>&amp; operator = (<span class="keyword">const</span> <a class="code" href="classxy_1_1_gui_client.html">GuiClient</a>&amp;) = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="classxy_1_1_gui_client.html">GuiClient</a>&amp; operator = (<a class="code" href="classxy_1_1_gui_client.html">GuiClient</a>&amp;&amp;) = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">void</span> registerStatusControls(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>()&gt;&amp;);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordtype">void</span> registerWindow(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>()&gt;&amp;);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    };</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
-<div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioSourceImpl.hpp:38</div></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        [[deprecated(<span class="stringliteral">&quot;Prefer registerConsoleTab()&quot;</span>)]]</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">void</span> registerStatusControls(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>()&gt;&amp;);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordtype">void</span> registerConsoleTab(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>()&gt;&amp;);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordtype">void</span> registerWindow(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>()&gt;&amp;);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    };</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
+<div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioScape.hpp:37</div></div>
 <div class="ttc" id="classxy_1_1_gui_client_html"><div class="ttname"><a href="classxy_1_1_gui_client.html">xy::GuiClient</a></div><div class="ttdoc">Allows registering GUI controls with the default output window, or registering custom windows using t...</div><div class="ttdef"><b>Definition:</b> GuiClient.hpp:43</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

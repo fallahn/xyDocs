@@ -87,6 +87,7 @@
 <h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
 <li>get()
 : <a class="el" href="classxy_1_1_base_resource.html#a985b6b5e15692afdb693e0358f2223d0">xy::BaseResource&lt; T &gt;</a>
+, <a class="el" href="classxy_1_1_resource_handler.html#a997bfdd6ee1fb527c8888ded33852f0b">xy::ResourceHandler</a>
 , <a class="el" href="classxy_1_1_shader_resource.html#a316db8e261948f77ab8457a5195ef629">xy::ShaderResource</a>
 </li>
 <li>getActiveCamera()
@@ -105,7 +106,8 @@
 : <a class="el" href="classxy_1_1_sprite.html#ab8450b3aa578e1cf11c24baa4b0038e3">xy::Sprite</a>
 </li>
 <li>getAnimationIndex()
-: <a class="el" href="classxy_1_1_sprite_sheet.html#a7f68c097a7fc8a456af2e76864a26a77">xy::SpriteSheet</a>
+: <a class="el" href="structxy_1_1_sprite_animation.html#a50d4631772f06ef8ed228671628d1183">xy::SpriteAnimation</a>
+, <a class="el" href="classxy_1_1_sprite_sheet.html#a7f68c097a7fc8a456af2e76864a26a77">xy::SpriteSheet</a>
 </li>
 <li>getAnimations()
 : <a class="el" href="classxy_1_1_sprite.html#a2fa0f3c573e2789d7f29308e83eab56e">xy::Sprite</a>
@@ -177,6 +179,15 @@
 : <a class="el" href="classxy_1_1_drawable.html#a283f8907ee84c6572397774d9db50406">xy::Drawable</a>
 , <a class="el" href="classxy_1_1_transform.html#ac55952feef20b2e07cba18f8776cfa08">xy::Transform</a>
 </li>
+<li>getDuration()
+: <a class="el" href="classxy_1_1_audio_emitter.html#a6abb0f364cf6faca7fa8b75b6288da72">xy::AudioEmitter</a>
+</li>
+<li>getEmitter()
+: <a class="el" href="classxy_1_1_audio_scape.html#a8b55390e3ce00821bd496c6154753d87">xy::AudioScape</a>
+</li>
+<li>getEnabled()
+: <a class="el" href="classxy_1_1_net_interpolate.html#adf81e4e38d75692d43d336c21de273d6">xy::NetInterpolate</a>
+</li>
 <li>getEntities()
 : <a class="el" href="classxy_1_1_system.html#a913283c245019d2e7fb538d4223623c7">xy::System</a>
 </li>
@@ -199,7 +210,8 @@
 : <a class="el" href="classxy_1_1_text.html#a87232123d80b5716251621ef6bca2bd7">xy::Text</a>
 </li>
 <li>getFilterFlags()
-: <a class="el" href="classxy_1_1_quad_tree_item.html#a37231806180017b5dc66e7ac1885000d">xy::QuadTreeItem</a>
+: <a class="el" href="structxy_1_1_broadphase_component.html#a43647648fa8f0dd6fc519b043ceb4635">xy::BroadphaseComponent</a>
+, <a class="el" href="classxy_1_1_quad_tree_item.html#a37231806180017b5dc66e7ac1885000d">xy::QuadTreeItem</a>
 </li>
 <li>getFont()
 : <a class="el" href="classxy_1_1_text.html#a2fa7de8cf82bf53d70cf9f618b6d6e5f">xy::Text</a>
@@ -222,6 +234,9 @@
 </li>
 <li>getLabel()
 : <a class="el" href="classxy_1_1_audio_mixer.html#a9f9ab84ffcf39a69003325e25a5ae61d">xy::AudioMixer</a>
+</li>
+<li>getLoader()
+: <a class="el" href="classxy_1_1_resource_handler.html#ac1d59f42eba296b72ddc2488d8547958">xy::ResourceHandler</a>
 </li>
 <li>getLocalBounds()
 : <a class="el" href="classxy_1_1_drawable.html#a37cfa1db27537161c1313523dfd4dcfa">xy::Drawable</a>
@@ -255,11 +270,14 @@
 <li>getPitch()
 : <a class="el" href="classxy_1_1_audio_emitter.html#abfd0a9f7a871b62a7461c1b06fa2dc67">xy::AudioEmitter</a>
 </li>
+<li>getPlayingOffset()
+: <a class="el" href="classxy_1_1_audio_emitter.html#a2bb6ca1e20c59573ce00b86e17765434">xy::AudioEmitter</a>
+</li>
 <li>getPort()
 : <a class="el" href="structxy_1_1_net_peer.html#adb3885f777223ff8dfc781d47e7a3325">xy::NetPeer</a>
 </li>
 <li>getPosition()
-: <a class="el" href="classxy_1_1_audio_emitter.html#a6f3e0b20a5873ed3dd85c68a84b2a257">xy::AudioEmitter</a>
+: <a class="el" href="classxy_1_1_audio_emitter.html#aa1c453ec13ad50787d927f4444ec212a">xy::AudioEmitter</a>
 </li>
 <li>getPrimitiveType()
 : <a class="el" href="classxy_1_1_drawable.html#a033a54b7450ca2411aac9d56d99dca25">xy::Drawable</a>
@@ -307,6 +325,9 @@
 </li>
 <li>getStateCount()
 : <a class="el" href="classxy_1_1_state.html#affafb45971f52c442f750e60d5e4f295">xy::State</a>
+</li>
+<li>getStates()
+: <a class="el" href="classxy_1_1_drawable.html#a86f69d7772bc51e35ec5eeb93b4c8f10">xy::Drawable</a>
 </li>
 <li>getStatus()
 : <a class="el" href="classxy_1_1_audio_emitter.html#a1b003bfa83f1853255d6d07488cea6c0">xy::AudioEmitter</a>
@@ -359,6 +380,9 @@
 </li>
 <li>getWorldPosition()
 : <a class="el" href="classxy_1_1_transform.html#a67b20587bd206ab6cd184af394d28ce4">xy::Transform</a>
+</li>
+<li>getWorldRotation()
+: <a class="el" href="classxy_1_1_transform.html#a51ea7602e0b13faeb9133610da690abd">xy::Transform</a>
 </li>
 <li>getWorldTransform()
 : <a class="el" href="classxy_1_1_transform.html#a3361bf723e1cad7d7bf0510335974df3">xy::Transform</a>

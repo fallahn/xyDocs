@@ -74,9 +74,9 @@ Inheritance diagram for xy::Scene:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a46582fdeae176d4ab49e3e34c148fb57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46582fdeae176d4ab49e3e34c148fb57"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Scene</b> (<a class="el" href="classxy_1_1_message_bus.html">MessageBus</a> &amp;)</td></tr>
-<tr class="separator:a46582fdeae176d4ab49e3e34c148fb57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b903577516eabbe8b5beee243bd205c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#a2b903577516eabbe8b5beee243bd205c">Scene</a> (<a class="el" href="classxy_1_1_message_bus.html">MessageBus</a> &amp;messageBus, std::size_t initialPoolSize=256)</td></tr>
+<tr class="memdesc:a2b903577516eabbe8b5beee243bd205c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a2b903577516eabbe8b5beee243bd205c">More...</a><br /></td></tr>
+<tr class="separator:a2b903577516eabbe8b5beee243bd205c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac4594d0b3c15d4edf869ea284e67b79"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac4594d0b3c15d4edf869ea284e67b79"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Scene</b> (const <a class="el" href="classxy_1_1_scene.html">Scene</a> &amp;)=delete</td></tr>
 <tr class="separator:aac4594d0b3c15d4edf869ea284e67b79"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -179,7 +179,43 @@ template&lt;typename T , typename... Args&gt; </td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Encapsulates a single scene. The scene class contains everything needed to create a scene graph by encapsulating the ECS and providing factory functions for entities. Multple scenes can exist at one time, for instance one to draw the game world, and another to draw the HUD. Everything is rendered through renderable systems which, in turn, require an ECS - therefore every state which wishes to draw something requires at least a scene, right down to menus. All systems should be added before attempting to create any entities else existing entities will not be processed by new systems. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a2b903577516eabbe8b5beee243bd205c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">xy::Scene::Scene </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classxy_1_1_message_bus.html">MessageBus</a> &amp;&#160;</td>
+          <td class="paramname"><em>messageBus</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>initialPoolSize</em> = <code>256</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">messageBus</td><td>Reference to the active message bus </td></tr>
+    <tr><td class="paramname">initialPoolSize</td><td>Components are pooled in memory, and this is the initial number of components for which memory is allocated. Memory pools will resize at runtime if necessary, but an initial size can be set here. The default is 256 components. As the maximum number of entity IDs is 1024 before they are recycled, values greater than this have no effect other than allocating unusable memory. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="ac553ae2178f40cb8fa7f20816e84647e"></a>
 <div class="memitem">
 <div class="memproto">

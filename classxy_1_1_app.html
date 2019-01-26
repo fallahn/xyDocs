@@ -182,9 +182,9 @@ Protected Member Functions</h2></td></tr>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#a34dbd1a4837b9ff4eb2b9fb7fcc55c7e">draw</a> ()=0</td></tr>
 <tr class="memdesc:a34dbd1a4837b9ff4eb2b9fb7fcc55c7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws to the render window. All drawing operations should be started from here. clear() and display() are called automatically by xygine and need to be manually used in derived applications. <br /></td></tr>
 <tr class="separator:a34dbd1a4837b9ff4eb2b9fb7fcc55c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4195265e8b00854ee90c9b2cbb521fe"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#ab4195265e8b00854ee90c9b2cbb521fe">initialise</a> ()</td></tr>
-<tr class="memdesc:ab4195265e8b00854ee90c9b2cbb521fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the application is first run.  <a href="#ab4195265e8b00854ee90c9b2cbb521fe">More...</a><br /></td></tr>
-<tr class="separator:ab4195265e8b00854ee90c9b2cbb521fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa608bf6cf9ed1eca0e50e8ded3676122"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#aa608bf6cf9ed1eca0e50e8ded3676122">initialise</a> ()</td></tr>
+<tr class="memdesc:aa608bf6cf9ed1eca0e50e8ded3676122"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the application is first run.  <a href="#aa608bf6cf9ed1eca0e50e8ded3676122">More...</a><br /></td></tr>
+<tr class="separator:aa608bf6cf9ed1eca0e50e8ded3676122"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b30493a47af9e4f3bc31645a68c2054"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_app.html#a0b30493a47af9e4f3bc31645a68c2054">finalise</a> ()</td></tr>
 <tr class="memdesc:a0b30493a47af9e4f3bc31645a68c2054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the application shuts down.  <a href="#a0b30493a47af9e4f3bc31645a68c2054">More...</a><br /></td></tr>
 <tr class="separator:a0b30493a47af9e4f3bc31645a68c2054"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -341,7 +341,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>GuiClient</b></td></
 
 </div>
 </div>
-<a class="anchor" id="ab4195265e8b00854ee90c9b2cbb521fe"></a>
+<a class="anchor" id="aa608bf6cf9ed1eca0e50e8ded3676122"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -349,7 +349,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>GuiClient</b></td></
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void xy::App::initialise </td>
+          <td class="memname">virtual bool xy::App::initialise </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -363,7 +363,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>GuiClient</b></td></
 </div><div class="memdoc">
 
 <p>Called when the application is first run. </p>
-<p>Optionally overridable this should be used when performing operations which may throw exceptions such as loading configuration data, which should not be performed in the constructor of a derived application. </p>
+<p>Optionally overridable this should be used when performing operations which may throw exceptions such as loading configuration data, which should not be performed in the constructor of a derived application. If initialisation is successful then this should return true, else return false. Returning false will prevent the application running and cause it to attempt to perform a clean shutdown with <a class="el" href="classxy_1_1_app.html#a0b30493a47af9e4f3bc31645a68c2054" title="Called when the application shuts down. ">finalise()</a>; </p>
 
 </div>
 </div>

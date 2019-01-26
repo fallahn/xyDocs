@@ -64,6 +64,14 @@
  <a href="classxy_1_1_drawable.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_drawable_8hpp_source.html">Drawable.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for xy::Drawable:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classxy_1_1_drawable.png" usemap="#xy::Drawable_map" alt=""/>
+  <map id="xy::Drawable_map" name="xy::Drawable_map">
+</map>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -97,6 +105,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>bindUniform</b> (cons
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_drawable.html#abfa798d708dfe8b37ece463c8f490150">bindUniform</a> (const std::string &amp;name, const float *value)</td></tr>
 <tr class="memdesc:abfa798d708dfe8b37ece463c8f490150"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds a pointer to a float array containing a 4x4 matrix. <br /></td></tr>
 <tr class="separator:abfa798d708dfe8b37ece463c8f490150"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f919e5a70709c9b21e51bb7383b2ae5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f919e5a70709c9b21e51bb7383b2ae5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_drawable.html#a9f919e5a70709c9b21e51bb7383b2ae5">bindUniformToCurrentTexture</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:a9f919e5a70709c9b21e51bb7383b2ae5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds the given uniform to the value of sf::Shader::CurrentTexture. Up to 6 uniforms may be bound to this value. <br /></td></tr>
+<tr class="separator:a9f919e5a70709c9b21e51bb7383b2ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3de615ad63840a15453929727e21982"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac3de615ad63840a15453929727e21982"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_drawable.html#ac3de615ad63840a15453929727e21982">setBlendMode</a> (sf::BlendMode)</td></tr>
 <tr class="memdesc:ac3de615ad63840a15453929727e21982"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the blend mode used when drawing. <br /></td></tr>
@@ -122,7 +134,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a283f8907ee84c6572397774d9db50406"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f9a45f3e4717a659d520973cf9a4014"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f9a45f3e4717a659d520973cf9a4014"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_drawable.html#a6f9a45f3e4717a659d520973cf9a4014">setCroppingArea</a> (sf::FloatRect)</td></tr>
-<tr class="memdesc:a6f9a45f3e4717a659d520973cf9a4014"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set an area to which to crop the drawable. The given rectangle should be in local coordinates, relative to the text. <br /></td></tr>
+<tr class="memdesc:a6f9a45f3e4717a659d520973cf9a4014"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set an area to which to crop the drawable. The given rectangle should be in local coordinates, relative to the drawable. <br /></td></tr>
 <tr class="separator:a6f9a45f3e4717a659d520973cf9a4014"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b5ae30af1542ed048f5153aa9e7a68a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b5ae30af1542ed048f5153aa9e7a68a"></a>
 sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_drawable.html#a2b5ae30af1542ed048f5153aa9e7a68a">getCroppingArea</a> () const </td></tr>
@@ -155,8 +167,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><b>updateLocalBounds</b> (sf::FloatRect)</td></tr>
 <tr class="separator:ad6eaf0c0f079eafff100edd3848ec591"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66239fb5c5cdac1da4c89b1bee6c0315"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_drawable.html#a66239fb5c5cdac1da4c89b1bee6c0315">setCulled</a> (bool cull)</td></tr>
-<tr class="memdesc:a66239fb5c5cdac1da4c89b1bee6c0315"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables viewport culling. By default Drawables are culled from rendering when not in the viewable area of the active camer. Setting this to true will cause the drawable to always be rendered, even if it falls outside the active camera's view.  <a href="#a66239fb5c5cdac1da4c89b1bee6c0315">More...</a><br /></td></tr>
+<tr class="memdesc:a66239fb5c5cdac1da4c89b1bee6c0315"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables viewport culling. By default Drawables are culled from rendering when not in the viewable area of the active camera. Setting this to true will cause the drawable to always be rendered, even if it falls outside the active camera's view.  <a href="#a66239fb5c5cdac1da4c89b1bee6c0315">More...</a><br /></td></tr>
 <tr class="separator:a66239fb5c5cdac1da4c89b1bee6c0315"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86f69d7772bc51e35ec5eeb93b4c8f10"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a86f69d7772bc51e35ec5eeb93b4c8f10"></a>
+sf::RenderStates&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_drawable.html#a86f69d7772bc51e35ec5eeb93b4c8f10">getStates</a> () const </td></tr>
+<tr class="memdesc:a86f69d7772bc51e35ec5eeb93b4c8f10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the RenderStates containing the current blend mode, PrimitiveType and Shader of the drawable. Generally not required, unless implementing a custom renderer. <br /></td></tr>
+<tr class="separator:a86f69d7772bc51e35ec5eeb93b4c8f10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b21eddd30fe16f76cd01e92a5f42c77"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b21eddd30fe16f76cd01e92a5f42c77"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_drawable.html#a9b21eddd30fe16f76cd01e92a5f42c77">applyShader</a> () const </td></tr>
+<tr class="memdesc:a9b21eddd30fe16f76cd01e92a5f42c77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies all the unform bindings to the current shader. Generally not used unless implementing a custom render system, in which case this should be called immediately before the component is drawn. <br /></td></tr>
+<tr class="separator:a9b21eddd30fe16f76cd01e92a5f42c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -215,7 +235,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>RenderSystem</b></td
 </table>
 </div><div class="memdoc">
 
-<p>Enables or disables viewport culling. By default Drawables are culled from rendering when not in the viewable area of the active camer. Setting this to true will cause the drawable to always be rendered, even if it falls outside the active camera's view. </p>
+<p>Enables or disables viewport culling. By default Drawables are culled from rendering when not in the viewable area of the active camera. Setting this to true will cause the drawable to always be rendered, even if it falls outside the active camera's view. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cull</td><td>Set to true to have the drawble culled from rendering when not intersecting the current viewable area. </td></tr>

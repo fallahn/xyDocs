@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xyginext: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/core/Console.hpp Source File</title>
+<title>xyginext: C:/Users/Matthew Marchant/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/core/Console.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -44,7 +44,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_de72eac28fae940626bc77a43000e4ad.html">include</a></li><li class="navelem"><a class="el" href="dir_7aeba9697aa2643cb98e804e91ef0468.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_99732df8828540ae815d91337e32b14c.html">core</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_162daa221dc0b0dabb7c2d65b288c90b.html">include</a></li><li class="navelem"><a class="el" href="dir_bd255dc1b65874336b892dc3a783bd66.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_788cd137090c3e780d7d6a86fefcc3fd.html">core</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -53,7 +53,7 @@
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">(c) Matt Marchant 2017 - 2018</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">(c) Matt Marchant 2017 - 2019</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">http://trederia.blogspot.com</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">xygineXT - Zlib license.</span></div>
@@ -123,16 +123,16 @@
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> addStatusControl(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>()&gt;&amp;, <span class="keyword">const</span> <a class="code" href="classxy_1_1_gui_client.html">GuiClient</a>*);</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> removeStatusControls(<span class="keyword">const</span> <a class="code" href="classxy_1_1_gui_client.html">GuiClient</a>*);</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> addCommand(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> <a class="code" href="classxy_1_1_console.html#a84f492258d94d097ed81aeb2a87d7ba5">Command</a>&amp; cmd, <span class="keyword">const</span> <a class="code" href="classxy_1_1_console_client.html">ConsoleClient</a>* owner);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> removeCommands(<span class="keyword">const</span> <a class="code" href="classxy_1_1_console_client.html">ConsoleClient</a>*); <span class="comment">//removes all commands belonging to the given client</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> draw();</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    };</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">//#include &quot;Console.inl&quot;</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> addConsoleTab(<span class="keyword">const</span> std::string&amp;, <span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>()&gt;&amp;, <span class="keyword">const</span> <a class="code" href="classxy_1_1_gui_client.html">GuiClient</a>*);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> removeConsoleTab(<span class="keyword">const</span> <a class="code" href="classxy_1_1_gui_client.html">GuiClient</a>*);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> addCommand(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> <a class="code" href="classxy_1_1_console.html#a84f492258d94d097ed81aeb2a87d7ba5">Command</a>&amp; cmd, <span class="keyword">const</span> <a class="code" href="classxy_1_1_console_client.html">ConsoleClient</a>* owner);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> removeCommands(<span class="keyword">const</span> <a class="code" href="classxy_1_1_console_client.html">ConsoleClient</a>*); <span class="comment">//removes all commands belonging to the given client</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> draw();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    };</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
-<div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioSourceImpl.hpp:38</div></div>
+<div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioScape.hpp:37</div></div>
 <div class="ttc" id="classxy_1_1_console_html_a84f492258d94d097ed81aeb2a87d7ba5"><div class="ttname"><a href="classxy_1_1_console.html#a84f492258d94d097ed81aeb2a87d7ba5">xy::Console::Command</a></div><div class="ttdeci">std::function&lt; void(const std::string &amp;)&gt; Command</div><div class="ttdef"><b>Definition:</b> Console.hpp:65</div></div>
 <div class="ttc" id="classxy_1_1_gui_client_html"><div class="ttname"><a href="classxy_1_1_gui_client.html">xy::GuiClient</a></div><div class="ttdoc">Allows registering GUI controls with the default output window, or registering custom windows using t...</div><div class="ttdef"><b>Definition:</b> GuiClient.hpp:43</div></div>
 <div class="ttc" id="classxy_1_1_app_html"><div class="ttname"><a href="classxy_1_1_app.html">xy::App</a></div><div class="ttdoc">Abstract base class for new games or applications. </div><div class="ttdef"><b>Definition:</b> App.hpp:77</div></div>

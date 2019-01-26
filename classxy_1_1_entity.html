@@ -87,8 +87,9 @@ ID&#160;</td><td class="memItemRight" valign="bottom"><b>getIndex</b> () const <
 Generation&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#a237d8a5d5f847c28f82dbb2f362a9b0a">getGeneration</a> () const </td></tr>
 <tr class="memdesc:a237d8a5d5f847c28f82dbb2f362a9b0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the generation of this entity. <br /></td></tr>
 <tr class="separator:a237d8a5d5f847c28f82dbb2f362a9b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e5d9585bcd82cb3b2e42a1d3fb29dab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#a2e5d9585bcd82cb3b2e42a1d3fb29dab">destroyed</a> () const </td></tr>
-<tr class="memdesc:a2e5d9585bcd82cb3b2e42a1d3fb29dab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks the entity for destruction.  <a href="#a2e5d9585bcd82cb3b2e42a1d3fb29dab">More...</a><br /></td></tr>
+<tr class="memitem:a2e5d9585bcd82cb3b2e42a1d3fb29dab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e5d9585bcd82cb3b2e42a1d3fb29dab"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#a2e5d9585bcd82cb3b2e42a1d3fb29dab">destroyed</a> () const </td></tr>
+<tr class="memdesc:a2e5d9585bcd82cb3b2e42a1d3fb29dab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the entity is marked for destruction. <br /></td></tr>
 <tr class="separator:a2e5d9585bcd82cb3b2e42a1d3fb29dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47a296f80078e6750f9494b1f72ccd2e"><td class="memTemplParams" colspan="2"><a class="anchor" id="a47a296f80078e6750f9494b1f72ccd2e"></a>
 template&lt;typename T &gt; </td></tr>
@@ -99,9 +100,10 @@ template&lt;typename T &gt; </td></tr>
 template&lt;typename T , typename... Args&gt; </td></tr>
 <tr class="memitem:a23df6458b1a7ce8fa93522dc6c14bbdb"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>addComponent</b> (Args &amp;&amp;...)</td></tr>
 <tr class="separator:a23df6458b1a7ce8fa93522dc6c14bbdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a599eb184dd8cb08ed805ee424e9dd67a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a599eb184dd8cb08ed805ee424e9dd67a"><td class="memTemplParams" colspan="2"><a class="anchor" id="a599eb184dd8cb08ed805ee424e9dd67a"></a>
+template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a599eb184dd8cb08ed805ee424e9dd67a"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxy_1_1_entity.html#a599eb184dd8cb08ed805ee424e9dd67a">hasComponent</a> () const </td></tr>
-<tr class="memdesc:a599eb184dd8cb08ed805ee424e9dd67a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the component of this type if it exists.  <a href="#a599eb184dd8cb08ed805ee424e9dd67a">More...</a><br /></td></tr>
+<tr class="memdesc:a599eb184dd8cb08ed805ee424e9dd67a"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns true if the component type exists on thie entity <br /></td></tr>
 <tr class="separator:a599eb184dd8cb08ed805ee424e9dd67a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a988a8795fa62353f350a0bcac4a4b4a3"><td class="memTemplParams" colspan="2"><a class="anchor" id="a988a8795fa62353f350a0bcac4a4b4a3"></a>
 template&lt;typename T &gt; </td></tr>
@@ -177,46 +179,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classxy_1_1_entity.html" title="Entity class - Basically just an ID. The ID is generated as a combination of the index in the memory ...">Entity</a> class - Basically just an ID. The ID is generated as a combination of the index in the memory pool and the generation - that is the nth time the index has been used. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a2e5d9585bcd82cb3b2e42a1d3fb29dab"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool xy::Entity::destroyed </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Marks the entity for destruction. </p>
-<p>Returns true if the entity is marked for destruction </p>
-
-</div>
-</div>
-<a class="anchor" id="a599eb184dd8cb08ed805ee424e9dd67a"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bool xy::Entity::hasComponent </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Removes the component of this type if it exists. </p>
-<p>returns true if the component type exists on thie entity </p>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
