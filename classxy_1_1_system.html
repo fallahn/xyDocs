@@ -73,11 +73,11 @@ Inheritance diagram for xy::System:</div>
   <img src="classxy_1_1_system.png" usemap="#xy::System_map" alt=""/>
   <map id="xy::System_map" name="xy::System_map">
 <area href="classxy_1_1_audio_system.html" title="Audio System. While AudioEmitter components will still be audible without and active AudioSystem..." alt="xy::AudioSystem" shape="rect" coords="156,56,302,80"/>
-<area href="classxy_1_1_callback_system.html" title="Performs a given callback function on an entity. This is useful for behaviour code on entities which ..." alt="xy::CallbackSystem" shape="rect" coords="156,112,302,136"/>
-<area href="classxy_1_1_camera_system.html" title="The camera system updates any camera components which are attached to entities that also have a trans..." alt="xy::CameraSystem" shape="rect" coords="156,168,302,192"/>
-<area href="classxy_1_1_command_system.html" alt="xy::CommandSystem" shape="rect" coords="156,224,302,248"/>
-<area href="classxy_1_1_dynamic_tree_system.html" title="Dynamic AABB tree for broadphase queries. Based on Erin Catto&#39;s dynamic tree in Box2D (http://www..." alt="xy::DynamicTreeSystem" shape="rect" coords="156,280,302,304"/>
-<area href="classxy_1_1_interpolation_system.html" title="Uses the NetInterpolate component to linearly interpolate a transform component&#39;s position between tw..." alt="xy::InterpolationSystem" shape="rect" coords="156,336,302,360"/>
+<area href="classxy_1_1_bitmap_text_system.html" title="System used for updating BitmapText components. Entities with a BitmapText component also require a T..." alt="xy::BitmapTextSystem" shape="rect" coords="156,112,302,136"/>
+<area href="classxy_1_1_callback_system.html" title="Performs a given callback function on an entity. This is useful for behaviour code on entities which ..." alt="xy::CallbackSystem" shape="rect" coords="156,168,302,192"/>
+<area href="classxy_1_1_camera_system.html" title="The camera system updates any camera components which are attached to entities that also have a trans..." alt="xy::CameraSystem" shape="rect" coords="156,224,302,248"/>
+<area href="classxy_1_1_command_system.html" alt="xy::CommandSystem" shape="rect" coords="156,280,302,304"/>
+<area href="classxy_1_1_dynamic_tree_system.html" title="Dynamic AABB tree for broadphase queries. Based on Erin Catto&#39;s dynamic tree in Box2D (http://www..." alt="xy::DynamicTreeSystem" shape="rect" coords="156,336,302,360"/>
 <area href="classxy_1_1_particle_system.html" title="ParticleSystem. Responsible for updating all ParticelEmitter components in the scene, and rendering the output. " alt="xy::ParticleSystem" shape="rect" coords="156,392,302,416"/>
 <area href="classxy_1_1_quad_tree.html" title="Partition system for entities with QuadTreeItem components. Entities are sorted in a tree hierarchy w..." alt="xy::QuadTree" shape="rect" coords="156,448,302,472"/>
 <area href="classxy_1_1_render_system.html" title="Used to draw all entities which have a Drawable and Transform component. The RenderSystem is used to ..." alt="xy::RenderSystem" shape="rect" coords="156,504,302,528"/>
@@ -105,10 +105,10 @@ Public Member Functions</h2></td></tr>
 UniqueType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#a99504ede1e0567b27d608e4897c688b4">getType</a> () const </td></tr>
 <tr class="memdesc:a99504ede1e0567b27d608e4897c688b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the unique type ID of the system. <br /></td></tr>
 <tr class="separator:a99504ede1e0567b27d608e4897c688b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a913283c245019d2e7fb538d4223623c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a913283c245019d2e7fb538d4223623c7"></a>
-std::vector&lt; <a class="el" href="classxy_1_1_entity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#a913283c245019d2e7fb538d4223623c7">getEntities</a> () const </td></tr>
-<tr class="memdesc:a913283c245019d2e7fb538d4223623c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of entities that this system is currently interested in. <br /></td></tr>
-<tr class="separator:a913283c245019d2e7fb538d4223623c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a510ce1e8135ebde63e9c06003d7106a9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a510ce1e8135ebde63e9c06003d7106a9"></a>
+const std::vector&lt; <a class="el" href="classxy_1_1_entity.html">Entity</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#a510ce1e8135ebde63e9c06003d7106a9">getEntities</a> () const </td></tr>
+<tr class="memdesc:a510ce1e8135ebde63e9c06003d7106a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of entities that this system is currently interested in. <br /></td></tr>
+<tr class="separator:a510ce1e8135ebde63e9c06003d7106a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50e854adba9cfc2a4d5ecac8f162d4b0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50e854adba9cfc2a4d5ecac8f162d4b0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#a50e854adba9cfc2a4d5ecac8f162d4b0">addEntity</a> (<a class="el" href="classxy_1_1_entity.html">Entity</a>)</td></tr>
 <tr class="memdesc:a50e854adba9cfc2a4d5ecac8f162d4b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an entity to the list to process. <br /></td></tr>

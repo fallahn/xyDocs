@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xyginext: C:/Users/Matthew Marchant/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/audio/AudioScape.hpp Source File</title>
+<title>xyginext: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/audio/AudioScape.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -44,7 +44,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_162daa221dc0b0dabb7c2d65b288c90b.html">include</a></li><li class="navelem"><a class="el" href="dir_bd255dc1b65874336b892dc3a783bd66.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_225e61450b30e29218ac37e36695e84c.html">audio</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_de72eac28fae940626bc77a43000e4ad.html">include</a></li><li class="navelem"><a class="el" href="dir_7aeba9697aa2643cb98e804e91ef0468.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_6d008cee86e980219eb23f13073cbbab.html">audio</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -92,45 +92,6 @@
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">class </span><a class="code" href="classxy_1_1_audio_resource.html">AudioResource</a>;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">/*</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">    \brief Contains one or more definitions used to create AudioEmitter components.</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">    Similarly to the SpriteSheet class used for loading Sprites from configuration</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">    files, AudioScapes can be used to define the settings used to create AudioEmitter</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">    components. AudioScape files usually have the extension *.xas with the following</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">    ConfigFile compatible layout:</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">    audio_scape NAME</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">    {</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">        emitter NAME_ONE</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">        {</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">            path = &quot;STR_PATH_TO_FILE&quot;</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">            streaming = BOOL</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">            pitch = FLOAT</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">            volume = FLOAT</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">            relative_listener = BOOL</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">            min_distance = FLOAT</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">            attenuation = FLOAT</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">            looped = BOOL</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">            mixer_channel = INT</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">        }</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">        emitter NAME_TWO</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">        {</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">            path = &quot;STR_PATH_TO_FILE&quot;</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">            streaming = BOOL</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">            pitch = FLOAT</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">            volume = FLOAT</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">            relative_listener = BOOL</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">            min_distance = FLOAT</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">            attenuation = FLOAT</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">            looped = BOOL</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">            mixer_channel = INT</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">        }</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">    }</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">    Emitter properties are optional (except path and streaming) and any omitted properties</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">    will fall back to their default values.</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">    */</span></div>
 <div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classxy_1_1_audio_scape.html">   80</a></span>&#160;    <span class="keyword">class </span>XY_EXPORT_API <a class="code" href="classxy_1_1_audio_scape.html">AudioScape</a> final</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    {</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">public</span>:</div>
@@ -150,7 +111,7 @@
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    };</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;} <span class="comment">//namespace xy</span></div>
 <div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioScape.hpp:37</div></div>
-<div class="ttc" id="classxy_1_1_audio_scape_html"><div class="ttname"><a href="classxy_1_1_audio_scape.html">xy::AudioScape</a></div><div class="ttdef"><b>Definition:</b> AudioScape.hpp:80</div></div>
+<div class="ttc" id="classxy_1_1_audio_scape_html"><div class="ttname"><a href="classxy_1_1_audio_scape.html">xy::AudioScape</a></div><div class="ttdoc">Contains one or more definitions used to create AudioEmitter components. Similarly to the SpriteSheet...</div><div class="ttdef"><b>Definition:</b> AudioScape.hpp:80</div></div>
 <div class="ttc" id="classxy_1_1_audio_emitter_html"><div class="ttname"><a href="classxy_1_1_audio_emitter.html">xy::AudioEmitter</a></div><div class="ttdoc">Audio emitter component. Audio emitter provide points within the scene to play audio, either one shot effects or streaming music. If the buffer used to supply the audio is monothen the AudioEmitter will be panned spatially relative to the current listener (usually the active scene camera), unless it has been set to absolute positioning. Requires a scene to have an AudioSystem. </div><div class="ttdef"><b>Definition:</b> AudioEmitter.hpp:59</div></div>
 <div class="ttc" id="classxy_1_1_audio_resource_html"><div class="ttname"><a href="classxy_1_1_audio_resource.html">xy::AudioResource</a></div><div class="ttdoc">Resource manager for sound files. </div><div class="ttdef"><b>Definition:</b> Resource.hpp:165</div></div>
 </div><!-- fragment --></div><!-- contents -->

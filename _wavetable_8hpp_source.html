@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xyginext: C:/Users/Matthew Marchant/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/util/Wavetable.hpp Source File</title>
+<title>xyginext: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/util/Wavetable.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -44,7 +44,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_162daa221dc0b0dabb7c2d65b288c90b.html">include</a></li><li class="navelem"><a class="el" href="dir_bd255dc1b65874336b892dc3a783bd66.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_ab5179e6445b47a1a215285ec5c23dec.html">util</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_de72eac28fae940626bc77a43000e4ad.html">include</a></li><li class="navelem"><a class="el" href="dir_7aeba9697aa2643cb98e804e91ef0468.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_99d223d5dc8e1ceb2a20b61f811abf55.html">util</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -92,23 +92,60 @@
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keyword">namespace </span>Wavetable</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> std::vector&lt;float&gt; sine(<span class="keywordtype">float</span> frequency, <span class="keywordtype">float</span> amplitude = 1.f, <span class="keywordtype">float</span> updateRate = 60.f)</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                XY_ASSERT(frequency &gt; 0 &amp;&amp; amplitude &gt; 0 &amp;&amp; updateRate &gt; 0, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="keywordtype">float</span> stepCount = updateRate / frequency;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                <span class="keywordtype">float</span> step = Const::TAU / stepCount;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                std::vector&lt;float&gt; wavetable;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">float</span> i = 0.f; i &lt; stepCount; ++i)</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                    wavetable.push_back(std::sin(step * i) * amplitude);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <span class="keywordflow">return</span> wavetable;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> std::vector&lt;float&gt; sine(<span class="keywordtype">float</span> frequency, <span class="keywordtype">float</span> amplitude = 1.f, <span class="keywordtype">float</span> updateRate = 60.f)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                XY_ASSERT(frequency &gt; 0 &amp;&amp; amplitude &gt; 0 &amp;&amp; updateRate &gt; 0, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                <span class="keywordtype">float</span> stepCount = updateRate / frequency;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="keywordtype">float</span> step = Const::TAU / stepCount;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                std::vector&lt;float&gt; wavetable;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">float</span> i = 0.f; i &lt; stepCount; ++i)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                    wavetable.push_back(std::sin(step * i) * amplitude);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                <span class="keywordflow">return</span> wavetable;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> std::vector&lt;float&gt; triangle(<span class="keywordtype">float</span> frequency, <span class="keywordtype">float</span> amplitude = 1.f, <span class="keywordtype">float</span> samplerate = 60.f)</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                XY_ASSERT(frequency &gt; 0 &amp;&amp; amplitude &gt; 0 &amp;&amp; samplerate &gt; 0, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                std::vector&lt;float&gt; retval;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <span class="keyword">const</span> <span class="keywordtype">float</span> stepCount = (samplerate / frequency);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                <span class="keyword">const</span> <span class="keywordtype">float</span> step = Const::TAU / stepCount;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                <span class="keyword">const</span> <span class="keywordtype">float</span> invPi = 1.f / Const::PI;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">float</span> i = 0.f; i &lt; stepCount; i++)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                    retval.push_back(invPi * std::asin(std::sin(i * step)) * amplitude);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                <span class="keywordflow">return</span> retval;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> std::vector&lt;float&gt; square(<span class="keywordtype">float</span> frequency, <span class="keywordtype">float</span> amplitude = 1.f, <span class="keywordtype">float</span> samplerate = 60.f)</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                XY_ASSERT(frequency &gt; 0 &amp;&amp; amplitude &gt; 0 &amp;&amp; samplerate &gt; 0, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                std::vector&lt;float&gt; retval;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                <span class="keyword">const</span> std::int32_t sampleCount = <span class="keyword">static_cast&lt;</span>std::int32_t<span class="keyword">&gt;</span>(samplerate / frequency);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                <span class="keywordflow">for</span> (<span class="keyword">auto</span> i = 0; i &lt; sampleCount; ++i)</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                    <span class="keywordflow">if</span> (i &lt; sampleCount / 2)</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                    {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                        retval.push_back(amplitude);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                    }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                    {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                        retval.push_back(-amplitude);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                    }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                <span class="keywordflow">return</span> retval;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;}</div>
 <div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioScape.hpp:37</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

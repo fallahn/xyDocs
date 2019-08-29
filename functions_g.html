@@ -117,6 +117,9 @@
 <li>getApplicationName()
 : <a class="el" href="classxy_1_1_app.html#a9b7112b5a9d1cc35117b765a0e2c21ec">xy::App</a>
 </li>
+<li>getArea()
+: <a class="el" href="structxy_1_1_broadphase_component.html#a7f2348bda855f2345b1fde6fb0d46739">xy::BroadphaseComponent</a>
+</li>
 <li>getAttenuation()
 : <a class="el" href="classxy_1_1_audio_emitter.html#a999addaa8a953bb88f17cc5146f4f324">xy::AudioEmitter</a>
 </li>
@@ -134,13 +137,15 @@
 : <a class="el" href="classxy_1_1_audio_emitter.html#ae986ca59875ce0a64fe41403af0cfc6e">xy::AudioEmitter</a>
 </li>
 <li>getCharacterSize()
-: <a class="el" href="classxy_1_1_text.html#af232d70ac54301664abfdc943535e81d">xy::Text</a>
+: <a class="el" href="classxy_1_1_bitmap_font.html#ab3749ca841508aa21d53b80c4529083e">xy::BitmapFont</a>
+, <a class="el" href="classxy_1_1_text.html#af232d70ac54301664abfdc943535e81d">xy::Text</a>
 </li>
 <li>getClearColour()
 : <a class="el" href="classxy_1_1_app.html#a98861274f6b13462c6e2051d2a692aff">xy::App</a>
 </li>
 <li>getColour()
-: <a class="el" href="classxy_1_1_sprite.html#a77ac2e969631f3f77b05a8ce71a96a31">xy::Sprite</a>
+: <a class="el" href="classxy_1_1_bitmap_text.html#a774452084e81cf21c98cc96f5cf3cd00">xy::BitmapText</a>
+, <a class="el" href="classxy_1_1_sprite.html#a77ac2e969631f3f77b05a8ce71a96a31">xy::Sprite</a>
 </li>
 <li>getComponent()
 : <a class="el" href="classxy_1_1_entity.html#a988a8795fa62353f350a0bcac4a4b4a3">xy::Entity</a>
@@ -181,17 +186,17 @@
 : <a class="el" href="classxy_1_1_drawable.html#a283f8907ee84c6572397774d9db50406">xy::Drawable</a>
 , <a class="el" href="classxy_1_1_transform.html#ac55952feef20b2e07cba18f8776cfa08">xy::Transform</a>
 </li>
+<li>getDirector()
+: <a class="el" href="classxy_1_1_scene.html#a90bdfe21346d7890ba97be5b64fe3364">xy::Scene</a>
+</li>
 <li>getDuration()
 : <a class="el" href="classxy_1_1_audio_emitter.html#a6abb0f364cf6faca7fa8b75b6288da72">xy::AudioEmitter</a>
 </li>
 <li>getEmitter()
 : <a class="el" href="classxy_1_1_audio_scape.html#a8b55390e3ce00821bd496c6154753d87">xy::AudioScape</a>
 </li>
-<li>getEnabled()
-: <a class="el" href="classxy_1_1_net_interpolate.html#adf81e4e38d75692d43d336c21de273d6">xy::NetInterpolate</a>
-</li>
 <li>getEntities()
-: <a class="el" href="classxy_1_1_system.html#a913283c245019d2e7fb538d4223623c7">xy::System</a>
+: <a class="el" href="classxy_1_1_system.html#a510ce1e8135ebde63e9c06003d7106a9">xy::System</a>
 </li>
 <li>getEntity()
 : <a class="el" href="classxy_1_1_entity_manager.html#a8024b160fce3fdb43814da9504737a47">xy::EntityManager</a>
@@ -213,16 +218,21 @@
 </li>
 <li>getFilterFlags()
 : <a class="el" href="structxy_1_1_broadphase_component.html#a43647648fa8f0dd6fc519b043ceb4635">xy::BroadphaseComponent</a>
+, <a class="el" href="classxy_1_1_drawable.html#a140bb4d84813420ae78e2b818f0835f3">xy::Drawable</a>
 , <a class="el" href="classxy_1_1_quad_tree_item.html#a37231806180017b5dc66e7ac1885000d">xy::QuadTreeItem</a>
 </li>
 <li>getFont()
-: <a class="el" href="classxy_1_1_text.html#a2fa7de8cf82bf53d70cf9f618b6d6e5f">xy::Text</a>
+: <a class="el" href="classxy_1_1_bitmap_text.html#a2c0021d028af440e67f15f960a5cd150">xy::BitmapText</a>
+, <a class="el" href="classxy_1_1_text.html#a2fa7de8cf82bf53d70cf9f618b6d6e5f">xy::Text</a>
 </li>
 <li>getFrameID()
 : <a class="el" href="structxy_1_1_sprite_animation.html#a4fc6f31c53b7d21c8a27595fbe7c0673">xy::SpriteAnimation</a>
 </li>
 <li>getGeneration()
 : <a class="el" href="classxy_1_1_entity.html#a237d8a5d5f847c28f82dbb2f362a9b0a">xy::Entity</a>
+</li>
+<li>getGlyph()
+: <a class="el" href="classxy_1_1_bitmap_font.html#a4a3f2904aa2fc9e946bdebd55e846450">xy::BitmapFont</a>
 </li>
 <li>getID()
 : <a class="el" href="classxy_1_1_component_manager.html#a3090bc536c2db855ac3ed60bdad384a1">xy::ComponentManager</a>
@@ -241,7 +251,8 @@
 : <a class="el" href="classxy_1_1_resource_handler.html#ac1d59f42eba296b72ddc2488d8547958">xy::ResourceHandler</a>
 </li>
 <li>getLocalBounds()
-: <a class="el" href="classxy_1_1_drawable.html#a37cfa1db27537161c1313523dfd4dcfa">xy::Drawable</a>
+: <a class="el" href="classxy_1_1_bitmap_text.html#a0d0f7575f20a2fe73a8bc275c194a40e">xy::BitmapText</a>
+, <a class="el" href="classxy_1_1_drawable.html#a37cfa1db27537161c1313523dfd4dcfa">xy::Drawable</a>
 , <a class="el" href="classxy_1_1_text.html#a5b1cdd759d874e27a051f64d696b22b1">xy::Text</a>
 </li>
 <li>getLockedAxis()
@@ -262,6 +273,12 @@
 </li>
 <li>getObjects()
 : <a class="el" href="classxy_1_1_config_object.html#a6e59c52513c6ca983d7f3bb91e137958">xy::ConfigObject</a>
+</li>
+<li>getOutlineColour()
+: <a class="el" href="classxy_1_1_text.html#aba2ff49396bafc0ead848663bc0aa042">xy::Text</a>
+</li>
+<li>getOutlineThickness()
+: <a class="el" href="classxy_1_1_text.html#a1eb04db550ddbb446fe272133317f59f">xy::Text</a>
 </li>
 <li>getOutsideRootEnts()
 : <a class="el" href="classxy_1_1_quad_tree.html#aab46e9916da84550c51a34df609e64d7">xy::QuadTree</a>
@@ -335,14 +352,16 @@
 : <a class="el" href="classxy_1_1_audio_emitter.html#a1b003bfa83f1853255d6d07488cea6c0">xy::AudioEmitter</a>
 </li>
 <li>getString()
-: <a class="el" href="classxy_1_1_text.html#a8028c7ccff859e421f6c4010285d3b78">xy::Text</a>
+: <a class="el" href="classxy_1_1_bitmap_text.html#a9e86a047c5c7b5ca177090bc30d15fdc">xy::BitmapText</a>
+, <a class="el" href="classxy_1_1_text.html#a8028c7ccff859e421f6c4010285d3b78">xy::Text</a>
 </li>
 <li>getSystem()
 : <a class="el" href="classxy_1_1_scene.html#a3a391a874cf04c7b964992ac1e7676d5">xy::Scene</a>
 , <a class="el" href="classxy_1_1_system_manager.html#a15f4d978bb02b6f52e9fbb90ba8cd1a2">xy::SystemManager</a>
 </li>
 <li>getTexture()
-: <a class="el" href="classxy_1_1_drawable.html#aa1cb6b841ccfc8970d89f636c363c37f">xy::Drawable</a>
+: <a class="el" href="classxy_1_1_bitmap_font.html#aefdf49fc744b6c24b22a501b075670e3">xy::BitmapFont</a>
+, <a class="el" href="classxy_1_1_drawable.html#aa1cb6b841ccfc8970d89f636c363c37f">xy::Drawable</a>
 , <a class="el" href="classxy_1_1_sprite.html#a8d5222d927198fe428585361ec36bc90">xy::Sprite</a>
 </li>
 <li>getTextureBounds()
@@ -388,6 +407,9 @@
 </li>
 <li>getWorldTransform()
 : <a class="el" href="classxy_1_1_transform.html#a3361bf723e1cad7d7bf0510335974df3">xy::Transform</a>
+</li>
+<li>getZoom()
+: <a class="el" href="classxy_1_1_camera.html#aa233b2db144f355bc4b8857874675fba">xy::Camera</a>
 </li>
 </ul>
 </div><!-- contents -->

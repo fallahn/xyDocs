@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xyginext: C:/Users/Matthew Marchant/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/ecs/components/Sprite.hpp Source File</title>
+<title>xyginext: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/ecs/components/Sprite.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -44,7 +44,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_162daa221dc0b0dabb7c2d65b288c90b.html">include</a></li><li class="navelem"><a class="el" href="dir_bd255dc1b65874336b892dc3a783bd66.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_e20eeb6b5ca7d7f9b1c3a23258ddef6d.html">ecs</a></li><li class="navelem"><a class="el" href="dir_7c8ae933a16a7e2244b0b3e56a3216e5.html">components</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_de72eac28fae940626bc77a43000e4ad.html">include</a></li><li class="navelem"><a class="el" href="dir_7aeba9697aa2643cb98e804e91ef0468.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_141b73324cfa9e0730bc4f78dfddc86f.html">ecs</a></li><li class="navelem"><a class="el" href="dir_df3dffa4792d66a9776d92e59e0f9cb9.html">components</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -150,16 +150,18 @@
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keyword">const</span> sf::Texture* m_texture;</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <a class="code" href="namespacexy.html#a1456b66bc8b10b37d802a77b64e90955">ResourceHandle</a>  m_textureHandle;</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        sf::Color m_colour;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordtype">bool</span> m_dirty;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        std::size_t m_animationCount;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        std::array&lt;Animation, MaxAnimations&gt; m_animations;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_sprite_system.html">SpriteSystem</a>;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_sprite_sheet.html">SpriteSheet</a>;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_sprite_animator.html">SpriteAnimator</a>;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    };</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;}</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        sf::BlendMode m_blendMode;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordtype">bool</span> m_blendOverride;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keywordtype">bool</span> m_dirty;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        std::size_t m_animationCount;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        std::array&lt;Animation, MaxAnimations&gt; m_animations;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_sprite_system.html">SpriteSystem</a>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_sprite_sheet.html">SpriteSheet</a>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_sprite_animator.html">SpriteAnimator</a>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    };</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;}</div>
 <div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioScape.hpp:37</div></div>
 <div class="ttc" id="classxy_1_1_sprite_animator_html"><div class="ttname"><a href="classxy_1_1_sprite_animator.html">xy::SpriteAnimator</a></div><div class="ttdoc">Sprite Animation system. Updates all active animations on entities which have Sprite and SpriteAnimat...</div><div class="ttdef"><b>Definition:</b> SpriteAnimator.hpp:39</div></div>
 <div class="ttc" id="classxy_1_1_sprite_html_ab5864f82a8f8c4a3ef6a5eb95ceec410"><div class="ttname"><a href="classxy_1_1_sprite.html#ab5864f82a8f8c4a3ef6a5eb95ceec410">xy::Sprite::getTextureRect</a></div><div class="ttdeci">sf::FloatRect getTextureRect() const </div><div class="ttdoc">Returns the current sub-rectangle used to crop the sprite. </div><div class="ttdef"><b>Definition:</b> Sprite.hpp:93</div></div>
@@ -171,7 +173,7 @@
 <div class="ttc" id="classxy_1_1_sprite_html_a940bb2137058724c3ba6d4716ed7f2ac"><div class="ttname"><a href="classxy_1_1_sprite.html#a940bb2137058724c3ba6d4716ed7f2ac">xy::Sprite::getAnimations</a></div><div class="ttdeci">const std::array&lt; Animation, MaxAnimations &gt; &amp; getAnimations() const </div><div class="ttdef"><b>Definition:</b> Sprite.hpp:155</div></div>
 <div class="ttc" id="classxy_1_1_sprite_html_ae478ad3196ea851b87b029018f2a88a6"><div class="ttname"><a href="classxy_1_1_sprite.html#ae478ad3196ea851b87b029018f2a88a6">xy::Sprite::getTextureBounds</a></div><div class="ttdeci">sf::FloatRect getTextureBounds() const </div><div class="ttdoc">Returns the bounds created by the current texture rect. </div><div class="ttdef"><b>Definition:</b> Sprite.hpp:103</div></div>
 <div class="ttc" id="namespacesf_html"><div class="ttname"><a href="namespacesf.html">sf</a></div><div class="ttdef"><b>Definition:</b> State.hpp:42</div></div>
-<div class="ttc" id="namespacexy_html_a1456b66bc8b10b37d802a77b64e90955"><div class="ttname"><a href="namespacexy.html#a1456b66bc8b10b37d802a77b64e90955">xy::ResourceHandle</a></div><div class="ttdeci">std::size_t ResourceHandle</div><div class="ttdoc">Handle for a Resource. </div><div class="ttdef"><b>Definition:</b> ResourceHandler.hpp:42</div></div>
+<div class="ttc" id="namespacexy_html_a1456b66bc8b10b37d802a77b64e90955"><div class="ttname"><a href="namespacexy.html#a1456b66bc8b10b37d802a77b64e90955">xy::ResourceHandle</a></div><div class="ttdeci">std::size_t ResourceHandle</div><div class="ttdoc">Handle for a Resource. </div><div class="ttdef"><b>Definition:</b> ResourceHandler.hpp:43</div></div>
 <div class="ttc" id="classxy_1_1_sprite_sheet_html"><div class="ttname"><a href="classxy_1_1_sprite_sheet.html">xy::SpriteSheet</a></div><div class="ttdoc">Supports loading multiple sprites from a single texture atlas via the ConfigFile format. </div><div class="ttdef"><b>Definition:</b> SpriteSheet.hpp:45</div></div>
 <div class="ttc" id="classxy_1_1_sprite_html_a2fa0f3c573e2789d7f29308e83eab56e"><div class="ttname"><a href="classxy_1_1_sprite.html#a2fa0f3c573e2789d7f29308e83eab56e">xy::Sprite::getAnimations</a></div><div class="ttdeci">std::array&lt; Animation, MaxAnimations &gt; &amp; getAnimations()</div><div class="ttdef"><b>Definition:</b> Sprite.hpp:149</div></div>
 </div><!-- fragment --></div><!-- contents -->

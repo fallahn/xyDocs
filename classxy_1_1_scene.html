@@ -117,10 +117,15 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ab491978db13ed6bd0673a6137309570e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#ab491978db13ed6bd0673a6137309570e">setSystemActive</a> (bool active)</td></tr>
 <tr class="memdesc:ab491978db13ed6bd0673a6137309570e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the given system type active or inactive in the scene. Inactive systems are moved from the processing list and are ignored until set active again. If the system type give doesn't exist then this function does nothing. <br /></td></tr>
 <tr class="separator:ab491978db13ed6bd0673a6137309570e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac553ae2178f40cb8fa7f20816e84647e"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args&gt; </td></tr>
-<tr class="memitem:ac553ae2178f40cb8fa7f20816e84647e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#ac553ae2178f40cb8fa7f20816e84647e">addDirector</a> (Args &amp;&amp;...args)</td></tr>
-<tr class="memdesc:ac553ae2178f40cb8fa7f20816e84647e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a <a class="el" href="classxy_1_1_director.html" title="Abstract Base Class for Directors. A director is an &#39;observer&#39; of the scene to which it belongs...">Director</a> to the <a class="el" href="classxy_1_1_scene.html" title="Encapsulates a single scene. The scene class contains everything needed to create a scene graph by en...">Scene</a>. Directors are used to control in game entities and events through observed messages and events.  <a href="#ac553ae2178f40cb8fa7f20816e84647e">More...</a><br /></td></tr>
-<tr class="separator:ac553ae2178f40cb8fa7f20816e84647e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8407ae3d9310586555d2829245532fe"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args&gt; </td></tr>
+<tr class="memitem:af8407ae3d9310586555d2829245532fe"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#af8407ae3d9310586555d2829245532fe">addDirector</a> (Args &amp;&amp;...args)</td></tr>
+<tr class="memdesc:af8407ae3d9310586555d2829245532fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a <a class="el" href="classxy_1_1_director.html" title="Abstract Base Class for Directors. A director is an &#39;observer&#39; of the scene to which it belongs...">Director</a> to the <a class="el" href="classxy_1_1_scene.html" title="Encapsulates a single scene. The scene class contains everything needed to create a scene graph by en...">Scene</a>. Directors are used to control in game entities and events through observed messages and events. Returns a reference to the newly added director.  <a href="#af8407ae3d9310586555d2829245532fe">More...</a><br /></td></tr>
+<tr class="separator:af8407ae3d9310586555d2829245532fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90bdfe21346d7890ba97be5b64fe3364"><td class="memTemplParams" colspan="2"><a class="anchor" id="a90bdfe21346d7890ba97be5b64fe3364"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a90bdfe21346d7890ba97be5b64fe3364"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#a90bdfe21346d7890ba97be5b64fe3364">getDirector</a> ()</td></tr>
+<tr class="memdesc:a90bdfe21346d7890ba97be5b64fe3364"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the the requested <a class="el" href="classxy_1_1_director.html" title="Abstract Base Class for Directors. A director is an &#39;observer&#39; of the scene to which it belongs...">Director</a>, if it exists. <br /></td></tr>
+<tr class="separator:a90bdfe21346d7890ba97be5b64fe3364"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4a50e032148f96eba0ec2ed62a51012"><td class="memTemplParams" colspan="2"><a class="anchor" id="ab4a50e032148f96eba0ec2ed62a51012"></a>
 template&lt;typename T , typename... Args&gt; </td></tr>
 <tr class="memitem:ab4a50e032148f96eba0ec2ed62a51012"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxy_1_1_scene.html#ab4a50e032148f96eba0ec2ed62a51012">addPostProcess</a> (Args &amp;&amp;...args)</td></tr>
@@ -168,14 +173,22 @@ template&lt;typename T &gt; </td></tr>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ab491978db13ed6bd0673a6137309570e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>setSystemActive</b> (bool active)</td></tr>
 <tr class="separator:ab491978db13ed6bd0673a6137309570e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac553ae2178f40cb8fa7f20816e84647e"><td class="memTemplParams" colspan="2"><a class="anchor" id="ac553ae2178f40cb8fa7f20816e84647e"></a>
+<tr class="memitem:a343c53b0f43bd13636d28fa693c65ab3"><td class="memTemplParams" colspan="2"><a class="anchor" id="a343c53b0f43bd13636d28fa693c65ab3"></a>
 template&lt;typename T , typename... Args&gt; </td></tr>
-<tr class="memitem:ac553ae2178f40cb8fa7f20816e84647e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>addDirector</b> (Args &amp;&amp;...args)</td></tr>
-<tr class="separator:ac553ae2178f40cb8fa7f20816e84647e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a343c53b0f43bd13636d28fa693c65ab3"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>addDirector</b> (Args &amp;&amp;...args)</td></tr>
+<tr class="separator:a343c53b0f43bd13636d28fa693c65ab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fb39b02b3712aac6cb024d26cd4eb45"><td class="memTemplParams" colspan="2"><a class="anchor" id="a2fb39b02b3712aac6cb024d26cd4eb45"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a2fb39b02b3712aac6cb024d26cd4eb45"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getDirector</b> ()</td></tr>
+<tr class="separator:a2fb39b02b3712aac6cb024d26cd4eb45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb217a380f2f5bef83faf662f61001f7"><td class="memTemplParams" colspan="2"><a class="anchor" id="acb217a380f2f5bef83faf662f61001f7"></a>
 template&lt;typename T , typename... Args&gt; </td></tr>
 <tr class="memitem:acb217a380f2f5bef83faf662f61001f7"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>addPostProcess</b> (Args &amp;&amp;...args)</td></tr>
 <tr class="separator:acb217a380f2f5bef83faf662f61001f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabafc416293612db49b38441607a5e92"><td class="memTemplParams" colspan="2"><a class="anchor" id="aabafc416293612db49b38441607a5e92"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aabafc416293612db49b38441607a5e92"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>directorExists</b> () const </td></tr>
+<tr class="separator:aabafc416293612db49b38441607a5e92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Encapsulates a single scene. The scene class contains everything needed to create a scene graph by encapsulating the ECS and providing factory functions for entities. Multple scenes can exist at one time, for instance one to draw the game world, and another to draw the HUD. Everything is rendered through renderable systems which, in turn, require an ECS - therefore every state which wishes to draw something requires at least a scene, right down to menus. All systems should be added before attempting to create any entities else existing entities will not be processed by new systems. </p>
@@ -216,14 +229,14 @@ template&lt;typename T , typename... Args&gt; </td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ac553ae2178f40cb8fa7f20816e84647e"></a>
+<a class="anchor" id="af8407ae3d9310586555d2829245532fe"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T , typename... Args&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void xy::Scene::addDirector </td>
+          <td class="memname">T &amp; xy::Scene::addDirector </td>
           <td>(</td>
           <td class="paramtype">Args &amp;&amp;...&#160;</td>
           <td class="paramname"><em>args</em></td><td>)</td>
@@ -232,7 +245,7 @@ template&lt;typename T , typename... Args&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Adds a <a class="el" href="classxy_1_1_director.html" title="Abstract Base Class for Directors. A director is an &#39;observer&#39; of the scene to which it belongs...">Director</a> to the <a class="el" href="classxy_1_1_scene.html" title="Encapsulates a single scene. The scene class contains everything needed to create a scene graph by en...">Scene</a>. Directors are used to control in game entities and events through observed messages and events. </p>
+<p>Adds a <a class="el" href="classxy_1_1_director.html" title="Abstract Base Class for Directors. A director is an &#39;observer&#39; of the scene to which it belongs...">Director</a> to the <a class="el" href="classxy_1_1_scene.html" title="Encapsulates a single scene. The scene class contains everything needed to create a scene graph by en...">Scene</a>. Directors are used to control in game entities and events through observed messages and events. Returns a reference to the newly added director. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classxy_1_1_director.html" title="Abstract Base Class for Directors. A director is an &#39;observer&#39; of the scene to which it belongs...">Director</a> </dd></dl>
 
 </div>

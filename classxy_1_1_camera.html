@@ -95,11 +95,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a590f29d8bb8fe710e5dcbcb9fb87cba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b095aeaa375d94c7574f026304ac09d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b095aeaa375d94c7574f026304ac09d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_camera.html#a6b095aeaa375d94c7574f026304ac09d">zoom</a> (float)</td></tr>
-<tr class="memdesc:a6b095aeaa375d94c7574f026304ac09d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the zoom level relative to the current view size. Contrary to default SFML views a value of 2 will make the scene appear 2x larger, and a value of less than 1 will zoom out. Values must be greater than 0. <br /></td></tr>
+<tr class="memdesc:a6b095aeaa375d94c7574f026304ac09d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies the current zoom level. Contrary to default SFML views a value of 2 will make the scene appear 2x larger, and a value of less than 1 will zoom out. Values must be greater than 0. <br /></td></tr>
 <tr class="separator:a6b095aeaa375d94c7574f026304ac09d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f44f9991e71bcd16e64d51b808e72d7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f44f9991e71bcd16e64d51b808e72d7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_camera.html#a6f44f9991e71bcd16e64d51b808e72d7">setZoom</a> (float)</td></tr>
+<tr class="memdesc:a6f44f9991e71bcd16e64d51b808e72d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the zoom level relative to the current view size. Setting this to 2x when the view size is 320x240, for example will display an area 160x120 units in size. Must be greater than 0. <br /></td></tr>
+<tr class="separator:a6f44f9991e71bcd16e64d51b808e72d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a323077d052bbc6660dcc0001cb59ef56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a323077d052bbc6660dcc0001cb59ef56"></a>
 sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_camera.html#a323077d052bbc6660dcc0001cb59ef56">getView</a> () const </td></tr>
-<tr class="memdesc:a323077d052bbc6660dcc0001cb59ef56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current view of the camera, in world units. <br /></td></tr>
+<tr class="memdesc:a323077d052bbc6660dcc0001cb59ef56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current view of the camera, in world units. This is the pre-zoomed value, or the view with a zoom of 1x. <br /></td></tr>
 <tr class="separator:a323077d052bbc6660dcc0001cb59ef56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28cd76509218cce33e703e277d4c4d83"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a28cd76509218cce33e703e277d4c4d83"></a>
 sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_camera.html#a28cd76509218cce33e703e277d4c4d83">getViewport</a> () const </td></tr>
@@ -117,6 +121,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_camera.html#a69799f4af9ecbead5653a6ea5362053c">getBounds</a> () const </td></tr>
 <tr class="memdesc:a69799f4af9ecbead5653a6ea5362053c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current bounds of the camera. <br /></td></tr>
 <tr class="separator:a69799f4af9ecbead5653a6ea5362053c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa233b2db144f355bc4b8857874675fba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa233b2db144f355bc4b8857874675fba"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_camera.html#aa233b2db144f355bc4b8857874675fba">getZoom</a> () const </td></tr>
+<tr class="memdesc:aa233b2db144f355bc4b8857874675fba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current zoom level. Default is 1x. <br /></td></tr>
+<tr class="separator:aa233b2db144f355bc4b8857874675fba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>

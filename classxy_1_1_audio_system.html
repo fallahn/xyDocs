@@ -78,6 +78,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af65d5fa48e260d5ce05366f39e7f55a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af65d5fa48e260d5ce05366f39e7f55a1"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>AudioSystem</b> (<a class="el" href="classxy_1_1_message_bus.html">MessageBus</a> &amp;)</td></tr>
 <tr class="separator:af65d5fa48e260d5ce05366f39e7f55a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afafb51608d79e841b9aa063d9c92678d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afafb51608d79e841b9aa063d9c92678d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_audio_system.html#afafb51608d79e841b9aa063d9c92678d">handleMessage</a> (const <a class="el" href="classxy_1_1_message.html">xy::Message</a> &amp;) override</td></tr>
+<tr class="memdesc:afafb51608d79e841b9aa063d9c92678d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to process any incoming system messages. <br /></td></tr>
+<tr class="separator:afafb51608d79e841b9aa063d9c92678d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72a74b40e789052b28357f9eaf7553ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a72a74b40e789052b28357f9eaf7553ba"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_audio_system.html#a72a74b40e789052b28357f9eaf7553ba">process</a> (float) override</td></tr>
 <tr class="memdesc:a72a74b40e789052b28357f9eaf7553ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this for system specific processing to entities. <br /></td></tr>
@@ -91,10 +95,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 UniqueType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#a99504ede1e0567b27d608e4897c688b4">getType</a> () const </td></tr>
 <tr class="memdesc:a99504ede1e0567b27d608e4897c688b4 inherit pub_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the unique type ID of the system. <br /></td></tr>
 <tr class="separator:a99504ede1e0567b27d608e4897c688b4 inherit pub_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a913283c245019d2e7fb538d4223623c7 inherit pub_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a913283c245019d2e7fb538d4223623c7"></a>
-std::vector&lt; <a class="el" href="classxy_1_1_entity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#a913283c245019d2e7fb538d4223623c7">getEntities</a> () const </td></tr>
-<tr class="memdesc:a913283c245019d2e7fb538d4223623c7 inherit pub_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of entities that this system is currently interested in. <br /></td></tr>
-<tr class="separator:a913283c245019d2e7fb538d4223623c7 inherit pub_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a510ce1e8135ebde63e9c06003d7106a9 inherit pub_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a510ce1e8135ebde63e9c06003d7106a9"></a>
+const std::vector&lt; <a class="el" href="classxy_1_1_entity.html">Entity</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#a510ce1e8135ebde63e9c06003d7106a9">getEntities</a> () const </td></tr>
+<tr class="memdesc:a510ce1e8135ebde63e9c06003d7106a9 inherit pub_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of entities that this system is currently interested in. <br /></td></tr>
+<tr class="separator:a510ce1e8135ebde63e9c06003d7106a9 inherit pub_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50e854adba9cfc2a4d5ecac8f162d4b0 inherit pub_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50e854adba9cfc2a4d5ecac8f162d4b0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#a50e854adba9cfc2a4d5ecac8f162d4b0">addEntity</a> (<a class="el" href="classxy_1_1_entity.html">Entity</a>)</td></tr>
 <tr class="memdesc:a50e854adba9cfc2a4d5ecac8f162d4b0 inherit pub_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an entity to the list to process. <br /></td></tr>
@@ -107,10 +111,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 const ComponentMask &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#aadfce231fab86ef5f1d96bcb1c50b16f">getComponentMask</a> () const </td></tr>
 <tr class="memdesc:aadfce231fab86ef5f1d96bcb1c50b16f inherit pub_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the component mask used to mask entities with corresponding components for this system to process. <br /></td></tr>
 <tr class="separator:aadfce231fab86ef5f1d96bcb1c50b16f inherit pub_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1dcd580be2c87a7a77e5699cec24ca46 inherit pub_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1dcd580be2c87a7a77e5699cec24ca46"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#a1dcd580be2c87a7a77e5699cec24ca46">handleMessage</a> (const <a class="el" href="classxy_1_1_message.html">Message</a> &amp;)</td></tr>
-<tr class="memdesc:a1dcd580be2c87a7a77e5699cec24ca46 inherit pub_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to process any incoming system messages. <br /></td></tr>
-<tr class="separator:a1dcd580be2c87a7a77e5699cec24ca46 inherit pub_methods_classxy_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69d9358bee5a6bbf68a23176aacbdad9 inherit pub_methods_classxy_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a69d9358bee5a6bbf68a23176aacbdad9"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_system.html#a69d9358bee5a6bbf68a23176aacbdad9">isActive</a> () const </td></tr>
 <tr class="memdesc:a69d9358bee5a6bbf68a23176aacbdad9 inherit pub_methods_classxy_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the system is currently active. Systems can be activeated and deactivated with <a class="el" href="classxy_1_1_scene.html#ab491978db13ed6bd0673a6137309570e" title="Sets the given system type active or inactive in the scene. Inactive systems are moved from the proce...">Scene::setSystemActive()</a> <br /></td></tr>

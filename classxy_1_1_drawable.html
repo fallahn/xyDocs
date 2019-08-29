@@ -101,6 +101,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>bindUniform</b> (cons
 <tr class="memitem:a83c560cbd39f6da8c7054bb15745f701"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a83c560cbd39f6da8c7054bb15745f701"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>bindUniform</b> (const std::string &amp;name, bool value)</td></tr>
 <tr class="separator:a83c560cbd39f6da8c7054bb15745f701"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafa29a87f5f06a576b00bc8ddce92ea2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aafa29a87f5f06a576b00bc8ddce92ea2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>bindUniform</b> (const std::string &amp;name, sf::Color colour)</td></tr>
+<tr class="separator:aafa29a87f5f06a576b00bc8ddce92ea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfa798d708dfe8b37ece463c8f490150"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abfa798d708dfe8b37ece463c8f490150"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_drawable.html#abfa798d708dfe8b37ece463c8f490150">bindUniform</a> (const std::string &amp;name, const float *value)</td></tr>
 <tr class="memdesc:abfa798d708dfe8b37ece463c8f490150"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds a pointer to a float array containing a 4x4 matrix. <br /></td></tr>
@@ -113,6 +116,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_drawable.html#ac3de615ad63840a15453929727e21982">setBlendMode</a> (sf::BlendMode)</td></tr>
 <tr class="memdesc:ac3de615ad63840a15453929727e21982"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the blend mode used when drawing. <br /></td></tr>
 <tr class="separator:ac3de615ad63840a15453929727e21982"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a000f6abef2ca6378b5b7228f3ac0ae35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_drawable.html#a000f6abef2ca6378b5b7228f3ac0ae35">setFilterFlags</a> (std::uint64_t flags)</td></tr>
+<tr class="memdesc:a000f6abef2ca6378b5b7228f3ac0ae35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set filter flags for rendering. Filter flags allow certain drawables to be omitted from a drawing pass by the render system. This is useful for multipass effects which require rendering different entities to different render buffers. For example lighting objects may be flagged as such so that when the lighting only flag is active on the render system only illuminating objects are rendered to the output. Flags are bitwise values so that drawables can be categorised in multiple filters by setting the appropriate flags. The default value is Uin64::max - ie all flags set (so will always pass the render filter).  <a href="#a000f6abef2ca6378b5b7228f3ac0ae35">More...</a><br /></td></tr>
+<tr class="separator:a000f6abef2ca6378b5b7228f3ac0ae35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a140bb4d84813420ae78e2b818f0835f3"><td class="memItemLeft" align="right" valign="top">std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_drawable.html#a140bb4d84813420ae78e2b818f0835f3">getFilterFlags</a> () const </td></tr>
+<tr class="memdesc:a140bb4d84813420ae78e2b818f0835f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current filter flags of this drawable.  <a href="#a140bb4d84813420ae78e2b818f0835f3">More...</a><br /></td></tr>
+<tr class="separator:a140bb4d84813420ae78e2b818f0835f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1cb6b841ccfc8970d89f636c363c37f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1cb6b841ccfc8970d89f636c363c37f"></a>
 sf::Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_drawable.html#aa1cb6b841ccfc8970d89f636c363c37f">getTexture</a> ()</td></tr>
 <tr class="memdesc:aa1cb6b841ccfc8970d89f636c363c37f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the active texture. <br /></td></tr>
@@ -177,6 +186,10 @@ sf::RenderStates&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_drawable.html#a9b21eddd30fe16f76cd01e92a5f42c77">applyShader</a> () const </td></tr>
 <tr class="memdesc:a9b21eddd30fe16f76cd01e92a5f42c77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies all the unform bindings to the current shader. Generally not used unless implementing a custom render system, in which case this should be called immediately before the component is drawn. <br /></td></tr>
 <tr class="separator:a9b21eddd30fe16f76cd01e92a5f42c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f9297c1ef4976d6779d20e969938a56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f9297c1ef4976d6779d20e969938a56"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_drawable.html#a7f9297c1ef4976d6779d20e969938a56">addGlFlag</a> (std::int32_t)</td></tr>
+<tr class="memdesc:a7f9297c1ef4976d6779d20e969938a56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an OpenGL flag to be applied with glEnable() before the <a class="el" href="classxy_1_1_drawable.html" title="Drawable component. The drawable component encapsulates an sf::VertexArray which can be used to draw ...">Drawable</a> is rendered and glDisable() afterwards. Multiple flags can be added. Generally only useful if you have a specific need for it, and probably won't do what you expect... <br /></td></tr>
+<tr class="separator:a7f9297c1ef4976d6779d20e969938a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -213,6 +226,32 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>RenderSystem</b></td
 
 </div>
 </div>
+<a class="anchor" id="a140bb4d84813420ae78e2b818f0835f3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::uint64_t xy::Drawable::getFilterFlags </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the current filter flags of this drawable. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classxy_1_1_drawable.html#a000f6abef2ca6378b5b7228f3ac0ae35" title="Set filter flags for rendering. Filter flags allow certain drawables to be omitted from a drawing pas...">setFilterFlags()</a> </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a66239fb5c5cdac1da4c89b1bee6c0315"></a>
 <div class="memitem">
 <div class="memproto">
@@ -239,6 +278,38 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>RenderSystem</b></td
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cull</td><td>Set to true to have the drawble culled from rendering when not intersecting the current viewable area. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a000f6abef2ca6378b5b7228f3ac0ae35"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void xy::Drawable::setFilterFlags </td>
+          <td>(</td>
+          <td class="paramtype">std::uint64_t&#160;</td>
+          <td class="paramname"><em>flags</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set filter flags for rendering. Filter flags allow certain drawables to be omitted from a drawing pass by the render system. This is useful for multipass effects which require rendering different entities to different render buffers. For example lighting objects may be flagged as such so that when the lighting only flag is active on the render system only illuminating objects are rendered to the output. Flags are bitwise values so that drawables can be categorised in multiple filters by setting the appropriate flags. The default value is Uin64::max - ie all flags set (so will always pass the render filter). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flags</td><td>a bitmask of filter flags </td></tr>
   </table>
   </dd>
 </dl>

@@ -59,7 +59,7 @@
 </div><!--header-->
 <div class="contents">
 
-<p>Allows registering GUI controls with the default output window, or registering custom windows using the <a class="el" href="namespacexy_1_1_nim.html" title="Exposes a selection of ImGui functions to the public API. These can be used to create stand-alone win...">Nim</a> namespace. Classes which inherit this interface may register controls with the imgui renderer. This is usually used for debugging output or when creating tooling.  
+<p>Allows registering GUI controls with the default output window, or registering custom windows using the ui namespace. Classes which inherit this interface may register controls with the imgui renderer. This is usually used for debugging output or when creating tooling.  
  <a href="classxy_1_1_gui_client.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_gui_client_8hpp_source.html">GuiClient.hpp</a>&gt;</code></p>
@@ -80,10 +80,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0861cc5f1649371a21a2454fd7f16682"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40204cc4d9ca0ded01c22d90a927f57e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a40204cc4d9ca0ded01c22d90a927f57e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_gui_client.html#a40204cc4d9ca0ded01c22d90a927f57e">registerStatusControls</a> (const std::function&lt; void()&gt; &amp;)</td></tr>
-<tr class="memdesc:a40204cc4d9ca0ded01c22d90a927f57e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers one or more gui controls with the default status window. The given function should include the Nim/ImGui functions as they would appear between the Begin() and End() commands <em>without</em> Begin() and End() themselves. These controls will then appear in the default status window all the time the object which inherits this interface exists. DEPRECATED. <br /></td></tr>
+<tr class="memdesc:a40204cc4d9ca0ded01c22d90a927f57e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers one or more gui controls with the default status window. The given function should include the ui/ImGui functions as they would appear between the Begin() and End() commands <em>without</em> Begin() and End() themselves. These controls will then appear in the default status window all the time the object which inherits this interface exists. DEPRECATED. <br /></td></tr>
 <tr class="separator:a40204cc4d9ca0ded01c22d90a927f57e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ae8c6432dc2130fdb1e771f87f34fba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_gui_client.html#a7ae8c6432dc2130fdb1e771f87f34fba">registerConsoleTab</a> (const std::string &amp;name, const std::function&lt; void()&gt; &amp;)</td></tr>
-<tr class="memdesc:a7ae8c6432dc2130fdb1e771f87f34fba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers one or more gui controls with the console window. The given function should include the Nim/ImGui functions as they would appear between the Begin() and End() commands <em>without</em> Begin() and End() themselves. These controls will then appear in a new tab in the console window all the time the object which inherits this interface exists.  <a href="#a7ae8c6432dc2130fdb1e771f87f34fba">More...</a><br /></td></tr>
+<tr class="memdesc:a7ae8c6432dc2130fdb1e771f87f34fba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers one or more gui controls with the console window. The given function should include the ui/ImGui functions as they would appear between the Begin() and End() commands <em>without</em> Begin() and End() themselves. These controls will then appear in a new tab in the console window all the time the object which inherits this interface exists.  <a href="#a7ae8c6432dc2130fdb1e771f87f34fba">More...</a><br /></td></tr>
 <tr class="separator:a7ae8c6432dc2130fdb1e771f87f34fba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6858eb9820ac537a7b3ba8f9c4180175"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6858eb9820ac537a7b3ba8f9c4180175"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_gui_client.html#a6858eb9820ac537a7b3ba8f9c4180175">registerWindow</a> (const std::function&lt; void()&gt; &amp;)</td></tr>
@@ -91,7 +91,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a6858eb9820ac537a7b3ba8f9c4180175"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Allows registering GUI controls with the default output window, or registering custom windows using the <a class="el" href="namespacexy_1_1_nim.html" title="Exposes a selection of ImGui functions to the public API. These can be used to create stand-alone win...">Nim</a> namespace. Classes which inherit this interface may register controls with the imgui renderer. This is usually used for debugging output or when creating tooling. </p>
+<div class="textblock"><p>Allows registering GUI controls with the default output window, or registering custom windows using the ui namespace. Classes which inherit this interface may register controls with the imgui renderer. This is usually used for debugging output or when creating tooling. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a7ae8c6432dc2130fdb1e771f87f34fba"></a>
 <div class="memitem">
@@ -117,7 +117,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
       </table>
 </div><div class="memdoc">
 
-<p>Registers one or more gui controls with the console window. The given function should include the Nim/ImGui functions as they would appear between the Begin() and End() commands <em>without</em> Begin() and End() themselves. These controls will then appear in a new tab in the console window all the time the object which inherits this interface exists. </p>
+<p>Registers one or more gui controls with the console window. The given function should include the ui/ImGui functions as they would appear between the Begin() and End() commands <em>without</em> Begin() and End() themselves. These controls will then appear in a new tab in the console window all the time the object which inherits this interface exists. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>Title to give the new tab </td></tr>

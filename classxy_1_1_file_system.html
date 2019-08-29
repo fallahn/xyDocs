@@ -100,24 +100,31 @@ static std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valig
 static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_file_system.html#aa0a64148771d50db662ce79112a605e9">getCurrentDirectory</a> ()</td></tr>
 <tr class="memdesc:aa0a64148771d50db662ce79112a605e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the absolute path of the current working directory. <br /></td></tr>
 <tr class="separator:aa0a64148771d50db662ce79112a605e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acce7b15337b185313c6b8c83693c3e3b"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_file_system.html#acce7b15337b185313c6b8c83693c3e3b">setCurrentDirectory</a> (std::string path)</td></tr>
+<tr class="memdesc:acce7b15337b185313c6b8c83693c3e3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current working directory to the given absolute path.  <a href="#acce7b15337b185313c6b8c83693c3e3b">More...</a><br /></td></tr>
+<tr class="separator:acce7b15337b185313c6b8c83693c3e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2124f4d34858d1e85008bd5f5e0321b"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_file_system.html#ab2124f4d34858d1e85008bd5f5e0321b">getRelativePath</a> (std::string path, const std::string &amp;root)</td></tr>
 <tr class="memdesc:ab2124f4d34858d1e85008bd5f5e0321b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to convert the given absolute path to a path relative to the given root directory.  <a href="#ab2124f4d34858d1e85008bd5f5e0321b">More...</a><br /></td></tr>
 <tr class="separator:ab2124f4d34858d1e85008bd5f5e0321b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5f56d8277493950a2ee33f9ce68b04f"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_file_system.html#ac5f56d8277493950a2ee33f9ce68b04f">getConfigDirectory</a> (const std::string &amp;appName)</td></tr>
 <tr class="memdesc:ac5f56d8277493950a2ee33f9ce68b04f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a path to the current user's config directory. Config files should generally be written to this directory, rather than the current working directory. Output is usually in the form of the following:  <a href="#ac5f56d8277493950a2ee33f9ce68b04f">More...</a><br /></td></tr>
 <tr class="separator:ac5f56d8277493950a2ee33f9ce68b04f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a805a80c813175e4cfdd237e90db3364f"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_file_system.html#a805a80c813175e4cfdd237e90db3364f">openFileDialogue</a> (const std::string &amp;filter=&quot;&quot;)</td></tr>
-<tr class="memdesc:a805a80c813175e4cfdd237e90db3364f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show a native file dialog to open a file.  <a href="#a805a80c813175e4cfdd237e90db3364f">More...</a><br /></td></tr>
-<tr class="separator:a805a80c813175e4cfdd237e90db3364f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84f35aa7f7dba208342c2e883bd03493"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_file_system.html#a84f35aa7f7dba208342c2e883bd03493">openFileDialogue</a> (const std::string &amp;defaultDir=&quot;&quot;, const std::string &amp;filter=&quot;&quot;)</td></tr>
+<tr class="memdesc:a84f35aa7f7dba208342c2e883bd03493"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show a native file dialog to open a file.  <a href="#a84f35aa7f7dba208342c2e883bd03493">More...</a><br /></td></tr>
+<tr class="separator:a84f35aa7f7dba208342c2e883bd03493"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4033a9144aa731c5a935d6c102d71635"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_file_system.html#a4033a9144aa731c5a935d6c102d71635">openFolderDialogue</a> ()</td></tr>
 <tr class="memdesc:a4033a9144aa731c5a935d6c102d71635"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show a native file dialog to open a folder.  <a href="#a4033a9144aa731c5a935d6c102d71635">More...</a><br /></td></tr>
 <tr class="separator:a4033a9144aa731c5a935d6c102d71635"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77250223aaf77ce2fccb35e9e355c4ae"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_file_system.html#a77250223aaf77ce2fccb35e9e355c4ae">saveFileDialogue</a> (const std::string &amp;filter=&quot;&quot;)</td></tr>
-<tr class="memdesc:a77250223aaf77ce2fccb35e9e355c4ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show a platform native file dialogue for saving files.  <a href="#a77250223aaf77ce2fccb35e9e355c4ae">More...</a><br /></td></tr>
-<tr class="separator:a77250223aaf77ce2fccb35e9e355c4ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85a5cd8ffcc6b702498d31f4b53e285e"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_file_system.html#a85a5cd8ffcc6b702498d31f4b53e285e">saveFileDialogue</a> (const std::string &amp;defaultDir=&quot;&quot;, const std::string &amp;filter=&quot;&quot;)</td></tr>
+<tr class="memdesc:a85a5cd8ffcc6b702498d31f4b53e285e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show a platform native file dialogue for saving files.  <a href="#a85a5cd8ffcc6b702498d31f4b53e285e">More...</a><br /></td></tr>
+<tr class="separator:a85a5cd8ffcc6b702498d31f4b53e285e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87f4f5235497c9f8e47a3e11e2fb7c1f"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_file_system.html#a87f4f5235497c9f8e47a3e11e2fb7c1f">getResourcePath</a> ()</td></tr>
-<tr class="memdesc:a87f4f5235497c9f8e47a3e11e2fb7c1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Currently only relevent on macOS when creating an app bundle. Basically a wrapper around the SFML resourcePath() function. Might potentially provide some portable way of bundling resources nicely in the future.  <a href="#a87f4f5235497c9f8e47a3e11e2fb7c1f">More...</a><br /></td></tr>
+<tr class="memdesc:a87f4f5235497c9f8e47a3e11e2fb7c1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Currently only relevant on macOS when creating an app bundle. Basically a wrapper around the SFML resourcePath() function. Might potentially provide some portable way of bundling resources nicely in the future.  <a href="#a87f4f5235497c9f8e47a3e11e2fb7c1f">More...</a><br /></td></tr>
 <tr class="separator:a87f4f5235497c9f8e47a3e11e2fb7c1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d453a7ec85259a3bbc08a445da72bd5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d453a7ec85259a3bbc08a445da72bd5"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_file_system.html#a4d453a7ec85259a3bbc08a445da72bd5">setResourceDirectory</a> (const std::string &amp;path)</td></tr>
+<tr class="memdesc:a4d453a7ec85259a3bbc08a445da72bd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the resource directory relative to the working directory. When using <a class="el" href="classxy_1_1_file_system.html#a87f4f5235497c9f8e47a3e11e2fb7c1f" title="Currently only relevant on macOS when creating an app bundle. Basically a wrapper around the SFML res...">getResourcePath()</a> this path will be appended to the working directory. Used, for example, when setting a sub-directory as a resource directory. <br /></td></tr>
+<tr class="separator:a4d453a7ec85259a3bbc08a445da72bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Utilities for manipulating the current file system. </p>
@@ -208,7 +215,8 @@ static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="
 <div class="fragment"><div class="line">Windows: C:\Users\squidward\AppData\Roaming\appname\</div>
 <div class="line">Linux: /home/squidward/.config/appname/</div>
 <div class="line">Mac: /Users/squidward/Library/Application Support/appname/</div>
-</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+</div><!-- fragment --><p>WARNING some linux distros are known to return the current working directory instead. This should be considered when using configuration files with the same name as another which is expected to be stored in a unique directory.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">appName</td><td>Name of the current application used to create the appname directory </td></tr>
   </table>
@@ -282,12 +290,12 @@ static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </table>
 </div><div class="memdoc">
 
-<p>Currently only relevent on macOS when creating an app bundle. Basically a wrapper around the SFML resourcePath() function. Might potentially provide some portable way of bundling resources nicely in the future. </p>
+<p>Currently only relevant on macOS when creating an app bundle. Basically a wrapper around the SFML resourcePath() function. Might potentially provide some portable way of bundling resources nicely in the future. </p>
 <dl class="section return"><dt>Returns</dt><dd>path to the resource directory </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a805a80c813175e4cfdd237e90db3364f"></a>
+<a class="anchor" id="a84f35aa7f7dba208342c2e883bd03493"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -298,8 +306,18 @@ static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="
           <td class="memname">static std::string xy::FileSystem::openFileDialogue </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>filter</em> = <code>&quot;&quot;</code></td><td>)</td>
+          <td class="paramname"><em>defaultDir</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filter</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -312,6 +330,7 @@ static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="
 <p>Show a native file dialog to open a file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">defaultDir</td><td>Default path to open (optional) </td></tr>
     <tr><td class="paramname">filter</td><td>File extention filter in the format "png,jpg,bmp" </td></tr>
   </table>
   </dd>
@@ -346,7 +365,7 @@ static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="
 
 </div>
 </div>
-<a class="anchor" id="a77250223aaf77ce2fccb35e9e355c4ae"></a>
+<a class="anchor" id="a85a5cd8ffcc6b702498d31f4b53e285e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -357,8 +376,18 @@ static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="
           <td class="memname">static std::string xy::FileSystem::saveFileDialogue </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>filter</em> = <code>&quot;&quot;</code></td><td>)</td>
+          <td class="paramname"><em>defaultDir</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filter</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -371,11 +400,45 @@ static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="
 <p>Show a platform native file dialogue for saving files. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">defaultDir</td><td>Default directory to save to - optional </td></tr>
     <tr><td class="paramname">filter</td><td>String containing file extension filter in the format "png,jpg,bmp" </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>string containing the selected file path </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acce7b15337b185313c6b8c83693c3e3b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool xy::FileSystem::setCurrentDirectory </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the current working directory to the given absolute path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>String containing the path to attempt to set to cwd </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>false on failure </dd></dl>
 
 </div>
 </div>

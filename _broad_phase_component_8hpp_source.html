@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xyginext: C:/Users/Matthew Marchant/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/ecs/components/BroadPhaseComponent.hpp Source File</title>
+<title>xyginext: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/ecs/components/BroadPhaseComponent.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -44,7 +44,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_162daa221dc0b0dabb7c2d65b288c90b.html">include</a></li><li class="navelem"><a class="el" href="dir_bd255dc1b65874336b892dc3a783bd66.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_e20eeb6b5ca7d7f9b1c3a23258ddef6d.html">ecs</a></li><li class="navelem"><a class="el" href="dir_7c8ae933a16a7e2244b0b3e56a3216e5.html">components</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_de72eac28fae940626bc77a43000e4ad.html">include</a></li><li class="navelem"><a class="el" href="dir_7aeba9697aa2643cb98e804e91ef0468.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_141b73324cfa9e0730bc4f78dfddc86f.html">ecs</a></li><li class="navelem"><a class="el" href="dir_df3dffa4792d66a9776d92e59e0f9cb9.html">components</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -100,26 +100,29 @@
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
 <div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="structxy_1_1_broadphase_component.html#a1012eee0b8e90332c410f0960b5fa656">   63</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="structxy_1_1_broadphase_component.html#a1012eee0b8e90332c410f0960b5fa656">setArea</a>(sf::FloatRect area) { m_bounds = area; }</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="structxy_1_1_broadphase_component.html#a0eb704f039a6f730bce3515c4eeb2be3">   74</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="structxy_1_1_broadphase_component.html#a0eb704f039a6f730bce3515c4eeb2be3">setFilterFlags</a>(std::uint64_t flags) { m_filterFlags = flags; }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="structxy_1_1_broadphase_component.html#a43647648fa8f0dd6fc519b043ceb4635">   80</a></span>&#160;        std::uint64_t <a class="code" href="structxy_1_1_broadphase_component.html#a43647648fa8f0dd6fc519b043ceb4635">getFilterFlags</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_filterFlags; }</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="structxy_1_1_broadphase_component.html#a7f2348bda855f2345b1fde6fb0d46739">   69</a></span>&#160;        sf::FloatRect <a class="code" href="structxy_1_1_broadphase_component.html#a7f2348bda855f2345b1fde6fb0d46739">getArea</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_bounds; }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="structxy_1_1_broadphase_component.html#a0eb704f039a6f730bce3515c4eeb2be3">   80</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="structxy_1_1_broadphase_component.html#a0eb704f039a6f730bce3515c4eeb2be3">setFilterFlags</a>(std::uint64_t flags) { m_filterFlags = flags; }</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        sf::FloatRect m_bounds; <span class="comment">//&lt;! AABB of the entity</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        std::int32_t m_treeID = -1;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        std::uint64_t m_filterFlags = std::numeric_limits&lt;std::uint64_t&gt;::max();</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        sf::Vector2f m_lastWorldPosition;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="structxy_1_1_broadphase_component.html#a43647648fa8f0dd6fc519b043ceb4635">   86</a></span>&#160;        std::uint64_t <a class="code" href="structxy_1_1_broadphase_component.html#a43647648fa8f0dd6fc519b043ceb4635">getFilterFlags</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_filterFlags; }</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_dynamic_tree_system.html">DynamicTreeSystem</a>;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    };</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        sf::FloatRect m_bounds; <span class="comment">//&lt;! AABB of the entity</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        std::int32_t m_treeID = -1;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        std::uint64_t m_filterFlags = std::numeric_limits&lt;std::uint64_t&gt;::max();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        sf::Vector2f m_lastWorldPosition;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classxy_1_1_dynamic_tree_system.html">DynamicTreeSystem</a>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    };</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
 <div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioScape.hpp:37</div></div>
-<div class="ttc" id="structxy_1_1_broadphase_component_html_a0eb704f039a6f730bce3515c4eeb2be3"><div class="ttname"><a href="structxy_1_1_broadphase_component.html#a0eb704f039a6f730bce3515c4eeb2be3">xy::BroadphaseComponent::setFilterFlags</a></div><div class="ttdeci">void setFilterFlags(std::uint64_t flags)</div><div class="ttdoc">Allows filtering BroadphaseComponents during DynamicTree queries. The filter consists of up to 64 fla...</div><div class="ttdef"><b>Definition:</b> BroadPhaseComponent.hpp:74</div></div>
+<div class="ttc" id="structxy_1_1_broadphase_component_html_a0eb704f039a6f730bce3515c4eeb2be3"><div class="ttname"><a href="structxy_1_1_broadphase_component.html#a0eb704f039a6f730bce3515c4eeb2be3">xy::BroadphaseComponent::setFilterFlags</a></div><div class="ttdeci">void setFilterFlags(std::uint64_t flags)</div><div class="ttdoc">Allows filtering BroadphaseComponents during DynamicTree queries. The filter consists of up to 64 fla...</div><div class="ttdef"><b>Definition:</b> BroadPhaseComponent.hpp:80</div></div>
 <div class="ttc" id="classxy_1_1_dynamic_tree_system_html"><div class="ttname"><a href="classxy_1_1_dynamic_tree_system.html">xy::DynamicTreeSystem</a></div><div class="ttdoc">Dynamic AABB tree for broadphase queries. Based on Erin Catto&#39;s dynamic tree in Box2D (http://www...</div><div class="ttdef"><b>Definition:</b> DynamicTreeSystem.hpp:83</div></div>
-<div class="ttc" id="structxy_1_1_broadphase_component_html_a1012eee0b8e90332c410f0960b5fa656"><div class="ttname"><a href="structxy_1_1_broadphase_component.html#a1012eee0b8e90332c410f0960b5fa656">xy::BroadphaseComponent::setArea</a></div><div class="ttdeci">void setArea(sf::FloatRect area)</div><div class="ttdoc">Set the area within the world which this component&#39;s enity covers, in local coordinates. </div><div class="ttdef"><b>Definition:</b> BroadPhaseComponent.hpp:63</div></div>
+<div class="ttc" id="structxy_1_1_broadphase_component_html_a1012eee0b8e90332c410f0960b5fa656"><div class="ttname"><a href="structxy_1_1_broadphase_component.html#a1012eee0b8e90332c410f0960b5fa656">xy::BroadphaseComponent::setArea</a></div><div class="ttdeci">void setArea(sf::FloatRect area)</div><div class="ttdoc">Set the area within the world which this component&#39;s entity covers, in local coordinates. </div><div class="ttdef"><b>Definition:</b> BroadPhaseComponent.hpp:63</div></div>
 <div class="ttc" id="structxy_1_1_broadphase_component_html"><div class="ttname"><a href="structxy_1_1_broadphase_component.html">xy::BroadphaseComponent</a></div><div class="ttdoc">Entities with broadphase components are returned from dynamic tree queries, which can then be used in...</div><div class="ttdef"><b>Definition:</b> BroadPhaseComponent.hpp:45</div></div>
-<div class="ttc" id="structxy_1_1_broadphase_component_html_a43647648fa8f0dd6fc519b043ceb4635"><div class="ttname"><a href="structxy_1_1_broadphase_component.html#a43647648fa8f0dd6fc519b043ceb4635">xy::BroadphaseComponent::getFilterFlags</a></div><div class="ttdeci">std::uint64_t getFilterFlags() const </div><div class="ttdoc">Returns the current flags for this item. Defaults to the max size of uint64 (all flags set) ...</div><div class="ttdef"><b>Definition:</b> BroadPhaseComponent.hpp:80</div></div>
+<div class="ttc" id="structxy_1_1_broadphase_component_html_a43647648fa8f0dd6fc519b043ceb4635"><div class="ttname"><a href="structxy_1_1_broadphase_component.html#a43647648fa8f0dd6fc519b043ceb4635">xy::BroadphaseComponent::getFilterFlags</a></div><div class="ttdeci">std::uint64_t getFilterFlags() const </div><div class="ttdoc">Returns the current flags for this item. Defaults to the max size of uint64 (all flags set) ...</div><div class="ttdef"><b>Definition:</b> BroadPhaseComponent.hpp:86</div></div>
+<div class="ttc" id="structxy_1_1_broadphase_component_html_a7f2348bda855f2345b1fde6fb0d46739"><div class="ttname"><a href="structxy_1_1_broadphase_component.html#a7f2348bda855f2345b1fde6fb0d46739">xy::BroadphaseComponent::getArea</a></div><div class="ttdeci">sf::FloatRect getArea() const </div><div class="ttdoc">Returns the local bounds of the component as applied in the constructor oe with setArea() ...</div><div class="ttdef"><b>Definition:</b> BroadPhaseComponent.hpp:69</div></div>
 <div class="ttc" id="structxy_1_1_broadphase_component_html_a787cbad9ec1bcd0f2ed51921494960e7"><div class="ttname"><a href="structxy_1_1_broadphase_component.html#a787cbad9ec1bcd0f2ed51921494960e7">xy::BroadphaseComponent::BroadphaseComponent</a></div><div class="ttdeci">BroadphaseComponent(sf::FloatRect rect, std::uint64_t flags=std::numeric_limits&lt; std::uint64_t &gt;::max())</div><div class="ttdoc">Construct a broadphase component from given FloatRect and flags. </div><div class="ttdef"><b>Definition:</b> BroadPhaseComponent.hpp:56</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

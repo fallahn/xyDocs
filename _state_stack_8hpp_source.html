@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>xyginext: C:/Users/Matthew Marchant/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/core/StateStack.hpp Source File</title>
+<title>xyginext: C:/Users/Matt/Documents/Visual Studio 2015/Projects/xygine/xyginext/include/xyginext/core/StateStack.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -44,7 +44,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_162daa221dc0b0dabb7c2d65b288c90b.html">include</a></li><li class="navelem"><a class="el" href="dir_bd255dc1b65874336b892dc3a783bd66.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_788cd137090c3e780d7d6a86fefcc3fd.html">core</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_de72eac28fae940626bc77a43000e4ad.html">include</a></li><li class="navelem"><a class="el" href="dir_7aeba9697aa2643cb98e804e91ef0468.html">xyginext</a></li><li class="navelem"><a class="el" href="dir_99732df8828540ae815d91337e32b14c.html">core</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -133,56 +133,58 @@
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            };</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        }</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordtype">void</span> update(<span class="keywordtype">float</span> dt);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordtype">void</span> draw();</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordtype">void</span> handleEvent(<span class="keyword">const</span> sf::Event&amp; evt);</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordtype">void</span> handleMessage(<span class="keyword">const</span> <a class="code" href="classxy_1_1_message.html">Message</a>&amp;);</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keywordtype">void</span> pushState(StateID <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keywordtype">void</span> popState();</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordtype">void</span> clearStates();</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordtype">bool</span> empty() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        sf::View updateView();</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keywordtype">void</span> applyPendingChanges();</div>
-<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="classxy_1_1_state_stack.html#a612a484ed179307e842b3dd1f3581323">  170</a></span>&#160;        std::size_t <a class="code" href="classxy_1_1_state_stack.html#a612a484ed179307e842b3dd1f3581323">getStackSize</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_stack.size(); }</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> StateID bufferID = -100;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="comment">//gets pushed on top of new states for one frame to consume</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="comment">//spurious window events</span></div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keyword">class </span>BufferState final : <span class="keyword">public</span> <a class="code" href="classxy_1_1_state.html">State</a></div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        {</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            BufferState(<a class="code" href="classxy_1_1_state_stack.html">StateStack</a>&amp; s, Context c) : <a class="code" href="classxy_1_1_state.html">State</a>(s, c) {}</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            ~BufferState() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            <span class="keywordtype">bool</span> update(<span class="keywordtype">float</span>)<span class="keyword"> override </span>{ requestStackPop(); <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            <span class="keywordtype">bool</span> handleEvent(<span class="keyword">const</span> sf::Event&amp;)<span class="keyword"> override </span>{ <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            <span class="keywordtype">void</span> handleMessage(<span class="keyword">const</span> Message&amp;)<span class="keyword"> override</span>{}</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            <span class="keywordtype">void</span> draw()<span class="keyword"> override </span>{}</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            StateID stateID()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> bufferID; }</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        };</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keyword">struct </span>Pendingchange</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        {</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="keyword">explicit</span> Pendingchange(Action, StateID <span class="keywordtype">id</span> = 0, <span class="keywordtype">bool</span> = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            Action action;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            StateID <span class="keywordtype">id</span> = 0;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            <span class="keywordtype">bool</span> suspendPrevious = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        };</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        std::vector&lt;State::Ptr&gt; m_stack;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        std::vector&lt;std::pair&lt;StateID, State::Ptr&gt;&gt; m_suspended;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        std::vector&lt;Pendingchange&gt; m_pendingChanges;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        std::vector&lt;Pendingchange&gt; m_activeChanges;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        State::Context m_context;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        std::map&lt;StateID, std::function&lt;State::Ptr()&gt;&gt; m_factories;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        State::Ptr createState(StateID <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    };</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;}</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordtype">void</span> unregisterState(StateID <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordtype">void</span> update(<span class="keywordtype">float</span> dt);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordtype">void</span> draw();</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordtype">void</span> handleEvent(<span class="keyword">const</span> sf::Event&amp; evt);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keywordtype">void</span> handleMessage(<span class="keyword">const</span> <a class="code" href="classxy_1_1_message.html">Message</a>&amp;);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordtype">void</span> pushState(StateID <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordtype">void</span> popState();</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordtype">void</span> clearStates();</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordtype">bool</span> empty() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        sf::View updateView();</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordtype">void</span> applyPendingChanges();</div>
+<div class="line"><a name="l00175"></a><span class="lineno"><a class="line" href="classxy_1_1_state_stack.html#a612a484ed179307e842b3dd1f3581323">  175</a></span>&#160;        std::size_t <a class="code" href="classxy_1_1_state_stack.html#a612a484ed179307e842b3dd1f3581323">getStackSize</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_stack.size(); }</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> StateID bufferID = -100;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="comment">//gets pushed on top of new states for one frame to consume</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="comment">//spurious window events</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keyword">class </span>BufferState final : <span class="keyword">public</span> <a class="code" href="classxy_1_1_state.html">State</a></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        {</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            BufferState(<a class="code" href="classxy_1_1_state_stack.html">StateStack</a>&amp; s, Context c) : <a class="code" href="classxy_1_1_state.html">State</a>(s, c) {}</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            ~BufferState() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            <span class="keywordtype">bool</span> update(<span class="keywordtype">float</span>)<span class="keyword"> override </span>{ requestStackPop(); <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            <span class="keywordtype">bool</span> handleEvent(<span class="keyword">const</span> sf::Event&amp;)<span class="keyword"> override </span>{ <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            <span class="keywordtype">void</span> handleMessage(<span class="keyword">const</span> Message&amp;)<span class="keyword"> override</span>{}</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="keywordtype">void</span> draw()<span class="keyword"> override </span>{}</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            StateID stateID()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> bufferID; }</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        };</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="keyword">struct </span>Pendingchange</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        {</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            <span class="keyword">explicit</span> Pendingchange(Action, StateID <span class="keywordtype">id</span> = 0, <span class="keywordtype">bool</span> = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            Action action;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            StateID <span class="keywordtype">id</span> = 0;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            <span class="keywordtype">bool</span> suspendPrevious = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        };</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        std::vector&lt;State::Ptr&gt; m_stack;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        std::vector&lt;std::pair&lt;StateID, State::Ptr&gt;&gt; m_suspended;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        std::vector&lt;Pendingchange&gt; m_pendingChanges;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        std::vector&lt;Pendingchange&gt; m_activeChanges;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        State::Context m_context;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        std::map&lt;StateID, std::function&lt;State::Ptr()&gt;&gt; m_factories;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        State::Ptr createState(StateID <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    };</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;}</div>
 <div class="ttc" id="namespacexy_html"><div class="ttname"><a href="namespacexy.html">xy</a></div><div class="ttdoc">Main xyginext namespace. </div><div class="ttdef"><b>Definition:</b> AudioScape.hpp:37</div></div>
 <div class="ttc" id="classxy_1_1_state_stack_html_a687a5d39f67dde893d43b5bd880d09d1"><div class="ttname"><a href="classxy_1_1_state_stack.html#a687a5d39f67dde893d43b5bd880d09d1">xy::StateStack::registerState</a></div><div class="ttdeci">void registerState(StateID id, Args &amp;&amp;...args)</div><div class="ttdoc">Overload for registering states which have custom construction parameters. </div><div class="ttdef"><b>Definition:</b> StateStack.hpp:105</div></div>
-<div class="ttc" id="classxy_1_1_state_stack_html_a612a484ed179307e842b3dd1f3581323"><div class="ttname"><a href="classxy_1_1_state_stack.html#a612a484ed179307e842b3dd1f3581323">xy::StateStack::getStackSize</a></div><div class="ttdeci">std::size_t getStackSize() const </div><div class="ttdoc">Returns the number of actives states on the stack. </div><div class="ttdef"><b>Definition:</b> StateStack.hpp:170</div></div>
+<div class="ttc" id="classxy_1_1_state_stack_html_a612a484ed179307e842b3dd1f3581323"><div class="ttname"><a href="classxy_1_1_state_stack.html#a612a484ed179307e842b3dd1f3581323">xy::StateStack::getStackSize</a></div><div class="ttdeci">std::size_t getStackSize() const </div><div class="ttdoc">Returns the number of actives states on the stack. </div><div class="ttdef"><b>Definition:</b> StateStack.hpp:175</div></div>
 <div class="ttc" id="classxy_1_1_message_html"><div class="ttname"><a href="classxy_1_1_message.html">xy::Message</a></div><div class="ttdoc">Message class. </div><div class="ttdef"><b>Definition:</b> Message.hpp:46</div></div>
 <div class="ttc" id="classxy_1_1_state_stack_html"><div class="ttname"><a href="classxy_1_1_state_stack.html">xy::StateStack</a></div><div class="ttdoc">Maintains a stack of active states. </div><div class="ttdef"><b>Definition:</b> StateStack.hpp:61</div></div>
 <div class="ttc" id="structxy_1_1_state_1_1_context_html"><div class="ttname"><a href="structxy_1_1_state_1_1_context.html">xy::State::Context</a></div><div class="ttdoc">Contains information about the current application context. </div><div class="ttdef"><b>Definition:</b> State.hpp:78</div></div>

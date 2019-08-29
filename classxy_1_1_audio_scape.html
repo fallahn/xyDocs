@@ -58,6 +58,11 @@
 <div class="title">xy::AudioScape Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Contains one or more definitions used to create <a class="el" href="classxy_1_1_audio_emitter.html" title="Audio emitter component. Audio emitter provide points within the scene to play audio, either one shot effects or streaming music. If the buffer used to supply the audio is monothen the AudioEmitter will be panned spatially relative to the current listener (usually the active scene camera), unless it has been set to absolute positioning. Requires a scene to have an AudioSystem. ">AudioEmitter</a> components. Similarly to the <a class="el" href="classxy_1_1_sprite_sheet.html" title="Supports loading multiple sprites from a single texture atlas via the ConfigFile format. ">SpriteSheet</a> class used for loading Sprites from configuration files, AudioScapes can be used to define the settings used to create <a class="el" href="classxy_1_1_audio_emitter.html" title="Audio emitter component. Audio emitter provide points within the scene to play audio, either one shot effects or streaming music. If the buffer used to supply the audio is monothen the AudioEmitter will be panned spatially relative to the current listener (usually the active scene camera), unless it has been set to absolute positioning. Requires a scene to have an AudioSystem. ">AudioEmitter</a> components. <a class="el" href="classxy_1_1_audio_scape.html" title="Contains one or more definitions used to create AudioEmitter components. Similarly to the SpriteSheet...">AudioScape</a> files usually have the extension *.xas with the following ConfigFile compatible layout:  
+ <a href="classxy_1_1_audio_scape.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_audio_scape_8hpp_source.html">AudioScape.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -65,21 +70,52 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a6d2a0402618cd00ddb2672a818cf5f7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a6d2a0402618cd00ddb2672a818cf5f7d">More...</a><br /></td></tr>
 <tr class="separator:a6d2a0402618cd00ddb2672a818cf5f7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b09b3cfce0e52dbb6b9ec9700f1308f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_audio_scape.html#a3b09b3cfce0e52dbb6b9ec9700f1308f">loadFromFile</a> (const std::string &amp;path)</td></tr>
-<tr class="memdesc:a3b09b3cfce0e52dbb6b9ec9700f1308f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to load an <a class="el" href="classxy_1_1_audio_scape.html">AudioScape</a> file from the given path.  <a href="#a3b09b3cfce0e52dbb6b9ec9700f1308f">More...</a><br /></td></tr>
+<tr class="memdesc:a3b09b3cfce0e52dbb6b9ec9700f1308f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to load an <a class="el" href="classxy_1_1_audio_scape.html" title="Contains one or more definitions used to create AudioEmitter components. Similarly to the SpriteSheet...">AudioScape</a> file from the given path.  <a href="#a3b09b3cfce0e52dbb6b9ec9700f1308f">More...</a><br /></td></tr>
 <tr class="separator:a3b09b3cfce0e52dbb6b9ec9700f1308f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed820c2f52195958ae354925fa6f29d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aed820c2f52195958ae354925fa6f29d0"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_audio_scape.html#aed820c2f52195958ae354925fa6f29d0">saveToFile</a> (const std::string &amp;path)</td></tr>
-<tr class="memdesc:aed820c2f52195958ae354925fa6f29d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the <a class="el" href="classxy_1_1_audio_scape.html">AudioScape</a> configuration to a given path. <a class="el" href="classxy_1_1_audio_scape.html">AudioScape</a> files normally have the extension *.xas. <br /></td></tr>
+<tr class="memdesc:aed820c2f52195958ae354925fa6f29d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the <a class="el" href="classxy_1_1_audio_scape.html" title="Contains one or more definitions used to create AudioEmitter components. Similarly to the SpriteSheet...">AudioScape</a> configuration to a given path. <a class="el" href="classxy_1_1_audio_scape.html" title="Contains one or more definitions used to create AudioEmitter components. Similarly to the SpriteSheet...">AudioScape</a> files normally have the extension *.xas. <br /></td></tr>
 <tr class="separator:aed820c2f52195958ae354925fa6f29d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b55390e3ce00821bd496c6154753d87"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8b55390e3ce00821bd496c6154753d87"></a>
 <a class="el" href="classxy_1_1_audio_emitter.html">AudioEmitter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_audio_scape.html#a8b55390e3ce00821bd496c6154753d87">getEmitter</a> (const std::string &amp;name) const </td></tr>
 <tr class="memdesc:a8b55390e3ce00821bd496c6154753d87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an <a class="el" href="classxy_1_1_audio_emitter.html" title="Audio emitter component. Audio emitter provide points within the scene to play audio, either one shot effects or streaming music. If the buffer used to supply the audio is monothen the AudioEmitter will be panned spatially relative to the current listener (usually the active scene camera), unless it has been set to absolute positioning. Requires a scene to have an AudioSystem. ">AudioEmitter</a> configured with the given name from the loaded confugration, if it exists, else returns an Uninitialised <a class="el" href="classxy_1_1_audio_emitter.html" title="Audio emitter component. Audio emitter provide points within the scene to play audio, either one shot effects or streaming music. If the buffer used to supply the audio is monothen the AudioEmitter will be panned spatially relative to the current listener (usually the active scene camera), unless it has been set to absolute positioning. Requires a scene to have an AudioSystem. ">AudioEmitter</a>. Use <a class="el" href="classxy_1_1_audio_emitter.html#a325ef4024de5181101df6e66d8a2e9b8" title="Returns true if the emitter has been initialised with a sound source. ">AudioEmitter::hasSource()</a> to check validity of the returned emitter. <br /></td></tr>
 <tr class="separator:a8b55390e3ce00821bd496c6154753d87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a879c21de921667de120d219e9f37a590"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxy_1_1_audio_scape.html#a879c21de921667de120d219e9f37a590">addEmitter</a> (const std::string &amp;name, const <a class="el" href="classxy_1_1_audio_emitter.html">AudioEmitter</a> &amp;emitter)</td></tr>
-<tr class="memdesc:a879c21de921667de120d219e9f37a590"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an emitter configuration to the <a class="el" href="classxy_1_1_audio_scape.html">AudioScape</a>.  <a href="#a879c21de921667de120d219e9f37a590">More...</a><br /></td></tr>
+<tr class="memdesc:a879c21de921667de120d219e9f37a590"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an emitter configuration to the <a class="el" href="classxy_1_1_audio_scape.html" title="Contains one or more definitions used to create AudioEmitter components. Similarly to the SpriteSheet...">AudioScape</a>.  <a href="#a879c21de921667de120d219e9f37a590">More...</a><br /></td></tr>
 <tr class="separator:a879c21de921667de120d219e9f37a590"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Contains one or more definitions used to create <a class="el" href="classxy_1_1_audio_emitter.html" title="Audio emitter component. Audio emitter provide points within the scene to play audio, either one shot effects or streaming music. If the buffer used to supply the audio is monothen the AudioEmitter will be panned spatially relative to the current listener (usually the active scene camera), unless it has been set to absolute positioning. Requires a scene to have an AudioSystem. ">AudioEmitter</a> components. Similarly to the <a class="el" href="classxy_1_1_sprite_sheet.html" title="Supports loading multiple sprites from a single texture atlas via the ConfigFile format. ">SpriteSheet</a> class used for loading Sprites from configuration files, AudioScapes can be used to define the settings used to create <a class="el" href="classxy_1_1_audio_emitter.html" title="Audio emitter component. Audio emitter provide points within the scene to play audio, either one shot effects or streaming music. If the buffer used to supply the audio is monothen the AudioEmitter will be panned spatially relative to the current listener (usually the active scene camera), unless it has been set to absolute positioning. Requires a scene to have an AudioSystem. ">AudioEmitter</a> components. <a class="el" href="classxy_1_1_audio_scape.html" title="Contains one or more definitions used to create AudioEmitter components. Similarly to the SpriteSheet...">AudioScape</a> files usually have the extension *.xas with the following ConfigFile compatible layout: </p>
+<div class="fragment"><div class="line">audio_scape NAME</div>
+<div class="line">{</div>
+<div class="line">    emitter NAME_ONE</div>
+<div class="line">    {</div>
+<div class="line">        path = <span class="stringliteral">&quot;STR_PATH_TO_FILE&quot;</span></div>
+<div class="line">        streaming = BOOL</div>
+<div class="line">        pitch = FLOAT</div>
+<div class="line">        volume = FLOAT</div>
+<div class="line">        relative_listener = BOOL</div>
+<div class="line">        min_distance = FLOAT</div>
+<div class="line">        attenuation = FLOAT</div>
+<div class="line">        looped = BOOL</div>
+<div class="line">        mixer_channel = INT</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    emitter NAME_TWO</div>
+<div class="line">    {</div>
+<div class="line">        path = <span class="stringliteral">&quot;STR_PATH_TO_FILE&quot;</span></div>
+<div class="line">        streaming = BOOL</div>
+<div class="line">        pitch = FLOAT</div>
+<div class="line">        volume = FLOAT</div>
+<div class="line">        relative_listener = BOOL</div>
+<div class="line">        min_distance = FLOAT</div>
+<div class="line">        attenuation = FLOAT</div>
+<div class="line">        looped = BOOL</div>
+<div class="line">        mixer_channel = INT</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> Emitter properties are optional (except path and streaming) and any omitted properties will fall back to their default values. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a6d2a0402618cd00ddb2672a818cf5f7d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -129,7 +165,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
       </table>
 </div><div class="memdoc">
 
-<p>Adds an emitter configuration to the <a class="el" href="classxy_1_1_audio_scape.html">AudioScape</a>. </p>
+<p>Adds an emitter configuration to the <a class="el" href="classxy_1_1_audio_scape.html" title="Contains one or more definitions used to create AudioEmitter components. Similarly to the SpriteSheet...">AudioScape</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>Name of the <a class="el" href="classxy_1_1_audio_emitter.html" title="Audio emitter component. Audio emitter provide points within the scene to play audio, either one shot effects or streaming music. If the buffer used to supply the audio is monothen the AudioEmitter will be panned spatially relative to the current listener (usually the active scene camera), unless it has been set to absolute positioning. Requires a scene to have an AudioSystem. ">AudioEmitter</a> as it appears in the configuration. If an emitter with the name already exists then it will be overwritten. </td></tr>
@@ -154,7 +190,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
       </table>
 </div><div class="memdoc">
 
-<p>Attempts to load an <a class="el" href="classxy_1_1_audio_scape.html">AudioScape</a> file from the given path. </p>
+<p>Attempts to load an <a class="el" href="classxy_1_1_audio_scape.html" title="Contains one or more definitions used to create AudioEmitter components. Similarly to the SpriteSheet...">AudioScape</a> file from the given path. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td>String containing the path to the *.xas file to load </td></tr>
